@@ -24,7 +24,7 @@ const studentInfoSchema= new mongoose.scheema({
         required: true
       },
       attendence:{
-        type:intiger,
+        type:float,
         required:true
       },
       total_score:{

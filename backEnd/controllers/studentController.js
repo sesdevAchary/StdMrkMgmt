@@ -64,14 +64,14 @@ exports.updateStudentInfo=async(req,res)=>{
 
 
         },{new:true}); // return the updated code .......
-        if(!updateInfo) return res.status(404).send("Updated room not found")
+        if(!updateInfo) return res.status(404).send("Updated student id not found")
             else{
-        res.send("Updated room found ",updateInfo);
+        res.send("Updated student id  found ",updateInfo);
         };
     } 
    
     catch(err){
-        res.status(400).send(error)
+        res.status(400).send(err)
     }
 
     }

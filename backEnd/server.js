@@ -6,9 +6,10 @@ import studentRoutes from './routes/studentRoutes';
 const app = express();
 
 connectDB();
-app.use(cors());
+
 app.use(express.json());
 app.use('/api/students', studentRoutes);
+app.use(cors());
 
 const PORT = process.env.PORT || 5454;
 app.listen(PORT, () => {
