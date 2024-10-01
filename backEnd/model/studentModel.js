@@ -1,6 +1,6 @@
-import mongoose from 'mongoose'
+const mongoose = require('mongoose');
 
-const studentInfoSchema= new mongoose.scheema({
+const studentInfoSchema= new mongoose.Schema({
     first_name:{
         type: String,
         required: true,  // student  name is compulsory 
@@ -10,12 +10,12 @@ const studentInfoSchema= new mongoose.scheema({
         required: true,
       },
       unique_id:{
-        type:integer,
+        type: Number,
         required:true,
         unique:true
       },
       mail_id:{
-        type:string,
+        type: String,
         required:true,
         unique:true
       },
@@ -24,20 +24,20 @@ const studentInfoSchema= new mongoose.scheema({
         required: true
       },
       attendence:{
-        type:float,
+        type: Number,
         required:true
       },
       total_score:{
-        type:float,
+        type: Number,
         required:true
       },
       avg_cgpa:{
-        type:float,
+        type: Number,
         required:true
-         },
+         }
     
 });
 
-const studentModel= mongoose.model(studentInfoSchema)
+const studentModel= mongoose.model('Student',studentInfoSchema)
 
 module.exports= studentModel;

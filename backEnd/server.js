@@ -1,17 +1,24 @@
-import express, { json } from 'express';
-import connectDB from './config/db';
-import cors from 'cors';
-import studentRoutes from './routes/studentRoutes';
-
-const app = express();
+const express = require('express');
+const connectDB = require('./config/db');
+const StudentRoutes = require('./routes/studentRoutes');
+// const mongoose = require('mongoose');
 
 connectDB();
+const app = express();
+const port = 3000;
 
-app.use(express.json());
-app.use('/api/students', studentRoutes);
-app.use(cors());
 
-const PORT = process.env.PORT || 5454;
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+app.use(express.json())
+
+app.use('/api', StudentRoutes); 
+let student = [];
+
+app.get('/student',(req,res) => {
+    res.send('hello world!');
 });
+
+
+
+app.listen(port,() => {
+    console.log(`server running at http://localhost:${port}`);
+})
