@@ -49,3 +49,26 @@ exports.getstudentInfoById=async(req,res)=>{
         res.status(400).send(error.message)
     }
 }
+
+
+// update student info by ID//
+
+exports.updateStudentById=async(res,req)=>{
+       try{
+        const updateStudent=await studentModel.updateById(req.params.Id,{
+            first_name: req.body.first_name,
+            last_name:req.body.last_name,
+            unique_id: req.body.unique_id,
+            mail_id: req.body.mail_id,
+            current_address: req.body.current_address,
+            attendence: req.body.attendence,
+            total_score: req.body.total_score,
+            avg_cgpa: req.body.avg_cgpa
+        },{new:true});
+
+        if(!updateStudent)return res.status(404).send("failed to update")
+            res.send(updateStudent)
+       }catch(error){
+                res.status(400).send(error)
+       }
+}
