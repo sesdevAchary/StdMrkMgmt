@@ -32,10 +32,10 @@
     "last_name" : "Haasan",
     "unique_id" : " 013",
     "mail_id" : " kamalhaasan@gmail.com",
-    "current_addresa": "Chennai",
-    "attendence":"42%",
-    "total_score":"495.5",
-    "avg_cgpa": "9.8"
+    "current_address": "Chennai",
+    "attendence":"42",
+    "total_score":"495",
+    "avg_cgpa": "9"
 
  }   ,
 
@@ -77,8 +77,8 @@
     "last_name" : "Khurana",
     "unique_id" : " 016",
     "mail_id" : " ayushmannkhurana@gmail.com",
-    "current_addresa": "Bareily",
-    "attendence":"69%",
+    "current_address": "Bareily",
+    "attendence":"69",
     "total_score":"368.5",
     "avg_cgpa": "6.6"
 

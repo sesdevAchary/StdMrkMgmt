@@ -32,3 +32,20 @@ exports.getstudentInfo=async(req ,res)=>{
         res.status(400).send(error.message)
     }
 }    
+
+// get studetnt by id........
+exports.getstudentInfoById=async(req,res)=>{
+    try{
+        const studentInfoById= await studentModel.findById(req.params.Id);
+        if(!studentInfoById){ 
+            res.status(404).send("student ID not found")
+        }
+
+    else{
+        res.send(studentInfoById)
+    }
+        res.send
+    }catch(error){
+        res.status(400).send(error.message)
+    }
+}
