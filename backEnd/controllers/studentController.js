@@ -52,27 +52,6 @@ exports.getstudentInfoById = async (req, res) => {
 
 // update student info by ID//
 
-exports.updateStudentById = async (req, res) => {
-    try {
-        const updateStudent = await studentModel.updateStudentById(req.params.Id, {
-            first_name: req.body.first_name,
-            last_name: req.body.last_name,
-            unique_id: req.body.unique_id,
-            mail_id: req.body.mail_id,
-            current_address: req.body.current_address,
-            attendence: req.body.attendence,
-            total_score: req.body.total_score,
-            avg_cgpa: req.body.avg_cgpa
-        }, { new: true });
-
-        if (!updateStudent) return res.status(404).send("failed to update")
-        res.send(updateStudent)
-    } catch (error) {
-        res.status(400).send(error)
-    }
-}
-
-
 
 // delete a student by its Id
 exports.deleteStudentById = async (req, res) => {
@@ -80,9 +59,37 @@ exports.deleteStudentById = async (req, res) => {
         const deleteStudentById = await studentModel.deleteById(req.params.Id)
         if (!deleteStudentById) return res.status(404).send("failed to update")
         else {
-            res.send(deleteStudentById)
+            res.send("deleted")
         }
     } catch (error) {
         res.status(400).send(error)
+    }
+}
+
+
+
+// update student info by ID//
+
+
+exports.updateStudentById=async(req,res)=>{
+    try{
+     const updateStudent = await studentModel.updateStudentById(req.params.id ,{
+         first_name: req.body.first_name,
+    last_name: req.body.last_name,
+    unique_id: req.body.unique_id,
+    mail_id: req.body.mail_id,
+    current_address: req.body.current_address,
+    attendence: req.body.attendence,
+    total_score: req.body.total_score,
+    avg_cgpa: req.body.avg_cgpa
+}, { new: true });
+     
+
+     if(!updateStudent) res.status(400).send("coudln't update  student Id")
+         else{
+        res.send(updateStudent)
+     }
+    }catch(error){
+     res.status(404).send(error)
     }
 }
