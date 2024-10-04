@@ -12,12 +12,10 @@ const studentInfoSchema= new mongoose.Schema({
       unique_id:{
         type: Number,
         required:true,
-        unique:true
       },
       mail_id:{
         type: String,
         required:true,
-        unique:true
       },
       current_address:{ 
         type: String,
