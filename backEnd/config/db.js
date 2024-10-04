@@ -4,7 +4,7 @@ const connectDB= async()=>{
        try{
         await mongoose.connect( 'mongodb://localhost:27017/ownDataBase',{
             
-            useUnifiedTopology: true,
+            //useUnifiedTopology: true,
        });
        console.log("successfully connected to mongo db")
        }catch(error){
