@@ -28,7 +28,7 @@
         return (
             <div className='box-container'>
             <h1>ALL STUDENT LIST </h1>
-            <link to ="/add" className='btn btn-add add-person-button'> Add patient </link>
+            <Link to ="/add" className='btn btn-add add-person-button'> Add patient </Link>
 
             <table>
                 <thead>
@@ -44,6 +44,13 @@
                         </tr>))}
                 </tbody>
             </table>
+            {notification && (
+                <Notification message={notification} onClose={()=>setNotification( ' ')}/>
+
+            )}
             </div>
-        )
-  }
+        );
+  };
+
+
+  export default studentList;
