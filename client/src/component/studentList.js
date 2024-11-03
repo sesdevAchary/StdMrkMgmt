@@ -11,6 +11,16 @@
 
  // functional component for state initialisation//
   const studentList =() =>{
-         const[student,setStudent]= useState([]);
+         const[student,setStudent]= useState([]); /* array to hold student data,initially empty*/
          const[notification ,setNotification]=useState( ' ');
+
+       useEffect(()=>{
+        const fetchStudent = async ()=>{
+            try{
+                const response = await axios.get(API_URL);
+                setStudent(response.data);
+            }catch(error)
+        }
+       })
+
   }
