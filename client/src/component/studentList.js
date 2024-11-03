@@ -39,7 +39,9 @@
                 </thead>
                 <tbody>
                     {student.map(student =>(<tr key={student.id} className="person-name"><td>
-                        <link to=</td></tr>))}
+                        <link to={`/details/${student.id}`}>{student.name}</link></td>
+                        <td>{student.roll_no}</td>
+                        </tr>))}
                 </tbody>
             </table>
             </div>
