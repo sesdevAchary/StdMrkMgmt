@@ -23,7 +23,7 @@
                 console.log('error fetching student:',error);
             }
         };
-        fetchStudent
-       })
+        fetchStudent();
+       }, []);
 
   }
