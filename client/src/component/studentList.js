@@ -29,6 +29,14 @@
             <div className='box-container'>
             <h1>ALL STUDENT LIST </h1>
             <link to ="/add" className='btn btn-add add-person-button'> Add patient </link>
+
+            <table>
+                <thead>
+                    <tr>
+                        
+                    </tr>
+                </thead>
+            </table>
             </div>
         )
   }
