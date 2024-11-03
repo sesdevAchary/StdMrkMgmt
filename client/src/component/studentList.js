@@ -25,5 +25,8 @@
         };
         fetchStudent();
        }, []);
-
+        return (
+            <div className='box-container'>
+            </div>
+        )
   }
