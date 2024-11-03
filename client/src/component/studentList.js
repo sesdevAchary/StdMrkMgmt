@@ -27,6 +27,7 @@
        }, []);
         return (
             <div className='box-container'>
+            <h1>ALL STUDENT LIST </h1>
             </div>
         )
   }
