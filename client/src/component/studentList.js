@@ -19,8 +19,11 @@
             try{
                 const response = await axios.get(API_URL);
                 setStudent(response.data);
-            }catch(error)
-        }
+            }catch(error){
+                console.log('error fetching student:',error);
+            }
+        };
+        fetchStudent
        })
 
   }
