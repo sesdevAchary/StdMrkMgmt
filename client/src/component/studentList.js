@@ -33,9 +33,14 @@
             <table>
                 <thead>
                     <tr>
-                        
+                        <th>Name</th>
+                        <th>roll_no</th>
                     </tr>
                 </thead>
+                <tbody>
+                    {student.map(student =>(<tr key={student.id} className="person-name"><td>
+                        <link to=</td></tr>))}
+                </tbody>
             </table>
             </div>
         )
