@@ -1,7 +1,7 @@
 [
  {
-    "first_name" : "Shahid Kapoor ",
-    
+    "name" : "Shahid Kapoor ",
+    "gender":"male",
     "unique_id" : " 011",
     "mail_id" : " shahidkapoor@gmail.com",
     "current_address": "berhampur",
@@ -13,9 +13,10 @@
 
 
  {
-    "first_name" : "Sidhant Chaturvedi",
+    "name" : "Ridhima Tiwari",
+    "gender":"female",
     "unique_id" : " 012",
-    "mail_id" : " sidhantchaturvedi@gmail.com",
+    "mail_id" : " ridhima@gmail.com",
     "current_address": "Bhubaneswar",
     "attendence":"82",
     "total_score":"555",
@@ -27,9 +28,10 @@
 
 
  {
-    "first_name" : "Kamal Haasan",
+    "name" : " Shreeyasi Das",
+    "gender":"female",
     "unique_id" : " 013",
-    "mail_id" : " kamalhaasan@gmail.com",
+    "mail_id" : " shreeyasi@gmail.com",
     "current_address": "Chennai",
     "attendence":"42",
     "total_score":"495",
@@ -41,7 +43,8 @@
 
 
  {
-    "first_name" : "Ranbir Kapoor",
+    "name" : "Ranbir Kapoor",
+    "gender":"male",
     "unique_id" : " 014",
     "mail_id" : " RanbirKapoor@gmail.com",
     "current_address": "Kolkata",
@@ -55,9 +58,10 @@
 
 
  {
-    "first_name" : "Saif Ali Khan",
+    "name" : "Shakeena Ara",
+    "gender":"female",
     "unique_id" : " 015",
-    "mail_id" : " saifalikhan@gmail.com",
+    "mail_id" : " shakeena@gmail.com",
     "current_address": "Indore",
     "attendence":"86",
     "total_score":"483",
@@ -69,7 +73,8 @@
 
 
  {
-    "first_name" : "Ayushmann Khurana",
+    "name" : "Ayushmann Khurana",
+    "gender":"male",
     "unique_id" : " 016",
     "mail_id" : " ayushmannkhurana@gmail.com",
     "current_address": "Bareily",
