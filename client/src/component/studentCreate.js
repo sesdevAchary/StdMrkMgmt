@@ -10,6 +10,7 @@ const PatientAdd = ({onPatientAdd=()=>{}})=>{   {/* functional component with a 
     const [name,setName]=useState(' '); /* store student's  name*/
     const[gender,setGender] = useState( ' ') /* stores student's gender*/
     const[roll_no,setNumber]=useState( ' ');
+    const[ navigate]=useNavigate(); /*to programmatically navigate to different routes. */
     
 
 
