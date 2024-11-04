@@ -4,7 +4,6 @@ exports.createStudentInfo = async (req, res) => {
     try {
         let newStudent = new studentModel({
             first_name: req.body.first_name,
-            last_name: req.body.last_name,
             unique_id: req.body.unique_id,
             mail_id: req.body.mail_id,
             current_address: req.body.current_address,

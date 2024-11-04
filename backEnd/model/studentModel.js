@@ -5,10 +5,6 @@ const studentInfoSchema= new mongoose.Schema({
         type: String,
         required: true,  // student  name is compulsory 
       },
-      last_name:{
-        type: String,
-        required: true,
-      },
       unique_id:{
         type: Number,
         required:true,

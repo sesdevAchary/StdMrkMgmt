@@ -1,7 +1,7 @@
 [
  {
-    "first_name" : "Shahid",
-    "last_name" : "Kapoor",
+    "first_name" : "Shahid Kapoor ",
+    
     "unique_id" : " 011",
     "mail_id" : " shahidkapoor@gmail.com",
     "current_address": "berhampur",
@@ -13,8 +13,7 @@
 
 
  {
-    "first_name" : "Sidhant",
-    "last_name" : "Chaturvedi",
+    "first_name" : "Sidhant Chaturvedi",
     "unique_id" : " 012",
     "mail_id" : " sidhantchaturvedi@gmail.com",
     "current_address": "Bhubaneswar",
@@ -28,8 +27,7 @@
 
 
  {
-    "first_name" : "Kamal",
-    "last_name" : "Haasan",
+    "first_name" : "Kamal Haasan",
     "unique_id" : " 013",
     "mail_id" : " kamalhaasan@gmail.com",
     "current_address": "Chennai",
@@ -43,8 +41,7 @@
 
 
  {
-    "first_name" : "Ranbir",
-    "last_name" : "Kapoor",
+    "first_name" : "Ranbir Kapoor",
     "unique_id" : " 014",
     "mail_id" : " RanbirKapoor@gmail.com",
     "current_address": "Kolkata",
@@ -58,8 +55,7 @@
 
 
  {
-    "first_name" : "Saif Ali ",
-    "last_name" : "Khan",
+    "first_name" : "Saif Ali Khan",
     "unique_id" : " 015",
     "mail_id" : " saifalikhan@gmail.com",
     "current_address": "Indore",
@@ -73,8 +69,7 @@
 
 
  {
-    "first_name" : "Ayushmann",
-    "last_name" : "Khurana",
+    "first_name" : "Ayushmann Khurana",
     "unique_id" : " 016",
     "mail_id" : " ayushmannkhurana@gmail.com",
     "current_address": "Bareily",
