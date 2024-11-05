@@ -33,7 +33,14 @@ const handleSubmit= async(e)=>{
 
 // To show success notification//
 setShowNotification({type:'success', text: `Patient "${response.data.name}" added successfully!`});
+
+
+// To navigate into new person's page//
+setTimeout(()=>navigate(`/detail/${newPatientId}`),1000)
    }
+
+
+
 
 }
 
