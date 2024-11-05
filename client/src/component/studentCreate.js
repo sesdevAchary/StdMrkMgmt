@@ -14,6 +14,17 @@ const PatientAdd = ({onPatientAdd=()=>{}})=>{      {/* functional component with
     const [showNotification, setShowNotification] = useState(null); /* for showing notifications, initialized to null*/
 
 
+// handle form submsission //
+
+const handleSubmit= async(e)=>{
+    e.preventdefault()
+
+    if(!name || !gender || !roll_no  ) return ; {/* f any of them are missing, the function exits early (does not proceed with the API request*/}
+
+
+    
+}
+
 
 
 }
