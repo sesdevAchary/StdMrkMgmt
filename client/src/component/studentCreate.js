@@ -7,11 +7,11 @@ const API_URL = process.env.REACT_APP_API_URL; /* Retrieves the API URL from the
 
 
 const PatientAdd = ({onPatientAdd=()=>{}})=>{      {/* functional component with a prop*/}
-    const [name,setName]=useState(' ');            /* store student's  name*/
-    const[gender,setGender] = useState( ' ')       /* stores student's gender*/
-    const[roll_no,setNumber]=useState( ' ');       /* stores student's roll number*/
-    const[ navigate]=useNavigate();                /*to programmatically navigate to different routes. */
-    const [showNotification, setShowNotification] = useState(null); /* for showing notifications, initialized to null*/
+    const [name,setName]=useState(' ');            {/* store student's  name*/}
+    const[gender,setGender] = useState( ' ');       {/* stores student's gender*/}
+    const[roll_no,setNumber]=useState( ' ');      { /* stores student's roll number*/}
+    const[ navigate]=useNavigate();               { /*to programmatically navigate to different routes. */}
+    const [showNotification, setShowNotification] = useState(null);{ /* for showing notifications, initialized to null*/}
 
 
 // handle form submsission //
@@ -38,16 +38,13 @@ setShowNotification({type:'success', text: `Patient "${response.data.name}" adde
 // To navigate into new person's page//
 setTimeout(()=>navigate(`/detail/${newPatientId}`),2000);  {/* wait for 2 second before navigating*/}
 
-   }catch(error){
+   } catch(error){
     console.error(`error while adding a new person into this`,error);
     setShowNotification({type:'error',text:`failed to add new student here . we sincerely request you to go through it again `});
    }
+};
 
+const handleCloseNotification = () => {
+    setShowNotification(null);
 
-
-
-}
-
-
-
-}
+};
