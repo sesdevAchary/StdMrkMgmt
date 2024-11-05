@@ -38,8 +38,8 @@ setShowNotification({type:'success', text: `Patient "${response.data.name}" adde
 // To navigate into new person's page//
 setTimeout(()=>navigate(`/detail/${newPatientId}`),2000);  {/* wait for 2 second before navigating*/}
 
-   }catch(errror){
-    
+   }catch(error){
+    console.error(`error while adding a new person into this`,error);
    }
 
 
