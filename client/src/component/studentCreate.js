@@ -25,9 +25,14 @@ const handleSubmit= async(e)=>{
     const response = await axios.post(API_URL, {name,gender,roll_no});
     const newStudentID = response.data.id;
 
+
+// clearing the form fields
     setName( ' ');
     setGender( ' ');
     setNumber( ' ');
+
+// To show success notification//
+setShowNotification({type:'success', text: `Patient "${response.data.name}" added successfully!`});
    }
 
 }
