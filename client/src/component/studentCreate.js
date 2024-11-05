@@ -21,8 +21,11 @@ const handleSubmit= async(e)=>{
 
     if(!name || !gender || !roll_no  ) return ; {/* f any of them are missing, the function exits early (does not proceed with the API request*/}
 
+   try{
+    const response = await axios.post(API_URL, {name,gender,roll_no});
+    const newStudentID = 
+   }
 
-    
 }
 
 
