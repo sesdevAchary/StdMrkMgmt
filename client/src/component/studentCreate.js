@@ -40,6 +40,7 @@ setTimeout(()=>navigate(`/detail/${newPatientId}`),2000);  {/* wait for 2 second
 
    }catch(error){
     console.error(`error while adding a new person into this`,error);
+    setShowNotification({type:'error',text:`failed to add new student here . we sincerely request you to go through it again `});
    }
 
 
