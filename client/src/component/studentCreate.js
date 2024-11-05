@@ -23,7 +23,11 @@ const handleSubmit= async(e)=>{
 
    try{
     const response = await axios.post(API_URL, {name,gender,roll_no});
-    const newStudentID = 
+    const newStudentID = response.data.id;
+
+    setName( ' ');
+    setGender( ' ');
+    setNumber( ' ');
    }
 
 }
