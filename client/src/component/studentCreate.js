@@ -64,5 +64,6 @@ return(
                 <option value="Other">Other</option> </select>
 
                 <div className="button-group">
+                <button type="submit" className="btn btn-add">Add Patient</button>
 
 )
