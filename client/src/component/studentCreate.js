@@ -48,3 +48,8 @@ const handleCloseNotification = () => {
     setShowNotification(null);
 
 };
+
+return(
+    <div className="box-container">
+
+)
