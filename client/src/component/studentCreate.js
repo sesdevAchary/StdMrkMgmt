@@ -52,5 +52,6 @@ const handleCloseNotification = () => {
 return(
     <div className="box-container">
                 <h2>Add Patient</h2>
+                <form onSubmit={handleSubmit} className="form-container">
 
 )
