@@ -54,6 +54,7 @@ return(
                 <h2>Add Patient</h2>
                 <form onSubmit={handleSubmit} className="form-container">
                 <input type="text" placeholder="Name"  value={name} onChange={(e) => setName(e.target.value)} required className="input-field"/>
-                <input type="number" placeholder="Age" value={age} onChange={(e) => setAge(e.target.value)} required className="input-field" />
+                <input type="text" placeholder="text" value={text} onChange={(e) => setAge(e.target.value)} required className="input-field" />
+                <input type="number" placeholder="roll_no" value={roll_no} onChange={(e) => setNumber(e.target.value)} required className="input-field" />
 
 )
