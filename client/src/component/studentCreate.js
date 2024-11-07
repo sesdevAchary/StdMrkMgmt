@@ -70,6 +70,7 @@ return(
                 </form>
                 {showNotification && <Notification message={showNotification} onClose={handleCloseNotification} />}
                 </div>
+        );
 
 
 )
