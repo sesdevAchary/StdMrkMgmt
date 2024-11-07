@@ -27,9 +27,9 @@ const handleSubmit= async(e)=>{
 
 
 // clearing the form fields
-    setName( ' ');
-    setGender( ' ');
-    setNumber( ' ');
+    setName( ' ' );
+    setGender( ' ' );
+    setNumber( ' ' );
 
 // To show success notification//
 setShowNotification({type:'success', text: `Patient "${response.data.name}" added successfully!`});
