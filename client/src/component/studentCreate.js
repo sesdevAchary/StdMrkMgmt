@@ -67,6 +67,7 @@ return(
                 <button type="submit" className="btn btn-add">Add Patient</button>
                 <button type="button" className="btn btn-cancel" onClick={() => navigate('/')}>Cancel</button>
                 </div>
+                </form>
 
 
 )
