@@ -68,6 +68,7 @@ return(
                 <button type="button" className="btn btn-cancel" onClick={() => navigate('/')}>Cancel</button>
                 </div>
                 </form>
+                {showNotification && <Notification message={showNotification} onClose={handleCloseNotification} />}
 
 
 )
