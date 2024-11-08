@@ -11,6 +11,7 @@ const Notification = ({message,onClose})=>{   {/*message contains data about not
         <button onClick ={onClose} className="btn btn-cancel">close</button>
         </div>
 
- )
+ );
 }
 
+export default Notification;
