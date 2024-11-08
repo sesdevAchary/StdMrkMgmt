@@ -6,7 +6,8 @@ const Notification = ({message,onClose})=>{   {/*message contains data about not
 
 
  return (
-    <div className={notificationClass}
+    <div className={notificationClass}>
+        {message.text}
  )
 }
 
