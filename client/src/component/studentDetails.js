@@ -9,3 +9,9 @@ import Notification from './Notification';
 const API_URL = process.env.REACT_APP_API_URL;
 console.log(API_URL);   /* for debugging the apI url*/
 
+
+// Component State and Variables //
+
+const {id} = useParams();    /* access the student id from the url params */
+const navigate = useNavigate(); /* hook to navigate programmatically to different routes */
+const [student,setStudent]=useState(null);   /* to hold the patient Data */
