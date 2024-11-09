@@ -23,7 +23,10 @@ const [showNotification, setShowNotification] = useState(null);   /* State to ha
 useEffect(()=>{
     const fetchStudent = async()=>{
         console.log("fetching the Student's data..");
-        const respone = await axios.get(`${API_URL}/${id}`);
+        const response = await axios.get(`${API_URL}/${id}`);
+        console.log(response.data);
+        setStudent(response.data);
+        
 
     }
 })
