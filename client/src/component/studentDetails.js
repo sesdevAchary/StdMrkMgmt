@@ -21,7 +21,9 @@ const [showNotification, setShowNotification] = useState(null);   /* State to ha
 // Fetching Student Data //
 
 useEffect(()=>{
-    const fetchPatient = async()=>{
-        
+    const fetchStudent = async()=>{
+        console.log("fetching the Student's data..");
+        const respone = await axios.get(`${API_URL}/${id}`);
+
     }
 })
