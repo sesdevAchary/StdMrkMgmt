@@ -22,11 +22,17 @@ const [showNotification, setShowNotification] = useState(null);   /* State to ha
 
 useEffect(()=>{
     const fetchStudent = async()=>{
+        try{
         console.log("fetching the Student's data..");
         const response = await axios.get(`${API_URL}/${id}`);
         console.log(response.data);
         setStudent(response.data);
-        
+        } catch(error){
+            console.errror(`error in fetching student data:`,error.response || error.message);
+            setShowNotification({ type: 'error', text: 'Error loading student  details.' });
+
+
+        }
 
     }
 })
