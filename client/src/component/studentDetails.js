@@ -12,6 +12,7 @@ console.log(API_URL);   /* for debugging the apI url*/
 
 // Component State and Variables //
 
-const {id} = useParams();    /* access the student id from the url params */
-const navigate = useNavigate(); /* hook to navigate programmatically to different routes */
-const [student,setStudent]=useState(null);   /* to hold the patient Data */
+const {id} = useParams();       /* access the student id from the url params */
+const navigate = useNavigate();    /* hook to navigate programmatically to different routes */
+const [student,setStudent]=useState(null);     /* to hold the patient Data */
+const [showNotification, setShowNotification] = useState(null);   /* State to handle notifications.*/
