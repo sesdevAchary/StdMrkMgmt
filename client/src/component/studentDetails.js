@@ -16,3 +16,12 @@ const {id} = useParams();       /* access the student id from the url params */
 const navigate = useNavigate();    /* hook to navigate programmatically to different routes */
 const [student,setStudent]=useState(null);     /* to hold the patient Data */
 const [showNotification, setShowNotification] = useState(null);   /* State to handle notifications.*/
+
+
+// Fetching Student Data //
+
+useEffect(()=>{
+    const fetchPatient = async()=>{
+        
+    }
+})
