@@ -37,3 +37,11 @@ useEffect(()=>{
     };
     fetchStudent();
 },[id]);
+
+
+const deletePerson=async()=>{
+    try{
+        
+    }
+
+}
