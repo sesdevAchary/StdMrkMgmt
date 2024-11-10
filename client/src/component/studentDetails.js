@@ -42,6 +42,8 @@ useEffect(()=>{
 const deletePerson=async()=>{
     try{
         await axios.delete(`${API_URL}/${id}`);
+        setShowNotification({type:'Success',text:'person deleted successfully'}); 
+        setTimeout(()=>navigate('/'),3000);
     }
 
 }
