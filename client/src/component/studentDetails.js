@@ -39,11 +39,14 @@ useEffect(()=>{
 },[id]);
 
 
-const deletePerson=async()=>{
+const deleteStudent=async()=>{
     try{
         await axios.delete(`${API_URL}/${id}`);
-        setShowNotification({type:'Success',text:'person deleted successfully'}); 
+        setShowNotification({type:'Success',text:'student  deleted successfully'}); 
         setTimeout(()=>navigate('/'),3000);
+    } catch(error){
+        console.error(`error fetching the student `,error);
+        setShowNotification({type:'error',text:'could not find the student'});
     }
 
-}
+};
