@@ -41,7 +41,7 @@ useEffect(()=>{
 
 const deletePerson=async()=>{
     try{
-        
+        await axios.delete(`${API_URL}/${id}`);
     }
 
 }
