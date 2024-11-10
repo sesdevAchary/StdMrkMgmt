@@ -66,3 +66,11 @@ if(!student && !showNotification ){
     return <div className='box-container'>Loading still </div> ; {/* if true  then it renders that the prson data is being fetched || not yet available */};
 
 };
+
+
+
+
+// if  the patient data is still not loaded for there shows an error notification //
+if (!patient && showNotification) {
+    return <div className="box-container">Error loading patient details.</div>; {/* displays an error message indicating that there was an issue loading the patient details.*/}
+  }
