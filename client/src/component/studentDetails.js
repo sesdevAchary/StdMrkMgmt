@@ -50,3 +50,11 @@ const deleteStudent=async()=>{
     }
 
 };
+
+
+
+// to close notifcation state //
+const handleCloseNotification=()=>{
+    setShowNotification(null);      {/* there is no notification to show anymore*/}
+
+}
