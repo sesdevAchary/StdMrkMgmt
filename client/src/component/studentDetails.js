@@ -61,7 +61,8 @@ const handleCloseNotification=()=>{
 
 
 
-// the conditional rendering of return statements //
+// to check whether the student and showNotfication are falsy(e.g. null, undefined, or false)  //
 if(!student && !showNotification ){
-    return <div className='box-container'>Loading , please wait </div>
-}
+    return <div className='box-container'>Loading still </div> ; {/* if true  then it renders that the prson data is being fetched || not yet available */};
+
+};
