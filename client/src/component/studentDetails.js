@@ -58,3 +58,10 @@ const handleCloseNotification=()=>{
     setShowNotification(null);      {/* there is no notification to show anymore*/}
 
 }
+
+
+
+// the conditional rendering of return statements //
+if(!student && !showNotification ){
+    return <div className='box-container'>Loading , please wait </div>
+}
