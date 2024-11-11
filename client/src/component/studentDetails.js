@@ -89,7 +89,8 @@ return(
 
    <button onclick={deleteStudent} className='btn btn-delete'>Delete</button>; {/* button triggers the deleteStudent function when clicked */}
    
-   <link to='/' className='btn btn-back'>Back to home</link>
+   <link to='/' className='btn btn-back'>Back to home</link>  {/* Another Link component that takes the user back to the home page (/) */}
 </div>
 
+{showNotification $$ <Notification message={showNotification} onClose={handleCloseNotification} />}
 )
