@@ -87,6 +87,7 @@ return(
     <Link to={`/edit/${student.id}`} className="btn btn-update">Edit</Link>; {/*to prop specidies the target route to navigate,uses template literals to dynamically generate the url(e.g.edit/21) */}
   </div>
 
+   <button onclick={deleteStudent} className='btn btn-delete'>Delete</button>; {/* button triggers the deleteStudent function when clicked */}
 
 </div>
 
