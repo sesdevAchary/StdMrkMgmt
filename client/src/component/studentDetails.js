@@ -78,6 +78,9 @@ if (!patient && showNotification) {
 // The Jsx Content //
 return(
    <div clssName='box-container'>
-    <h2>Name:{student.name}</h2>
-   </div>
+    <h2>Name:{student.name}</h2> {/* it will render the student name inside the h2 tag*/}
+ </div>
+
+ <div className='student-info'><p> gender:{student.gender</p></div>
+
 )
