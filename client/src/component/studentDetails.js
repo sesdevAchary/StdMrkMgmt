@@ -88,7 +88,8 @@ return(
   </div>
 
    <button onclick={deleteStudent} className='btn btn-delete'>Delete</button>; {/* button triggers the deleteStudent function when clicked */}
-
+   
+   <link to='/' className='btn btn-back'>Back to home</link>
 </div>
 
 )
