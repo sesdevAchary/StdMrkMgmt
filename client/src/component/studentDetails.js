@@ -83,7 +83,9 @@ return(
  
    <div className="patient-info"><p>roll_no: {student.roll_no}</p></div>
 
-
+  <div className='student-actions'>
+    <Link to={`/edit/${student.id}`} className="btn btn-update">Edit</Link>
+  </div>
 
 
 </div>
