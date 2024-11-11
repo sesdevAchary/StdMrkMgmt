@@ -38,6 +38,8 @@ useEffect(() => {
 }, [id]);
 
 
+// delete student data //
+
 const deleteStudent = async () => {
     try {
         await axios.delete(`${API_URL}/${id}`);
