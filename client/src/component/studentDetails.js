@@ -11,6 +11,7 @@ console.log(API_URL);   /* for debugging the apI url*/
 
 
 // Component State and Variables //
+const studentDetails=()=>{
 
 const { id } = useParams();       /* access the student id from the url params */
 const navigate = useNavigate();    /* hook to navigate programmatically to different routes */
@@ -85,12 +86,16 @@ return(
 
   <div className='student-actions'>
     <Link to={`/edit/${student.id}`} className="btn btn-update">Edit</Link>; {/*to prop specidies the target route to navigate,uses template literals to dynamically generate the url(e.g.edit/21) */}
-  </div>
+  
 
    <button onclick={deleteStudent} className='btn btn-delete'>Delete</button>; {/* button triggers the deleteStudent function when clicked */}
    
    <link to='/' className='btn btn-back'>Back to home</link>  {/* Another Link component that takes the user back to the home page (/) */}
 </div>
 
-{showNotification $$ <Notification message={showNotification} onClose={handleCloseNotification} />}
-)
+{showNotification && <Notification message={showNotification} onClose={handleCloseNotification} />}
+</div>
+);
+};
+
+export default studentDetails;
