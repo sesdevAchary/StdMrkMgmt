@@ -72,3 +72,12 @@ if (!student && !showNotification) {
 if (!patient && showNotification) {
     return <div className="box-container">Error loading patient details.</div>; {/* displays an error message indicating that there was an issue loading the student  details.*/ }
 }
+
+
+
+// The Jsx Content //
+return(
+   <div clssName='box-container'>
+    <h2>Name:{student.name}</h2>
+   </div>
+)
