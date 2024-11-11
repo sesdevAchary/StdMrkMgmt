@@ -79,8 +79,10 @@ if (!patient && showNotification) {
 return(
    <div clssName='box-container'>
     <h2>Name:{student.name}</h2> {/* it will render the student name inside the h2 tag*/}
- </div>
 
- <div className='student-info'><p> gender:{student.gender</p></div>
+ <div className='student-info'><p> gender:{student.gender}</p></div>
+
+
+</div>
 
 )
