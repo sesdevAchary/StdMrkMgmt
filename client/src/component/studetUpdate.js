@@ -8,5 +8,7 @@ console.log(API_URL) // logs the URL to the console for debugging purposes.//
 
 const studentId=()=>{
     const {id} =useParams();
-    
+    const navigate = useNavigate();
+
+
 }
