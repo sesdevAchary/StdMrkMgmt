@@ -12,4 +12,8 @@ const studentId=()=>{
     const [student, setStudent] = useState({ name: '', roll_no:'',gender:''});
 
 
+    useEffect(()=>{
+        const fetchStudent
+    })
+
 }
