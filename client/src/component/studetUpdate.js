@@ -42,7 +42,7 @@ const studentId=()=>{
     e.preventDefault();
     try{
         await axios.put(`${API_URL}/${id}`,student);{/*id is used in the url and the student obj contains the updated data sent as request body*/}
-        navigate(`/detail/${id}`) {/* comes from r-r-d,user is redirected to the student's detail page after the updation */}
+        navigate(`/detail/${id}`); {/* comes from r-r-d,user is redirected to the student's detail page after the updation */}
 
 
     }catch(error){
@@ -54,6 +54,8 @@ const studentId=()=>{
 
  // handle cancel operation //
  const handleCancel =()=>{
-    navigate (`/detail/${}`)
- }
+    navigate (`/detail/${id}`); {/* navigating back to the student details page */}
+ };
+
+ 
 }
