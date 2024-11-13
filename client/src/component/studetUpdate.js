@@ -31,7 +31,7 @@ const studentId=()=>{
 // to handle change in forms //
     const handleChange=(e)=>{
         const{name,value}=e.target; {/* destructuring the e.target object to extract the name and value properties.*/}
-        setStudent({...patient,[name]});
+        setStudent({...student,[name]:value});
     }
 
 }
