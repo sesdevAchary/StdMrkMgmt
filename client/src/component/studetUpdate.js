@@ -18,8 +18,17 @@ const studentId=()=>{
         const fetchStudent= async()=>{
             try{
                 const response = await axios .get(`${API_URL}/$ {id}`);
+                setStudent(response.data);
+            } catch (error){
+                console.error("error fetching the student:",error);
             }
-        }
-    })
+        };
+        fetchStudent();
+    } ,[id]);
+
+
+    const handleChange=(e)=>{
+
+    }
 
 }
