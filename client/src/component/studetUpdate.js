@@ -40,6 +40,14 @@ const studentId=()=>{
 // handle update phase //
  const handleUpdate = async(e)=>{
     e.preventDefault();
-    
+    try{
+        await axios.put(`${API_URL}/${id}`,student);{/*id is used in the url and the student obj contains the updated data sent as request body*/}
+        navigate(`/detail/${id}`) {/* comes from r-r-d,user is redirected to the student's detail page after the updation */}
+
+
+    }catch(error){
+        console.log(`error in updating the student details:`,error);
+    }
+
  }
 }
