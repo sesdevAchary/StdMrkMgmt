@@ -57,5 +57,10 @@ const studentId=()=>{
     navigate (`/detail/${id}`); {/* navigating back to the student details page */}
  };
 
+
+ // handleHome function //
+  const handleHome=()=>{
+    navigate('/'); {/* navigating back to the home page */}
+  }
  
 }
