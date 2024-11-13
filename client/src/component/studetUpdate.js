@@ -27,8 +27,10 @@ const studentId=()=>{
     } ,[id]);
 
 
-    const handleChange=(e)=>{
 
+// to handle change in forms //
+    const handleChange=(e)=>{
+        const{name,value}=e.target;
     }
 
 }
