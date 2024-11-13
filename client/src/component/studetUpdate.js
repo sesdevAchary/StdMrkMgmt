@@ -49,5 +49,11 @@ const studentId=()=>{
         console.log(`error in updating the student details:`,error);
     }
 
+ };
+
+
+ // handle cancel operation //
+ const handleCancel =()=>{
+    navigate (`/detail/${}`)
  }
 }
