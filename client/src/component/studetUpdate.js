@@ -28,10 +28,18 @@ const studentId=()=>{
 
 
 
-// to handle change in forms //
+// to handle change in forms updates the patient state with the new value of the form field. //
     const handleChange=(e)=>{
         const{name,value}=e.target; {/* destructuring the e.target object to extract the name and value properties.*/}
-        setStudent({...student,[name]:value});
+        setStudent({...student,[name]:value}); {/* e.g.-> name:Rohan */}
     }
 
+
+
+
+// handle update phase //
+ const handleUpdate = async(e)=>{
+    e.preventDefault();
+    
+ }
 }
