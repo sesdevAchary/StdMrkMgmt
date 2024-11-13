@@ -12,8 +12,14 @@ const studentId=()=>{
     const [student, setStudent] = useState({ name: '', roll_no:'',gender:''});
 
 
+
+    // to fetech studnet data when id changes //
     useEffect(()=>{
-        const fetchStudent
+        const fetchStudent= async()=>{
+            try{
+                const response = await axios .get(`${API_URL}/$ {id}`);
+            }
+        }
     })
 
 }
