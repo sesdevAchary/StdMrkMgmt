@@ -67,7 +67,9 @@ const studentId=()=>{
 
   // the jsx content //
 reutrn (
-
+  <div className='box-container'>
+    
+  </div>
 )
 
 
