@@ -63,4 +63,12 @@ const studentId=()=>{
     navigate('/'); {/* navigating back to the home page */}
   }
  
+
+
+  // the jsx content //
+reutrn (
+
+)
+
+
 }
