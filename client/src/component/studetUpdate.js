@@ -69,6 +69,7 @@ const studentId=()=>{
 reutrn (
   <div className='box-container'>
     <h1>Update Student</h1>  
+    <form onSubmit = {handleUpdate} className="form-container"
   </div>
 )
 
