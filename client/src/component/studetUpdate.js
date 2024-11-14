@@ -70,7 +70,7 @@ reutrn (
   <div className='box-container'>
     <h1>Update Student</h1>  
     <form onSubmit = {handleUpdate} className="form-container"
-    <input type='text' name='name' placeholder='Name' value ={student.name}  onChange={handleChange}
+    <input type='text' name='name' placeholder='Name' value ={student.name}  onChange={handleChange} required className ='input-field'
   </div>
 )
 
