@@ -72,7 +72,7 @@ reutrn (
     <form onSubmit = {handleUpdate} className="form-container">
     <input type='text' name='name' placeholder='Name' value ={student.name}  onChange={handleChange} required className ='input-field' />
 
-    <input type='number' name=
+    <select type='select' placeholder='select gender ' value={student.gender} onchange {handleChange} require className='input-field'></input>
     </form>
     
   </div>
