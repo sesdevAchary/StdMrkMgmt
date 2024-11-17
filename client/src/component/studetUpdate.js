@@ -96,3 +96,5 @@ reutrn (
 
 
 }
+
+export default PatientEdit;
