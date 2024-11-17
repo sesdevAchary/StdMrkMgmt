@@ -79,6 +79,8 @@ reutrn (
         <div className="person-actions">
         <button type="submit" className="btn btn-update">Update</button>
         <button type="button" className="btn btn-cancel" onClick={handleCancel}>Cancel</button>
+        <button type="button" className="btn btn-back" onClick={handleHome}>Back to Home</button>
+
 
 
 
