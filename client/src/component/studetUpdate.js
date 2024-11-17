@@ -77,6 +77,8 @@ reutrn (
         <option value ="female">Female</option>
         <option value="other">Others</option>
         <div className="person-actions">
+        <button type="submit" className="btn btn-update">Update</button>
+
 
     </select>
     </form>
