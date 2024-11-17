@@ -76,6 +76,8 @@ reutrn (
         <option value="male">Male</option>
         <option value ="female">Female</option>
         <option value="other">Others</option>
+        <div className="person-actions">
+
     </select>
     </form>
     
