@@ -78,6 +78,8 @@ reutrn (
         <option value="other">Others</option>
         <div className="person-actions">
         <button type="submit" className="btn btn-update">Update</button>
+        <button type="button" className="btn btn-cancel" onClick={handleCancel}>Cancel</button>
+
 
 
     </select>
