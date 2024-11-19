@@ -90,10 +90,6 @@ reutrn (
 
 
 
-    </select>
-    </form>
-    
-  </div>
 )
 
 
