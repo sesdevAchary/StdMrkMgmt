@@ -90,9 +90,9 @@ reutrn (
 
 
 
-)
+);
 
 
-}
+};
 
-export default PatientEdit;
+export default studentUpdate;
