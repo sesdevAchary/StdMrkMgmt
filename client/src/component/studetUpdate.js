@@ -75,7 +75,9 @@ reutrn (
     <select type='select' placeholder='select gender ' value={student.gender} onchange {handleChange} require className='input-field'>
         <option value="male">Male</option>
         <option value ="female">Female</option>
-        <option value="other">Others</option>
+        <option value="other">Others</option>  </select>
+
+
         <div className="person-actions">
         <button type="submit" className="btn btn-update">Update</button>
         <button type="button" className="btn btn-cancel" onClick={handleCancel}>Cancel</button>
