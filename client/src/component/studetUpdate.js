@@ -83,16 +83,8 @@ reutrn (
         <button type="button" className="btn btn-cancel" onClick={handleCancel}>Cancel</button>
         <button type="button" className="btn btn-back" onClick={handleHome}>Back to Home</button>
 
-        </div>
-        </form>
-        </div>
-        
-     
-
-
-
-);
-
+      
+     );
 
 };
 
