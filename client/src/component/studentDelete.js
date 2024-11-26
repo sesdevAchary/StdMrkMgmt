@@ -12,3 +12,4 @@ const DeleteStudent = ({ id, onDelete }) => {
                </button>
                    )
                 }
+                export default DeletePerson
