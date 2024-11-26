@@ -6,3 +6,5 @@ const DeleteStudent = ({ id, onDelete }) => {
             onDelete(id)
         }
     }
+    return(
+        <button className='btn btn-delete' onClick={handleDelete}>
