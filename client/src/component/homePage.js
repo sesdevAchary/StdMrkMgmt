@@ -19,7 +19,7 @@ const  HomePage = () => {
           color="primary" 
           variant="contained"
           >
-          View Patients
+          View Student information
         </Button>
       </Box>
       </Container>
