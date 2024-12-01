@@ -9,3 +9,6 @@ const  HomePage = () => {
         <Typography variant="h2" component="h1" color="success">
           Welcome to the Student Management queue 
         </Typography>
+        <Typography variant="h5" gutterBottom>
+          Manage Student information  Efficiently
+        </Typography>
