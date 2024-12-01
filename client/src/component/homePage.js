@@ -18,3 +18,7 @@ const  HomePage = () => {
           to="/list" // Updated to link to the PatirntList component
           color="primary" 
           variant="contained"
+          >
+          View Patients
+        </Button>
+      </Box>
