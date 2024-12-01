@@ -12,3 +12,5 @@ const  HomePage = () => {
         <Typography variant="h5" gutterBottom>
           Manage Student information  Efficiently
         </Typography>
+        <Box mt={4}>
+        <Button 
