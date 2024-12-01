@@ -22,3 +22,8 @@ const  HomePage = () => {
           View Patients
         </Button>
       </Box>
+      </Container>
+  );
+};
+
+export default HomePage;
