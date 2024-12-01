@@ -7,10 +7,10 @@ const  HomePage = () => {
     return (
       <Container maxWidth="lg" sx={{ textAlign: 'center', py: 5 }}>
         <Typography variant="h2" component="h1" color="success">
-          Welcome to the Student Management queue 
+          Heartening Welcome to the Student Management queue 
         </Typography>
         <Typography variant="h5" gutterBottom>
-          Manage Student information  Efficiently
+          Manages Student information  effortlessly and efficiently 
         </Typography>
         <Box mt={4}>
         <Button 
