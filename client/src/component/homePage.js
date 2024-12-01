@@ -14,3 +14,7 @@ const  HomePage = () => {
         </Typography>
         <Box mt={4}>
         <Button 
+          component={Link} 
+          to="/list" // Updated to link to the PatirntList component
+          color="primary" 
+          variant="contained"
