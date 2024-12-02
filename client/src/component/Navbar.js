@@ -18,3 +18,10 @@ const notesPages = [
     { title: 'Home', path: '/notes/home' },
     { title: 'Schedule', path: '/notes/schedule' },
   ];
+
+  const Navbar = () => {
+    const [notesAnchorEl, setNotesAnchorEl] = useState(null);
+  
+    const handleNotesClick = (event) => {
+      setNotesAnchorEl(event.currentTarget);
+    };
