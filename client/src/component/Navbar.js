@@ -42,3 +42,10 @@ const notesPages = [
             to="/"
             startIcon={<HomeIcon />}
           >
+             Home
+          </Button>
+          <Button
+            color="primary"
+            onClick={handleNotesClick}
+            startIcon={<MenuBookIcon />} // Added icon here
+          ></Button>
