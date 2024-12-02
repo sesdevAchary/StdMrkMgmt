@@ -48,4 +48,11 @@ const notesPages = [
             color="primary"
             onClick={handleNotesClick}
             startIcon={<MenuBookIcon />} // Added icon here
-          ></Button>
+            >
+            Notes
+          </Button>
+          <Menu
+            anchorEl={notesAnchorEl}
+            open={Boolean(notesAnchorEl)}
+            onClose={handleNotesClose}
+          >
