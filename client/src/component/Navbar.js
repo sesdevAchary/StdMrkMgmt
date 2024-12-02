@@ -13,3 +13,8 @@ import {
 import GitHubIcon from '@mui/icons-material/GitHub';
 import HomeIcon from '@mui/icons-material/Home';
 import MenuBookIcon from '@mui/icons-material/MenuBook'; // Added Notes icon
+
+const notesPages = [
+    { title: 'Home', path: '/notes/home' },
+    { title: 'Schedule', path: '/notes/schedule' },
+  ];
