@@ -32,3 +32,13 @@ const notesPages = [
       return (
         <AppBar position="static" color="transparent" elevation={0} sx={{ width: '100%' }}>
           <Toolbar>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1, color: 'primary.main' }}>
+          Clinic Management Project
+        </Typography>
+        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+          <Button
+            color="primary"
+            component={RouterLink}
+            to="/"
+            startIcon={<HomeIcon />}
+          >
