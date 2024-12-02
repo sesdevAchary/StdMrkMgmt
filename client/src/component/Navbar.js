@@ -56,3 +56,10 @@ const notesPages = [
             open={Boolean(notesAnchorEl)}
             onClose={handleNotesClose}
           >
+             {notesPages.map((page) => (
+              <MenuItem 
+                key={page.path} 
+                component={RouterLink} 
+                to={page.path}
+                onClick={handleNotesClose}
+              ></MenuItem>
