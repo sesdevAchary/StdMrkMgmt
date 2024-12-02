@@ -15,24 +15,25 @@ import HomeIcon from '@mui/icons-material/Home';
 import MenuBookIcon from '@mui/icons-material/MenuBook'; // Added Notes icon
 
 const notesPages = [
-    { title: 'Home', path: '/notes/home' },
-    { title: 'Schedule', path: '/notes/schedule' },
-  ];
+  { title: 'Home', path: '/notes/home' },
+  { title: 'Schedule', path: '/notes/schedule' },
+];
 
-  const Navbar = () => {
-    const [notesAnchorEl, setNotesAnchorEl] = useState(null);
-  
-    const handleNotesClick = (event) => {
-      setNotesAnchorEl(event.currentTarget);
-    };
-    const handleNotesClose = () => {
-        setNotesAnchorEl(null);
-      };
-    
-      return (
-        <AppBar position="static" color="transparent" elevation={0} sx={{ width: '100%' }}>
-          <Toolbar>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1, color: 'primary.main' }}>
+const Navbar = () => {
+  const [notesAnchorEl, setNotesAnchorEl] = useState(null);
+
+  const handleNotesClick = (event) => {
+    setNotesAnchorEl(event.currentTarget);
+  };
+
+  const handleNotesClose = () => {
+    setNotesAnchorEl(null);
+  };
+
+  return (
+    <AppBar position="static" color="transparent" elevation={0} sx={{ width: '100%' }}>
+      <Toolbar>
+        <Typography variant="h6" component="div" sx={{ flexGrow: 1, color: 'primary.main' }}>
           Clinic Management Project
         </Typography>
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
@@ -42,13 +43,13 @@ const notesPages = [
             to="/"
             startIcon={<HomeIcon />}
           >
-             Home
+            Home
           </Button>
           <Button
             color="primary"
             onClick={handleNotesClick}
             startIcon={<MenuBookIcon />} // Added icon here
-            >
+          >
             Notes
           </Button>
           <Menu
@@ -56,10 +57,30 @@ const notesPages = [
             open={Boolean(notesAnchorEl)}
             onClose={handleNotesClose}
           >
-             {notesPages.map((page) => (
+            {notesPages.map((page) => (
               <MenuItem 
                 key={page.path} 
                 component={RouterLink} 
                 to={page.path}
                 onClick={handleNotesClose}
-              ></MenuItem>
+              >
+                {page.title}
+              </MenuItem>
+            ))}
+          </Menu>
+           <IconButton
+            color="primary"
+            component="a"
+            href="https://github.com/88chinu/clinicManagement"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub">
+            <GitHubIcon />
+          </IconButton> 
+        </Box>
+      </Toolbar>
+    </AppBar>
+  );
+};
+
+export default Navbar;
