@@ -25,3 +25,10 @@ const notesPages = [
     const handleNotesClick = (event) => {
       setNotesAnchorEl(event.currentTarget);
     };
+    const handleNotesClose = () => {
+        setNotesAnchorEl(null);
+      };
+    
+      return (
+        <AppBar position="static" color="transparent" elevation={0} sx={{ width: '100%' }}>
+          <Toolbar>
