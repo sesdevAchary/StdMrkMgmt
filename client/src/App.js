@@ -9,6 +9,8 @@ import { CssBaseline, Box } from '@mui/material';
 
 
 import Navbar from './component/Navbar';
+import DeleteStudent from './studentDelete.js'
+
 
 
 
