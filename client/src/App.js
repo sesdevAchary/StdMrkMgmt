@@ -8,13 +8,13 @@ import { CssBaseline, Box } from '@mui/material';
 
 
 
-import studentList from './components/studentList';
-import studentDetails from './components/studentDetail';
-import PatientAdd from './components/createPatient';
-import PatientEdit from './components/updatePatient';
-import Footer from './components/footer';
-import Navbar from './components/Navbar';
-import HomePage from './components/homePage';
+import studentList from './component/studentList';
+import studentDetails from './component/studentDetail';
+import PatientAdd from './component/createPatient';
+import PatientEdit from './component/updatePatient';
+import footer from './component/footer';
+import Navbar from './component/Navbar';
+import HomePage from './component/homePage';
 import './App.css'; // Make sure this contains your CSS
 
 
@@ -35,9 +35,10 @@ const App = () => {
                 <Route exact path='/' element={<HomePage />} /> 
             </Routes>
         </div>
-        
+        <footer/>
         </Box>
     </Router>
+    router fro all case 
     </ThemeProvider>
     
 );
