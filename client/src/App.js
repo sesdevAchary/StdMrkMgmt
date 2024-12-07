@@ -8,10 +8,14 @@ import { CssBaseline, Box } from '@mui/material';
 
 
 
-import Navbar from './component/Navbar';
-import studentList from './studentList.js'
-import DeleteStudent from './studentDelete.js'
-
+import studentList from './components/PatientList';
+import studentDetails from './components/studentDetail';
+import PatientAdd from './components/createPatient';
+import PatientEdit from './components/updatePatient';
+import Footer from './components/footer';
+import Navbar from './components/Navbar';
+import HomePage from './components/homePage';
+import './App.css'; // Make sure this contains your CSS
 
 
 
@@ -22,11 +26,11 @@ const App = () => {
         <div className="box-container">
             <Navbar />
             <Routes>
-                {/* <Route path="/list" element={<PatientList />} />
+                {/* {<Route path="/list" element={<studentList />} />
                 <Route path="/add" element={<PatientAdd />} />
                 <Route path="/edit/:id" element={<PatientEdit />} />
                 <Route path="/detail/:id" element={<PatientDetail />} />
-                <Route exact path='/' element={<HomePage />} /> */}
+                <Route exact path='/' element={<HomePage />} /> */} */}
             </Routes>
         </div>
         
