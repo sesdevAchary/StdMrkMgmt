@@ -6,7 +6,7 @@ const API_URL = process.env.REACT_APP_API_URL;
 console.log(API_URL) // logs the URL to the console for debugging purposes.//
 
 
-const studentId=()=>{
+const studentUpdate=()=>{
     const {id} =useParams();
     const navigate = useNavigate();
     const [student, setStudent] = useState({ name: '', roll_no:'',gender:''});
