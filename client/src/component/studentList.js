@@ -28,7 +28,7 @@
         return (
             <div className='box-container'>
             <h1>ALL STUDENT LIST </h1>
-            <Link to ="/add" className='btn btn-add add-person-button'> Add patient </Link>
+            <Link to ="/add" className='btn btn-add add-person-button'> Add student </Link>
 
             <table>
                 <thead>
