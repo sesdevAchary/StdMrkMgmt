@@ -13,7 +13,7 @@ const studentUpdate=()=>{
 
 
 
-    // to fetech studnet data when id changes //
+    // to fetech student  data when id changes //
     useEffect(()=>{
         const fetchStudent= async()=>{
             try{
