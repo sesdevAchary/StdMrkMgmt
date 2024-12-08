@@ -10,7 +10,7 @@ import { CssBaseline, Box } from '@mui/material';
 
 import studentList from './component/studentList';
 import studentDetails from './component/studentDetail';
-import Add from './component/createPatient';
+import studentAdd from './component/studentCreate';
 import Notification from './component/Notification';
 import PatientEdit from './component/updatePatient';
 import footer from './component/footer';
@@ -32,7 +32,7 @@ const App = () => {
             
             <Routes>
                  <Route path="/list" element={<studentList />} />
-                <Route path="/add" element={<PatientAdd />} />
+                <Route path="/add" element={<studentAdd />} />
                 <Route path="/edit/:id" element={<studentUpdate />} />
                 <Route path="/detail/:id" element={<studentDetail />} />
                 <Route exact path='/' element={<HomePage />} /> 
