@@ -33,15 +33,15 @@ const App = () => {
         <div className="box-container">
             
             <Routes>
-                 <Route path="/list" element={<studentList />} />
-                <Route path="/add" element={<studentAdd />} />
-                <Route path="/edit/:id" element={<studentUpdate />} />
-                <Route path="/detail/:id" element={<studentDetail />} />
+                 <Route path="/list" element={<StudentList />} />
+                <Route path="/add" element={<StudentAdd />} />
+                <Route path="/edit/:id" element={<StudentUpdate />} />
+                <Route path="/detail/:id" element={<StudentDetails />} />
                 <Route exact path='/' element={<HomePage />} /> 
             </Routes>
 
         </div>
-        <footer/>
+        <footer />
         </Box>
     </Router>
     
