@@ -20,7 +20,7 @@ const clinicThemeColors = {
     highlightHigh: '#e0e0e0',
 };
 
-const clinicManagementTheme = createTheme({
+const studentManagementTheme = createTheme({
     palette: {
         mode: 'light',
         background: {
@@ -102,4 +102,4 @@ const clinicManagementTheme = createTheme({
     },
 });
 
-export default clinicManagementTheme;
+export default studentManagementTheme;
