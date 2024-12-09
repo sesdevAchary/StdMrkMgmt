@@ -9,10 +9,10 @@ import { CssBaseline, Box } from '@mui/material';
 
 
 import studentList from './component/studentList';
-import studentDetails from './component/studentDetail';
+import studentDetails from './component/studentDetails';
 import studentAdd from './component/studentCreate';
 import Notification from './component/Notification';
-import PatientEdit from './component/updatePatient';
+import PatientEdit from './component/studentUpdate';
 import footer from './component/footer';
 import Navbar from './component/Navbar';
 import HomePage from './component/homePage';
