@@ -11,7 +11,7 @@ console.log(API_URL);   /* for debugging the apI url*/
 
 
 // Component State and Variables //
-const studentDetails=()=>{
+const StudentDetails=()=>{
 
 const { id } = useParams();       /* access the student id from the url params */
 const navigate = useNavigate();    /* hook to navigate programmatically to different routes */
@@ -56,7 +56,7 @@ const deleteStudent = async () => {
 
 // to close notifcation state //
 const handleCloseNotification = () => {
-    setShowNotification(null); {/* there is no notification to show anymore*/ }
+    setShowNotification(null); 
 
 }
 
@@ -64,7 +64,7 @@ const handleCloseNotification = () => {
 
 // to check whether the student and showNotfication are falsy(e.g. null, undefined, or false)  //
 if (!student && !showNotification) {
-    return <div className='box-container'>Loading still </div>; {/* if true  then it renders that the student data is being fetched || not yet available */ };
+    return <div className='box-container'>Loading still </div>; 
 
 };
 
@@ -72,8 +72,8 @@ if (!student && !showNotification) {
 
 
 // if  the student  data is still not loaded for there shows an error notification //
-if (!patient && showNotification) {
-    return <div className="box-container">Error loading patient details.</div>; {/* displays an error message indicating that there was an issue loading the student  details.*/ }
+if (!student && showNotification) {
+    return <div className="box-container">Error loading patient details.</div>;
 }
 
 
@@ -100,4 +100,4 @@ return(
 );
 };
 
-export default studentDetails;
+export default StudentDetails;

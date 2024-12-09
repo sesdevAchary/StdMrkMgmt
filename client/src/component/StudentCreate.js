@@ -6,13 +6,12 @@ import Notification from './Notification'
 const API_URL = process.env.REACT_APP_API_URL; /* Retrieves the API URL from the environment variables, which is used to send requests to the server.*/
 
 
-const StudentAdd = ({onPatientAdd=()=>{}})=>{      {/* functional component with a prop*/}
-    const [name,setName]=useState(' ');            {/* store student's  name*/}
-    const[gender,setGender] = useState( ' ');       {/* stores student's gender*/}
-    const[roll_no,setNumber]=useState( ' ');
-        { /* stores student's roll number*/}
-    const[ navigate]=useNavigate();               { /*to programmatically navigate to different routes. */}
-    const [showNotification, setShowNotification] = useState(null);{ /* for showing notifications, initialized to null*/}
+const StudentAdd = ({ onPatientAdd = () => { } })=>{     
+    const [name,setName]=useState(' ');            
+    const[gender,setGender] = useState( ' ');       
+    const[roll_no,setNumber]=useState( ' ');         
+    const[ navigate]=useNavigate();               
+    const [showNotification, setShowNotification] = useState(null);
 
 
 // handle form submsission //
@@ -20,8 +19,7 @@ const StudentAdd = ({onPatientAdd=()=>{}})=>{      {/* functional component with
 const handleSubmit= async(e)=>{
     e.preventDefault()
 
-    if(!name || !gender || !roll_no  ) return ; {/* f any of them are missing, the function exits early (does not proceed with the API request*/}
-
+    if(!name || !gender || !roll_no  ) return ; 
    try{
     const response = await axios.post(API_URL, {name,gender,roll_no});
     const newStudentID = response.data.id;
@@ -37,7 +35,7 @@ setShowNotification({type:'success', text: `Patient "${response.data.name}" adde
 
 
 // To navigate into new person's page//
-setTimeout(()=>navigate(`/detail/${newStudentID}`),2000);  {/* wait for 2 second before navigating*/}
+setTimeout(()=>navigate(`/detail/${newStudentID}`),2000);  
 
    } catch(error){
     console.error(`error while adding a new person into this`,error);

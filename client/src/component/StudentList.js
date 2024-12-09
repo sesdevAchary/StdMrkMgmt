@@ -10,7 +10,7 @@
 
 
  // functional component for state initialisation//
-  const studentList =() =>{
+  const StudentList =() =>{
          const[student,setStudent]= useState([]); /* array to hold student data,initially empty*/
          const[notification ,setNotification]=useState( ' ');
 
@@ -53,4 +53,4 @@
   };
 
 
-  export default studentList;
+  export default StudentList;
