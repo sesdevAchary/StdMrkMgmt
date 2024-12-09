@@ -6,7 +6,7 @@ import Notification from './Notification'
 const API_URL = process.env.REACT_APP_API_URL; /* Retrieves the API URL from the environment variables, which is used to send requests to the server.*/
 
 
-const studentAdd = ({onPatientAdd=()=>{}})=>{      {/* functional component with a prop*/}
+const StudentAdd = ({onPatientAdd=()=>{}})=>{      {/* functional component with a prop*/}
     const [name,setName]=useState(' ');            {/* store student's  name*/}
     const[gender,setGender] = useState( ' ');       {/* stores student's gender*/}
     const[roll_no,setNumber]=useState( ' ');
@@ -18,7 +18,7 @@ const studentAdd = ({onPatientAdd=()=>{}})=>{      {/* functional component with
 // handle form submsission //
 
 const handleSubmit= async(e)=>{
-    e.preventdefault()
+    e.preventDefault()
 
     if(!name || !gender || !roll_no  ) return ; {/* f any of them are missing, the function exits early (does not proceed with the API request*/}
 
@@ -37,7 +37,7 @@ setShowNotification({type:'success', text: `Patient "${response.data.name}" adde
 
 
 // To navigate into new person's page//
-setTimeout(()=>navigate(`/detail/${newPatientId}`),2000);  {/* wait for 2 second before navigating*/}
+setTimeout(()=>navigate(`/detail/${newStudentID}`),2000);  {/* wait for 2 second before navigating*/}
 
    } catch(error){
     console.error(`error while adding a new person into this`,error);
@@ -61,7 +61,7 @@ return(
                 
                 
 
-                <select type='select' placeholder="SelectGender" value={gender} onChange={(e) => setGender(e.target.value)} required className='input-field'>
+                <select  placeholder="SelectGender" value={gender} onChange={(e) => setGender(e.target.value)} required className='input-field'>
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
                 <option value="Other">Other</option> </select>
@@ -77,4 +77,4 @@ return(
     };
 
 
-    export default studentAdd;
+    export default StudentAdd;
