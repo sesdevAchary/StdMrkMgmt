@@ -46,6 +46,7 @@ const StudentAdd = ({ onPatientAdd = () => {} }) => {
     <div className="box-container">
       <h2>Add Patient</h2>
       <form onSubmit={handleSubmit} className="form-container">
+       
         <input
           type="text"
           placeholder="Name"
@@ -54,6 +55,8 @@ const StudentAdd = ({ onPatientAdd = () => {} }) => {
           required
           className="input-field"
         />
+         <br/>
+        
         <select
           placeholder="Select Gender"
           value={gender}
@@ -61,10 +64,13 @@ const StudentAdd = ({ onPatientAdd = () => {} }) => {
           required
           className="input-field"
         >
+                    <option value="select gender">Select geder</option>
+
           <option value="Male">Male</option>
           <option value="Female">Female</option>
           <option value="Other">Other</option>
         </select>
+        <br/>
         <input
           type="number"
           placeholder="Roll No"
@@ -73,9 +79,10 @@ const StudentAdd = ({ onPatientAdd = () => {} }) => {
           required
           className="input-field"
         />
+        <br/>
         <div className="button-group">
           <button type="submit" className="btn btn-add">
-            Add Patient
+            Add Student
           </button>
           <button type="button" className="btn btn-cancel" onClick={() => navigate('/')}>
             Cancel
