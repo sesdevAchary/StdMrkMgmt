@@ -1,78 +1,90 @@
-import React,{useState} from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
-import {useNavigate} from 'react-router-dom';
-import Notification from './Notification'
+import { useNavigate } from 'react-router-dom';
+import Notification from './Notification';
 
-const API_URL = process.env.REACT_APP_API_URL; /* Retrieves the API URL from the environment variables, which is used to send requests to the server.*/
+const API_URL = process.env.REACT_APP_API_URL; // Retrieves the API URL from environment variables
 
+const StudentAdd = ({ onPatientAdd = () => {} }) => {
+  const [name, setName] = useState(''); // Initialize with empty strings
+  const [gender, setGender] = useState('');
+  const [roll_no, setNumber] = useState('');
+  const [showNotification, setShowNotification] = useState(null);
 
-const StudentAdd = ({ onPatientAdd = () => { } })=>{     
-    const [name,setName]=useState(' ');            
-    const[gender,setGender] = useState( ' ');       
-    const[roll_no,setNumber]=useState( ' ');         
-    const[ navigate]=useNavigate();               
-    const [showNotification, setShowNotification] = useState(null);
+  const navigate = useNavigate(); // Correct use of useNavigate
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-// handle form submsission //
+    if (!name || !gender || !roll_no) return; // Don't proceed if fields are empty
 
-const handleSubmit= async(e)=>{
-    e.preventDefault()
+    try {
+      const response = await axios.post(API_URL, { name, gender, roll_no });
+      const newStudentID = response.data.id;
 
-    if(!name || !gender || !roll_no  ) return ; 
-   try{
-    const response = await axios.post(API_URL, {name,gender,roll_no});
-    const newStudentID = response.data.id;
+      // Clear form fields
+      setName('');
+      setGender('');
+      setNumber('');
 
+      // Show success notification
+      setShowNotification({ type: 'success', text: `Patient "${response.data.name}" added successfully!` });
 
-// clearing the form fields
-    setName( ' ' );
-    setGender( ' ' );
-    setNumber( ' ' );
+      // Navigate to the new student's detail page after 2 seconds
+      setTimeout(() => navigate(`/detail/${newStudentID}`), 2000);
+    } catch (error) {
+      console.error('Error while adding a new student', error);
+      setShowNotification({ type: 'error', text: 'Failed to add new student. Please try again.' });
+    }
+  };
 
-// To show success notification//
-setShowNotification({type:'success', text: `Patient "${response.data.name}" added successfully!`});
-
-
-// To navigate into new person's page//
-setTimeout(()=>navigate(`/detail/${newStudentID}`),2000);  
-
-   } catch(error){
-    console.error(`error while adding a new person into this`,error);
-    setShowNotification({type:'error',text:`failed to add new student here . we sincerely request you to go through it again `});
-   }
-};
-
-const handleCloseNotification = () => {
+  const handleCloseNotification = () => {
     setShowNotification(null);
+  };
 
+  return (
+    <div className="box-container">
+      <h2>Add Patient</h2>
+      <form onSubmit={handleSubmit} className="form-container">
+        <input
+          type="text"
+          placeholder="Name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          required
+          className="input-field"
+        />
+        <select
+          placeholder="Select Gender"
+          value={gender}
+          onChange={(e) => setGender(e.target.value)}
+          required
+          className="input-field"
+        >
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+        <input
+          type="number"
+          placeholder="Roll No"
+          value={roll_no}
+          onChange={(e) => setNumber(e.target.value)}
+          required
+          className="input-field"
+        />
+        <div className="button-group">
+          <button type="submit" className="btn btn-add">
+            Add Patient
+          </button>
+          <button type="button" className="btn btn-cancel" onClick={() => navigate('/')}>
+            Cancel
+          </button>
+        </div>
+      </form>
+      {showNotification && <Notification message={showNotification} onClose={handleCloseNotification} />}
+    </div>
+  );
 };
 
-return( 
-    <div className="box-container">
-                <h2>Add Patient</h2>
-                <form onSubmit={handleSubmit} className="form-container">
-                <input type="text" placeholder="Name"  value={name} onChange={(e) => setName(e.target.value)} required className="input-field"/>
-                <input type="text" placeholder="gender" value={gender} onChange={(e) => setGender(e.target.value)} required className="input-field" />
-                <input type="number" placeholder="roll_no" value={roll_no} onChange={(e) => setNumber(e.target.value)} required className="input-field" />
-
-                
-                
-
-                <select  placeholder="SelectGender" value={gender} onChange={(e) => setGender(e.target.value)} required className='input-field'>
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-                <option value="Other">Other</option> </select>
-
-                <div className="button-group">
-                <button type="submit" className="btn btn-add">Add Patient</button>
-                <button type="button" className="btn btn-cancel" onClick={() => navigate('/')}>Cancel</button>
-                </div>
-                </form>
-                {showNotification && <Notification message={showNotification} onClose={handleCloseNotification} />}
-                </div>
-        );
-    };
-
-
-    export default StudentAdd;
+export default StudentAdd;
