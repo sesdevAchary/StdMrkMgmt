@@ -15,10 +15,9 @@ import StudentAdd from './component/StudentCreate';
 import StudentUpdate from './component/StudentUpdate';
 import Footer from './component/Footer';
 import Navbar from './component/Navbar';
-import HomePage from './component/homePage';
+import HomePage from './component/HomePage';
 import './App.css'; // Make sure this contains your CSS
 // import { blueGrey } from '@mui/material/colors';
-// import rosePineTheme from './container/Theme';
 
 
 
