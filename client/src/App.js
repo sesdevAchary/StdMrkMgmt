@@ -17,15 +17,15 @@ import Footer from './component/Footer';
 import Navbar from './component/Navbar';
 import HomePage from './component/homePage';
 import './App.css'; // Make sure this contains your CSS
-import { blueGrey } from '@mui/material/colors';
-import rosePineTheme from './container/Theme';
+// import { blueGrey } from '@mui/material/colors';
+// import rosePineTheme from './container/Theme';
 
 
 
 
 const App = () => {
   return (
-    <ThemeProvider theme={rosePineTheme}>
+    <ThemeProvider>
       <CssBaseline />
     <Router>
     <Box display="flex" flexDirection="column" minHeight="100vh">
@@ -41,8 +41,7 @@ const App = () => {
             </Routes>
 
         </div>
-        <footer />
-        </Box>
+        <Footer />        </Box>
     </Router>
     
     </ThemeProvider>

@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react';
+import React,{useState} from 'react';
 import axios from 'axios';
 import {useNavigate} from 'react-router-dom';
 import Notification from './Notification'
@@ -9,7 +9,8 @@ const API_URL = process.env.REACT_APP_API_URL; /* Retrieves the API URL from the
 const studentAdd = ({onPatientAdd=()=>{}})=>{      {/* functional component with a prop*/}
     const [name,setName]=useState(' ');            {/* store student's  name*/}
     const[gender,setGender] = useState( ' ');       {/* stores student's gender*/}
-    const[roll_no,setNumber]=useState( ' ');      { /* stores student's roll number*/}
+    const[roll_no,setNumber]=useState( ' ');
+        { /* stores student's roll number*/}
     const[ navigate]=useNavigate();               { /*to programmatically navigate to different routes. */}
     const [showNotification, setShowNotification] = useState(null);{ /* for showing notifications, initialized to null*/}
 
@@ -54,8 +55,9 @@ return(
                 <h2>Add Patient</h2>
                 <form onSubmit={handleSubmit} className="form-container">
                 <input type="text" placeholder="Name"  value={name} onChange={(e) => setName(e.target.value)} required className="input-field"/>
-                <input type="text" placeholder="gender" value={gender} onChange={(e) => setAge(e.target.value)} required className="input-field" />
+                <input type="text" placeholder="gender" value={gender} onChange={(e) => setGender(e.target.value)} required className="input-field" />
                 <input type="number" placeholder="roll_no" value={roll_no} onChange={(e) => setNumber(e.target.value)} required className="input-field" />
+
                 
                 
 
