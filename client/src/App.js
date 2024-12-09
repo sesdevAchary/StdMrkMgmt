@@ -19,12 +19,15 @@ import HomePage from './component/HomePage';
 import './App.css'; // Make sure this contains your CSS
 // import { blueGrey } from '@mui/material/colors';
 
+import  clinicManagementTheme from './Theme/studentMgmt';
+
+
 
 
 
 const App = () => {
   return (
-    <ThemeProvider>
+    <ThemeProvider theme={ clinicManagementTheme}>
       <CssBaseline />
     <Router>
     <Box display="flex" flexDirection="column" minHeight="100vh">
