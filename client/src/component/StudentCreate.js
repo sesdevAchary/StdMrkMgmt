@@ -24,7 +24,7 @@
 
 //       // Clear form fields
 //       setName('');
-//       setGender('');
+//       setgender('');
 //       setNumber('');
 
 //       // Show success notification
