@@ -103,3 +103,8 @@ import {useNavigate} from 'react-router-dom';
 import {slide,ToastContainer,toast} from 'react-tostify';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
+
+
+const CreateStudent=(props)=>{
+  const navigate = useNavigate();
+}
