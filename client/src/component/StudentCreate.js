@@ -107,4 +107,16 @@ import axios from 'axios';
 
 const CreateStudent=(props)=>{
   const navigate = useNavigate();
+  const [student,setStudent]=useState({
+    name:'',
+    roll_no:' ',
+    mail_id:' ',
+    score:' ',
+    cgpa:' ',
+    dob:' ',
+    attendance:''
+
+  }
+
+  )
 }
