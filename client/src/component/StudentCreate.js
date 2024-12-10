@@ -5,7 +5,7 @@
 
 // const API_URL = process.env.REACT_APP_API_URL; // Retrieves the API URL from environment variables
 
-// const StudentAdd = () => {
+// const StudentAdd = ({ onPatientAdd = () => {} ) => {
 //   const [name, setName] = useState(''); // Initialize with empty strings
 //   const [gender, setGender] = useState('');
 //   const [roll_no, setNumber] = useState('');
