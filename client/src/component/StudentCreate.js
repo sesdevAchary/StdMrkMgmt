@@ -3,8 +3,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-import { slide, ToastContainer, toast } from 'react-tostify';
-import 'react-toastify/dist/ReactToastify.css';
+import { slide, ToastContainer, toast } from 'react-toastify';
+import 'react-tostify/dist/ReactTostify.css';
 import axios from 'axios';
 
 
@@ -20,7 +20,7 @@ const CreateStudent = (props) => {
     avg_cgpa: ''
 
   });
-  const [showToast, setToast] = useState(false);
+  // const [showToast, setToast] = useState(false);
 
   // form change handler //
   const onChange = (e) => {
@@ -36,6 +36,7 @@ const CreateStudent = (props) => {
     axios
       .post('/api/students', student)  // sends a post reuest to the /api/student on the server ,to add a new book//
       .then((res) => {
+        console.log(student);
         setStudent({
           first_name: '',
           unique_id: '',
@@ -45,7 +46,7 @@ const CreateStudent = (props) => {
           total_score: '',
           avg_cgpa: ''
         });
-        console.log(student);
+        
         toast.success('student created successfully !', {
           position: "bottom-right",
           autoClose: 5000,
@@ -57,10 +58,10 @@ const CreateStudent = (props) => {
           theme: "light",
           transition: slide,
         });
-        setTimeout = (() => {
-          setToast(false); // Hide the toast
-          navigate('/'); // Navigate to homepage
+        setTimeout(() => {
+          navigate('/'); // Navigate to homepage after 5 seconds
         }, 5000); // Adjust the timeout as needed
+        
       })
 
       .catch((err) => {
@@ -99,13 +100,13 @@ const CreateStudent = (props) => {
       />
       <div className='Container  d-flex align-items-center justify-content-center'>
         <div className='row w-100'>
-          <div className='col md-8 m-auto'>
+          <div className='col-md-8 m-auto'>
             <br />
             <Link to='/create-student' className='btn btn-outline-warning float-left'>
               Complete Student List
             </Link>
             </div>
-            <div className='col md-8 m-auto style={{display:"flex" align-item:"center" flexDirection: "column" }}'>
+            <div className='col-md-8 m-auto' style={{ display: "flex", alignItems: "center", flexDirection: "column" }}>
               <h1 className='display-4 text-center'>Add Student Here </h1>
               <p className='lead text-center'>Create A New Student</p>
 
@@ -117,7 +118,7 @@ const CreateStudent = (props) => {
                     type='text'
                     placeholder='Enter the Name of the STUDENT'
                     name='first_name'
-                    className='form-controller'
+                    className='form-control'
                     value={student.first_name}
                     onChange={onChange}
                   />
@@ -129,7 +130,7 @@ const CreateStudent = (props) => {
                     type='text'
                     placeholder='Enter the Roll number of the STUDENT'
                     name='unique_id'
-                    className='form-controller'
+                  className='form-control'
                     value={student.unique_id}
                     onChange={onChange}
                   />
@@ -141,7 +142,7 @@ const CreateStudent = (props) => {
                     type='text'
                     placeholder='Enter the mail ID of the STUDENT'
                     name='mail_id'
-                    className='form-controller'
+                    className='form-control'
                     value={student.mail_id}
                     onChange={onChange}
                   />
@@ -154,7 +155,7 @@ const CreateStudent = (props) => {
                     type='text'
                     placeholder='Enter the current address  of the STUDENT'
                     name='current_address'
-                    className='form-controller'
+                    className='form-control'
                     value={student.current_address}
                     onChange={onChange}
                   />
@@ -165,7 +166,7 @@ const CreateStudent = (props) => {
                     type='text'
                     placeholder='Enter the attendence number  of the STUDENT'
                     name='attendence'
-                    className='form-controller'
+                    className='form-control'
                     value={student.attendence}
                     onChange={onChange}
                   />
@@ -176,7 +177,7 @@ const CreateStudent = (props) => {
                     type='text'
                     placeholder='Enter the total score   of the STUDENT'
                     name=' total_score'
-                    className='form-controller'
+                   className='form-control'
                     value={student.total_score}
                     onChange={onChange}
                   />
@@ -186,8 +187,8 @@ const CreateStudent = (props) => {
                   <input
                     type='text'
                     placeholder='Enter the cgpa obtained by the STUDENT'
-                    name=' avg_cgpa'
-                    className='form-controller'
+                    name='avg_cgpa'
+                    className='form-control'
                     value={student.avg_cgpa}
                     onChange={onChange}
                   />
