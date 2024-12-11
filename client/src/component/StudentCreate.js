@@ -119,8 +119,9 @@ const CreateStudent=(props)=>{
   });
   const [showToast,setToast]=useState(false);
 
-  const onChange(e)=>{
-    setStudent({...student,[e.target.name]:e.target.value})
-
+  const onChange=(e)=>{
+    console.log(e.target.value);  
+    setStudent({...student,[e.target.name]:e.target.value});
+    // [e.target.cgpa]:e.target.value
   }
 }
