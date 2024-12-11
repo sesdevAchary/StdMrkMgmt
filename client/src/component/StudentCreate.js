@@ -133,7 +133,7 @@ const CreateStudent=(props)=>{
 
      axios
 
-     .post('/api/students',student) // sends a post reuest to the /api/books on the server ,to add a new book//
+     .post('/api/students',student)  // sends a post reuest to the /api/books on the server ,to add a new book//
      .then((res)=>{
       setStudent({
         name:'',
@@ -146,6 +146,22 @@ const CreateStudent=(props)=>{
 
       });
       console.log(student);
+      toast.success('student created successfully !',{
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: slide,
+      })
+      setTimeOut=(()=>{
+        setToast(false); // Hide the toast
+                navigate('/'); // Navigate to homepage
+            }, 5000); // Adjust the timeout as needed
+      }
      }
   }
 }
