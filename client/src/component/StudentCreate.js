@@ -116,7 +116,11 @@ const CreateStudent=(props)=>{
     dob:' ',
     attendance:''
 
-  }
+  });
+  const [showToast,setToast]=useState(false);
 
-  )
+  const onChange(e)=>{
+    setStudent({...student,[e.target.name]:e.target.value})
+
+  }
 }
