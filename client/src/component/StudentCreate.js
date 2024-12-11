@@ -156,7 +156,7 @@ const CreateStudent=(props)=>{
         progress: undefined,
         theme: "light",
         transition: slide,
-      })
+      });
       setTimeOut=(()=>{
         setToast(false); // Hide the toast
                 navigate('/'); // Navigate to homepage
@@ -176,8 +176,9 @@ const CreateStudent=(props)=>{
                 draggable: true,
                 progress: undefined,
                 theme: "dark",
-                transition: Slide,
+                transition: slide,
             });
-          }
-     }
+            
+      });
+     };
   }
