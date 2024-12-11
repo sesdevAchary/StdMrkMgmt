@@ -130,9 +130,7 @@ const CreateStudent=(props)=>{
   // form change handler 
   const onSubmit =(e)=>{
      e.preventDefault();
-
-     axios
-
+    axios
      .post('/api/students',student)  // sends a post reuest to the /api/books on the server ,to add a new book//
      .then((res)=>{
       setStudent({
@@ -163,7 +161,7 @@ const CreateStudent=(props)=>{
             }, 5000); // Adjust the timeout as needed
       })
 
-      .catch(error){
+      .catch((err)=>{
         console.log('Error in CreateBook!');
             console.log('The error is -> ');
             console.log(err);
