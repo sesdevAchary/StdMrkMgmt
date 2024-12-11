@@ -161,7 +161,23 @@ const CreateStudent=(props)=>{
         setToast(false); // Hide the toast
                 navigate('/'); // Navigate to homepage
             }, 5000); // Adjust the timeout as needed
-      }
+      })
+
+      .catch(error){
+        console.log('Error in CreateBook!');
+            console.log('The error is -> ');
+            console.log(err);
+            toast.error('Something went wrong, try again!', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+                transition: Slide,
+            });
+          }
      }
   }
-}
