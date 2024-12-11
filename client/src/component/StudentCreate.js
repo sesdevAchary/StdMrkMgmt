@@ -131,7 +131,7 @@ const CreateStudent=(props)=>{
   const onSubmit =(e)=>{
      e.preventDefault();
     axios
-     .post('/api/students',student)  // sends a post reuest to the /api/books on the server ,to add a new book//
+     .post('/api/students',student)  // sends a post reuest to the /api/student on the server ,to add a new book//
      .then((res)=>{
       setStudent({
         name:'',
@@ -179,4 +179,71 @@ const CreateStudent=(props)=>{
             
       });
      };
+
+    return(
+      <div className='CreateStudent'>
+           <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+        transition={slide}
+      />
+      <div className='Container  d-flex align-items-center justify-content-center'>
+        <div className='row w-100'>
+          <div className='col md-8 m-auto'>
+            <br/>
+            <Link to='/create-student' className='btn btn-outline-warning float-left'>
+                            Complete Student List
+                        </Link>
+              <div>
+                <div className='col md-8 m-auto style={{display:"flex" align-item:"center" flexDirection: "column" }}'>
+                 <h1 className='display-4 text-center'>Add Student Here </h1>
+                 <p className='lead text-center'>Create A New Student</p>
+
+
+                 <form noValidate onSubmit={onsubmit}>
+
+                  <div className="all-form">
+                    <input 
+                      type='text'
+                      placeholder='Enter the Name of the STUDENT'
+                      name='name'
+                      className='form-controller'
+                      value='student.name'
+                      onChange={onChange}
+                    />  
+
+                  </div>
+
+                  <div className="all-form">
+                    <input 
+                      type=''
+                  </div>
+                 </form>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    )
+
+
+
+
+
+
+
+
+
+
+
   }
+  export default CreateStudent;
