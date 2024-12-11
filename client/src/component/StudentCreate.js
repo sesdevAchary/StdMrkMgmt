@@ -128,4 +128,14 @@ const CreateStudent=(props)=>{
 
 
   // form change handler 
+  const onSubmit =(e)=>{
+     e.preventDefault();
+
+     axios
+
+     .post('/api/students',student); // sends a post reuest to the /api/books on the server ,to add a new book//
+     .then((res)=>{
+      
+     }
+  }
 }
