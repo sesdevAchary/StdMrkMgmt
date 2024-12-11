@@ -133,9 +133,19 @@ const CreateStudent=(props)=>{
 
      axios
 
-     .post('/api/students',student); // sends a post reuest to the /api/books on the server ,to add a new book//
+     .post('/api/students',student) // sends a post reuest to the /api/books on the server ,to add a new book//
      .then((res)=>{
-      
+      setStudent({
+        name:'',
+        roll_no:' ',
+        mail_id:' ',
+        score:' ',
+        cgpa:' ',
+        dob:' ',
+        attendance:''
+
+      });
+      console.log(student);
      }
   }
 }
