@@ -120,7 +120,7 @@ const CreateStudent = (props) => {
               <p className='lead text-center'>Create A New Student</p>
 
 
-              <form noValidate onSubmit={onSubmit}>
+              
 
                 <div className="all-form">
                   <input
