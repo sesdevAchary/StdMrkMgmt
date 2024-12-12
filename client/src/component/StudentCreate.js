@@ -104,7 +104,7 @@ const CreateStudent = (props) => {
         pauseOnFocusLoss
         draggable
         pauseOnHover
-        theme="light"
+        theme="dark"
         transition={Slide}
       />
       <div className='Container  d-flex align-items-center justify-content-center'>
