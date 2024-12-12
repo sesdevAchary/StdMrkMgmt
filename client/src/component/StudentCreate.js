@@ -148,7 +148,7 @@ const CreateStudent = (props) => {
 
                 <div className="all-form">
                   <input
-                    type=text
+                    type='mail'
                     placeholder='Enter the mail ID of the STUDENT'
                     name='mail_id'
                     className='form-control'
