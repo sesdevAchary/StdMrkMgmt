@@ -9,10 +9,10 @@ import { CssBaseline, Box } from '@mui/material';
 
 
 
-import StudentList from './component/StudentList';
-import StudentDetails from './component/StudentDetails';
-import StudentAdd from './component/StudentCreate';
-import StudentUpdate from './component/StudentUpdate';
+// import StudentList from './component/StudentList';
+// import StudentDetails from './component/StudentDetails';
+import CreateStudent from './component/StudentCreate';
+// import StudentUpdate from './component/StudentUpdate';
 import Footer from './component/Footer';
 import Navbar from './component/Navbar';
 import HomePage from './component/HomePage';
@@ -27,7 +27,7 @@ import  clinicManagementTheme from './Theme/studentMgmt';
 
 const App = () => {
   return (
-    <ThemeProvider theme={ clinicManagementTheme}>
+    <ThemeProvider theme={clinicManagementTheme}>
       <CssBaseline />
     <Router>
     <Box display="flex" flexDirection="column" minHeight="100vh">
@@ -35,10 +35,10 @@ const App = () => {
         <div className="box-container">
             
             <Routes>
-                 <Route path="/list" element={<StudentList />} />
-                <Route path="/add" element={<StudentAdd />} />
-                <Route path="/edit/:id" element={<StudentUpdate />} />
-                <Route path="/detail/:id" element={<StudentDetails />} />
+                 {/* <Route path="/list" element={<StudentList/>} /> */}
+                <Route path="/add" element={<CreateStudent/>} />
+                {/* <Route path="/edit/:id" element={<StudentUpdate />} />
+                <Route path="/detail/:id" element={<StudentDetails />} /> */}
                 <Route exact path='/' element={<HomePage />} /> 
             </Routes>
 

@@ -33,6 +33,16 @@ const CreateStudent = (props) => {
   // form change handler 
   const onSubmit = (e) => {
     e.preventDefault();
+
+    if (!student.first_name || !student.unique_id || !student.mail_id) {
+      toast.error('Please fill in all required fields.', {
+        position: "top-right",
+        autoClose: 5000,
+        theme: "dark",
+      });
+      return;  // Do not proceed with the API call if validation fails
+    }
+
     axios
       .post('/api/students', student)  // sends a post reuest to the /api/students on the server ,to add a new book//
       .then((res) => {
@@ -105,7 +115,7 @@ const CreateStudent = (props) => {
               Complete Student List
             </Link>
             </div>
-            <div className='col-md-8 m-auto' style={{ display: "flex", alignItems: "center", flexDirection: "column" }}>
+            <div className='col-md-8 m-auto' style={{ display:"flex", alignItems: "center", flexDirection: "column" }}>
               <h1 className='display-4 text-center'>Add Student Here </h1>
               <p className='lead text-center'>Create A New Student</p>
 
@@ -126,7 +136,7 @@ const CreateStudent = (props) => {
 
                 <div className="all-form">
                   <input
-                    type='text'
+                    type='number'
                     placeholder='Enter the Roll number of the STUDENT'
                     name='unique_id'
                   className='form-control'
@@ -138,7 +148,7 @@ const CreateStudent = (props) => {
 
                 <div className="all-form">
                   <input
-                    type='text'
+                    type='email'
                     placeholder='Enter the mail ID of the STUDENT'
                     name='mail_id'
                     className='form-control'
@@ -162,7 +172,7 @@ const CreateStudent = (props) => {
 
                 <div className="all-form">
                   <input
-                    type='text'
+                    type='number'
                     placeholder='Enter the attendence number  of the STUDENT'
                     name='attendence'
                     className='form-control'
@@ -173,7 +183,7 @@ const CreateStudent = (props) => {
 
                 <div className="all-form">
                   <input
-                    type='text'
+                    type='number'
                     placeholder='Enter the total score   of the STUDENT'
                     name='total_score'
                    className='form-control'
@@ -184,7 +194,7 @@ const CreateStudent = (props) => {
 
                 <div className="all-form">
                   <input
-                    type='text'
+                    type='number'
                     placeholder='Enter the cgpa obtained by the STUDENT'
                     name='avg_cgpa'
                     className='form-control'
