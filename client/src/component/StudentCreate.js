@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { slide, ToastContainer, toast } from 'react-toastify';
-import 'react-tostify/dist/ReactTostify.css';
+import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
 
 
@@ -34,7 +34,7 @@ const CreateStudent = (props) => {
   const onSubmit = (e) => {
     e.preventDefault();
     axios
-      .post('/api/students', student)  // sends a post reuest to the /api/student on the server ,to add a new book//
+      .post('/api/students', student)  // sends a post reuest to the /api/students on the server ,to add a new book//
       .then((res) => {
         console.log(student);
         setStudent({
@@ -65,9 +65,8 @@ const CreateStudent = (props) => {
       })
 
       .catch((err) => {
-        console.log('Error in CreateBook!');
-        console.log('The error is -> ');
-        console.log(err);
+        console.log('Error in CreateStudent!');
+        console.error(err.response ? err.response.data : err.message);
         toast.error('Something went wrong, try again!', {
           position: "top-right",
           autoClose: 5000,
@@ -176,7 +175,7 @@ const CreateStudent = (props) => {
                   <input
                     type='text'
                     placeholder='Enter the total score   of the STUDENT'
-                    name=' total_score'
+                    name='total_score'
                    className='form-control'
                     value={student.total_score}
                     onChange={onChange}
