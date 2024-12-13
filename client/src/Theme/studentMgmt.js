@@ -1,105 +1,95 @@
-
-
+// src/theme/midnightEmerald.js
 import { createTheme } from '@mui/material/styles';
 
-const clinicThemeColors = {
-    base: '#ffffff',
-    surface: '#f9f9f9',
-    overlay: '#e0e0e0',
-    muted: '#9e9e9e',
-    subtle: '#bdbdbd',
-    text: '#333333',
-    primaryMain: '#00796b', // Calming teal
-    secondaryMain: '#0288d1', // Trustworthy blue
-    error: '#d32f2f', // Alert red
-    warning: '#f9a825', // Attention yellow
-    info: '#0288d1', // Consistent blue
-    success: '#388e3c', // Positive green
-    highlightLow: '#f5f5f5',
-    highlightMed: '#eeeeee',
-    highlightHigh: '#e0e0e0',
+const midnightEmeraldColors = {
+  base: '#0e1a28', // Deep midnight blue background
+  surface: '#1b2a3c', // Slightly lighter blue for surfaces
+  overlay: '#25334a', // A more subtle blue-gray for overlay
+  muted: '#5a6478', // Muted grayish-blue
+  subtle: '#8091a4', // Subtle light grayish-blue
+  text: '#d0d9e1', // Light gray for text
+  emerald: '#4caf50', // Emerald green as the main color
+  gold: '#ffb74d', // Golden accents
+  coral: '#ff6f61', // Coral as a secondary highlight
+  sky: '#64b5f6', // Sky blue for info messages
+  lavender: '#b39ddb', // Lavender for highlights
+  highlightLow: '#1d2a3d', // Darker low-light color
+  highlightMed: '#37465c', // Medium light color
+  highlightHigh: '#4f6175', // Lightest shade for highlights
 };
 
-const clinicManagementTheme = createTheme({
-    palette: {
-        mode: 'light',
-        background: {
-            default: clinicThemeColors.base,
-            paper: clinicThemeColors.surface,
-        },
-        primary: {
-            main: clinicThemeColors.primaryMain,
-        },
-        secondary: {
-            main: clinicThemeColors.secondaryMain,
-        },
-        error: {
-            main: clinicThemeColors.error,
-        },
-        warning: {
-            main: clinicThemeColors.warning,
-        },
-        info: {
-            main: clinicThemeColors.info,
-        },
-        success: {
-            main: clinicThemeColors.success,
-        },
-        text: {
-            primary: clinicThemeColors.text,
-            secondary: clinicThemeColors.muted,
-        },
+const midnightEmeraldTheme = createTheme({
+  palette: {
+    mode: 'dark',
+    background: {
+      default: midnightEmeraldColors.base,
+      paper: midnightEmeraldColors.surface,
     },
-    typography: {
-        fontFamily: '"Lato", "Roboto", "Helvetica", "Arial", sans-serif',
-        h1: {
-            fontFamily: '"Roboto Slab", serif',
-        },
-        h2: {
-            fontFamily: '"Roboto Slab", serif',
-        },
-        h3: {
-            fontFamily: '"Roboto Slab", serif',
-        },
-        h4: {
-            fontFamily: '"Roboto Slab", serif',
-        },
-        h5: {
-            fontFamily: '"Roboto Slab", serif',
-        },
-        h6: {
-            fontFamily: '"Roboto Slab", serif',
-        },
-        body1: {
-            fontFamily: '"Lato", sans-serif',
-        },
-        body2: {
-            fontFamily: '"Lato", sans-serif',
-        },
+    primary: {
+      main: midnightEmeraldColors.emerald,
     },
-    components: {
-        MuiAppBar: {
-            styleOverrides: {
-                root: {
-                    backgroundColor: clinicThemeColors.primaryMain,
-                    color: clinicThemeColors.text, // Ensures the text is visible on the AppBar
-                },
-            },
-        },        
-        MuiButton: {
-            styleOverrides: {
-                root: {
-                    textTransform: 'none',
-                    borderRadius: '8px',
-                },
-            },
-        },
-        MuiCssBaseline: {
-            styleOverrides: `
-                @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Roboto+Slab:wght@400;700&display=swap');
-            `,
-        },
+    secondary: {
+      main: midnightEmeraldColors.coral,
     },
+    error: {
+      main: midnightEmeraldColors.coral,
+    },
+    warning: {
+      main: midnightEmeraldColors.gold,
+    },
+    info: {
+      main: midnightEmeraldColors.sky,
+    },
+    success: {
+      main: midnightEmeraldColors.emerald,
+    },
+    text: {
+      primary: midnightEmeraldColors.text,
+      secondary: midnightEmeraldColors.subtle,
+    },
+  },
+  typography: {
+    fontFamily: '"Roboto", "Arial", sans-serif',
+    h1: {
+      fontFamily: '"Courier New", monospace',
+    },
+    h2: {
+      fontFamily: '"Courier New", monospace',
+    },
+    h3: {
+      fontFamily: '"Courier New", monospace',
+    },
+    h4: {
+      fontFamily: '"Courier New", monospace',
+    },
+    h5: {
+      fontFamily: '"Courier New", monospace',
+    },
+    h6: {
+      fontFamily: '"Courier New", monospace',
+    },
+  },
+  components: {
+    MuiAppBar: {
+      styleOverrides: {
+        root: {
+          backgroundColor: midnightEmeraldColors.surface,
+        },
+      },
+    },
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          textTransform: 'none',
+        },
+      },
+    },
+    MuiCssBaseline: {
+      styleOverrides: `
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Courier+New&display=swap');
+      `,
+    }
+  },
 });
 
-export default clinicManagementTheme;
+export default midnightEmeraldTheme;
