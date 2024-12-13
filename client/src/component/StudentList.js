@@ -69,10 +69,12 @@ function StudentList(){
 
 
     useEffect(()=>{
-        axios.get('/api/student')
-        .then(res)=>{
-            student.res(student)
-        }
+        axios
+        .get('/api/student')
+        .then((res)=>{
+            setStudents(res.data);
+            setLoading(false);
+        })
     })
     
 }
