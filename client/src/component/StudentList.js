@@ -63,7 +63,8 @@ import axios from 'axios';
 import { Button, Typography, Container, Grid, CircularProgress, Box } from '@mui/material';
 
 
-function StudentList()={
-    const [student,setStudent]=useState('');
+function StudentList(){
+    const [student,setStudent]=useState('[]');
+    const[loading,setLoading]=useState(true);
     
 }
