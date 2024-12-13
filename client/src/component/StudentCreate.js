@@ -44,7 +44,7 @@ const CreateStudent = (props) => {
     }
 
     axios
-      .post('/api/students', student)  // sends a post reuest to the /api/students on the server ,to add a new book//
+    .post('http://localhost:5000/api/students', student)  // sends a post reuest to the /api/students on the server ,to add a new book//
       .then((res) => {
         console.log(student);
         setStudent({
@@ -148,7 +148,7 @@ const CreateStudent = (props) => {
 
                 <div className="all-form">
                   <input
-                    type='mail'
+                    type='email'
                     placeholder='Enter the mail ID of the STUDENT'
                     name='mail_id'
                     className='form-control'

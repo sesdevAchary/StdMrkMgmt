@@ -1,85 +1,84 @@
-// src/theme/sapphireGold.js
+// src/theme/midnightLavender.js
 import { createTheme } from '@mui/material/styles';
 
-const sapphireGoldColors = {
-  base: '#0c0f1a', // Deep sapphire blue background
-  surface: '#1b2331', // Darker surface with subtle blue tones
-  overlay: '#2a3a4f', // Rich blue-gray for overlay
-  muted: '#586779', // Muted cool grayish-blue
-  subtle: '#8a97b1', // Soft gray-blue for subtle accents
-  text: '#f0f4f8', // Crisp white-gray for text
-  sapphire: '#3d70a3', // Rich sapphire blue as the main color
-  gold: '#ffd700', // Bright gold accents
-  coral: '#ff4c58', // Coral for secondary highlights
-  mint: '#a4d8c7', // Mint green for info messages
-  lavender: '#c8a2d9', // Soft lavender for highlights
-  highlightLow: '#212c3b', // Deep low-light shade
-  highlightMed: '#3b4a63', // Balanced medium light shade
-  highlightHigh: '#59688d', // Lighter high-light color
+const midnightLavenderColors = {
+  base: '#121212', // Deep midnight black background
+  surface: '#1a1a2e', // Darker surface with cool undertones
+  overlay: '#2c2c57', // Subtle cool blue overlay
+  muted: '#56597c', // Muted cool gray for secondary elements
+  subtle: '#a8a8d0', // Soft lavender-gray for text accents
+  text: '#e8e8ff', // Light, soft lavender for primary text
+  lavender: '#7a55d6', // Bold lavender as the primary accent color
+  electricBlue: '#00bcd4', // Neon blue for secondary highlights
+  rosePink: '#f48fb1', // Soft rose pink for highlights
+  teal: '#00796b', // Teal for info messages
+  highlightLow: '#1c1c33', // Darker low-light color
+  highlightMed: '#3b3b6d', // Medium dark grayish tone
+  highlightHigh: '#636388', // Lighter cool gray for highlights
 };
 
-const sapphireGoldTheme = createTheme({
+const midnightLavenderTheme = createTheme({
   palette: {
     mode: 'dark',
     background: {
-      default: sapphireGoldColors.base,
-      paper: sapphireGoldColors.surface,
+      default: midnightLavenderColors.base,
+      paper: midnightLavenderColors.surface,
     },
     primary: {
-      main: sapphireGoldColors.sapphire,
+      main: midnightLavenderColors.lavender,
     },
     secondary: {
-      main: sapphireGoldColors.coral,
+      main: midnightLavenderColors.electricBlue,
     },
     error: {
-      main: sapphireGoldColors.coral,
+      main: midnightLavenderColors.rosePink,
     },
     warning: {
-      main: sapphireGoldColors.gold,
+      main: midnightLavenderColors.rosePink,
     },
     info: {
-      main: sapphireGoldColors.mint,
+      main: midnightLavenderColors.teal,
     },
     success: {
-      main: sapphireGoldColors.sapphire,
+      main: midnightLavenderColors.lavender,
     },
     text: {
-      primary: sapphireGoldColors.text,
-      secondary: sapphireGoldColors.subtle,
+      primary: midnightLavenderColors.text,
+      secondary: midnightLavenderColors.subtle,
     },
   },
   typography: {
-    fontFamily: '"Lora", serif, "Arial", sans-serif',
+    fontFamily: '"Poppins", sans-serif', // Clean and modern sans-serif
     h1: {
-      fontFamily: '"Playfair Display", serif',
+      fontFamily: '"Roboto Slab", serif', // Bold serif for headings
       fontWeight: 700,
     },
     h2: {
-      fontFamily: '"Playfair Display", serif',
-      fontWeight: 700,
+      fontFamily: '"Roboto Slab", serif',
+      fontWeight: 600,
     },
     h3: {
-      fontFamily: '"Playfair Display", serif',
-      fontWeight: 600,
+      fontFamily: '"Roboto Slab", serif',
+      fontWeight: 500,
     },
     h4: {
-      fontFamily: '"Playfair Display", serif',
-      fontWeight: 600,
+      fontFamily: '"Roboto Slab", serif',
+      fontWeight: 500,
     },
     h5: {
-      fontFamily: '"Playfair Display", serif',
-      fontWeight: 500,
+      fontFamily: '"Roboto Slab", serif',
+      fontWeight: 400,
     },
     h6: {
-      fontFamily: '"Playfair Display", serif',
-      fontWeight: 500,
+      fontFamily: '"Roboto Slab", serif',
+      fontWeight: 400,
     },
   },
   components: {
     MuiAppBar: {
       styleOverrides: {
         root: {
-          backgroundColor: sapphireGoldColors.surface,
+          backgroundColor: midnightLavenderColors.surface,
         },
       },
     },
@@ -87,29 +86,53 @@ const sapphireGoldTheme = createTheme({
       styleOverrides: {
         root: {
           textTransform: 'none',
-          borderRadius: '12px', // Rounded buttons for a modern look
-          padding: '8px 16px',
+          borderRadius: '10px', // Rounded edges for modern buttons
+          padding: '12px 20px',
+          fontWeight: 'bold',
           '&:hover': {
-            backgroundColor: sapphireGoldColors.sapphire,
+            backgroundColor: midnightLavenderColors.lavender,
             color: '#fff',
+            transform: 'scale(1.05)', // Hover animation
           },
         },
       },
     },
     MuiCssBaseline: {
       styleOverrides: `
-        @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto+Slab:wght@400;500;700&display=swap');
       `,
     },
     MuiPaper: {
       styleOverrides: {
         root: {
-          borderRadius: '12px', // Rounded corners for cards and paper elements
-          boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', // Subtle shadow for depth
+          borderRadius: '10px', // Rounded corners for a modern feel
+          boxShadow: '0 6px 12px rgba(0, 0, 0, 0.2)', // Stronger shadow for depth
+        },
+      },
+    },
+    MuiTypography: {
+      styleOverrides: {
+        h1: {
+          fontSize: '3rem',
+        },
+        h2: {
+          fontSize: '2.5rem',
+        },
+        h3: {
+          fontSize: '2rem',
+        },
+        h4: {
+          fontSize: '1.75rem',
+        },
+        h5: {
+          fontSize: '1.5rem',
+        },
+        h6: {
+          fontSize: '1.25rem',
         },
       },
     },
   },
 });
 
-export default sapphireGoldTheme;
+export default midnightLavenderTheme;
