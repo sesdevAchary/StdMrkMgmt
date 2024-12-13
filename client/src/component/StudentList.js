@@ -66,5 +66,13 @@ import { Button, Typography, Container, Grid, CircularProgress, Box } from '@mui
 function StudentList(){
     const [student,setStudent]=useState('[]');
     const[loading,setLoading]=useState(true);
+
+
+    useEffect(()=>{
+        axios.get('/api/student')
+        .then(res)=>{
+            student.res(student)
+        }
+    })
     
 }
