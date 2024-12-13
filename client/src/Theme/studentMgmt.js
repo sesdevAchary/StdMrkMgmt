@@ -1,79 +1,85 @@
-// src/theme/midnightEmerald.js
+// src/theme/sapphireGold.js
 import { createTheme } from '@mui/material/styles';
 
-const midnightEmeraldColors = {
-  base: '#0e1a28', // Deep midnight blue background
-  surface: '#1b2a3c', // Slightly lighter blue for surfaces
-  overlay: '#25334a', // A more subtle blue-gray for overlay
-  muted: '#5a6478', // Muted grayish-blue
-  subtle: '#8091a4', // Subtle light grayish-blue
-  text: '#d0d9e1', // Light gray for text
-  emerald: '#4caf50', // Emerald green as the main color
-  gold: '#ffb74d', // Golden accents
-  coral: '#ff6f61', // Coral as a secondary highlight
-  sky: '#64b5f6', // Sky blue for info messages
-  lavender: '#b39ddb', // Lavender for highlights
-  highlightLow: '#1d2a3d', // Darker low-light color
-  highlightMed: '#37465c', // Medium light color
-  highlightHigh: '#4f6175', // Lightest shade for highlights
+const sapphireGoldColors = {
+  base: '#0c0f1a', // Deep sapphire blue background
+  surface: '#1b2331', // Darker surface with subtle blue tones
+  overlay: '#2a3a4f', // Rich blue-gray for overlay
+  muted: '#586779', // Muted cool grayish-blue
+  subtle: '#8a97b1', // Soft gray-blue for subtle accents
+  text: '#f0f4f8', // Crisp white-gray for text
+  sapphire: '#3d70a3', // Rich sapphire blue as the main color
+  gold: '#ffd700', // Bright gold accents
+  coral: '#ff4c58', // Coral for secondary highlights
+  mint: '#a4d8c7', // Mint green for info messages
+  lavender: '#c8a2d9', // Soft lavender for highlights
+  highlightLow: '#212c3b', // Deep low-light shade
+  highlightMed: '#3b4a63', // Balanced medium light shade
+  highlightHigh: '#59688d', // Lighter high-light color
 };
 
-const midnightEmeraldTheme = createTheme({
+const sapphireGoldTheme = createTheme({
   palette: {
     mode: 'dark',
     background: {
-      default: midnightEmeraldColors.base,
-      paper: midnightEmeraldColors.surface,
+      default: sapphireGoldColors.base,
+      paper: sapphireGoldColors.surface,
     },
     primary: {
-      main: midnightEmeraldColors.emerald,
+      main: sapphireGoldColors.sapphire,
     },
     secondary: {
-      main: midnightEmeraldColors.coral,
+      main: sapphireGoldColors.coral,
     },
     error: {
-      main: midnightEmeraldColors.coral,
+      main: sapphireGoldColors.coral,
     },
     warning: {
-      main: midnightEmeraldColors.gold,
+      main: sapphireGoldColors.gold,
     },
     info: {
-      main: midnightEmeraldColors.sky,
+      main: sapphireGoldColors.mint,
     },
     success: {
-      main: midnightEmeraldColors.emerald,
+      main: sapphireGoldColors.sapphire,
     },
     text: {
-      primary: midnightEmeraldColors.text,
-      secondary: midnightEmeraldColors.subtle,
+      primary: sapphireGoldColors.text,
+      secondary: sapphireGoldColors.subtle,
     },
   },
   typography: {
-    fontFamily: '"Roboto", "Arial", sans-serif',
+    fontFamily: '"Lora", serif, "Arial", sans-serif',
     h1: {
-      fontFamily: '"Courier New", monospace',
+      fontFamily: '"Playfair Display", serif',
+      fontWeight: 700,
     },
     h2: {
-      fontFamily: '"Courier New", monospace',
+      fontFamily: '"Playfair Display", serif',
+      fontWeight: 700,
     },
     h3: {
-      fontFamily: '"Courier New", monospace',
+      fontFamily: '"Playfair Display", serif',
+      fontWeight: 600,
     },
     h4: {
-      fontFamily: '"Courier New", monospace',
+      fontFamily: '"Playfair Display", serif',
+      fontWeight: 600,
     },
     h5: {
-      fontFamily: '"Courier New", monospace',
+      fontFamily: '"Playfair Display", serif',
+      fontWeight: 500,
     },
     h6: {
-      fontFamily: '"Courier New", monospace',
+      fontFamily: '"Playfair Display", serif',
+      fontWeight: 500,
     },
   },
   components: {
     MuiAppBar: {
       styleOverrides: {
         root: {
-          backgroundColor: midnightEmeraldColors.surface,
+          backgroundColor: sapphireGoldColors.surface,
         },
       },
     },
@@ -81,15 +87,29 @@ const midnightEmeraldTheme = createTheme({
       styleOverrides: {
         root: {
           textTransform: 'none',
+          borderRadius: '12px', // Rounded buttons for a modern look
+          padding: '8px 16px',
+          '&:hover': {
+            backgroundColor: sapphireGoldColors.sapphire,
+            color: '#fff',
+          },
         },
       },
     },
     MuiCssBaseline: {
       styleOverrides: `
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Courier+New&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
       `,
-    }
+    },
+    MuiPaper: {
+      styleOverrides: {
+        root: {
+          borderRadius: '12px', // Rounded corners for cards and paper elements
+          boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', // Subtle shadow for depth
+        },
+      },
+    },
   },
 });
 
-export default midnightEmeraldTheme;
+export default sapphireGoldTheme;
