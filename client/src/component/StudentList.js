@@ -72,7 +72,7 @@ function StudentList(){
         axios
         .get('/api/student')
         .then((res)=>{
-            setStudents(res.data);
+            setStudent(res.data);
             setLoading(false);
         })
     })
