@@ -97,7 +97,7 @@ function StudentList(){
                 </Box>
             ):(
                 <Grid Container spacing={4}>
-                    {StudentList.length===0 ?(
+                    {students.length === 0  ?(
                         <Grid item xs={12}>
                              <Typography variant='h6' color='text.secondary'>
                                 OOPS !!! No Students found..
@@ -106,13 +106,15 @@ function StudentList(){
                     ):( students.map((student,index) => (
                         <Grid item xs={12} sm={6} md={4} key={index}>
                             <StudentCard student={student} />
-                        </Grid>)}
+                        </Grid>))
+                        ))
+                        }
                 </Grid>
             )
             
         }
          </Container>
-    )
+    );
     
 }
 export default StudentList;
