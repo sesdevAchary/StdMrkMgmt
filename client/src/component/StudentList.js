@@ -86,6 +86,8 @@ function StudentList(){
             <Typography variant="h3" color="primary" gutterBottom component={h1}>
                 STUDENT LIST
             </Typography>
+
+            <button component={Link} to ="/Create-Student" color="primary" variant="contained" sx={{mb:4}} ></button>
          </Container>
     )
     
