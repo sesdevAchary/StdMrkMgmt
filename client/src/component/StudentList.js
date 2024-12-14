@@ -87,7 +87,17 @@ function StudentList(){
                 STUDENT LIST
             </Typography>
 
-            <button component={Link} to ="/Create-Student" color="primary" variant="contained" sx={{mb:4}} ></button>
+            <button component={Link} to ="/Create-Student" color="primary" variant="contained" sx={{mb:4}} >
+            Add New Student...
+            </button>
+
+            {loading?(
+                <Box display="flex" justifyContent="center" mt={7}>
+                    <CircularProgress/>
+                </Box>
+            )
+            
+        }
          </Container>
     )
     
