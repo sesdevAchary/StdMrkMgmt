@@ -95,6 +95,12 @@ function StudentList(){
                 <Box display="flex" justifyContent="center" mt={7}>
                     <CircularProgress/>
                 </Box>
+            ):(
+                <Grid Container spacing={4}>
+                    {StudentList.length===0 ?(
+                        <Grid item xs={12}>
+                    )}
+                </Grid>
             )
             
         }
