@@ -83,7 +83,9 @@ function StudentList(){
 
     return(
          <Container maxWidth='lg' sx={{py:4}}>    
-
+            <Typography variant="h3" color="primary" gutterBottom component={h1}>
+                STUDENT LIST
+            </Typography>
          </Container>
     )
     
