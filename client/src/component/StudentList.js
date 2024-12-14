@@ -79,6 +79,13 @@ function StudentList(){
             console.log('error in loading  student status ',err);
             setLoading(false);
         });
-    })
+    },[]);
+
+    return(
+         <Container maxWidth='lg' sx={{py:4}}>    
+
+         </Container>
+    )
     
 }
+export default StudentList;
