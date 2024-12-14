@@ -103,7 +103,10 @@ function StudentList(){
                                 OOPS !!! No Students found..
                             </Typography>
                         </Grid>
-                    )}
+                    ):( students.map((student,index) => (
+                        <Grid item xs={12} sm={6} md={4} key={index}>
+                            <StudentCard student={student} />
+                        </Grid>)}
                 </Grid>
             )
             
