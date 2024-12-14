@@ -75,6 +75,10 @@ function StudentList(){
             setStudent(res.data);
             setLoading(false);
         })
+        .catch((err)=>{
+            console.log('error in loading  student status ',err);
+            setLoading(false);
+        });
     })
     
 }
