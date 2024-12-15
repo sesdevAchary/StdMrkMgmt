@@ -1,61 +1,3 @@
-//  import React,{useState,useEffect} from 'react';
-//  import {Link} from   'react-router-dom'; /* to navigate between the routes */
-//  import axios from    'axios'; /* promise based http for client making request*/
-//  import Notification from './Notification';    /* for displaying notification to the user*/
-
-
-
-//  // To retrive the url from the environment//
-//  const API_URL= process.env.REACT_APP_API_URL;
-
-
-//  // functional component for state initialisation//
-//   const StudentList =() =>{
-//          const[student,setStudent]= useState([]); /* array to hold student data,initially empty*/
-//          const[notification ,setNotification]=useState( ' ');
-
-//        useEffect(()=>{
-//         const fetchStudent = async ()=>{
-//             try{
-//                 const response = await axios.get(API_URL);
-//                 setStudent(response.data);
-//             }catch(error){
-//                 console.log('error fetching student:',error);
-//             }
-//         };
-//         fetchStudent();
-//        }, []);
-//         return (
-//             <div className='box-container'>
-//             <h1>ALL STUDENT LIST </h1>
-//             <Link to ="/add" className='btn btn-add add-person-button'> Add student </Link>
-
-//             <table>
-//                 <thead>
-//                     <tr>
-//                         <th>Name</th>
-//                         <th>roll_no</th>
-//                     </tr>
-//                 </thead>
-//                 <tbody>
-//                     {student.map(student =>(<tr key={student.id} className="person-name"><td>
-//                         <link to={`/details/${student.id}`}>{student.name}</link></td>
-//                         <td>{student.roll_no}</td>
-//                         </tr>))}
-//                 </tbody>
-//             </table>
-//             {notification && (
-//                 <Notification message={notification} onClose={()=>setNotification( ' ')}/>
-
-//             )}
-//             </div>
-//         );
-//   };
-
-
-//   export default StudentList;
-
-
 
 import React ,{useState, useEffect} from "react";
 import Link from 'react-router-dom';
@@ -64,7 +6,7 @@ import { Button, Typography, Container, Grid, CircularProgress, Box } from '@mui
 
 
 function StudentList(){
-    const [student,setStudent]=useState('[]');
+    const [Students,setStudent]=useState('[]');
     const[loading,setLoading]=useState(true);
 
 
@@ -87,9 +29,9 @@ function StudentList(){
                 STUDENT LIST
             </Typography>
 
-            <button component={Link} to ="/Create-Student" color="primary" variant="contained" sx={{mb:4}} >
+            <Button component={Link} to ="/Create-Student" color="primary" variant="contained" sx={{mb:4}} >
             Add New Student...
-            </button>
+            </Button>
 
             {loading?(
                 <Box display="flex" justifyContent="center" mt={7}>
@@ -97,13 +39,13 @@ function StudentList(){
                 </Box>
             ):(
                 <Grid Container spacing={4}>
-                    {students.length === 0  ?(
+                    Students.length === 0  ?(
                         <Grid item xs={12}>
                              <Typography variant='h6' color='text.secondary'>
                                 OOPS !!! No Students found..
                             </Typography>
                         </Grid>
-                    ):( students.map((student,index) => (
+                    ):( Students.map((student,index) => (
                         <Grid item xs={12} sm={6} md={4} key={index}>
                             <StudentCard student={student} />
                         </Grid>))
