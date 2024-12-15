@@ -1,138 +1,137 @@
-// src/theme/midnightLavender.js
+// src/theme/twilightHorizon.js
 import { createTheme } from '@mui/material/styles';
 
-const midnightLavenderColors = {
-  base: '#121212', // Deep midnight black background
-  surface: '#1a1a2e', // Darker surface with cool undertones
-  overlay: '#2c2c57', // Subtle cool blue overlay
-  muted: '#56597c', // Muted cool gray for secondary elements
-  subtle: '#a8a8d0', // Soft lavender-gray for text accents
-  text: '#e8e8ff', // Light, soft lavender for primary text
-  lavender: '#7a55d6', // Bold lavender as the primary accent color
-  electricBlue: '#00bcd4', // Neon blue for secondary highlights
-  rosePink: '#f48fb1', // Soft rose pink for highlights
-  teal: '#00796b', // Teal for info messages
-  highlightLow: '#1c1c33', // Darker low-light color
-  highlightMed: '#3b3b6d', // Medium dark grayish tone
-  highlightHigh: '#636388', // Lighter cool gray for highlights
+const twilightHorizonColors = {
+  base: '#2C2E43',
+  surface: '#383A59',
+  overlay: '#52557A',
+  muted: '#9298B8',
+  subtle: '#F0E9D2',
+  text: '#F7F7FF',
+  love: '#F2545B',
+  gold: '#EFB366',
+  rose: '#FF9671',
+  pine: '#A0C4A8',
+  foam: '#D4ECDD',
+  iris: '#4357AD',
+  highlightLow: '#2E4057',
+  highlightMed: '#7289DA',
+  highlightHigh: '#FF6F61',
 };
 
-const midnightLavenderTheme = createTheme({
+const twilightHorizonTheme = createTheme({
+  MuiCssBaseline: {
+    styleOverrides: `
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap');
+    `,
+  },
   palette: {
     mode: 'dark',
     background: {
-      default: midnightLavenderColors.base,
-      paper: midnightLavenderColors.surface,
+      default: twilightHorizonColors.base,
+      paper: twilightHorizonColors.surface,
     },
     primary: {
-      main: midnightLavenderColors.lavender,
+      main: twilightHorizonColors.highlightMed,
     },
     secondary: {
-      main: midnightLavenderColors.electricBlue,
+      main: twilightHorizonColors.foam,
     },
     error: {
-      main: midnightLavenderColors.rosePink,
+      main: twilightHorizonColors.love,
     },
     warning: {
-      main: midnightLavenderColors.rosePink,
+      main: twilightHorizonColors.gold,
     },
     info: {
-      main: midnightLavenderColors.teal,
+      main: twilightHorizonColors.iris,
     },
     success: {
-      main: midnightLavenderColors.lavender,
+      main: twilightHorizonColors.pine,
     },
     text: {
-      primary: midnightLavenderColors.text,
-      secondary: midnightLavenderColors.subtle,
+      primary: twilightHorizonColors.text,
+      secondary: twilightHorizonColors.muted,
     },
   },
   typography: {
-    fontFamily: '"Poppins", sans-serif', // Clean and modern sans-serif
+    fontFamily: '"Inter", "Roboto", "Helvetica", "Arial", sans-serif',
     h1: {
-      fontFamily: '"Roboto Slab", serif', // Bold serif for headings
+      fontFamily: '"Playfair Display", serif',
       fontWeight: 700,
+      fontSize: '3rem',
     },
     h2: {
-      fontFamily: '"Roboto Slab", serif',
+      fontFamily: '"Playfair Display", serif',
       fontWeight: 600,
+      fontSize: '2.5rem',
     },
     h3: {
-      fontFamily: '"Roboto Slab", serif',
-      fontWeight: 500,
+      fontFamily: '"Playfair Display", serif',
+      fontWeight: 600,
+      fontSize: '2rem',
     },
     h4: {
-      fontFamily: '"Roboto Slab", serif',
+      fontFamily: '"Playfair Display", serif',
       fontWeight: 500,
+      fontSize: '1.75rem',
     },
     h5: {
-      fontFamily: '"Roboto Slab", serif',
-      fontWeight: 400,
+      fontFamily: '"Playfair Display", serif',
+      fontWeight: 500,
+      fontSize: '1.5rem',
     },
     h6: {
-      fontFamily: '"Roboto Slab", serif',
+      fontFamily: '"Playfair Display", serif',
       fontWeight: 400,
+      fontSize: '1.25rem',
+    },
+    button: {
+      textTransform: 'none',
     },
   },
   components: {
     MuiAppBar: {
       styleOverrides: {
         root: {
-          backgroundColor: midnightLavenderColors.surface,
+          backgroundColor: twilightHorizonColors.overlay,
+          color: twilightHorizonColors.text,
         },
       },
     },
     MuiButton: {
       styleOverrides: {
         root: {
-          textTransform: 'none',
-          borderRadius: '10px', // Rounded edges for modern buttons
-          padding: '12px 20px',
-          fontWeight: 'bold',
+          textTransform: 'capitalize',
+          borderRadius: '10px',
+          padding: '8px 16px',
+        },
+        contained: {
+          backgroundColor: twilightHorizonColors.highlightMed,
+          color: twilightHorizonColors.text,
           '&:hover': {
-            backgroundColor: midnightLavenderColors.lavender,
-            color: '#fff',
-            transform: 'scale(1.05)', // Hover animation
+            backgroundColor: twilightHorizonColors.highlightHigh,
           },
         },
       },
     },
-    MuiCssBaseline: {
-      styleOverrides: `
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto+Slab:wght@400;500;700&display=swap');
-      `,
-    },
     MuiPaper: {
       styleOverrides: {
         root: {
-          borderRadius: '10px', // Rounded corners for a modern feel
-          boxShadow: '0 6px 12px rgba(0, 0, 0, 0.2)', // Stronger shadow for depth
+          backgroundColor: twilightHorizonColors.surface,
+          color: twilightHorizonColors.text,
         },
       },
     },
-    MuiTypography: {
+    MuiCard: {
       styleOverrides: {
-        h1: {
-          fontSize: '3rem',
-        },
-        h2: {
-          fontSize: '2.5rem',
-        },
-        h3: {
-          fontSize: '2rem',
-        },
-        h4: {
-          fontSize: '1.75rem',
-        },
-        h5: {
-          fontSize: '1.5rem',
-        },
-        h6: {
-          fontSize: '1.25rem',
+        root: {
+          borderRadius: '12px',
+          boxShadow: '0 4px 10px rgba(0, 0, 0, 0.3)',
         },
       },
     },
   },
 });
 
-export default midnightLavenderTheme;
+export default twilightHorizonTheme;
