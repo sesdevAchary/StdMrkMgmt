@@ -4,5 +4,15 @@ import { Link } from 'react-router-dom';
 
 
 const StudentCard= ({Students})=>{
-    
+    return(
+        <Card
+        sx={{
+            height: '100%',
+            display: 'flex',
+            flexDirection: 'column',
+            transition: 'transform 0.2s, box-shadow 0.2s',
+        }}
+    )
 }
+
+export default StudentCard;
