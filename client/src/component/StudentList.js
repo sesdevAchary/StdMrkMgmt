@@ -1,12 +1,12 @@
 
 import React ,{useState, useEffect} from "react";
-import Link from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import axios from 'axios';
 import { Button, Typography, Container, Grid, CircularProgress, Box } from '@mui/material';
 
 
 function StudentList(){
-    const [Students,setStudent]=useState('[]');
+    const [Students,setStudent]=useState([]);
     const[loading,setLoading]=useState(true);
 
 
@@ -25,7 +25,7 @@ function StudentList(){
 
     return(
          <Container maxWidth='lg' sx={{py:4}}>    
-            <Typography variant="h3" color="primary" gutterBottom component={h1}>
+            <Typography variant="h3" color="primary" gutterBottom component="h1">
                 STUDENT LIST
             </Typography>
 
@@ -38,8 +38,8 @@ function StudentList(){
                     <CircularProgress/>
                 </Box>
             ):(
-                <Grid Container spacing={4}>
-                    Students.length === 0  ?(
+                <Grid container spacing={4}>
+                   { Students.length === 0  ?(
                         <Grid item xs={12}>
                              <Typography variant='h6' color='text.secondary'>
                                 OOPS !!! No Students found..
@@ -49,8 +49,8 @@ function StudentList(){
                         <Grid item xs={12} sm={6} md={4} key={index}>
                             <StudentCard student={student} />
                         </Grid>))
-                        ))
-                        }
+                        
+                        )}
                 </Grid>
             )
             
