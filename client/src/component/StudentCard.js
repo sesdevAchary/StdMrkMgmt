@@ -25,6 +25,13 @@ const StudentCard= ({Students})=>{
         alt='Students'
         style={{ height: 200, objectFit: 'cover', width: '100%' }}
     />
+
+
+    <cardContent sx={{flexGrow:1}}>
+        <Typography variant='h6' component='div' color='primary' gutterBottom>
+            
+        </Typography>
+    </cardContent>
     )
 }
 
