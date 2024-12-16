@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, CardContent, Typography, Button, Box } from '@mui/material';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types'
 
 
 const StudentCard = ({ Student }) => {
@@ -56,6 +57,18 @@ const StudentCard = ({ Student }) => {
             </Box>
         </Card>
     );
+};
+
+
+// to ensure that the student prop is passed correctly //
+
+StudentCard.propTypes = {
+    student: PropTypes.shape({
+        unique_id: PropTypes.string.isRequired,
+        first_name: PropTypes.string.isRequired,
+        total_score: PropTypes.number.isRequired,
+        imageUrl: PropTypes.string, // Optional if an image URL exists
+    }).isRequired,
 };
 
 export default StudentCard;
