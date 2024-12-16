@@ -27,7 +27,7 @@ const StudentCard= ({Students})=>{
             <CardContent sx={{ flexGrow: 1 }}>
                 <Typography variant='h6' component='div' color='primary' gutterBottom>
                     <Link to={`/show-student/${student._id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
-                        {student.first_name}
+                        {Students.first_name}
                     </Link>
                 </Typography>
               
@@ -39,13 +39,13 @@ const StudentCard= ({Students})=>{
                         WebkitLineClamp: 3,
                         WebkitBoxOrient: 'vertical',
                     }}>
-                    {student.total_score}
+                    {Students.total_score}
                 </Typography>
             </CardContent>
             <Box sx = {{p: 2, mt: 'auto'}}>
                 <Button
                   component={Link}
-                  to={`/show-student/${student.unique_id}`}
+                  to={`/show-student/${Students.unique_id}`}
                   variant='contained'
                   color='primary'
                   size='small'

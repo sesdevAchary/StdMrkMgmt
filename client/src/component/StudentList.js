@@ -2,7 +2,10 @@
 import React ,{useState, useEffect} from "react";
 import {Link} from 'react-router-dom';
 import axios from 'axios';
-import { Button, Typography, Container, Grid, CircularProgress, Box } from '@mui/material';
+import { Button, Typography, Container, CircularProgress, Box } from '@mui/material';
+import {Grid} from '@mui/material'
+import { ResponsiveGridLayout } from 'react-grid-layout';
+
 import StudentCard from './StudentCard';
 
 function StudentList(){
