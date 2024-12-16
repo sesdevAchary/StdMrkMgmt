@@ -3,7 +3,7 @@ import { Card, CardContent, Typography, Button, Box } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 
-const StudentCard= ({Students})=>{
+const StudentCard= ({Student})=>{
     return (
         <Card
             sx={{
@@ -26,8 +26,8 @@ const StudentCard= ({Students})=>{
             />
             <CardContent sx={{ flexGrow: 1 }}>
                 <Typography variant='h6' component='div' color='primary' gutterBottom>
-                    <Link to={`/show-student/${student._id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
-                        {Students.first_name}
+                    <Link to={`/show-student/${Student._id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                        {Student.first_name}
                     </Link>
                 </Typography>
               
@@ -39,13 +39,13 @@ const StudentCard= ({Students})=>{
                         WebkitLineClamp: 3,
                         WebkitBoxOrient: 'vertical',
                     }}>
-                    {Students.total_score}
+                    {Student.total_score}
                 </Typography>
             </CardContent>
             <Box sx = {{p: 2, mt: 'auto'}}>
                 <Button
                   component={Link}
-                  to={`/show-student/${Students.unique_id}`}
+                  to={`/show-student/${Student.unique_id}`}
                   variant='contained'
                   color='primary'
                   size='small'
