@@ -4,7 +4,6 @@ import {Link} from 'react-router-dom';
 import axios from 'axios';
 import { Button, Typography, Container, CircularProgress, Box } from '@mui/material';
 import {Grid} from '@mui/material'
-import { ResponsiveGridLayout } from 'react-grid-layout';
 
 import StudentCard from './StudentCard';
 
@@ -15,7 +14,7 @@ function StudentList(){
 
     useEffect(()=>{
         axios
-        .get('/api/student')
+        .get('https://3000-sesdevachary-stdmrkmgmt-v42c1lz37x9.ws-us117.gitpod.io//api/student')
         .then((res)=>{
             setStudent(res.data);
             setLoading(false);
