@@ -3,7 +3,7 @@ import { Card, CardContent, Typography, Button, Box } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 
-const StudentCard= ({Student})=>{
+const StudentCard = ({ Student }) => {
     return (
         <Card
             sx={{
@@ -13,7 +13,7 @@ const StudentCard= ({Student})=>{
                 transition: 'transform 0.2s, box-shadow 0.2s',
                 borderRadius: 2,
                 boxShadow: 3,
-                '&:hover': {
+                '&:hover, &:focus': {
                     transform: 'scale(1.05)',
                     boxShadow: 6,
                 },
@@ -26,11 +26,11 @@ const StudentCard= ({Student})=>{
             />
             <CardContent sx={{ flexGrow: 1 }}>
                 <Typography variant='h6' component='div' color='primary' gutterBottom>
-                    <Link to={`/show-student/${Student._id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                    <Link to={`/show-student/${Student.unique_id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
                         {Student.first_name}
                     </Link>
                 </Typography>
-              
+
                 <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}
                     style={{
                         overflow: 'hidden',
@@ -42,14 +42,14 @@ const StudentCard= ({Student})=>{
                     {Student.total_score}
                 </Typography>
             </CardContent>
-            <Box sx = {{p: 2, mt: 'auto'}}>
+            <Box sx={{ p: 2, mt: 'auto' }}>
                 <Button
-                  component={Link}
-                  to={`/show-student/${Student.unique_id}`}
-                  variant='contained'
-                  color='primary'
-                  size='small'
-                  fullWidth
+                    component={Link}
+                    to={`/show-student/${Student.unique_id}`}
+                    variant='contained'
+                    color='primary'
+                    size='small'
+                    fullWidth
                 >
                     view Details
                 </Button>
