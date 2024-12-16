@@ -9,7 +9,7 @@ import { CssBaseline, Box } from '@mui/material';
 
 
 
-// import StudentList from './component/StudentList';
+ import StudentList from './component/StudentList';
 // import StudentDetails from './component/StudentDetails';
 import CreateStudent from './component/StudentCreate';
 // import StudentUpdate from './component/StudentUpdate';
@@ -35,7 +35,7 @@ const App = () => {
         <div className="box-container">
             
             <Routes>
-                 {/* <Route path="/list" element={<StudentList/>} /> */}
+                 <Route path="/list" element={<StudentList/>} /> 
                 <Route path="/add" element={<CreateStudent/>} />     
                 <Route exact path='/' element={<HomePage />} /> 
             </Routes>
