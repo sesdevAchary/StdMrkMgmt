@@ -37,11 +37,7 @@ const App = () => {
             
             <Routes>
                  {/* <Route path="/list" element={<StudentList/>} /> */}
-                <Route path="/add" element={<CreateStudent/>} />
-                <Route path='/create-book' element={<CreateBook />} />
-
-                {/* <Route path="/edit/:id" element={<StudentUpdate />} />
-                <Route path="/detail/:id" element={<StudentDetails />} /> */}
+                <Route path="/add" element={<CreateStudent/>} />     
                 <Route exact path='/' element={<HomePage />} /> 
             </Routes>
 
