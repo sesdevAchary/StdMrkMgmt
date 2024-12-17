@@ -44,7 +44,8 @@ function StudentList(){
                    { Students.length === 0  ?(
                         <Grid item xs={12}>
                              <Typography variant='h6' color='text.secondary'>
-                                OOPS !!! No Students found..
+                                OOPS !!!
+                                 No Students found..
                             </Typography>
                         </Grid>
                     ):( Students.map((student,index) => (
