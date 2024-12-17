@@ -17,7 +17,7 @@ import Footer from './component/Footer';
 import Navbar from './component/Navbar';
 import HomePage from './component/HomePage';
 import './App.css'; // Make sure this contains your CSS
-// import { blueGrey } from '@mui/material/colors';
+
 
 import  twilightHorizonTheme from './Theme/studentMgmt';
 
