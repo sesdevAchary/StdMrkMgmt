@@ -31,7 +31,7 @@ function StudentList(){
                 STUDENT LIST
             </Typography>
 
-            <Button component={Link} to ="/Create-Student" color="primary" variant="contained" sx={{mb:4}} >
+            <Button component={Link} to ="/add" color="primary" variant="contained" sx={{mb:2}} >
             Add New Student...
             </Button>
 

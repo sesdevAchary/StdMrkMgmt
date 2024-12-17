@@ -1,14 +1,21 @@
-
-
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Slide, ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
 
+// Material-UI Imports
+import {
+  Box,
+  Button,
+  Container,
+  Grid,
+  Paper,
+  TextField,
+  Typography,
+} from '@mui/material';
 
-const CreateStudent = (props) => {
+const CreateStudent = () => {
   const navigate = useNavigate();
   const [student, setStudent] = useState({
     first_name: '',
@@ -17,36 +24,30 @@ const CreateStudent = (props) => {
     current_address: '',
     attendence: '',
     total_score: '',
-    avg_cgpa: ''
-
+    avg_cgpa: '',
   });
-  // const [showToast, setToast] = useState(false);
 
-  // form change handler //
+  // Handle form input changes
   const onChange = (e) => {
-    console.log(e.target.value);
     setStudent({ ...student, [e.target.name]: e.target.value });
-    // [e.target.cgpa]:e.target.value
-  }
+  };
 
-
-  // form change handler 
+  // Form submit handler
   const onSubmit = (e) => {
     e.preventDefault();
 
     if (!student.first_name || !student.unique_id || !student.mail_id) {
       toast.error('Please fill in all required fields.', {
-        position: "top-right",
+        position: 'top-right',
         autoClose: 5000,
-        theme: "dark",
+        theme: 'dark',
       });
-      return;  // Do not proceed with the API call if validation fails
+      return;
     }
 
     axios
-    .post('http://localhost:5000/api/students', student)  // sends a post reuest to the /api/students on the server ,to add a new book//
+      .post('http://localhost:5000/api/students', student)
       .then((res) => {
-        console.log(student);
         setStudent({
           first_name: '',
           unique_id: '',
@@ -54,170 +55,161 @@ const CreateStudent = (props) => {
           current_address: '',
           attendence: '',
           total_score: '',
-          avg_cgpa: ''
+          avg_cgpa: '',
         });
-        
-        toast.success('student created successfully !', {
-          position: "bottom-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
+
+        toast.success('Student created successfully!', {
+          position: 'bottom-right',
+          autoClose: 3000,
+          theme: 'light',
           transition: Slide,
         });
+
         setTimeout(() => {
-          navigate('/'); // Navigate to homepage after 5 seconds
-        }, 5000); // Adjust the timeout as needed
-        
+          navigate('/');
+        }, 3000);
       })
-
       .catch((err) => {
-        console.log('Error in CreateStudent!');
-        console.error(err.response ? err.response.data : err.message);
         toast.error('Something went wrong, try again!', {
-          position: "top-right",
+          position: 'top-right',
           autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "dark",
+          theme: 'dark',
           transition: Slide,
         });
-
       });
   };
 
   return (
-    <div className='CreateStudent'>
-      <ToastContainer
-        position="top-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="dark"
-        transition={Slide}
-      />
-      <div className='Container  d-flex align-items-center justify-content-center'>
-        <div className='row w-100'>
-          <div className='col-md-8 m-auto'>
-            <br />
-            <Link to='/create-student' className='btn btn-outline-warning float-left'>
-              Complete Student List
-            </Link>
-            </div>
-            <div className='col-md-8 m-auto' style={{ display:"flex", alignItems: "center", flexDirection: "column" }}>
-              <h1 className='display-4 text-center'>Add Student Here </h1>
-              <p className='lead text-center'>Create A New Student</p>
+    <Container maxWidth="md">
+      <ToastContainer position="top-right" autoClose={5000} theme="dark" transition={Slide} />
+      <Paper
+        elevation={6}
+        sx={{
+          padding: 4,
+          borderRadius: 2,
+          backgroundColor: 'background.paper',
+          color: 'text.primary',
+        }}
+      >
+        <Typography variant="h4" gutterBottom align="center">
+          Create A New Student
+        </Typography>
 
+        <Box component="form" onSubmit={onSubmit} noValidate>
+          <Grid container spacing={2}>
+            {/* Student Name */}
+            <Grid item xs={12} sm={6}>
+              <TextField
+                fullWidth
+                label="Student Name"
+                name="first_name"
+                value={student.first_name}
+                onChange={onChange}
+                variant="outlined"
+              />
+            </Grid>
 
-              <form noValidate onSubmit={onSubmit}>
+            {/* Roll Number */}
+            <Grid item xs={12} sm={6}>
+              <TextField
+                fullWidth
+                label="Roll Number"
+                name="unique_id"
+                value={student.unique_id}
+                onChange={onChange}
+                type="number"
+                variant="outlined"
+              />
+            </Grid>
 
-                <div className="all-form">
-                  <input
-                    type='text'
-                    placeholder='Enter the Name of the STUDENT'
-                    name='first_name'
-                    className='form-control'
-                    value={student.first_name}
-                    onChange={onChange}
-                  />
+            {/* Email */}
+            <Grid item xs={12} sm={6}>
+              <TextField
+                fullWidth
+                label="Email ID"
+                name="mail_id"
+                value={student.mail_id}
+                onChange={onChange}
+                type="email"
+                variant="outlined"
+              />
+            </Grid>
 
-                </div>
+            {/* Current Address */}
+            <Grid item xs={12} sm={6}>
+              <TextField
+                fullWidth
+                label="Current Address"
+                name="current_address"
+                value={student.current_address}
+                onChange={onChange}
+                variant="outlined"
+              />
+            </Grid>
 
-                <div className="all-form">
-                  <input
-                    type='number'
-                    placeholder='Enter the Roll number of the STUDENT'
-                    name='unique_id'
-                  className='form-control'
-                    value={student.unique_id}
-                    onChange={onChange}
-                  />
-                </div>
+            {/* Attendance */}
+            <Grid item xs={12} sm={4}>
+              <TextField
+                fullWidth
+                label="Attendance"
+                name="attendence"
+                value={student.attendence}
+                onChange={onChange}
+                type="number"
+                variant="outlined"
+              />
+            </Grid>
 
+            {/* Total Score */}
+            <Grid item xs={12} sm={4}>
+              <TextField
+                fullWidth
+                label="Total Score"
+                name="total_score"
+                value={student.total_score}
+                onChange={onChange}
+                type="number"
+                variant="outlined"
+              />
+            </Grid>
 
-                <div className="all-form">
-                  <input
-                    type='email'
-                    placeholder='Enter the mail ID of the STUDENT'
-                    name='mail_id'
-                    className='form-control'
-                    value={student.mail_id}
-                    onChange={onChange}
-                  />
-                </div>
+            {/* Average CGPA */}
+            <Grid item xs={12} sm={4}>
+              <TextField
+                fullWidth
+                label="Average CGPA"
+                name="avg_cgpa"
+                value={student.avg_cgpa}
+                onChange={onChange}
+                type="number"
+                variant="outlined"
+              />
+            </Grid>
+          </Grid>
 
-
-
-                <div className="all-form">
-                  <input
-                    type='text'
-                    placeholder='Enter the current address  of the STUDENT'
-                    name='current_address'
-                    className='form-control'
-                    value={student.current_address}
-                    onChange={onChange}
-                  />
-                </div>
-
-                <div className="all-form">
-                  <input
-                    type='number'
-                    placeholder='Enter the attendence number  of the STUDENT'
-                    name='attendence'
-                    className='form-control'
-                    value={student.attendence}
-                    onChange={onChange}
-                  />
-                </div>
-
-                <div className="all-form">
-                  <input
-                    type='number'
-                    placeholder='Enter the total score   of the STUDENT'
-                    name='total_score'
-                   className='form-control'
-                    value={student.total_score}
-                    onChange={onChange}
-                  />
-                </div>
-
-                <div className="all-form">
-                  <input
-                    type='number'
-                    placeholder='Enter the cgpa obtained by the STUDENT'
-                    name='avg_cgpa'
-                    className='form-control'
-                    value={student.avg_cgpa}
-                    onChange={onChange}
-                  />
-                </div>
-
-                <br />
-
-                <div className="button-group">
-                  <button type="submit" className="btn btn-add">Submit</button>
-                  <button type="button" className="btn btn-cancel" onClick={() => navigate('/')}>Cancel</button>
-                </div>
-
-
-              </form>
-            </div>
-
-          
-        </div>
-      </div>
-    </div>
+          {/* Buttons */}
+          <Box display="flex" justifyContent="space-between" mt={4}>
+            <Button
+              variant="contained"
+              color="primary"
+              type="submit"
+              sx={{ borderRadius: '8px', padding: '10px 20px' }}
+            >
+              Submit
+            </Button>
+            <Button
+              variant="outlined"
+              color="secondary"
+              onClick={() => navigate('/')}
+              sx={{ borderRadius: '8px', padding: '10px 20px' }}
+            >
+              Cancel
+            </Button>
+          </Box>
+        </Box>
+      </Paper>
+    </Container>
   );
 };
+
 export default CreateStudent;
