@@ -31,7 +31,11 @@ const StyledPaper = styled(Paper)(({ theme }) => ({
 
 
   const showStudentDetails=()=>{
-    const[student,setStudent]=useState('');
-    const[openDialog,setOpenDialog]=usestate(''); // controls the visibility of the confirmation dialog (used for the delete action).//
+    const[student,setStudent]=useState({});
+    const[openDialog,setOpenDialog]=useState(false); // controls the visibility of the confirmation dialog (used for the delete action).//
+  
 
+    // fetching the student url ID//
+    const value= useparams();
+    const id= value.id;
   }
