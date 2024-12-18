@@ -11,3 +11,5 @@ import {
     CardMedia,
     Divider,
     Box, } from '@mui/material';
+    import { styled } from '@mui/material/styles';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
