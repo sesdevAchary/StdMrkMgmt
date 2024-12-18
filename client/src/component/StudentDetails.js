@@ -18,3 +18,8 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from '@mui/material';
+
+
+const StyledPaper = styled(Paper)(({ theme }) => ({
+    padding: theme.spacing(4),
+    marginTop: theme.spacing(4),
