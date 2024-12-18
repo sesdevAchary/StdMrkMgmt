@@ -18,6 +18,7 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from '@mui/material';
+import axios from "axios";
 
 
 const StyledPaper = styled(Paper)(({ theme }) => ({
@@ -38,4 +39,17 @@ const StyledPaper = styled(Paper)(({ theme }) => ({
     // fetching the student url ID//
     const value= useparams();
     const id= value.id;
+    const navigate =  useNavigate();
+
+
+
+    useEffect ( ()=>{
+        if (id) {
+            axios.
+             get(`https://3000-sesdevachary-stdmrkmgmt-v42c1lz37x9.ws-us117.gitpod.io/api/student/{id}`);
+             then((res)=>{
+                setStudent(res.data);
+             })
+        }
+    })
   }
