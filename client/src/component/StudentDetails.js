@@ -25,5 +25,6 @@ const StyledPaper = styled(Paper)(({ theme }) => ({
     marginTop: theme.spacing(4),
     marginBottom: theme.spacing(4),
     backgroundColor: theme.palette.background.paper,
+    borderRadius: '12px',
     boxShadow: theme.shadows[3],
   }));
