@@ -28,3 +28,10 @@ const StyledPaper = styled(Paper)(({ theme }) => ({
     borderRadius: '12px',
     boxShadow: theme.shadows[3],
   }));
+
+
+  const showStudentDetails=()=>{
+    const[student,setStudent]=useState('');
+    const[openDialog,setOpenDialog]=usestate(''); // controls the visibility of the confirmation dialog (used for the delete action).//
+
+  }
