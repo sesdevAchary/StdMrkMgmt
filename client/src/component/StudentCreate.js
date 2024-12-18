@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Slide, ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
@@ -46,7 +46,7 @@ const CreateStudent = () => {
     }
 
     axios
-      .post('http://localhost:5000/api/students', student)
+      .post('https://3000-sesdevachary-stdmrkmgmt-v42c1lz37x9.ws-us117.gitpod.io/api/student', student)
       .then((res) => {
         setStudent({
           first_name: '',

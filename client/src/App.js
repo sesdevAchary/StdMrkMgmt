@@ -10,7 +10,7 @@ import { CssBaseline, Box } from '@mui/material';
 
 
  import StudentList from './component/StudentList';
-// import StudentDetails from './component/StudentDetails';
+//  import StudentDetails from './component/StudentDetails';
 import CreateStudent from './component/StudentCreate';
 // import StudentUpdate from './component/StudentUpdate';
 import Footer from './component/Footer';
