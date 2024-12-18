@@ -50,6 +50,13 @@ const StyledPaper = styled(Paper)(({ theme }) => ({
              then((res)=>{
                 setStudent(res.data);
              })
+             .catch((err)=>{
+                console.err('error  in fetching student details:',err);
+             });
         }
-    })
+    } ,[id])
+
+
+
   }
+  export default showStudentDetails;
