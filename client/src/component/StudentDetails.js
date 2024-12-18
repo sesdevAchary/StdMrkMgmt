@@ -23,3 +23,7 @@ import { Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } 
 const StyledPaper = styled(Paper)(({ theme }) => ({
     padding: theme.spacing(4),
     marginTop: theme.spacing(4),
+    marginBottom: theme.spacing(4),
+    backgroundColor: theme.palette.background.paper,
+    boxShadow: theme.shadows[3],
+  }));
