@@ -11,8 +11,10 @@ import {
     CardMedia,
     Divider,
     Box, } from '@mui/material';
-    import { styled } from '@mui/material/styles';
+
+import { styled } from '@mui/material/styles';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
+import { Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from '@mui/material';
