@@ -62,7 +62,10 @@ const StyledPaper = styled(Paper)(({ theme }) => ({
       setOpenDialog(true); // for deletion confirmation //
     };
 
-    
+
+    const handleDeleteConfirmation=()=>{
+      
+    }
 
   }
   export default showStudentDetails;
