@@ -103,9 +103,16 @@ const showStudentDetails = () => {
                   {student.first_name}
                 </Typography>
 
-                <Typography variant="h4" component="h1" gutterBottom>
+                <Typography variant="h4" color='textSecondary'  gutterBottom>
                   {student.mail_id}
                 </Typography>
+
+                <Divider sx={{ my: 2 }} />
+
+
+            <Box display="flex" flexDirection="column">
+              
+            </Box>
 
             </Grid>
           </StyledPaper>
