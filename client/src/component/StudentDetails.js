@@ -64,7 +64,17 @@ const StyledPaper = styled(Paper)(({ theme }) => ({
 
 
     const handleDeleteConfirmation=()=>{
-      
+      axios.
+      delete(`https://3000-sesdevachary-stdmrkmgmt-v42c1lz37x9.ws-us117.gitpod.io/api/student`);
+      then((res)=>{
+        navigate(list);
+      })
+      .catch((err)=>{
+        console.log(`error in showStudentDetails_deleteLCick`);
+      });
+      setOpenDialog(false);
+
+      };
     }
 
   }
