@@ -75,7 +75,11 @@ const StyledPaper = styled(Paper)(({ theme }) => ({
       setOpenDialog(false);
 
       };
-    }
+
+      const hadnleCancelDelete=()=>{
+        setOpenDialog(false);
+      }
+    
 
   }
   export default showStudentDetails;
