@@ -58,5 +58,11 @@ const StyledPaper = styled(Paper)(({ theme }) => ({
 
 
 
+    const onDeleteClick=()=>{
+      setOpenDialog(true); // for deletion confirmation //
+    };
+
+    
+
   }
   export default showStudentDetails;
