@@ -1,16 +1,17 @@
 
-import React ,{useState , useEffect} from "react";
-import { useparams, Link as RouterLink ,useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { useparams, Link as RouterLink, useNavigate } from 'react-router-dom';
 import {
-    Container,
-    Paper,
-    Typography,
-    Grid,
-    Button,
-    Card,
-    CardMedia,
-    Divider,
-    Box, } from '@mui/material';
+  Container,
+  Paper,
+  Typography,
+  Grid,
+  Button,
+  Card,
+  CardMedia,
+  Divider,
+  Box,
+} from '@mui/material';
 
 import { styled } from '@mui/material/styles';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
@@ -22,64 +23,97 @@ import axios from "axios";
 
 
 const StyledPaper = styled(Paper)(({ theme }) => ({
-    padding: theme.spacing(4),
-    marginTop: theme.spacing(4),
-    marginBottom: theme.spacing(4),
-    backgroundColor: theme.palette.background.paper,
-    borderRadius: '12px',
-    boxShadow: theme.shadows[3],
-  }));
+  padding: theme.spacing(4),
+  marginTop: theme.spacing(4),
+  marginBottom: theme.spacing(4),
+  backgroundColor: theme.palette.background.paper,
+  borderRadius: '12px',
+  boxShadow: theme.shadows[3],
+}));
 
 
-  const showStudentDetails=()=>{
-    const[student,setStudent]=useState({});
-    const[openDialog,setOpenDialog]=useState(false); // controls the visibility of the confirmation dialog (used for the delete action).//
-  
-
-    // fetching the student url ID//
-    const value= useparams();
-    const id= value.id;
-    const navigate =  useNavigate();
+const showStudentDetails = () => {
+  const [student, setStudent] = useState({});
+  const [openDialog, setOpenDialog] = useState(false); // controls the visibility of the confirmation dialog (used for the delete action).//
 
 
-
-    useEffect ( ()=>{
-        if (id) {
-            axios.
-             get(`https://3000-sesdevachary-stdmrkmgmt-v42c1lz37x9.ws-us117.gitpod.io/api/student/{id}`);
-             then((res)=>{
-                setStudent(res.data);
-             })
-             .catch((err)=>{
-                console.err('error  in fetching student details:',err);
-             });
-        }
-    } ,[id])
+  // fetching the student url ID//
+  const value = useparams();
+  const id = value.id;
+  const navigate = useNavigate();
 
 
 
-    const onDeleteClick=()=>{
-      setOpenDialog(true); // for deletion confirmation //
-    };
-
-
-    const handleDeleteConfirmation=()=>{
+  useEffect(() => {
+    if (id) {
       axios.
-      delete(`https://3000-sesdevachary-stdmrkmgmt-v42c1lz37x9.ws-us117.gitpod.io/api/student`);
-      then((res)=>{
-        navigate(list);
+        get(`https://3000-sesdevachary-stdmrkmgmt-v42c1lz37x9.ws-us117.gitpod.io/api/student/{id}`);
+      then((res) => {
+        setStudent(res.data);
       })
-      .catch((err)=>{
+        .catch((err) => {
+          console.err('error  in fetching student details:', err);
+        });
+    }
+  }, [id])
+
+
+
+  const onDeleteClick = () => {
+    setOpenDialog(true); // for deletion confirmation //
+  };
+
+
+  const handleDeleteConfirmation = () => {
+    axios.
+      delete(`https://3000-sesdevachary-stdmrkmgmt-v42c1lz37x9.ws-us117.gitpod.io/api/student`);
+    then((res) => {
+      navigate(list);
+    })
+      .catch((err) => {
         console.log(`error in showStudentDetails_deleteLCick`);
       });
-      setOpenDialog(false);
+    setOpenDialog(false);
 
-      };
+  };
 
-      const hadnleCancelDelete=()=>{
-        setOpenDialog(false);
-      }
-    
-
+  const hadnleCancelDelete = () => {
+    setOpenDialog(false);
   }
-  export default showStudentDetails;
+
+
+  return (
+
+    <Container maxWidth="md">
+      <StyledPaper>
+        <Grid container spacing={4}>
+          <Grid item xs={12} md={4}>
+            <card>
+              <CardMedia
+                component="img"
+                height="400"
+                image="https://images.unsplash.com/photo-1495446815901-a7297e633e8d"
+                alt={student.first_name}
+              />
+            </card>
+            </Grid>
+
+            <Grid item xs={12} md={8}>
+                <Typography variant="h4" component="h1" gutterBottom>
+                  {student.first_name}
+                </Typography>
+
+                <Typography variant="h4" component="h1" gutterBottom>
+                  {student.mail_id}
+                </Typography>
+
+            </Grid>
+          </StyledPaper>
+        </Container>
+
+
+
+
+        )
+}
+        export default showStudentDetails;
