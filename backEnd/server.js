@@ -1,4 +1,6 @@
 const express = require('express');
+const cors = require('cors');
+
 const connectDB = require('./config/db');
 const StudentRoutes = require('./routes/studentRoutes');
 // const mongoose = require('mongoose');
@@ -9,6 +11,9 @@ const port = 3000;
 
 
 app.use(express.json())
+
+app.use(cors());
+
 
 app.use('/api', StudentRoutes); 
 let student = [];

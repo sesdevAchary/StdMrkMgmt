@@ -96,37 +96,81 @@ const showStudentDetails = () => {
                 alt={student.first_name}
               />
             </card>
-            </Grid>
+          </Grid>
 
-            <Grid item xs={12} md={8}>
-                <Typography variant="h4" component="h1" gutterBottom>
-                  {student.first_name}
-                </Typography>
+          <Grid item xs={12} md={8}>
+            <Typography variant="h4" component="h1" gutterBottom>
+              {student.first_name}
+            </Typography>
 
-                <Typography variant="h4" color='textSecondary'  gutterBottom>
-                  {student.mail_id}
-                </Typography>
+            <Typography variant="h4" color='textSecondary' gutterBottom>
+              {student.mail_id}
+            </Typography>
 
-                <Divider sx={{ my: 2 }} />
+            <Divider sx={{ my: 2 }} />
 
 
             <Box display="flex" flexDirection="column">
-            <Typography variant='body1' paragraph>Name: {student.first_name}</Typography>
-                <Typography variant='body1'>ID: {student.unique_id}</Typography>
-                <Typography variant='body1'>Email: {student.mail_id}</Typography>
-                <Typography variant='body1'>address: {student.current_address}</Typography>
-                <Typography variant='body1'>attendance: {student.attendance}</Typography>
-                <Typography variant='body1'>Score: {student.total_score}</Typography>
-                <Typography variant='body1'>CGPA: {student.avg_cgpa}</Typography>
+              <Typography variant='body1' paragraph>Name: {student.first_name}</Typography>
+              <Typography variant='body1'>ID: {student.unique_id}</Typography>
+              <Typography variant='body1'>Email: {student.mail_id}</Typography>
+              <Typography variant='body1'>Address: {student.current_address}</Typography>
+              <Typography variant='body1'>Attendance: {student.attendance}</Typography>
+              <Typography variant='body1'>Score: {student.total_score}</Typography>
+              <Typography variant='body1'>CGPA: {student.avg_cgpa}</Typography>
             </Box>
-
-            </Grid>
-          </StyledPaper>
-        </Container>
+          </Grid>
+        </Grid>
 
 
+              {/* button part */}
+
+        <Box mt="4" display="flex" justify-content="space-between">
+          <Button
+            startIcon={<ArrowBackIcon />}
+            component={RouterLink} // tells the button to act as link //
+            to="/list"
+            variant="outlined">
+            Back to student List
+          </Button>
+
+       { /*  Edit and Delete Button   */}
+
+       <Box>
+
+          <Button
+          startIcon={<EditIcon/>}
+          component={RouterLink}
+          to={`/edit/${student.unique_id}`}
+          variant="contained"
+          
 
 
-        )
+
+
+
+
+
+
+
+
+       </Box>
+        </Box>
+
+
+
+
+
+
+
+
+
+      </StyledPaper>
+    </Container>
+
+
+
+
+  )
 }
-        export default showStudentDetails;
+export default showStudentDetails;
