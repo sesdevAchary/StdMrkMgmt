@@ -123,49 +123,46 @@ const showStudentDetails = () => {
         </Grid>
 
 
-              {/* button part */}
+        {/* button part */}
 
         <Box mt="4" display="flex" justify-content="space-between">
           <Button
             startIcon={<ArrowBackIcon />}
             component={RouterLink} // tells the button to act as link //
             to="/list"
-            variant="outlined">
+            variant="outlined"
+            color="primary">
             Back to student List
           </Button>
 
-       { /*  Edit and Delete Button   */}
+          { /*  Edit and Delete Button   */}
 
-       <Box>
+          <Box>
 
-          <Button
-          startIcon={<EditIcon/>}
-          component={RouterLink}
-          to={`/edit/${student.unique_id}`}
-          variant="contained"
-          
-
-
-
-
-
-
-
-
-
-
-       </Box>
+            <Button
+              startIcon={<EditIcon />}
+              component={RouterLink}
+              to={`/edit/${student.unique_id}`}
+              variant="contained"
+              color="primary"
+              sx={{ mr: 5 }}
+            >   Edit
+            </Button>
+            <Button
+              startIcon={<DeleteIcon />}
+              onClick={onDeleteClick}
+              variant="contained"
+              color="error"
+            >  Delete
+            </Button>
+          </Box>
         </Box>
-
-
-
-
-
-
-
-
-
       </StyledPaper>
+
+
+
+
+
     </Container>
 
 
