@@ -111,7 +111,13 @@ const showStudentDetails = () => {
 
 
             <Box display="flex" flexDirection="column">
-              
+            <Typography variant='body1' paragraph>Name: {student.first_name}</Typography>
+                <Typography variant='body1'>ID: {student.unique_id}</Typography>
+                <Typography variant='body1'>Email: {student.mail_id}</Typography>
+                <Typography variant='body1'>address: {student.current_address}</Typography>
+                <Typography variant='body1'>attendance: {student.attendance}</Typography>
+                <Typography variant='body1'>Score: {student.total_score}</Typography>
+                <Typography variant='body1'>CGPA: {student.avg_cgpa}</Typography>
             </Box>
 
             </Grid>
