@@ -5,7 +5,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from '@mui/material/styles';
 import { CssBaseline, Box } from '@mui/material';
-import ExportPage from './components/ExportPage';
+import ExportPage from './component/exportPages';
 
 
 
@@ -41,6 +41,9 @@ const App = () => {
                 <Route path="/add" element={<CreateStudent/>} />     
                 <Route exact path='/' element={<HomePage />} /> 
                 <Route path='/show-student/:id' element={<showStudentDetails />} />
+
+                <Route path="/exports" element={<ExportPage/>} /> 
+
 
             </Routes>
 

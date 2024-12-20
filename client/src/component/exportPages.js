@@ -56,7 +56,7 @@ const ExportPage=()=>{
       });
   
       doc.save('Students-list.pdf');
-    };
+    
 
 
     const exportToExcel = () => {
@@ -123,70 +123,71 @@ const ExportPage=()=>{
             <CircularProgress />
           </Container>
         );
-        return (
-            <Container maxWidth="md" sx={{ mt: 4, mb: 4 }}>
-              <Paper sx={{ p: 4 }}>
-                <Typography variant="h4" gutterBottom align="center" color="primary">
-                  Export Student
-                </Typography>
-                
-                <Typography variant="body1" sx={{ mb: 4 }} align="center" color="text.secondary">
-                  Export your student collection in different formats
-                </Typography>
-        
-                <Box sx={{ 
-                  display: 'grid', 
-                  gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' }, 
-                  gap: 3,
-                  mt: 4 
-                }}>
-                  <Button
-                    variant="contained"
-                    size="large"
-                    startIcon={<PictureAsPdfIcon />}
-                    onClick={exportToPDF}
-                    sx={{ p: 2 }}
-                  >
-                    Export as PDF
-                  </Button>
-        
-                  <Button
-                    variant="contained"
-                    size="large"
-                    startIcon={<TableViewIcon />}
-                    onClick={exportToCSV}
-                    sx={{ p: 2 }}
-                  >
-                    Export as CSV
-                  </Button>
-        
-                  <Button
-                    variant="contained"
-                    size="large"
-                    startIcon={<DownloadIcon />}
-                    onClick={exportToExcel}
-                    sx={{ p: 2 }}
-                  >
-                    Export as Excel
-                  </Button>
-        
-                  <Button
-                    variant="contained"
-                    size="large"
-                    startIcon={<DescriptionIcon />}
-                    onClick={exportToText}
-                    sx={{ p: 2 }}
-                  >
-                    Export as Text
-                  </Button>
-                </Box>
-        
-                <Typography variant="body2" sx={{ mt: 4 }} align="center" color="text.secondary">
-                  Total students: {students.length}
-                </Typography>
-              </Paper>
-            </Container>
-          );
-        };
-        
-        export default ExportPage;
+    };
+    return (
+        <Container maxWidth="md" sx={{ mt: 4, mb: 4 }}>
+          <Paper sx={{ p: 4 }}>
+            <Typography variant="h4" gutterBottom align="center" color="primary">
+              Export Books
+            </Typography>
+            
+            <Typography variant="body1" sx={{ mb: 4 }} align="center" color="text.secondary">
+              Export your book collection in different formats
+            </Typography>
+    
+            <Box sx={{ 
+              display: 'grid', 
+              gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' }, 
+              gap: 3,
+              mt: 4 
+            }}>
+              <Button
+                variant="contained"
+                size="large"
+                startIcon={<PictureAsPdfIcon />}
+                onClick={exportToPDF}
+                sx={{ p: 2 }}
+              >
+                Export as PDF
+              </Button>
+    
+              <Button
+                variant="contained"
+                size="large"
+                startIcon={<TableViewIcon />}
+                onClick={exportToCSV}
+                sx={{ p: 2 }}
+              >
+                Export as CSV
+              </Button>
+    
+              <Button
+                variant="contained"
+                size="large"
+                startIcon={<DownloadIcon />}
+                onClick={exportToExcel}
+                sx={{ p: 2 }}
+              >
+                Export as Excel
+              </Button>
+    
+              <Button
+                variant="contained"
+                size="large"
+                startIcon={<DescriptionIcon />}
+                onClick={exportToText}
+                sx={{ p: 2 }}
+              >
+                Export as Text
+              </Button>
+            </Box>
+    
+            <Typography variant="body2" sx={{ mt: 4 }} align="center" color="text.secondary">
+              Total Books: {books.length}
+            </Typography>
+          </Paper>
+        </Container>
+      );
+    };
+    
+    export default ExportPage;
