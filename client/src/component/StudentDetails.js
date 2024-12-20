@@ -239,3 +239,8 @@ const StyledPaper = styled(Paper)(({ theme }) => ({
   borderRadius: 12,
   boxShadow: theme.shadows[3],
 }));
+const ShowStudentDetails = () => {
+  const [student, setStudent] = useState(null);
+  const [openDialog, setOpenDialog] = useState(false);
+  const { id } = useParams();
+  const navigate = useNavigate();
