@@ -1,13 +1,12 @@
 
 import React, { useState, useEffect } from "react";
-import { useparams, Link as RouterLink, useNavigate } from 'react-router-dom';
+import { useParams, Link as RouterLink, useNavigate } from 'react-router-dom';
 import {
   Container,
   Paper,
   Typography,
   Grid,
   Button,
-  Card,
   CardMedia,
   Divider,
   Box,
@@ -32,23 +31,23 @@ const StyledPaper = styled(Paper)(({ theme }) => ({
 }));
 
 
-const showStudentDetails = () => {
+const ShowStudentDetails = () => {
   const [student, setStudent] = useState({});
   const [openDialog, setOpenDialog] = useState(false); // controls the visibility of the confirmation dialog (used for the delete action).//
 
 
   // fetching the student url ID//
-  const value = useparams();
-  const id = value._id;
+  const value = useParams();
+  const id = value.id;
   const navigate = useNavigate();
 
 
 
   useEffect(() => {
     if (id) {
-      axios.
-        get(`https://3000-sesdevachary-stdmrkmgmt-v42c1lz37x9.ws-us117.gitpod.io/api/student/{id}`);
-      then((res) => {
+      axios
+        .get(`https://3000-sesdevachary-stdmrkmgmt-v42c1lz37x9.ws-us117.gitpod.io/api/student/{id}`)
+      .then((res) => {
         setStudent(res.data);
       })
         .catch((err) => {
@@ -65,10 +64,10 @@ const showStudentDetails = () => {
 
 
   const handleDeleteConfirmation = () => {
-    axios.
-      delete(`https://3000-sesdevachary-stdmrkmgmt-v42c1lz37x9.ws-us117.gitpod.io/api/student`);
-    then((res) => {
-      navigate(list);
+    axios
+      .delete(`https://3000-sesdevachary-stdmrkmgmt-v42c1lz37x9.ws-us117.gitpod.io/api/student`)
+    .then((res) => {
+      navigate('list');
     })
       .catch((err) => {
         console.log(`error in showStudentDetails_deleteLCick`);
@@ -77,7 +76,7 @@ const showStudentDetails = () => {
 
   };
 
-  const hadnleCancelDelete = () => {
+  const handleCancelDelete = () => {
     setOpenDialog(false);
   }
 
@@ -164,7 +163,7 @@ const showStudentDetails = () => {
    {/* Keep the dialog unchanged */}
    <Dialog
         open={openDialog}
-        onClose={handleDeleteCancel}
+        onClose={handleCancelDelete}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
@@ -175,7 +174,7 @@ const showStudentDetails = () => {
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleDeleteCancel} color="primary">
+          <Button onClick={handleCancelDelete} color="primary">
             Cancel
           </Button>
           <Button onClick={handleDeleteConfirmation} color="error" autoFocus>
@@ -194,4 +193,4 @@ const showStudentDetails = () => {
 
   )
 }
-export default showStudentDetails;
+export default ShowStudentDetails;
