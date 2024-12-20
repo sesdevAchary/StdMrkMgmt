@@ -6,6 +6,7 @@ import {
   Paper,
   Typography,
   Grid,
+  Card,
   Button,
   CardMedia,
   Divider,
@@ -50,8 +51,8 @@ const ShowStudentDetails = () => {
       .then((res) => {
         setStudent(res.data);
       })
-        .catch((err) => {
-          console.err('error  in fetching student details:', err);
+        .catch((error) => {
+          console.error('error  in fetching student details:', err);
         });
     }
   }, [id])
@@ -87,14 +88,14 @@ const ShowStudentDetails = () => {
       <StyledPaper>
         <Grid container spacing={4}>
           <Grid item xs={12} md={4}>
-            <card>
+            <Card>
               <CardMedia
                 component="img"
                 height="400"
                 image="https://images.unsplash.com/photo-1495446815901-a7297e633e8d"
                 alt={student.first_name}
               />
-            </card>
+            </Card>
           </Grid>
 
           <Grid item xs={12} md={8}>
