@@ -71,6 +71,26 @@ const ExportPage=()=>{
           Description: student.description
         })));
 
+        const workbook = XLSX.utils.student_new();
+        XLSX.utils.student_append_sheet(workbook, worksheet, "students")
+        const excelBuffer = XLSX.write(workbook, { studentType: 'xlsx', type: 'array' });
+        const data = new Blob([excelBuffer], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+        saveAs(data, 'students-list.xlsx');
+      };
+
+      const exportToCSV = () => {
+        const worksheet = XLSX.utils.json_to_sheet(books.map(book => ({
+            first_name:student.first_name,
+            unique_id:student.unique_id,
+            mail_id:student.mail_id,
+            current_address:student.current_address,
+            total_score:student.total_score,
+            avg_cgpa:student.avg_cgpa,
+      
+          'Published Date': new Date(book.published_date).toLocaleDateString(),
+          Description: book.description
+        })));
+
 
     
 
