@@ -27,7 +27,7 @@ const StudentCard = ({ Student }) => {
             />
             <CardContent sx={{ flexGrow: 1 }}>
                 <Typography variant='h6' component='div' color='primary' gutterBottom>
-                    <Link to={`/show-student/${Student.unique_id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                    <Link to={`/show-student/${Student._id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
                         {Student.first_name}
                     </Link>
                 </Typography>
@@ -46,7 +46,7 @@ const StudentCard = ({ Student }) => {
             <Box sx={{ p: 2, mt: 'auto' }}>
                 <Button
                     component={Link}
-                    to={`/show-student/${Student.unique_id}`}
+                    to={`/show-student/${Student._id}`}
                     variant='contained'
                     color='primary'
                     size='small'

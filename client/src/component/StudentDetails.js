@@ -39,7 +39,7 @@ const showStudentDetails = () => {
 
   // fetching the student url ID//
   const value = useparams();
-  const id = value.id;
+  const id = value._id;
   const navigate = useNavigate();
 
 
