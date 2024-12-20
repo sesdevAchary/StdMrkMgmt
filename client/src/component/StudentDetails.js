@@ -262,4 +262,19 @@ const ShowStudentDetails = () => {
       .catch((err) => console.error("Error deleting student:", err));
     setOpenDialog(false);
   };
+  const handleCancelDelete = () => setOpenDialog(false);
+
+  const onDeleteClick = () => setOpenDialog(true);
+
+  if (!student) {
+    return (
+      <Container maxWidth="md">
+        <StyledPaper>
+          <Typography variant="h5" align="center">
+            Loading student details...
+          </Typography>
+        </StyledPaper>
+      </Container>
+    );
+  }
 
