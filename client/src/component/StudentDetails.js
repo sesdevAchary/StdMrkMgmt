@@ -278,3 +278,113 @@ const ShowStudentDetails = () => {
     );
   }
 
+  return (
+    <Container maxWidth="md">
+      <StyledPaper>
+        <Grid container spacing={4}>
+          {/* Student Image */}
+          <Grid item xs={12} md={4}>
+            <Card>
+              <CardMedia
+                component="img"
+                height="400"
+                image={student.imageUrl || "https://images.unsplash.com/photo-1495446815901-a7297e633e8d"}
+                alt={student.first_name}
+                sx={{ borderRadius: "8px" }}
+              />
+            </Card>
+          </Grid>
+
+          {/* Student Details */}
+          <Grid item xs={12} md={8}>
+            <Typography variant="h4" gutterBottom>
+              {student.first_name}
+            </Typography>
+            <Typography variant="subtitle1" color="textSecondary" gutterBottom>
+              {student.mail_id}
+            </Typography>
+
+            <Divider sx={{ my: 2 }} />
+
+            <Box>
+              <Typography variant="body1" paragraph>
+                <strong>Name:</strong> {student.first_name}
+              </Typography>
+              <Typography variant="body1" paragraph>
+                <strong>ID:</strong> {student.unique_id}
+              </Typography>
+              <Typography variant="body1" paragraph>
+                <strong>Email:</strong> {student.mail_id}
+              </Typography>
+              <Typography variant="body1" paragraph>
+                <strong>Address:</strong> {student.current_address}
+              </Typography>
+              <Typography variant="body1" paragraph>
+                <strong>Attendance:</strong> {student.attendance}
+              </Typography>
+              <Typography variant="body1" paragraph>
+                <strong>Score:</strong> {student.total_score}
+              </Typography>
+              <Typography variant="body1" paragraph>
+                <strong>CGPA:</strong> {student.avg_cgpa}
+              </Typography>
+            </Box>
+          </Grid>
+        </Grid>
+
+        {/* Action Buttons */}
+        <Box mt={4} display="flex" justifyContent="space-between">
+          <Button
+            startIcon={<ArrowBackIcon />}
+            component={RouterLink}
+            to="/list"
+            variant="outlined"
+            color="primary"
+          >
+            Back to Student List
+          </Button>
+          <Box>
+            <Button
+              startIcon={<EditIcon />}
+              component={RouterLink}
+              to={`/edit/${student.unique_id}`}
+              variant="contained"
+              color="primary"
+              sx={{ mr: 2 }}
+            >
+              Edit
+            </Button>
+            <Button
+              startIcon={<DeleteIcon />}
+              onClick={onDeleteClick}
+              variant="contained"
+              color="error"
+            >
+              Delete
+            </Button>
+          </Box>
+        </Box>
+      </StyledPaper>
+
+      {/* Delete Confirmation Dialog */}
+      <Dialog open={openDialog} onClose={handleCancelDelete}>
+        <DialogTitle>Confirm Deletion</DialogTitle>
+        <DialogContent>
+          <DialogContentText>
+            Are you sure you want to delete this student? This action cannot be undone.
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleCancelDelete} color="primary">
+            Cancel
+          </Button>
+          <Button onClick={handleDeleteConfirmation} color="error">
+            Delete
+          </Button>
+        </DialogActions>
+      </Dialog>
+    </Container>
+  );
+};
+
+export default ShowStudentDetails;
