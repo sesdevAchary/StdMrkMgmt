@@ -12,7 +12,7 @@ const StudentCard = ({ student }) => {
                 display: 'flex',
                 flexDirection: 'column',
                 transition: 'transform 0.2s, box-shadow 0.2s',
-                borderRadius: 2,
+                borderRadius: 4,
                 boxShadow: 3,
                 '&:hover, &:focus': {
                     transform: 'scale(1.05)',
@@ -23,7 +23,7 @@ const StudentCard = ({ student }) => {
             <img
                 src='https://eacademics.in/img/i5.png'
                 alt='Students'
-                style={{ height: 300, objectFit: 'cover', width: '100%' }}
+                style={{ height: 200, objectFit: 'cover', width: '100%' }}
             />
             <CardContent sx={{ flexGrow: 1 }}>
                 <Typography variant='h6' component='div' color='primary' gutterBottom>
@@ -64,7 +64,7 @@ const StudentCard = ({ student }) => {
 
 StudentCard.propTypes = {
     student: PropTypes.shape({
-        unique_id: PropTypes.string.isRequired,
+        _id: PropTypes.string.isRequired,
         first_name: PropTypes.string.isRequired,
         total_score: PropTypes.number.isRequired,
         imageUrl: PropTypes.string, // Optional if an image URL exists
