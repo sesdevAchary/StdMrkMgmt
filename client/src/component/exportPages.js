@@ -31,7 +31,45 @@ const ExportPage=()=>{
       doc.setFontSize(10);
       doc.text(`Generated on: ${new Date().toLocaleDateString()}`, 14, 25);
 
-      
+         // Create table data
+    const tableColumn = ["first_name", "unique_id", "mail_id", "current_address", "attendence","total_score","avg_cgpa"];
+    const tableRows = students.map(student => [
+      student.first_name,
+      student.unique_id,
+      student.mail_id,
+      student.current_address,
+      student.total_score,
+      student.avg_cgpa,
+
+
+      new Date(student.published_date).toLocaleDateString()
+    ]);
+
+
+    doc.autoTable({
+        startY: 30,
+        head: [tableColumn],
+        body: tableRows,
+        theme: 'grid',
+        styles: { fontSize: 8 },
+        headStyles: { fillColor: [41, 128, 185], textColor: 255 }
+      });
+  
+      doc.save('Students-list.pdf');
+    };
+
+
+    const exportToExcel = () => {
+        const worksheet = XLSX.utils.json_to_sheet(students.map(student => ({
+            first_name:student.first_name,
+            unique_id:student.unique_id,
+            mail_id:student.mail_id,
+            current_address:student.current_address,
+            total_score:student.total_score,
+            avg_cgpa:student.avg_cgpa,
+          'Published Date': new Date(student.published_date).toLocaleDateString(),
+          Description: student.description
+        })));
 
 
     
