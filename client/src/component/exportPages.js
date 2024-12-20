@@ -11,8 +11,29 @@ import 'jspdf-autotable';
 import * as XLSX from 'xlsx';
 
 const ExportPage=()=>{
-    const[books,setBooks]=useState([]);
+    const[students,setStudents]=useState([]);
     const [loading, setLoading] = useState(true);
 
+    useEffect(()=>{
+        axios.get(`https://3000-sesdevachary-stdmrkmgmt-v42c1lz37x9.ws-us117.gitpod.io/api/student`)
+        .then(res=>{
+            setStudents(res.data);
+            setLoading(false);
+        })
+        .catch(error => {
+            console.error('Error fetching student:', error);
+            setLoading(false);
+          });
+      }, []);
+
+      doc.setFontSize(16);
+      doc.text('students List', 14, 15);
+      doc.setFontSize(10);
+      doc.text(`Generated on: ${new Date().toLocaleDateString()}`, 14, 25);
+
+      
+
+
+    
 
 }
