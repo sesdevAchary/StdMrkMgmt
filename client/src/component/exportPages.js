@@ -160,7 +160,15 @@ const ExportPage=()=>{
                     Export as CSV
                   </Button>
         
-                  
+                  <Button
+                    variant="contained"
+                    size="large"
+                    startIcon={<DownloadIcon />}
+                    onClick={exportToExcel}
+                    sx={{ p: 2 }}
+                  >
+                    Export as Excel
+                  </Button>
         
                   <Button
                     variant="contained"
