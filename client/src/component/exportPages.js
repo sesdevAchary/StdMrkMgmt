@@ -25,7 +25,9 @@ const ExportPage=()=>{
             setLoading(false);
           });
       }, []);
-
+      const exportToPDF = () => {
+        const doc = new jsPDF();
+        
       doc.setFontSize(16);
       doc.text('students List', 14, 15);
       doc.setFontSize(10);
@@ -57,7 +59,7 @@ const ExportPage=()=>{
   
       doc.save('Students-list.pdf');
     
-
+    }
 
     const exportToExcel = () => {
         const worksheet = XLSX.utils.json_to_sheet(students.map(student => ({
@@ -79,15 +81,15 @@ const ExportPage=()=>{
       };
 
       const exportToCSV = () => {
-        const worksheet = XLSX.utils.json_to_sheet(books.map(book => ({
-            first_name:student.first_name,
-            unique_id:student.unique_id,
-            mail_id:student.mail_id,
-            current_address:student.current_address,
-            total_score:student.total_score,
-            avg_cgpa:student.avg_cgpa,
+        const worksheet = XLSX.utils.json_to_sheet(students.map(book => ({
+            first_name:students.first_name,
+            unique_id:students.unique_id,
+            mail_id:students.mail_id,
+            current_address:students.current_address,
+            total_score:students.total_score,
+            avg_cgpa:students.avg_cgpa,
       
-          'Published Date': new Date(student.published_date).toLocaleDateString(),
+          'Published Date': new Date(students.published_date).toLocaleDateString(),
           Description: book.description
         })));
 
@@ -100,7 +102,7 @@ const ExportPage=()=>{
         let content = 'BOOKS LIST\n\n';
         content += `Generated on: ${new Date().toLocaleDateString()}\n\n`;
         
-        books.forEach((book, index) => {
+        students.forEach((student, index) => {
           content += `${index + 1}. STUDENT DETAILS\n`;
           content += `first_name: ${student.first_name}\n`;
           content += `unique_id: ${student.unique_id}\n`;
@@ -110,7 +112,7 @@ const ExportPage=()=>{
           content += `avg_cgpa: ${student.avg_cgpa}\n`;
 
 
-          content += `Description: ${book.description || 'N/A'}\n`;
+          content += `Description: ${student.description || 'N/A'}\n`;
           content += '\n----------------------------\n\n';
         });
     
@@ -183,7 +185,7 @@ const ExportPage=()=>{
             </Box>
     
             <Typography variant="body2" sx={{ mt: 4 }} align="center" color="text.secondary">
-              Total Books: {books.length}
+              Total students: {students.length}
             </Typography>
           </Paper>
         </Container>
