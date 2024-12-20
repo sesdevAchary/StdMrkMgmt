@@ -52,7 +52,7 @@ const ShowStudentDetails = () => {
         setStudent(res.data);
       })
         .catch((error) => {
-          console.error('error  in fetching student details:', err);
+          console.error('error  in fetching student details:', error);
         });
     }
   }, [id])

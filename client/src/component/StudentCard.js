@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types'
 
 
-const StudentCard = ({ Student }) => {
+const StudentCard = ({ student }) => {
     return (
         <Card
             sx={{
@@ -27,8 +27,8 @@ const StudentCard = ({ Student }) => {
             />
             <CardContent sx={{ flexGrow: 1 }}>
                 <Typography variant='h6' component='div' color='primary' gutterBottom>
-                    <Link to={`/show-student/${Student._id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
-                        {Student.first_name}
+                    <Link to={`/show-student/${student._id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                        {student.first_name}
                     </Link>
                 </Typography>
 
@@ -40,13 +40,13 @@ const StudentCard = ({ Student }) => {
                         WebkitLineClamp: 3,
                         WebkitBoxOrient: 'vertical',
                     }}>
-                    {Student.total_score}
+                    {student.total_score}
                 </Typography>
             </CardContent>
             <Box sx={{ p: 2, mt: 'auto' }}>
                 <Button
                     component={Link}
-                    to={`/show-student/${Student._id}`}
+                    to={`/show-student/${student._id}`}
                     variant='contained'
                     color='primary'
                     size='small'
