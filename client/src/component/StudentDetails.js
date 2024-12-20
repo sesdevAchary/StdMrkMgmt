@@ -244,3 +244,22 @@ const ShowStudentDetails = () => {
   const [openDialog, setOpenDialog] = useState(false);
   const { id } = useParams();
   const navigate = useNavigate();
+   // Fetch student details
+   useEffect(() => {
+    if (id) {
+      axios
+        .get(`https://3000-sesdevachary-stdmrkmgmt-v42c1lz37x9.ws-us117.gitpod.io/api/student/${id}`)
+        .then((res) => setStudent(res.data))
+        .catch((error) => console.error("Error fetching student details:", error));
+    }
+  }, [id]);
+
+  // Handle delete confirmation
+  const handleDeleteConfirmation = () => {
+    axios
+      .delete(`https://3000-sesdevachary-stdmrkmgmt-v42c1lz37x9.ws-us117.gitpod.io/api/student/${id}`)
+      .then(() => navigate("/list"))
+      .catch((err) => console.error("Error deleting student:", err));
+    setOpenDialog(false);
+  };
+
