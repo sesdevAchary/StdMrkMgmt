@@ -230,3 +230,12 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import axios from "axios";
+
+// Styled Paper for consistent design
+const StyledPaper = styled(Paper)(({ theme }) => ({
+  padding: theme.spacing(4),
+  marginTop: theme.spacing(4),
+  marginBottom: theme.spacing(4),
+  borderRadius: 12,
+  boxShadow: theme.shadows[3],
+}));
