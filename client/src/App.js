@@ -46,7 +46,7 @@ const App = () => {
                 <Route path="/card" element={<StudentList />} />
 
 
-                <Route path="/exports" element={<ExportPage/>} /> 
+                
 
 
             </Routes>
