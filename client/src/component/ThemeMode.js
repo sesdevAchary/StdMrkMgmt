@@ -24,4 +24,12 @@ export const ThemeModeProvider = ({ children }) => {
           }),
         [mode]
       );
-    
+      return (
+        <ThemeModeContext.Provider value={{ mode, toggleTheme }}>
+          <ThemeProvider theme={theme}>
+            <CssBaseline />
+            {children}
+          </ThemeProvider>
+        </ThemeModeContext.Provider>
+      );
+    };    
