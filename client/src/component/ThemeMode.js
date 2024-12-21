@@ -3,9 +3,9 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 
 // Create a context for theme mode
-export const ThemeModeContext = createContext();
+export const ThemeModeContext = createContext(); //context for sharing the current theme mode and the toggleTheme function throughout the component tree.
 
-export const ThemeModeProvider = ({ children }) => {
+export const ThemeMode = ({ children }) => {
   const [mode, setMode] = useState('dark'); // Default to light mode
 
   // Function to toggle between light and dark mode

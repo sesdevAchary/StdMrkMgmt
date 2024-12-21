@@ -4,7 +4,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from '@mui/material/styles';
-import {ThemeModeProvider } from './components/ThemeMode';
+import {ThemeMode } from './component/ThemeMode';
 import { CssBaseline, Box } from '@mui/material';
 import ExportPage from './component/exportPages';
 
@@ -30,7 +30,7 @@ import  twilightHorizonTheme from './Theme/studentMgmt';
 
 const App = () => {
   return (
-    <ThemeProvider theme={twilightHorizonTheme}>
+    <ThemeMode>
       <CssBaseline />
     <Router>
     <Box display="flex" flexDirection="column" minHeight="100vh">
@@ -53,7 +53,7 @@ const App = () => {
           </Box>
     </Router>
     
-    </ThemeProvider>
+    </ThemeMode>
     
 );
 };
