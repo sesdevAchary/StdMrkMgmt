@@ -4,7 +4,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from '@mui/material/styles';
-// import {ThemeMode } from './component/ThemeMode';
+ import {ThemeMode } from './component/ThemeMode';
 import { CssBaseline, Box } from '@mui/material';
 import ExportPage from './component/exportPages';
 
