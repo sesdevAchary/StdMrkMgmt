@@ -31,3 +31,19 @@ const SearchStudents = () => {
         sortOrder: 'asc',
         name: 'all'
     });
+    
+    useEffect(() => {
+        axios.get(`https://student-mark-management.onrender.com/api/student`)
+          .then(res => {
+            setStudents(res.data);
+            setFilteredStudents(res.data);
+
+            const uniqueNames = [...new Set(res.data.map(student => student.name))];
+            setNames(uniqueNames);
+            setLoading(false);
+          })
+          .catch(err => {
+            console.error('Error fetching students:',err);
+            setLoading(false);
+          });
+    },[]);
