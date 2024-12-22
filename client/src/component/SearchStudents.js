@@ -21,8 +21,7 @@ import axios from 'axios';
 
 const SearchStudents = () => {
     const [students, setStudents] = useState([]);
-    const [filteredStudents, setFilteredStudents] = useState([]);
-    const [loading, setLoading] = useState(true);
+    
     const [names, setNames] = useState([]);
     const [filters, setFilters] = useState({
        
