@@ -24,3 +24,10 @@ const SearchStudents = () => {
     const [filteredStudents, setFilteredStudents] = useState([]);
     const [loading, setLoading] = useState(true);
     const [names, setNames] = useState([]);
+    const [filters, setFilters] = useState({
+        searchTerm: '',
+        searchField: 'title',
+        sortBy: 'title',
+        sortOrder: 'asc',
+        name: 'all'
+    });
