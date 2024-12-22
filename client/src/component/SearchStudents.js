@@ -27,8 +27,7 @@ const SearchStudents = () => {
        
         searchField: 'title',
         sortBy: 'title',
-        sortOrder: 'asc',
-        name: 'all'
+       
     });
     
     useEffect(() => {
