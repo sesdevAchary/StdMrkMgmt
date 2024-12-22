@@ -25,7 +25,7 @@ const SearchStudents = () => {
     const [loading, setLoading] = useState(true);
     const [names, setNames] = useState([]);
     const [filters, setFilters] = useState({
-        searchTerm: '',
+       
         searchField: 'title',
         sortBy: 'title',
         sortOrder: 'asc',
@@ -38,7 +38,7 @@ const SearchStudents = () => {
             setStudents(res.data);
             setFilteredStudents(res.data);
 
-            const uniqueNames = [...new Set(res.data.map(student => student.name))];
+            const uniqueName = [...new Set(res.data.map(student => student.name))];
             setNames(uniqueNames);
             setLoading(false);
           })
@@ -48,7 +48,7 @@ const SearchStudents = () => {
           });
     },[]);
     const applyFilters = () => {
-        let result = [...students];
+        let result = [...student];
 
         if (filters.searchTerm) {
             result = result.filter(book => {
