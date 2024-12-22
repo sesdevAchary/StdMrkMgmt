@@ -47,3 +47,14 @@ const SearchStudents = () => {
             setLoading(false);
           });
     },[]);
+    const applyFilters = () => {
+        let result = [...students];
+
+        if (filters.searchTerm) {
+            result = result.filter(book => {
+                const searchValue = book[filters.searchField]?.toString().toLowerCase();
+                return searchValue?.includes(filters.searchTerm.toLowerCase());
+            });
+        }
+    }
+}
