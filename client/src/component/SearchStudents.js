@@ -18,3 +18,9 @@ import SearchIcon from '@mui/icons-material/Search';
 import RestartAltIcon from '@mui/icons-material/RestartAlt';
 import BookCard from './BookCard';
 import axios from 'axios';
+
+const SearchStudents = () => {
+    const [students, setStudents] = useState([]);
+    const [filteredStudents, setFilteredStudents] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [names, setNames] = useState([]);
