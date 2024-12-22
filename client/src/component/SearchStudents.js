@@ -21,22 +21,26 @@ import axios from 'axios';
 
 const SearchStudents = () => {
     const [students, setStudents] = useState([]);
-    
+    const [filteredStudents, setFilteredStudents] = useState([]);
+    const [loading, setLoading] = useState(true);
     const [names, setNames] = useState([]);
+
     const [filters, setFilters] = useState({
-       
+        searchTerm: '',
         searchField: 'title',
         sortBy: 'title',
-       
+        sortOrder: 'asc',
+        name: 'all'
     });
-    
+
+
     useEffect(() => {
         axios.get(`https://student-mark-management.onrender.com/api/student`)
           .then(res => {
             setStudents(res.data);
             setFilteredStudents(res.data);
 
-            const uniqueName = [...new Set(res.data.map(student => student.name))];
+            const uniqueNames = [...new Set(res.data.map(student => student.name))];
             setNames(uniqueNames);
             setLoading(false);
           })
@@ -45,8 +49,9 @@ const SearchStudents = () => {
             setLoading(false);
           });
     },[]);
+
     const applyFilters = () => {
-        let result = [...student];
+        let result = [...students];
 
         if (filters.searchTerm) {
             result = result.filter(book => {
