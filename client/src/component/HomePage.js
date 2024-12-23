@@ -111,4 +111,6 @@ const HomePage = () => {
             fontWeight: 600,
             marginBottom: 2,
           }}
-        ></Typography>
+        >
+           Green Valley High School
+           </Typography>
