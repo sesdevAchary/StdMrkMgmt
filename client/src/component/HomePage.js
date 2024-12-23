@@ -103,3 +103,12 @@ const HomePage = () => {
           marginBottom: 4,
         }}
       >
+         <Typography
+          variant="h4"
+          component="h2"
+          color="primary.main"
+          sx={{
+            fontWeight: 600,
+            marginBottom: 2,
+          }}
+        ></Typography>
