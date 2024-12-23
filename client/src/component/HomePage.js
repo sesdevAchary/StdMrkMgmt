@@ -94,3 +94,12 @@ const HomePage = () => {
         boxShadow: 3,
       }}
     >
+        {/* School Name and Photo */}
+        <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          marginBottom: 4,
+        }}
+      >
