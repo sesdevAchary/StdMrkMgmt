@@ -298,14 +298,14 @@ const HomePage = () => {
             color="primary.main"
             sx={{ fontWeight: 600, marginBottom: 2 }}
           >
-            Green Valley High School
+            GRREEN VALLEY HIGH SCHOOL
           </Typography>
-          <Card sx={{ borderRadius: 2, boxShadow: 2, maxWidth: 300 }}>
+          <Card sx={{ borderRadius: 2, boxShadow: 2, maxWidth: 500 }}>
             <CardMedia
               component="img"
-              image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT33jsfWTSX9jSE5B1idzDCy2aURcudl6xeFzrxRpOAXNTRI8-wGQAc3KvwV6aJjMVXeoI&usqp=CAU"
+              image="https://imagescdn.homes.com/i2/zAzfEG60j5CUeJZYrHBwxs5D7Tw2aEsDfTa5XCTDHQo/116/green-valley-high-school-henderson-nv-primaryphoto.jpg?p=1"
               alt="Green Valley High School"
-              sx={{ width: '100%', borderRadius: 2 }}
+              sx={{ width: '100%',  height: '100%',borderRadius: 2 }}
             />
           </Card>
         </Box>
