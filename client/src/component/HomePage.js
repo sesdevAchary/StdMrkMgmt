@@ -114,3 +114,12 @@ const HomePage = () => {
         >
            Green Valley High School
            </Typography>
+           <Card sx={{ borderRadius: 6, boxShadow: 7, maxWidth: 30 }}>
+          <CardMedia
+            component="img"
+            image="https://images.unsplash.com/photo-1596495577886-d920f5dceded" // Replace with your school's photo URL
+            alt="Green Valley High School"
+            sx={{ width: '100%', borderRadius: 2 }}
+          />
+        </Card>
+      </Box>
