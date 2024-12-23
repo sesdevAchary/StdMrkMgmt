@@ -1,79 +1,3 @@
-// import React from 'react';
-// import { Link } from 'react-router-dom';
-// import { Container, Typography, Button, Box } from '@mui/material';
-
-// const HomePage = () => {
-//   return (
-//     <Container
-//       maxWidth="lg"
-//       sx={{
-//         textAlign: 'center',
-//         py: { xs: 4, sm: 6 },  // Responsive padding
-//         display: 'flex',
-//         flexDirection: 'column',
-//         justifyContent: 'center',
-//         alignItems: 'center',
-//         backgroundColor: 'background.paper',
-//         borderRadius: 2,
-//         boxShadow: 3,
-//       }}
-//     >
-//       <Typography
-//         variant="h2"
-//         component="h1"
-//         color="success.main"
-//         sx={{
-//           fontWeight: 700,
-//           marginBottom: 3,
-//           letterSpacing: 1,
-//         }}
-//       >
-//         Heartening Welcome to the Student Management Queue
-//       </Typography>
-
-//       <Typography
-//         variant="h5"
-//         sx={{
-//           color: 'text.secondary',
-//           marginBottom: 4,
-//           fontWeight: 400,
-//           lineHeight: 1.5,
-//           maxWidth: '600px',  // Limit width for better text alignment
-//         }}
-//       >
-//         Manage student information effortlessly and efficiently. Stay organized and improve productivity.
-//       </Typography>
-
-//       <Box mt={4}>
-//         <Button
-//           component={Link}
-//           to="/list"
-//           color="primary"
-//           variant="contained"
-//           sx={{
-//             padding: '12px 24px',
-//             fontSize: '1.1rem',
-//             textTransform: 'none',
-//             boxShadow: 2,
-//             transition: 'all 0.3s ease',
-//             '&:hover': {
-//               boxShadow: 4,
-//               transform: 'translateY(-2px)',
-//             },
-//           }}
-//           aria-label="View Student Information"
-//         >
-//           View Student Information
-//         </Button>
-//       </Box>
-//     </Container>
-//   );
-// };
-
-// export default HomePage;
-
-
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Typography, Button, Box, Card, CardMedia } from '@mui/material';
@@ -94,8 +18,8 @@ const HomePage = () => {
         boxShadow: 3,
       }}
     >
-        {/* School Name and Photo */}
-        <Box
+      {/* School Name and Photo */}
+      <Box
         sx={{
           display: 'flex',
           flexDirection: 'column',
@@ -103,7 +27,7 @@ const HomePage = () => {
           marginBottom: 4,
         }}
       >
-         <Typography
+        <Typography
           variant="h4"
           component="h2"
           color="primary.main"
@@ -112,9 +36,9 @@ const HomePage = () => {
             marginBottom: 2,
           }}
         >
-           Green Valley High School
-           </Typography>
-           <Card sx={{ borderRadius: 6, boxShadow: 7, maxWidth: 30 }}>
+          Green Valley High School
+        </Typography>
+        <Card sx={{ borderRadius: 2, boxShadow: 2, maxWidth: 300 }}>
           <CardMedia
             component="img"
             image="https://images.unsplash.com/photo-1596495577886-d920f5dceded" // Replace with your school's photo URL
@@ -123,8 +47,9 @@ const HomePage = () => {
           />
         </Card>
       </Box>
-        {/* Welcome Message */}
-        <Typography
+
+      {/* Welcome Message */}
+      <Typography
         variant="h2"
         component="h1"
         color="success.main"
@@ -147,7 +72,7 @@ const HomePage = () => {
           maxWidth: '600px', // Limit width for better text alignment
         }}
       >
-        Manage student information effortlessly and efficiently. Stay organized and improve productivity.
+        Manage student information effortlessly and efficiently.
       </Typography>
 
       {/* View Students Button */}
@@ -155,13 +80,13 @@ const HomePage = () => {
         <Button
           component={Link}
           to="/list"
-          color="secondary"
+          color="primary"
           variant="contained"
           sx={{
-            padding: '82px 24px',
-            fontSize: '1.5rem',
+            padding: '12px 24px',
+            fontSize: '1.1rem',
             textTransform: 'none',
-            boxShadow:5,
+            boxShadow: 2,
             transition: 'all 0.3s ease',
             '&:hover': {
               boxShadow: 4,
