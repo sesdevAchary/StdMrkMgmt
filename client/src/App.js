@@ -3,7 +3,7 @@
 
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { ThemeProvider } from '@mui/material/styles';
+// import { ThemeProvider } from '@mui/material/styles';
  import {ThemeMode } from './component/ThemeMode';
 import { CssBaseline, Box } from '@mui/material';
 import ExportPage from './component/exportPages';
@@ -22,7 +22,7 @@ import HomePage from './component/HomePage';
 import './App.css'; // Make sure this contains your CSS
 
 
-import  twilightHorizonTheme from './Theme/studentMgmt';
+// import  twilightHorizonTheme from './Theme/studentMgmt';
 
 
 
@@ -30,7 +30,7 @@ import  twilightHorizonTheme from './Theme/studentMgmt';
 
 const App = () => {
   return (
-    <ThemeProvider theme={twilightHorizonTheme}>
+    <ThemeMode>
       <CssBaseline />
     <Router>
     <Box display="flex" flexDirection="column" minHeight="100vh">
@@ -56,7 +56,7 @@ const App = () => {
           </Box>
     </Router>
     
-    </ThemeProvider>
+    </ThemeMode>
     
 );
 };
