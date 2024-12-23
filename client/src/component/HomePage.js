@@ -123,3 +123,58 @@ const HomePage = () => {
           />
         </Card>
       </Box>
+        {/* Welcome Message */}
+        <Typography
+        variant="h2"
+        component="h1"
+        color="success.main"
+        sx={{
+          fontWeight: 700,
+          marginBottom: 3,
+          letterSpacing: 1,
+        }}
+      >
+        Heartening Welcome to the Student Management Queue
+      </Typography>
+
+      <Typography
+        variant="h5"
+        sx={{
+          color: 'text.secondary',
+          marginBottom: 4,
+          fontWeight: 400,
+          lineHeight: 1.5,
+          maxWidth: '600px', // Limit width for better text alignment
+        }}
+      >
+        Manage student information effortlessly and efficiently. Stay organized and improve productivity.
+      </Typography>
+
+      {/* View Students Button */}
+      <Box mt={4}>
+        <Button
+          component={Link}
+          to="/list"
+          color="secondary"
+          variant="contained"
+          sx={{
+            padding: '82px 24px',
+            fontSize: '1.5rem',
+            textTransform: 'none',
+            boxShadow:5,
+            transition: 'all 0.3s ease',
+            '&:hover': {
+              boxShadow: 4,
+              transform: 'translateY(-2px)',
+            },
+          }}
+          aria-label="View Student Information"
+        >
+          View Student Information
+        </Button>
+      </Box>
+    </Container>
+  );
+};
+
+export default HomePage;
