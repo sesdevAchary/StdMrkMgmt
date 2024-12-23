@@ -79,3 +79,18 @@ import { Link } from 'react-router-dom';
 import { Container, Typography, Button, Box, Card, CardMedia } from '@mui/material';
 
 const HomePage = () => {
+  return (
+    <Container
+      maxWidth="lg"
+      sx={{
+        textAlign: 'center',
+        py: { xs: 4, sm: 6 }, // Responsive padding
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'background.paper',
+        borderRadius: 2,
+        boxShadow: 3,
+      }}
+    >
