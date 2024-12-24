@@ -14,7 +14,7 @@ function StudentList(){
 
     useEffect(()=>{
         axios
-        .get()
+        .get('https://3000-sesdevachary-stdmrkmgmt-v42c1lz37x9.ws-us117.gitpod.io/api/student')
         .then((res)=>{
             setStudent(res.data);
             setLoading(false);
@@ -37,7 +37,7 @@ function StudentList(){
 
             {loading?(
                 <Box display="flex" justifyContent="center" mt={7}>
-                    <CircularProgress/>'https://3000-sesdevachary-stdmrkmgmt-v42c1lz37x9.ws-us117.gitpod.io/api/student'
+                    <CircularProgress/>
                 </Box>
             ):(
                 <Grid container spacing={4}>

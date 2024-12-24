@@ -193,6 +193,8 @@ const CreateStudent = () => {
               variant="contained"
               color="primary"
               type="submit"
+              onClick={() => navigate('/list')}
+
               sx={{ borderRadius: '8px', padding: '10px 20px' }}
             >
               Submit
