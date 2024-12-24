@@ -46,7 +46,7 @@ const StudentCard = ({ student }) => {
             <Box sx={{ p: 2, mt: 'auto' }}>
                 <Button
                     component={Link}
-                    to={`/show-student/${student._id}`}
+                    to={`/details/${student._id}`}
                     variant='contained'
                     color='primary'
                     size='small'
