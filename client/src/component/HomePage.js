@@ -1,6 +1,3 @@
-
-
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Typography, Button, Box, Card, CardMedia } from '@mui/material';
@@ -42,20 +39,25 @@ const HomePage = () => {
             variant="h4"
             component="h2"
             color="primary.main"
-            sx={{ fontWeight: 600, marginBottom: 2 }}
+            sx={{
+              fontFamily: 'Montserrat, sans-serif',
+              fontWeight: 700,
+              marginBottom: 2,
+              letterSpacing: 1.2,
+            }}
           >
-            GRREEN VALLEY HIGH SCHOOL
+            GREEN VALLEY HIGH SCHOOL
           </Typography>
           <Card sx={{ borderRadius: 2, boxShadow: 2, maxWidth: 500 }}>
             <CardMedia
               component="img"
               image="https://imagescdn.homes.com/i2/zAzfEG60j5CUeJZYrHBwxs5D7Tw2aEsDfTa5XCTDHQo/116/green-valley-high-school-henderson-nv-primaryphoto.jpg?p=1"
               alt="Green Valley High School"
-              sx={{ width: '100%',  height: '100%',borderRadius: 2 }}
+              sx={{ width: '100%', height: '100%', borderRadius: 2 }}
             />
           </Card>
         </Box>
-        
+
         <Button onClick={() => setIndex(1)} sx={{ mt: 3 }} variant="outlined">
           Go to Next Page
         </Button>
@@ -76,17 +78,23 @@ const HomePage = () => {
           boxShadow: 3,
         }}
       >
-       <Typography
+        <Typography
           variant="h2"
           component="h1"
           color="success.main"
-          sx={{ fontWeight: 700, marginBottom: 3, letterSpacing: 1 }}
+          sx={{
+            fontFamily: 'Montserrat, sans-serif',
+            fontWeight: 700,
+            marginBottom: 3,
+            letterSpacing: 1.2,
+          }}
         >
           Heartening Welcome to the Student Management Queue
         </Typography>
         <Typography
           variant="h5"
           sx={{
+            fontFamily: 'Roboto, sans-serif',
             color: 'text.secondary',
             marginBottom: 4,
             fontWeight: 400,
@@ -103,10 +111,11 @@ const HomePage = () => {
             color="primary"
             variant="contained"
             sx={{
+              fontFamily: 'Roboto, sans-serif',
               padding: '12px 24px',
               fontSize: '1.1rem',
               textTransform: 'none',
-              boxShadow: 2,
+              boxShadow: 5,
               transition: 'all 0.3s ease',
               '&:hover': {
                 boxShadow: 4,
