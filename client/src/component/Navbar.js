@@ -267,9 +267,10 @@ const Navbar = () => {
         // transition: 'all 0.3s ease',  // Smooth transition for all properties
      '&:hover': {
       backgroundColor: mode === 'light' ? 'action.hover' : 'primary.dark',
-
       // Make the background color even more pronounced with a deeper tone in light mode, and a rich color in dark mode
-  color: mode === 'light' ? 'background.paper' : 'text.primary',  // Text color switches to provide high contrast with the background
+      color: mode === 'light' ? 'text.primary' : 'background.paper',
+
+      // Text color switches to provide high contrast with the background
   boxShadow: mode === 'light' ? '0 8px 25px rgba(0, 0, 0, 0.2)' : '0 8px 25px rgba(255, 255, 255, 0.25)', // Soft shadow with more spread to create a subtle depth
   transform: 'scale(1.02)', // Increase the zoom effect for more visual emphasis
   borderRadius: '8px', // Rounded corners to smooth the button's shape during hover
