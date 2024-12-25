@@ -289,23 +289,30 @@ const Navbar = () => {
             },
           }}
         >
-          Student Management
+          STUDENT MANAGEMENT
         </Typography>
 
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
           {/* Theme Toggle */}
           <IconButton
-            onClick={toggleTheme}
-            sx={{
-              color: mode === 'light' ? 'text.primary' : 'secondary.light',
-              '&:hover': {
-                color: 'secondary.dark',
-              },
-              transition: 'color 0.3s ease',
-            }}
-          >
-            {mode === 'light' ? <Brightness4Icon /> : <Brightness7Icon />}
-          </IconButton>
+  onClick={toggleTheme}
+  sx={{
+    color: mode === 'light' ? 'primary.dark' : 'secondary.main',  // Use better contrast for text color
+    backgroundColor: mode === 'light' ? 'background.paper' : 'primary.dark', // Subtle background color change based on mode
+    borderRadius: '50%',  // Circular button
+    padding: '8px', // Add padding to make it more spacious
+    '&:hover': {
+      backgroundColor: mode === 'light' ? 'primary.light' : 'secondary.dark', // Hover effect changes background color
+      color: 'white',  // Change icon color to white on hover
+      transform: 'scale(1.1)',  // Slight scale effect for better interaction feedback
+      boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)',  // Soft shadow to add depth
+    },
+    transition: 'background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease',  // Smooth transition for multiple properties
+  }}
+>
+  {mode === 'light' ? <Brightness4Icon /> : <Brightness7Icon />}
+</IconButton>
+
 
           {/* GitHub Logo */}
           <IconButton
