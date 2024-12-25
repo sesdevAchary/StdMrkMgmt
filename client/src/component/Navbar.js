@@ -84,8 +84,6 @@
 // };
 
 // export default Navbar;
-
-
 import React, { useContext, useState } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import {
@@ -100,7 +98,7 @@ import {
 import MenuIcon from '@mui/icons-material/Menu';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
-import { ThemeModeContext } from './ThemeMode'; // Ensure correct path
+import { ThemeModeContext } from './ThemeMode'; 
 
 const Navbar = () => {
   const [menuAnchorEl, setMenuAnchorEl] = useState(null);
@@ -115,80 +113,106 @@ const Navbar = () => {
   };
 
   return (
-    <AppBar position="static" elevation={0} sx={{ backgroundColor: 'primary.main', width: '100%' }}>
-      <Toolbar>
+    <AppBar
+      position="static"
+      sx={{
+        backgroundColor: mode === 'light' ? 'primary.main' : 'background.default',
+        color: mode === 'light' ? 'text.primary' : 'secondary.main',
+        boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', // Subtle shadow for depth
+        transition: 'background-color 0.3s ease',
+      }}
+    >
+      <Toolbar
+        sx={{
+          justifyContent: 'space-between',
+          padding: { xs: '8px 16px', sm: '12px 24px' }, // Responsive padding
+        }}
+      >
         <Typography
-          variant="h6"
+          variant="h5"
           component={RouterLink}
           to="/"
           sx={{
-            flexGrow: 3,
-            color: 'primary.main', // Use theme's primary color for better contrast
+            color: mode === 'light' ? 'secondary.main' : 'primary.main',
             textDecoration: 'none',
-            fontFamily: 'Poppins, sans-serif', // Clean and modern font
-            fontWeight: 600, // Slightly bolder text for emphasis
-            letterSpacing: '0.05em', // Subtle spacing for readability
-            transition: 'color 0.3s ease, transform 0.3s ease', // Smooth transitions
+            fontFamily: 'Nunito, sans-serif', // Sleek and modern font
+            fontWeight: 700,
+            letterSpacing: '0.08em',
+            transition: 'color 0.3s ease, transform 0.3s ease',
             '&:hover': {
-              color: 'secondary.main', // Change color on hover for interaction
-              transform: 'scale(1.05)', // Slightly enlarge for effect
+              color: 'secondary.dark', // Interactive hover effect
+              transform: 'scale(1.1)', // Subtle zoom
             },
           }}
         >
           Student Management
         </Typography>
-        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-        <IconButton onClick={toggleTheme} color="inherit">
+
+        <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+          <IconButton
+            onClick={toggleTheme}
+            sx={{
+              color: mode === 'light' ? 'text.primary' : 'secondary.light',
+              '&:hover': {
+                color: 'secondary.dark',
+              },
+              transition: 'color 0.3s ease',
+            }}
+          >
             {mode === 'light' ? <Brightness4Icon /> : <Brightness7Icon />}
           </IconButton>
-          <IconButton onClick={handleMenuOpen} color="inherit">
+
+          <IconButton
+            onClick={handleMenuOpen}
+            sx={{
+              color: mode === 'light' ? 'text.primary' : 'secondary.light',
+              '&:hover': {
+                color: 'secondary.dark',
+              },
+              transition: 'color 0.3s ease',
+            }}
+          >
             <MenuIcon />
           </IconButton>
+
           <Menu
             anchorEl={menuAnchorEl}
             open={Boolean(menuAnchorEl)}
             onClose={handleMenuClose}
+            sx={{
+              '& .MuiPaper-root': {
+                backgroundColor: mode === 'light' ? 'background.paper' : 'background.default',
+                boxShadow: '0 4px 10px rgba(0, 0, 0, 0.2)',
+                transition: 'all 0.3s ease',
+              },
+            }}
           >
-            <MenuItem
-              component={RouterLink}
-              to="/add"
-              onClick={handleMenuClose}
-              sx={{ color: 'text.primary', fontFamily: 'Lato, sans-serif' }}
-            >
-              Create
-            </MenuItem>
-            <MenuItem
-              component={RouterLink}
-              to="/list"
-              onClick={handleMenuClose}
-              sx={{ color: 'text.primary', fontFamily: 'Lato, sans-serif' }}
-            >
-              StudentList
-            </MenuItem>
-            <MenuItem
-              component={RouterLink}
-              to="/search"
-              onClick={handleMenuClose}
-              sx={{ color: 'text.primary', fontFamily: 'Lato, sans-serif' }}
-            >
-              SearchPage
-            </MenuItem>
-            <MenuItem
-              component={RouterLink}
-              to="/export"
-              onClick={handleMenuClose}
-              sx={{ color: 'text.primary', fontFamily: 'Lato, sans-serif' }}
-            >
-              Download List
-            </MenuItem>
-            <MenuItem
-              component={RouterLink}
-              to="/About"
-              onClick={handleMenuClose}
-              sx={{ color: 'text.primary', fontFamily: 'Lato, sans-serif' }}
-            >
-              About
-            </MenuItem>
+            {[
+              { title: 'Create', path: '/add' },
+              { title: 'Student List', path: '/list' },
+              { title: 'Search Page', path: '/search' },
+              { title: 'Download List', path: '/export' },
+              { title: 'About', path: '/about' },
+            ].map((item) => (
+              <MenuItem
+                key={item.path}
+                component={RouterLink}
+                to={item.path}
+                onClick={handleMenuClose}
+                sx={{
+                  color: 'text.primary',
+                  fontFamily: 'Poppins, sans-serif',
+                  padding: '10px 20px',
+                  '&:hover': {
+                    backgroundColor: 'primary.light',
+                    color: 'secondary.dark',
+                  },
+                  transition: 'all 0.3s ease',
+                }}
+              >
+                {item.title}
+              </MenuItem>
+            ))}
           </Menu>
         </Box>
       </Toolbar>
