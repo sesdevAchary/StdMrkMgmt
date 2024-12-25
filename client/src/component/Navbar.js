@@ -280,7 +280,7 @@ const Navbar = () => {
             color: mode === 'light' ? 'secondary.main' : 'primary.main',
             textDecoration: 'none',
             fontFamily: 'Nunito, sans-serif',
-            fontWeight: 700,
+            fontWeight: 900,
             letterSpacing: '0.08em',
             transition: 'color 0.3s ease, transform 0.3s ease',
             '&:hover': {
@@ -297,17 +297,17 @@ const Navbar = () => {
           <IconButton
   onClick={toggleTheme}
   sx={{
-    color: mode === 'light' ? 'primary.dark' : 'secondary.main',  // Use better contrast for text color
-    backgroundColor: mode === 'light' ? 'background.paper' : 'primary.dark', // Subtle background color change based on mode
-    borderRadius: '50%',  // Circular button
+    color: mode === 'secondary.dark' ? 'primary.dark' : 'secondary.main',  // Use better contrast for text color
+    // backgroundColor: mode === 'light' ? 'background.paper' : 'primary.dark', // Subtle background color change based on mode
+    borderRadius: '90%',  // Circular button
     padding: '8px', // Add padding to make it more spacious
     '&:hover': {
       backgroundColor: mode === 'light' ? 'primary.light' : 'secondary.dark', // Hover effect changes background color
-      color: 'white',  // Change icon color to white on hover
+      color: 'secondary.white',  // Change icon color to white on hover
       transform: 'scale(1.1)',  // Slight scale effect for better interaction feedback
-      boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)',  // Soft shadow to add depth
+      boxShadow: '0 8px 8px rgba(0, 0, 0, 0.3)',  // Soft shadow to add depth
     },
-    transition: 'background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease',  // Smooth transition for multiple properties
+    transition: 'background-color 0.7s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease',  // Smooth transition for multiple properties
   }}
 >
   {mode === 'light' ? <Brightness4Icon /> : <Brightness7Icon />}
