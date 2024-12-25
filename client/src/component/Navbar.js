@@ -122,10 +122,17 @@ const Navbar = () => {
           component={RouterLink}
           to="/"
           sx={{
-            flexGrow: 1,
-            color: 'text.primary',
+            flexGrow: 3,
+            color: 'primary.main', // Use theme's primary color for better contrast
             textDecoration: 'none',
-            fontFamily: 'Roboto Slab, serif',
+            fontFamily: 'Poppins, sans-serif', // Clean and modern font
+            fontWeight: 600, // Slightly bolder text for emphasis
+            letterSpacing: '0.05em', // Subtle spacing for readability
+            transition: 'color 0.3s ease, transform 0.3s ease', // Smooth transitions
+            '&:hover': {
+              color: 'secondary.main', // Change color on hover for interaction
+              transform: 'scale(1.05)', // Slightly enlarge for effect
+            },
           }}
         >
           Student Management
