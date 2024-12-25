@@ -259,11 +259,28 @@ const Navbar = () => {
     <AppBar
       position="static"
       sx={{
-        backgroundColor: mode === 'light' ? 'primary.main' : 'background.default',
-        color: mode === 'light' ? 'text.primary' : 'secondary.main',
-        boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-        transition: 'background-color 0.3s ease',
+        // backgroundColor: mode === 'light' ? 'primary.main' : 'background.paper',  // Lighter background for better contrast in dark mode
+        // color: mode === 'light' ? 'background.paper' : 'text.primary',  // Invert text color based on mode for better contrast
+        boxShadow: mode === 'dark' ? '0 4px 12px rgba(0, 0, 0, 0.1)' : '0 4px 12px rgba(255, 255, 255, 0.2)',  // Enhanced shadow for more depth
+        borderRadius: '8px',  // Rounded corners for a more modern look
+        padding: '10px 10px',  // Spacious padding for better visual appeal
+        // transition: 'all 0.3s ease',  // Smooth transition for all properties
+     '&:hover': {
+      backgroundColor: mode === 'light' ? 'action.hover' : 'primary.dark',
+
+      // Make the background color even more pronounced with a deeper tone in light mode, and a rich color in dark mode
+  color: mode === 'light' ? 'background.paper' : 'text.primary',  // Text color switches to provide high contrast with the background
+  boxShadow: mode === 'light' ? '0 8px 25px rgba(0, 0, 0, 0.2)' : '0 8px 25px rgba(255, 255, 255, 0.25)', // Soft shadow with more spread to create a subtle depth
+  transform: 'scale(1.02)', // Increase the zoom effect for more visual emphasis
+  borderRadius: '8px', // Rounded corners to smooth the button's shape during hover
+  transition: 'all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55)',  // Use a more dynamic transition curve for a more fluid interaction
+  cursor: 'pointer', // Indicate that the button is interactive by changing the cursor
+
+ // Smooth transition for all properties
+  // transform: 'scale(1.05)',  // Slight scale effect for a more interactive feel
+        },
       }}
+      
     >
       <Toolbar
         sx={{
