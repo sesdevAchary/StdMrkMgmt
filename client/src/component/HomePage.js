@@ -59,9 +59,28 @@ const HomePage = () => {
           </Card>
         </Box>
 
-        <Button onClick={() => setIndex(1)} sx={{ mt: 3 }} variant="outlined">
-          Go to Next Page
-        </Button>
+        <Button
+  onClick={() => setIndex(1)}  // Changed variable name for better clarity
+  sx={{
+    mt: 3,
+    py: 1.5,  // Padding for better button height
+    px: 4,  // Padding for better width
+    fontSize: '30px',  
+    backgroundColor: 'primary.main',  // Solid background color
+    color: 'white',  //  text color contrasts well with the background
+    borderRadius: 2,  
+    '&:hover': {
+      backgroundColor: 'primary.dark',  // Darken on hover for visual feedback
+      boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.15)',  // Subtle shadow on hover
+    },
+    transition: 'background-color 0.3s ease, box-shadow 0.3s ease',  // Smooth transition for hover effect
+  }}
+  variant="contained"  // Use contained for a more prominent button appearance
+  aria-label="Go to the next page"  // Ensure accessibility for screen readers
+>
+  Go to Next Page
+</Button>
+
       </Container>
 
       {/* Page 2 */}
