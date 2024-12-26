@@ -264,46 +264,36 @@ const Navbar = () => {
     <AppBar
       position="static"
       sx={{
-        // backgroundColor: mode === 'light' ? 'primary.main' : 'background.paper',
-        // color: mode === 'light' ? 'background.paper' : 'text.primary',
-        // boxShadow: mode === 'dark' ? '0 4px 12px rgba(34, 72, 47, 0.1)' : '0 4px 12px rgba(255, 255, 255, 0.2)',
-        // borderRadius: '8px',
-        // padding: '10px 20px',
-        // display: 'flex',
-        // gap: '40px',
-        // alignItems: 'center',
-        // justifyContent: 'space-between',
-        // transition: 'all 0.3s ease',
+        backgroundColor: mode === 'light' ? 'primary.main' : 'background.paper',
+        color: mode === 'light' ? 'background.paper' : 'text.primary',
+        boxShadow: mode === 'dark' ? '0 4px 12px rgba(34, 72, 47, 0.1)' : '0 4px 12px rgba(255, 255, 255, 0.2)',
+        borderRadius: '8px',
+        padding: '10px 20px',
+        display: 'flex',
+        gap: '40px',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        transition: 'all 0.2s ease',
 
-
-
-
-
-        backgroundColor: mode === 'light' ? 'primary.main' : 'background.default',
-        color: mode === 'light' ? 'text.primary' : 'secondary.main',
-        boxShadow: '0 6px 9px rgba(0, 0, 0, 0.1)', // Subtle shadow for depth
-        transition: 'background-color 0.3s ease',
-
-        
       }}
     >
       <Toolbar
         sx={{
           display: 'flex',
           justifyContent: 'flex-start',
-          padding: { xs: '8px 16px', sm: '12px 24px' },
+          padding: { xs: '8px 8px', sm: '35px 34px' },
         }}
       >
         {/* Title */}
         <Typography
-          variant="h6"
+          variant="h4"
           component={RouterLink}
           to="/"
           sx={{
             color: mode === 'light' ? 'normal.main' : 'primary.main',
             textDecoration: 'none',
             fontFamily: 'Nunito, sans-serif',
-            fontWeight: 950,
+            fontWeight: 750,
             letterSpacing: '0.08em',
           }}
         >
@@ -311,7 +301,7 @@ const Navbar = () => {
         </Typography>
 
         {/* Right side items: GitHub, Theme Toggle, and Menu */}
-        <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+        <Box sx={{ display: 'flex', alignItems: 'end', gap: 2 }}>
           {/* Theme Toggle */}
           <IconButton onClick={toggleTheme} sx={{ color: mode === 'light' ? 'text.primary' : 'secondary.main' }}>
             {mode === 'light' ? <Brightness4Icon /> : <Brightness7Icon />}
