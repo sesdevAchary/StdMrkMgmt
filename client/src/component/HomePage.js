@@ -17,7 +17,7 @@ const HomePage = () => {
         maxWidth="lg"
         sx={{
           textAlign: 'center',
-          py: { xs: 4, sm: 6 },
+          py: { xs: 4, sm: 4 },
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
@@ -32,15 +32,16 @@ const HomePage = () => {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            marginBottom: 4,
+            marginBottom: 2,
           }}
         >
           <Typography
-            variant="h4"
+            variant="h2"
             component="h2"
             color="primary.main"
             sx={{
-              fontFamily: 'Montserrat, sans-serif',
+              fontFamily: 'Ubuntu, sans-serif',
+
               fontWeight: 700,
               marginBottom: 2,
               letterSpacing: 1.2,
@@ -48,12 +49,12 @@ const HomePage = () => {
           >
             GREEN VALLEY HIGH SCHOOL
           </Typography>
-          <Card sx={{ borderRadius: 2, boxShadow: 2, maxWidth: 500 }}>
+          <Card sx={{ borderRadius: 2, boxShadow: 10, maxWidth: 750 }}>
             <CardMedia
               component="img"
               image="https://imagescdn.homes.com/i2/zAzfEG60j5CUeJZYrHBwxs5D7Tw2aEsDfTa5XCTDHQo/116/green-valley-high-school-henderson-nv-primaryphoto.jpg?p=1"
               alt="Green Valley High School"
-              sx={{ width: '100%', height: '100%', borderRadius: 2 }}
+              sx={{ width: '100%', height: '100%', borderRadius: 5 }}
             />
           </Card>
         </Box>
