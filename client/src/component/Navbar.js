@@ -259,18 +259,16 @@ const Navbar = () => {
     <AppBar
       position="static"
       sx={{
-        backgroundColor: mode === 'light' ? 'primary.main' : 'background.paper',  // Lighter background for better contrast in dark mode
-        color: mode === 'light' ? 'background.paper' : 'text.primary',  // Invert text color based on mode for better contrast
-
-        backgroundColor: mode === 'light' ? 'primary.main' : 'background.paper',  // Light background in light mode, dark background in dark mode
+        backgroundColor: mode === 'light' ? 'primary.main' : 'background.paper',  // Lighter background for better contrast in light mode, darker background for dark mode
         color: mode === 'light' ? 'background.paper' : 'text.primary',  // Invert text color based on mode
-        boxShadow: mode === 'dark' ? '0 4px 12px rgba(0, 0, 0, 0.1)' : '0 4px 12px rgba(255, 255, 255, 0.2)',  // Soft shadow for depth
+        boxShadow: mode === 'dark' ? '0 4px 12px rgba(34, 72, 47, 0.1)' : '0 4px 12px rgba(255, 255, 255, 0.2)',  // Soft shadow for depth
         borderRadius: '8px',  // Rounded corners for a sleek, modern look
-        padding: '10px 15px',  // Slightly larger padding for better spacing
+        padding: '10px 20px',  // Larger padding for better spacing around content
         display: 'flex',  // Flexbox layout for easy alignment of navbar items
-        alignItems: 'center',  // Align items vertically
+        gap: '100px',  // Adequate space between elements
+        alignItems: 'center',  // Vertically align items in the center
         justifyContent: 'space-between',  // Distribute items across the navbar evenly
-        transition: 'all 0.3s ease',
+        transition: 'all 0.3s ease',  // Smooth transition for any changes
 
 
       }}
@@ -278,20 +276,23 @@ const Navbar = () => {
     >
       <Toolbar
         sx={{
-          justifyContent: 'space-between',
+          justifyContent: 'flex-start',
+          display:'flex',
+          
           padding: { xs: '8px 16px', sm: '12px 24px' },
         }}
       >
         {/* Title */}
         <Typography
-          variant="h5"
+          
+          variant="h6" 
           component={RouterLink}
           to="/"
           sx={{
-            color: mode === 'light' ? 'secondary.main' : 'primary.main',
+            color: mode === 'light' ? 'normal.main' : 'primary.main',
             textDecoration: 'none',
             fontFamily: 'Nunito, sans-serif',
-            fontWeight: 900,
+            fontWeight: 950,
             letterSpacing: '0.08em',
             transition: 'color 0.3s ease, transform 0.3s ease',
             '&:hover': {
