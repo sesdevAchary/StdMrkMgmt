@@ -106,13 +106,13 @@ const HomePage = () => {
             fontFamily: 'Montserrat, sans-serif',
             fontWeight: 700,
             marginBottom: 3,
-            letterSpacing: 1.2,
+            letterSpacing: 1.3,
           }}
         >
           Heartening Welcome to the Student Management Queue
         </Typography>
         <Typography
-          variant="h5"
+          variant="h3"
           sx={{
             fontFamily: 'Roboto, sans-serif',
             color: 'text.secondary',
@@ -131,25 +131,69 @@ const HomePage = () => {
             color="primary"
             variant="contained"
             sx={{
-              fontFamily: 'Roboto, sans-serif',
-              padding: '12px 24px',
-              fontSize: '1.1rem',
-              textTransform: 'none',
-              boxShadow: 5,
-              transition: 'all 0.3s ease',
+              mt: 3,  // Margin-top for spacing
+              py: 1.5,  // Vertical padding for better height
+              px: 4,  // Horizontal padding for width adjustment
+              fontSize: '16px',  // Clear and readable font size
+              fontWeight: 600,  // Slightly bold text for better emphasis
+              borderRadius: 2,  // Rounded corners for a more modern appearance
+              border: '2px solid',  // Defined border for outlined variant
+              borderColor: 'primary.main',  // Border color matching the theme
+              color: 'primary.main',  // Text color to match the border
+              backgroundColor: 'transparent',  // Transparent background for outlined style
               '&:hover': {
-                boxShadow: 4,
-                transform: 'translateY(-2px)',
+                backgroundColor: 'primary.light',  // Light background color on hover
+                borderColor: 'primary.dark',  // Darken border on hover for better feedback
+                color: 'primary.dark',  // Darken text color on hover
+                boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)',  // Subtle shadow on hover
               },
+              '&:focus': {
+                outline: 'none',  // Remove default outline for focus
+                boxShadow: '0px 0px 0px 2px rgba(0, 123, 255, 0.5)',  // Focus ring for accessibility
+              },
+              '&:active': {
+                backgroundColor: 'primary.dark',  // Darken background when button is clicked
+                color: 'white',  // Change text color on active state for better contrast
+              },
+              transition: 'all 0.3s ease',  // Smooth transition for all interactive states
             }}
-            aria-label="View Student Information"
+            
+            aria-label=" View Student information"  // Improve accessibility for screen readers
           >
-            View Student Information
+             View Student information
           </Button>
         </Box>
-        <Button onClick={() => setIndex(0)} sx={{ mt: 3 }} variant="outlined">
-          Go Back to Home
-        </Button>
+        <Button onClick={() => setIndex(0)} sx={{ mt: 3,  // Margin-top for spacing
+    py: 1.5,  // Vertical padding for better height
+    px: 4,  // Horizontal padding for width adjustment
+    fontSize: '16px',  // Clear and readable font size
+    fontWeight: 600,  // Slightly bold text for better emphasis
+    borderRadius: 2,  // Rounded corners for a more modern appearance
+    border: '2px solid',  // Defined border for outlined variant
+    borderColor: 'primary.main',  // Border color matching the theme
+    color: 'primary.main',  // Text color to match the border
+    backgroundColor: 'transparent',  // Transparent background for outlined style
+    '&:hover': {
+      backgroundColor: 'primary.light',  // Light background color on hover
+      borderColor: 'primary.dark',  // Darken border on hover for better feedback
+      color: 'primary.dark',  // Darken text color on hover
+      boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)',  // Subtle shadow on hover
+    },
+    '&:focus': {
+      outline: 'none',  // Remove default outline for focus
+      boxShadow: '0px 0px 0px 2px rgba(0, 123, 255, 0.5)',  // Focus ring for accessibility
+    },
+    '&:active': {
+      backgroundColor: 'primary.dark',  // Darken background when button is clicked
+      color: 'white',  // Change text color on active state for better contrast
+    },
+    transition: 'all 0.3s ease',  // Smooth transition for all interactive states
+  }}
+  variant="outlined"  // Outlined variant to maintain the button's sleek design
+  aria-label="Go back to home"  // Improve accessibility for screen readers
+>
+  Go Back to Home
+</Button>
       </Container>
     </SwipeableViews>
   );
