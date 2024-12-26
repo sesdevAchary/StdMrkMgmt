@@ -271,7 +271,7 @@ const Navbar = () => {
         padding: '10px 20px',
         display: 'flex',
         gap: '40px',
-        alignItems: 'center',
+        //  alignItems: 'center',
         justifyContent: 'space-between',
         transition: 'all 0.2s ease',
 
@@ -280,7 +280,8 @@ const Navbar = () => {
       <Toolbar
         sx={{
           display: 'flex',
-          justifyContent: 'flex-start',
+          justifyContent: 'space-between',
+          // alignItems: 'center',
           padding: { xs: '8px 8px', sm: '35px 34px' },
         }}
       >
