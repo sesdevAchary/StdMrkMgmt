@@ -60,11 +60,8 @@ function StudentList() {
           )}
         </Grid>
       )}
-      </Container>
-
-      <container>
-
-      {/* Add New Student Button inside its own Box */}
+      
+      {/* Add New Student Button */}
       <Box
         display="flex"
         justifyContent="center"
