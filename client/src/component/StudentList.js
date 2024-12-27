@@ -24,7 +24,7 @@ function StudentList() {
   return (
     <>
       {/* Main Container for Student List */}
-      <Container maxWidth="lg" sx={{ py: 2, px:2 }}>
+      <Container maxWidth="lg" sx={{ py: 6, px:4 }}>
 
         {/* Page Title */}
         <Typography
