@@ -96,7 +96,7 @@ Click here to toggle the next page
       </Container>
 
       {/* Page 2 */}
-      <Container
+      {/* <Container
         maxWidth="lg"
         sx={{
           textAlign: 'center',
@@ -205,8 +205,137 @@ Click here to toggle the next page
   aria-label="Go back to home"  // Improve accessibility for screen readers
 >
   Go Back to Home
-</Button>
-      </Container>
+</Button> */}
+      {/* </Container> */}
+
+
+
+
+
+
+      <Container
+  maxWidth="lg"
+  sx={{
+    textAlign: 'center',
+    py: { xs: 6, sm: 8 }, // Adjusted padding for better vertical spacing
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'background.paper',
+    borderRadius: 3, // Slightly more rounded corners
+    boxShadow: 6, // Increased box shadow for a more pronounced depth
+    transition: 'all 0.3s ease', // Smooth transition for hover effects
+    '@media (max-width:600px)': {
+      padding: '30px 15px', // Ensure proper padding on mobile devices
+    },
+  }}
+>
+  <Typography
+    variant="h2"
+    component="h1"
+    color="primary.main"
+    sx={{
+      fontFamily: 'Montserrat, sans-serif',
+      fontWeight: 700,
+      marginBottom: 2, // Reduced margin for a more balanced layout
+      letterSpacing: 1.5, // More spacious letter spacing for clarity
+      textTransform: 'uppercase', // Adding uppercase transformation for emphasis
+      '@media (max-width:600px)': {
+        fontSize: '1.5rem', // Adjust font size on mobile devices
+      },
+    }}
+  >
+    Heartening Welcome to the Student Management Queue
+  </Typography>
+  <Typography
+    variant="h3"
+    sx={{
+      fontFamily: 'Roboto, sans-serif',
+      color: 'text.secondary',
+      marginBottom: 5,
+      fontWeight: 300, // Lightened weight for a more modern and clean look
+      lineHeight: 1.6, // Improved line height for readability
+      maxWidth: '700px',
+      margin: '0 auto',
+      '@media (max-width:600px)': {
+        fontSize: '1rem', // Adjust font size on smaller screens
+      },
+    }}
+  >
+    Effortlessly manage student information with a streamlined system.
+  </Typography>
+
+  <Box mt={5}>
+    <Button
+      component={Link}
+      to="/list"
+      color="primary"
+      variant="contained"
+      sx={{
+        mt: 3, // Increased top margin for better spacing
+        py: 1.8, // Vertical padding for better height
+        px: 5, // Horizontal padding for more pronounced button size
+        fontSize: '16px', // Readable font size
+        fontWeight: 600, // Slightly bold text for emphasis
+        borderRadius: 3, // Modern rounded corners
+        boxShadow: 3, // Softer shadow for a smoother effect
+        '&:hover': {
+          backgroundColor: 'primary.light', // Lighter background on hover
+          boxShadow: '0px 6px 10px rgba(0, 0, 0, 0.15)', // Stronger shadow on hover
+        },
+        '&:focus': {
+          outline: 'none',
+          boxShadow: '0px 0px 0px 3px rgba(0, 123, 255, 0.5)', // Strong focus ring for accessibility
+        },
+        '&:active': {
+          backgroundColor: 'primary.dark', // Darkened background on active state
+          color: 'white',
+        },
+        transition: 'all 0.3s ease',
+      }}
+      aria-label="View Student Information"
+    >
+      View Student Information
+    </Button>
+  </Box>
+
+  <Button
+    onClick={() => setIndex(0)}
+    sx={{
+      mt: 4, // Increased margin-top for spacing between buttons
+      py: 1.8,
+      px: 5,
+      fontSize: '16px',
+      fontWeight: 600,
+      borderRadius: 3,
+      border: '2px solid',
+      borderColor: 'primary.main',
+      color: 'primary.main',
+      backgroundColor: 'transparent',
+      '&:hover': {
+        backgroundColor: 'primary.light',
+        borderColor: 'primary.dark',
+        color: 'primary.dark',
+        boxShadow: '0px 6px 10px rgba(0, 0, 0, 0.15)',
+      },
+      '&:focus': {
+        outline: 'none',
+        boxShadow: '0px 0px 0px 3px rgba(0, 123, 255, 0.5)',
+      },
+      '&:active': {
+        backgroundColor: 'primary.dark',
+        color: 'white',
+      },
+      transition: 'all 0.3s ease',
+    }}
+    variant="outlined"
+    aria-label="Go Back to Home"
+  >
+    Go Back to Home
+  </Button>
+</Container>
+
     </SwipeableViews>
   );
 };
