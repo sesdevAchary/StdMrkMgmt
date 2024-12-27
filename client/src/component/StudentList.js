@@ -38,8 +38,6 @@ function StudentList() {
         Student List
       </Typography>
 
-      
-
       {/* Loading Spinner or Students List */}
       {loading ? (
         <Box display="flex" justifyContent="center" mt={7}>
@@ -63,36 +61,39 @@ function StudentList() {
         </Grid>
       )}
 
-
-
-
-      {/* Add New Student Button */}
-<Box textAlign="center" mb={4}>
-<Button
-  component={Link}
-  to="/add"
-  color="primary"
-  variant="contained"
-  sx={{
-    px: 4,
-    py: 1.5,
-    fontSize: '16px',
-    fontWeight: 600,
-    borderRadius: 3,
-    '&:hover': {
-      backgroundColor: 'primary.dark',
-      boxShadow: '0px 6px 12px rgba(0, 0, 0, 0.1)',
-    },
-  }}
->
-  Add New Student...
-</Button>
-</Box>
+      {/* Add New Student Button inside its own Box */}
+      <Box
+        display="flex"
+        justifyContent="center"
+        sx={{
+          mt: 4, // Margin-top for spacing
+          borderRadius: 2, // Rounded corners for the box
+          boxShadow: 2, // Light box shadow
+          p: 3, // Padding around the button
+          backgroundColor: 'background.paper', // Box background color
+        }}
+      >
+        <Button
+          component={Link}
+          to="/add"
+          color="primary"
+          variant="contained"
+          sx={{
+            px: 4,
+            py: 1.5,
+            fontSize: '16px',
+            fontWeight: 600,
+            borderRadius: 3,
+            '&:hover': {
+              backgroundColor: 'primary.dark',
+              boxShadow: '0px 6px 12px rgba(0, 0, 0, 0.1)',
+            },
+          }}
+        >
+          Add New Student...
+        </Button>
+      </Box>
     </Container>
-
-
-
-
   );
 }
 
