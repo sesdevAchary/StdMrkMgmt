@@ -337,8 +337,6 @@ Click here to toggle the next page
 </Container> */}
 
 
-
-
 <Container
   maxWidth="lg"
   sx={{
@@ -357,58 +355,80 @@ Click here to toggle the next page
     },
   }}
 >
-  <Typography
-    variant="h2"
-    component="h1"
-    color="primary.main"
+  {/* First Typography Block */}
+  <Box
     sx={{
-      fontFamily: 'Montserrat, sans-serif',
-      fontWeight: 800,
-      marginBottom: 3,
-      letterSpacing: 2,
-      textTransform: 'uppercase',
-      textShadow: '1px 1px 4px rgba(0, 0, 0, 0.1)',
+      marginBottom: 4, // Space between first and second typography blocks
+      textAlign: 'center', // Center-align text
       '@media (max-width:600px)': {
-        fontSize: '2rem',
+        marginBottom: 3, // Adjust margin on mobile for better space
       },
     }}
   >
-    Heartening Welcome to the Student Management Queue
-  </Typography>
-  <Typography
-    variant="h4"
+    <Typography
+      variant="h2"
+      component="h1"
+      color="primary.main"
+      sx={{
+        fontFamily: 'Montserrat, sans-serif',
+        fontWeight: 800,
+        marginBottom: 3,
+        letterSpacing: 2,
+        textTransform: 'uppercase',
+        textShadow: '1px 1px 4px rgba(0, 0, 0, 0.1)', // Text shadow for effect
+        '@media (max-width:600px)': {
+          fontSize: '2rem', // Adjust font size for mobile
+        },
+      }}
+    >
+      Heartening Welcome to the Student Management Queue
+    </Typography>
+  </Box>
+
+  {/* Second Typography Block */}
+  <Box
     sx={{
-      fontFamily: 'Roboto, sans-serif',
-      color: 'text.secondary',
-      marginBottom: 6,
-      fontWeight: 400,
-      lineHeight: 1.7,
+      marginBottom: 6, // Space after the second typography block
+      textAlign: 'center',
       maxWidth: '800px',
-      margin: '0 auto',
-      letterSpacing: 0.5,
+      margin: '0 auto', // Center text with auto margin
       '@media (max-width:600px)': {
-        fontSize: '1.1rem',
+        fontSize: '1.1rem', // Adjust font size for mobile
       },
     }}
   >
-    Effortlessly manage student information with an intuitive, streamlined system.
-  </Typography>
+    <Typography
+      variant="h4"
+      sx={{
+        fontFamily: 'Roboto, sans-serif',
+        color: 'text.secondary',
+        fontWeight: 400,
+        lineHeight: 1.7,
+        letterSpacing: 0.5,
+        '@media (max-width:600px)': {
+          fontSize: '1rem', // Adjust font size for smaller screens
+        },
+      }}
+    >
+      Effortlessly manage student information with an intuitive, streamlined system.
+    </Typography>
+  </Box>
 
   {/* Box for Buttons */}
   <Box
     sx={{
       mt: 6,
-      p: 4, // Added padding inside the box
+      p: 4,
       display: 'flex',
-      flexDirection: 'column', // Stack buttons vertically
-      gap: 3, // Added gap between buttons
-      borderRadius: 4, // Rounded corners
-      boxShadow: 5, // Subtle box shadow for depth
-      backgroundColor: 'background.default', // Slight background color to separate the box
-      border: '1px solid', // Thin border for structure
-      borderColor: 'divider', // Border color for consistency with theme
+      flexDirection: 'column',
+      gap: 3,
+      borderRadius: 4,
+      boxShadow: 5,
+      backgroundColor: 'background.default',
+      border: '1px solid',
+      borderColor: 'divider',
       '@media (max-width:600px)': {
-        width: '100%', // Ensure the box is full-width on smaller screens
+        width: '100%',
       },
     }}
   >
@@ -480,7 +500,6 @@ Click here to toggle the next page
     </Button>
   </Box>
 </Container>
-
 
 
 
