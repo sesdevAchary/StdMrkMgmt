@@ -343,17 +343,17 @@ Click here to toggle the next page
   maxWidth="lg"
   sx={{
     textAlign: 'center',
-    py: { xs: 8, sm: 10 }, // Larger padding for top/bottom spacing
+    py: { xs: 8, sm: 10 },
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: 'background.paper',
-    borderRadius: 4, // Increased border radius for smoother corners
-    boxShadow: 10, // Enhanced shadow for more depth
+    borderRadius: 4,
+    boxShadow: 10,
     transition: 'all 0.3s ease',
     '@media (max-width:600px)': {
-      padding: '40px 20px', // Ensure proper padding on mobile devices
+      padding: '40px 20px',
     },
   }}
 >
@@ -363,13 +363,13 @@ Click here to toggle the next page
     color="primary.main"
     sx={{
       fontFamily: 'Montserrat, sans-serif',
-      fontWeight: 800, // Heavier font weight for more emphasis
-      marginBottom: 3, // Slightly larger margin for balance
-      letterSpacing: 2, // More spacious letter-spacing for clarity
+      fontWeight: 800,
+      marginBottom: 3,
+      letterSpacing: 2,
       textTransform: 'uppercase',
-      textShadow: '1px 1px 4px rgba(0, 0, 0, 0.1)', // Subtle text shadow for emphasis
+      textShadow: '1px 1px 4px rgba(0, 0, 0, 0.1)',
       '@media (max-width:600px)': {
-        fontSize: '2rem', // Larger font size on smaller screens for better readability
+        fontSize: '2rem',
       },
     }}
   >
@@ -380,93 +380,106 @@ Click here to toggle the next page
     sx={{
       fontFamily: 'Roboto, sans-serif',
       color: 'text.secondary',
-      marginBottom: 6, // Added margin for better spacing between sections
+      marginBottom: 6,
       fontWeight: 400,
       lineHeight: 1.7,
       maxWidth: '800px',
       margin: '0 auto',
       letterSpacing: 0.5,
       '@media (max-width:600px)': {
-        fontSize: '1.1rem', // Responsive font size on mobile
+        fontSize: '1.1rem',
       },
     }}
   >
     Effortlessly manage student information with an intuitive, streamlined system.
   </Typography>
 
-  <Box mt={6}>
+  {/* Box for Buttons */}
+  <Box
+    sx={{
+      mt: 6,
+      p: 4, // Added padding inside the box
+      display: 'flex',
+      flexDirection: 'column', // Stack buttons vertically
+      gap: 3, // Added gap between buttons
+      borderRadius: 4, // Rounded corners
+      boxShadow: 5, // Subtle box shadow for depth
+      backgroundColor: 'background.default', // Slight background color to separate the box
+      border: '1px solid', // Thin border for structure
+      borderColor: 'divider', // Border color for consistency with theme
+      '@media (max-width:600px)': {
+        width: '100%', // Ensure the box is full-width on smaller screens
+      },
+    }}
+  >
     <Button
       component={Link}
       to="/list"
       color="primary"
       variant="contained"
       sx={{
-        mt: 4, // Increased top margin for spacing between content
-        py: 2, // Larger vertical padding for better button height
-        px: 6, // Increased horizontal padding for button width
-        fontSize: '18px', // Larger font size for better readability
-        fontWeight: 600, // Bold text for emphasis
-        borderRadius: 4, // Increased border-radius for smoother corners
-        boxShadow: 5, // Softer shadow for depth
-        textTransform: 'none', // Avoid uppercase text for a relaxed style
+        py: 2,
+        px: 6,
+        fontSize: '18px',
+        fontWeight: 600,
+        borderRadius: 4,
+        boxShadow: 5,
+        textTransform: 'none',
         '&:hover': {
-          backgroundColor: 'primary.dark', // Darker background on hover
-          boxShadow: '0px 8px 15px rgba(0, 0, 0, 0.2)', // Increased shadow on hover
+          backgroundColor: 'primary.dark',
+          boxShadow: '0px 8px 15px rgba(0, 0, 0, 0.2)',
         },
         '&:focus': {
           outline: 'none',
-          boxShadow: '0px 0px 0px 3px rgba(0, 123, 255, 0.5)', // Accessibility-focused focus ring
+          boxShadow: '0px 0px 0px 3px rgba(0, 123, 255, 0.5)',
         },
         '&:active': {
-          backgroundColor: 'primary.main', // Darker background on click
-          color: 'white', // White text color when clicked
+          backgroundColor: 'primary.main',
+          color: 'white',
         },
-        transition: 'all 0.3s ease', // Smooth transition for interactive states
+        transition: 'all 0.3s ease',
       }}
       aria-label="View Student Information"
     >
       View Student Information
     </Button>
+
+    <Button
+      onClick={() => setIndex(0)}
+      sx={{
+        py: 2,
+        px: 6,
+        fontSize: '18px',
+        fontWeight: 600,
+        borderRadius: 4,
+        border: '2px solid',
+        borderColor: 'primary.main',
+        color: 'primary.main',
+        backgroundColor: 'transparent',
+        textTransform: 'none',
+        '&:hover': {
+          backgroundColor: 'primary.light',
+          borderColor: 'primary.dark',
+          color: 'primary.dark',
+          boxShadow: '0px 8px 15px rgba(0, 0, 0, 0.2)',
+        },
+        '&:focus': {
+          outline: 'none',
+          boxShadow: '0px 0px 0px 3px rgba(0, 123, 255, 0.5)',
+        },
+        '&:active': {
+          backgroundColor: 'primary.dark',
+          color: 'white',
+        },
+        transition: 'all 0.3s ease',
+      }}
+      variant="outlined"
+      aria-label="Go Back to Home"
+    >
+      Go Back to Home
+    </Button>
   </Box>
-
-  <Button
-    onClick={() => setIndex(0)}
-    sx={{
-      mt: 5, // Increased spacing between buttons
-      py: 2,
-      px: 6,
-      fontSize: '18px',
-      fontWeight: 600,
-      borderRadius: 4,
-      border: '2px solid',
-      borderColor: 'primary.main',
-      color: 'primary.main',
-      backgroundColor: 'transparent',
-      textTransform: 'none', // Relaxed text style for the button
-      '&:hover': {
-        backgroundColor: 'primary.light', // Lighter background on hover
-        borderColor: 'primary.dark',
-        color: 'primary.dark',
-        boxShadow: '0px 8px 15px rgba(0, 0, 0, 0.2)', // Stronger shadow on hover
-      },
-      '&:focus': {
-        outline: 'none',
-        boxShadow: '0px 0px 0px 3px rgba(0, 123, 255, 0.5)',
-      },
-      '&:active': {
-        backgroundColor: 'primary.dark', // Dark background on active
-        color: 'white', // White text when active
-      },
-      transition: 'all 0.3s ease',
-    }}
-    variant="outlined"
-    aria-label="Go Back to Home"
-  >
-    Go Back to Home
-  </Button>
 </Container>
-
-
 
 
 
