@@ -1,65 +1,99 @@
-
-import React ,{useState, useEffect} from "react";
-import {Link} from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { Link } from 'react-router-dom';
 import axios from 'axios';
-import { Button, Typography, Container, CircularProgress, Box } from '@mui/material';
-import {Grid} from '@mui/material'
-
+import { Button, Typography, Container, CircularProgress, Box, Grid } from '@mui/material';
 import StudentCard from './StudentCard';
 
-function StudentList(){
-    const [Students,setStudent]=useState([]);
-    const[loading,setLoading]=useState(true);
+function StudentList() {
+  const [students, setStudents] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    axios
+      .get('https://3000-sesdevachary-stdmrkmgmt-v42c1lz37x9.ws-us117.gitpod.io/api/student')
+      .then((res) => {
+        setStudents(res.data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.log('Error loading student data:', err);
+        setLoading(false);
+      });
+  }, []);
+
+  return (
+    <Container maxWidth="lg" sx={{ py: 4 }}>
+      {/* Page Title */}
+      <Typography
+        variant="h3"
+        color="primary.main"
+        align="center"
+        gutterBottom
+        sx={{
+          fontWeight: 700,
+          letterSpacing: 1,
+          textTransform: 'uppercase',
+        }}
+      >
+        Student List
+      </Typography>
+
+      
+
+      {/* Loading Spinner or Students List */}
+      {loading ? (
+        <Box display="flex" justifyContent="center" mt={7}>
+          <CircularProgress color="primary" size={60} />
+        </Box>
+      ) : (
+        <Grid container spacing={4}>
+          {students.length === 0 ? (
+            <Grid item xs={12}>
+              <Typography variant="h6" color="text.secondary" align="center">
+                Oops! No students found.
+              </Typography>
+            </Grid>
+          ) : (
+            students.map((student, index) => (
+              <Grid item xs={12} sm={6} md={4} key={index}>
+                <StudentCard student={student} />
+              </Grid>
+            ))
+          )}
+        </Grid>
+      )}
 
 
-    useEffect(()=>{
-        axios
-        .get('https://3000-sesdevachary-stdmrkmgmt-v42c1lz37x9.ws-us117.gitpod.io/api/student')
-        .then((res)=>{
-            setStudent(res.data);
-            setLoading(false);
-        })
-        .catch((err)=>{
-            console.log('error in loading  student status ',err);
-            setLoading(false);
-        });
-    },[]);
 
-    return(
-         <Container maxWidth='lg' sx={{py:4}}>    
-            <Typography variant="h3" color="primary" gutterBottom component="h1">
-                STUDENT LIST
-            </Typography>
 
-            <Button component={Link} to ="/add" color="primary" variant="contained" sx={{mb:2}} >
-            Add New Student...
-            </Button>
+      {/* Add New Student Button */}
+<Box textAlign="center" mb={4}>
+<Button
+  component={Link}
+  to="/add"
+  color="primary"
+  variant="contained"
+  sx={{
+    px: 4,
+    py: 1.5,
+    fontSize: '16px',
+    fontWeight: 600,
+    borderRadius: 3,
+    '&:hover': {
+      backgroundColor: 'primary.dark',
+      boxShadow: '0px 6px 12px rgba(0, 0, 0, 0.1)',
+    },
+  }}
+>
+  Add New Student...
+</Button>
+</Box>
+    </Container>
 
-            {loading?(
-                <Box display="flex" justifyContent="center" mt={7}>
-                    <CircularProgress/>
-                </Box>
-            ):(
-                <Grid container spacing={4}>
-                   { Students.length === 0  ?(
-                        <Grid item xs={12}>
-                             <Typography variant='h6' color='text.secondary'>
-                                OOPS !!!
-                                 No Students found..
-                            </Typography>
-                        </Grid>
-                    ):( Students.map((student,index) => (
-                        <Grid item xs={12} sm={6} md={4} key={index}>
-                            <StudentCard student={student} />
-                        </Grid>))
-                        
-                        )}
-                </Grid>
-            )
-            
-        }
-         </Container>
-    );
-    
+
+
+
+  );
 }
+
 export default StudentList;
