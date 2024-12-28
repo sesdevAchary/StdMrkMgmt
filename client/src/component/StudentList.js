@@ -102,7 +102,9 @@ function StudentList() {
       <container>
         <Typography variant="h5" alignItems="start" gutterBottom sx={{
           fontWeight: 700,
-          letterSpacing: 1,
+          letterSpacing: 1.5,
+          maxWidth:"lg" ,
+           py: 6, px: 4 
           // textTransform: 'uppercase',
         }}>
           <box
