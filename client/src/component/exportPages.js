@@ -121,7 +121,7 @@ const ExportPage=()=>{
       };
       if (loading) {
         return (
-          <Container sx={{ display: 'flex', justifyContent: 'center', mt: 4 }}>
+          <Container sx={{ display: 'flex', justifyContent: 'center', mt: 6 }}>
             <CircularProgress />
           </Container>
         );
@@ -130,11 +130,11 @@ const ExportPage=()=>{
         <Container maxWidth="md" sx={{ mt: 4, mb: 4 }}>
           <Paper sx={{ p: 4 }}>
             <Typography variant="h4" gutterBottom align="center" color="primary">
-              Export Books
+              Export Student
             </Typography>
             
             <Typography variant="body1" sx={{ mb: 4 }} align="center" color="text.secondary">
-              Export your book collection in different formats
+              Export your Student collection in different formats
             </Typography>
     
             <Box sx={{ 
