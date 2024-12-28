@@ -99,7 +99,7 @@ function StudentList() {
         </Box>
       </Container>
 
-      <container>
+      {/* <container>
         <Typography variant="h5" alignItems="start" gutterBottom sx={{
           fontWeight: 700,
           letterSpacing: 1.5,
@@ -119,7 +119,40 @@ function StudentList() {
             If you want to Go to the HomePage then Click on the STUDENT MANAGEMENT above
           </box>
         </Typography>
-      </container>
+      </container> */}
+
+
+
+<Container>
+  <Typography 
+    variant="h5" 
+    align="left" // Corrected alignItems to align for Typography 
+    gutterBottom 
+    sx={{
+      fontWeight: 600,  // Slightly lower weight for a balanced appearance
+      letterSpacing: 1.3, // Slightly less spacing for better readability
+      maxWidth: "lg", 
+      py: 6, px: 4,
+      fontFamily: "'Poppins', sans-serif", // Adding a clean modern font
+      color: '#333', // Dark text color for contrast
+    }}
+  >
+    <Box
+      display="flex"
+      justifyContent="center"
+      sx={{
+        borderRadius: 12, // Increased rounding for a smoother look
+        boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)', // Softer and more subtle shadow
+        p: 4, // Increased padding for more space around text
+        backgroundColor: 'linear-gradient(135deg, #a1c4fd, #c2e9fb)', // Gradient background
+        color: '#333', // Dark text to ensure readability
+      }}
+    >
+      If you want to Go to the HomePage then Click on the STUDENT MANAGEMENT above
+    </Box>
+  </Typography>
+</Container>
+
     </>
   );
 }
