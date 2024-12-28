@@ -122,30 +122,31 @@ function StudentList() {
       </container> */}
 
 
-
 <Container>
   <Typography 
     variant="h5" 
-    align="left" // Corrected alignItems to align for Typography 
+    align="center" // Center-aligning the text for better presentation
     gutterBottom 
     sx={{
       fontWeight: 600,  // Slightly lower weight for a balanced appearance
       letterSpacing: 1.3, // Slightly less spacing for better readability
       maxWidth: "lg", 
       py: 6, px: 4,
-      fontFamily: "'Poppins', sans-serif", // Adding a clean modern font
-      color: '#333', // Dark text color for contrast
+      fontFamily: "'Poppins', sans-serif", // Modern font for a clean look
+      color: '#2c3e50', // Darker, more sophisticated color for text
     }}
   >
     <Box
       display="flex"
       justifyContent="center"
+      alignItems="center"  // Ensure content is vertically centered
       sx={{
-        borderRadius: 12, // Increased rounding for a smoother look
-        boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)', // Softer and more subtle shadow
-        p: 4, // Increased padding for more space around text
-        backgroundColor: 'linear-gradient(135deg, #a1c4fd, #c2e9fb)', // Gradient background
-        color: '#333', // Dark text to ensure readability
+        borderRadius: 16, // Slightly more rounded for a smooth look
+        boxShadow: '0px 8px 15px rgba(0, 0, 0, 0.2)', // Softer and more dramatic shadow
+        p: 5, // Increased padding for a spacious and balanced design
+        backgroundColor: 'linear-gradient(135deg, #4eacb2, #a1d3d1)', // Cool teal gradient for a sophisticated feel
+        color: '#fff', // Light text color for contrast against the dark gradient
+        maxWidth: 'lg',
       }}
     >
       If you want to Go to the HomePage then Click on the STUDENT MANAGEMENT above
