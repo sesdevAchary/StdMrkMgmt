@@ -98,6 +98,16 @@ function StudentList() {
           </Button>
         </Box>
       </Container>
+
+      <container>
+        <Typography variant ="h4" alignItems="start" gutterBottom   sx={{
+            fontWeight: 700,
+            letterSpacing: 1,
+            textTransform: 'uppercase',
+          }}>
+           If you want to Go to the HomePage then Click on the STUDENT MANAGEMENT above
+        </Typography>
+      </container>
     </>
   );
 }
