@@ -24,7 +24,7 @@ function StudentList() {
   return (
     <>
       {/* Main Container for Student List */}
-      <Container maxWidth="lg" sx={{ py: 6, px:4 }}>
+      <Container maxWidth="lg" sx={{ py: 6, px: 4 }}>
 
         {/* Page Title */}
         <Typography
@@ -89,7 +89,7 @@ function StudentList() {
               fontWeight: 600,
               borderRadius: 3,
               '&:hover': {
-                backgroundColor: 'primary.dark',
+                backgroundColor: '#e0f8e8',
                 boxShadow: '0px 6px 12px rgba(0, 0, 0, 0.1)',
               },
             }}
@@ -100,12 +100,22 @@ function StudentList() {
       </Container>
 
       <container>
-        <Typography variant ="h4" alignItems="start" gutterBottom   sx={{
-            fontWeight: 700,
-            letterSpacing: 1,
-            textTransform: 'uppercase',
-          }}>
-           If you want to Go to the HomePage then Click on the STUDENT MANAGEMENT above
+        <Typography variant="h5" alignItems="start" gutterBottom sx={{
+          fontWeight: 700,
+          letterSpacing: 1,
+          // textTransform: 'uppercase',
+        }}>
+          <box
+            display="flex"
+            justifyContent="center"
+            sx={{
+              borderRadius: 10, // Rounded corners for the box
+              boxShadow: 50, // Light box shadow
+              p: 3, // Padding around the button
+              backgroundColor: '#e0f8e8' // Box background color
+            }}>
+            If you want to Go to the HomePage then Click on the STUDENT MANAGEMENT above
+          </box>
         </Typography>
       </container>
     </>
