@@ -84,13 +84,13 @@ function StudentList() {
             variant="contained"
             sx={{
               px: 4,
-              py: 1.5,
-              fontSize: '16px',
+              py: 4.5,
+              fontSize: '21px',
               fontWeight: 600,
               borderRadius: 3,
               '&:hover': {
                 backgroundColor: '#e0f8e8',
-                boxShadow: '0px 6px 12px rgba(0, 0, 0, 0.1)',
+                boxShadow: '0px 6px 12px rgba(73, 196, 46, 0.1)',
               },
             }}
           >
@@ -99,7 +99,7 @@ function StudentList() {
         </Box>
       </Container>
 
-      {/* <container>
+       <container>
         <Typography variant="h5" alignItems="start" gutterBottom sx={{
           fontWeight: 700,
           letterSpacing: 1.5,
@@ -119,40 +119,9 @@ function StudentList() {
             If you want to Go to the HomePage then Click on the STUDENT MANAGEMENT above
           </box>
         </Typography>
-      </container> */}
+      </container> 
 
 
-<Container>
-  <Typography 
-    variant="h5" 
-    align="center" // Center-aligning the text for better presentation
-    gutterBottom 
-    sx={{
-      fontWeight: 600,  // Slightly lower weight for a balanced appearance
-      letterSpacing: 1.3, // Slightly less spacing for better readability
-      maxWidth: "lg", 
-      py: 6, px: 4,
-      fontFamily: "'Poppins', sans-serif", // Modern font for a clean look
-      color: '#2c3e50', // Darker, more sophisticated color for text
-    }}
-  >
-    <Box
-      display="flex"
-      justifyContent="center"
-      alignItems="center"  // Ensure content is vertically centered
-      sx={{
-        borderRadius: 16, // Slightly more rounded for a smooth look
-        boxShadow: '0px 8px 15px rgba(0, 0, 0, 0.2)', // Softer and more dramatic shadow
-        p: 5, // Increased padding for a spacious and balanced design
-        backgroundColor: 'linear-gradient(135deg, #4eacb2, #a1d3d1)', // Cool teal gradient for a sophisticated feel
-        color: '#fff', // Light text color for contrast against the dark gradient
-        maxWidth: 'lg',
-      }}
-    >
-      If you want to Go to the HomePage then Click on the STUDENT MANAGEMENT above
-    </Box>
-  </Typography>
-</Container>
 
     </>
   );
