@@ -61,7 +61,7 @@ const CreateStudent = () => {
         toast.success('Student created successfully!', {
           position: 'bottom-right',
           autoClose: 3000,
-          theme: 'light',
+          theme: 'dark',
           transition: Slide,
         });
 
@@ -91,7 +91,7 @@ const CreateStudent = () => {
           color: 'text.primary',
         }}
       >
-        <Typography variant="h4" gutterBottom align="center">
+        <Typography variant="h3" gutterBottom align="center">
           Create A New Student
         </Typography>
 
@@ -193,7 +193,7 @@ const CreateStudent = () => {
               variant="contained"
               color="primary"
               type="submit"
-              onClick={() => navigate('/list')}
+              // onClick={() => navigate('/list')}
 
               sx={{ borderRadius: '8px', padding: '10px 20px' }}
             >
