@@ -53,7 +53,7 @@ const HomePage = () => {
             <CardMedia
               component="img"
               image="https://stjosephbbsr.org/wp-content/uploads/2023/10/bn12023.png"
-              alt=" High School"
+              alt="st. Joseph High School"
               sx={{ width: '100%', height: '100%', borderRadius: 5 }}
             />
           </Card>
