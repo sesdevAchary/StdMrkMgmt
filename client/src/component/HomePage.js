@@ -52,8 +52,8 @@ const HomePage = () => {
           <Card sx={{ borderRadius: 2, boxShadow: 10, maxWidth: 750 }}>
             <CardMedia
               component="img"
-              image="https://greenvalleyhs.org/wp-content/uploads/2019/08/gvhsSchoolEntrance-300x189.jpg"
-              alt="Green Valley High School"
+              image="https://stjosephbbsr.org/wp-content/uploads/2023/10/bn12023.png"
+              alt=" High School"
               sx={{ width: '100%', height: '100%', borderRadius: 5 }}
             />
           </Card>
