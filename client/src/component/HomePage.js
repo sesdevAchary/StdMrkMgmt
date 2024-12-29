@@ -47,7 +47,7 @@ const HomePage = () => {
               letterSpacing: 1.2,
             }}
           >
-            GREEN VALLEY HIGH SCHOOL
+            st. JOSEPH HIGH SCHOOL
           </Typography>
           <Card sx={{ borderRadius: 2, boxShadow: 10, maxWidth: 750 }}>
             <CardMedia
