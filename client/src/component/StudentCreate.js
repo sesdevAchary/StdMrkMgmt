@@ -36,7 +36,7 @@ const CreateStudent = () => {
   const onSubmit = (e) => {
     e.preventDefault();
 
-    if (!student.first_name || !student.unique_id || !student.mail_id) {
+    if (!student.first_name || !student.unique_id || !student.mail_id !! student.avg_cgpa !! student.current_address) {
       toast.error('Please fill in all required fields.', {
         position: 'top-right',
         autoClose: 5000,
