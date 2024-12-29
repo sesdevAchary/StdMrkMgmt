@@ -67,7 +67,7 @@ const CreateStudent = () => {
 
         setTimeout(() => {
           navigate('/');
-        }, 3000);
+        }, 10000);
       })
       .catch((err) => {
         toast.error('Something went wrong, try again!', {
