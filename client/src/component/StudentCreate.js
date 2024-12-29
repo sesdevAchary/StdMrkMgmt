@@ -92,7 +92,7 @@ const CreateStudent = () => {
         }}
       >
         <Typography variant="h3" gutterBottom align="center">
-          Create A New Student
+          Create A New Student Here
         </Typography>
 
         <Box component="form" onSubmit={onSubmit} noValidate>
