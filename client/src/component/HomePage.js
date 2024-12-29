@@ -52,7 +52,7 @@ const HomePage = () => {
           <Card sx={{ borderRadius: 2, boxShadow: 10, maxWidth: 750 }}>
             <CardMedia
               component="img"
-              image="https://imagescdn.homes.com/i2/zAzfEG60j5CUeJZYrHBwxs5D7Tw2aEsDfTa5XCTDHQo/116/green-valley-high-school-henderson-nv-primaryphoto.jpg?p=1"
+              image="https://greenvalleyhs.org/wp-content/uploads/2019/08/gvhsSchoolEntrance-300x189.jpg"
               alt="Green Valley High School"
               sx={{ width: '100%', height: '100%', borderRadius: 5 }}
             />

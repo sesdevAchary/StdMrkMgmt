@@ -97,6 +97,7 @@ const CreateStudent = () => {
 
         <Box component="form" onSubmit={onSubmit} noValidate>
           <Grid container spacing={2}>
+
             {/* Student Name */}
             <Grid item xs={12} sm={6}>
               <TextField
@@ -188,7 +189,7 @@ const CreateStudent = () => {
           </Grid>
 
           {/* Buttons */}
-          <Box display="flex" justifyContent="space-between" mt={4}>
+          <Box display="flex" justifyContent="space-between" mt={6}>
             <Button
               variant="contained"
               color="primary"
