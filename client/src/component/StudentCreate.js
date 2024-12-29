@@ -215,21 +215,29 @@ const CreateStudent = () => {
 
 
 
-      <box
-            display="flex"
-            justifyContent="center"
-            sx={{
-              borderRadius: 10, // Rounded corners for the box
-              boxShadow: 50, // Light box shadow
-              p: 5, // Padding around the button
-              backgroundColor: '#e0f8e8' // Box background color
-            }}>
-            If you want to Go to the HomePage then Click on the STUDENT MANAGEMENT above
-          </box>
+      
+<Container>
+  
+  <box
+  display="flex"
+  justifyContent="center"
+  sx={{
+    borderRadius: 10, // Rounded corners for the box
+    boxShadow: 50, // Light box shadow
+    p: 5, // Padding around the button
+    backgroundColor: '#e0f8e8' // Box background color
+  }}>
+  If you want to Go to the HomePage then Click on the STUDENT MANAGEMENT above
+  </box>
+  
+  </Container>
 
 
 
+  
     </Container>
+
+
   );
 };
 
