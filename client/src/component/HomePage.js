@@ -82,11 +82,7 @@ const HomePage = () => {
       outline: 'none',  // Remove default outline for focus
       boxShadow: '0px 0px 0px 2px rgba(0, 123, 255, 0.5)',  // Focus ring for accessibility
     },
-    // '&:active': {
-    //   backgroundColor: 'primary.dark',  // Darken background when button is clicked
-    //   color: 'white',  // Change text color on active state for better contrast
-    //   transform: 'scale(0.98)',  // Scale down the button when clicked (cracking effect)
-    //   boxShadow: '0px 8px 12px rgba(0, 0, 0, 0.15)',  // Stronger shadow on click
+   
     
     transition: 'all 0.3s ease',  // Smooth transition for all interactive states
     // Animation to simulate a "cracker" effect
