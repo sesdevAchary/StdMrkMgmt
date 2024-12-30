@@ -18,9 +18,10 @@ const Footer = () => (
       <Typography
         variant="body2"
         sx={{
-          color: 'text.secondary',
-          fontWeight: 500,
-          fontSize: '1rem', // Adjust the font size for readability
+          color: 'text.primary',
+          fontWeight: 800,
+          fontSize: '1.1rem', // Adjust the font size for readability
+          
         }}
       >
         Prepared and served with care by The Sesdev Achary
@@ -28,9 +29,14 @@ const Footer = () => (
       <Typography
         variant="caption"
         sx={{
-          color: 'text.secondary',
-          mt: 1,
-          fontSize: '0.875rem', // Slightly smaller text for less emphasis
+          borderRadius: 5,
+    boxShadow: '0 4px 10px rgba(0, 0, 0, 0.2)', // Correct box shadow
+    p: 1,
+    fontSize: '1.2rem', // Correct property name
+    textDecoration: 'underline', // Correct value for underline
+    // backgroundColor: '#ffffff', // Correct hex value for white
+    mt: 4,
+    color: 'primary.dark',
         }}
       >
         &copy; {new Date().getFullYear()} The Sesdev Achary. All rights reserved.
