@@ -40,6 +40,7 @@ function StudentList() {
         >
           Student List
         </Typography>
+        <br/>
 
         {/* Loading Spinner or Students List */}
         {loading ? (

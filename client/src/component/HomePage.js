@@ -47,14 +47,14 @@ const HomePage = () => {
               letterSpacing: 1.2,
             }}
           >
-            st. JOSEPH HIGH SCHOOL
+            St. JOSEPH HIGH SCHOOL
           </Typography>
           <Card sx={{ borderRadius: 2, boxShadow: 10, maxWidth: 750 }}>
             <CardMedia
               component="img"
               image="https://stjosephbbsr.org/wp-content/uploads/2023/10/bn12023.png"
               alt="st. Joseph High School"
-              sx={{ width: '100%', height: '100%', borderRadius: 5 }}
+              sx={{ width: '100%', height: '100%', borderRadius: 10,borderColor:"blue" }}
             />
           </Card>
         </Box>
