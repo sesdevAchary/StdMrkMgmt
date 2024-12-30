@@ -457,10 +457,13 @@ const CreateStudent = () => {
         display="flex"
         justifyContent="center"
         sx={{
-          borderRadius: 10,
-          boxShadow: 5,
-          p: 5,
-          backgroundColor: '#e0f8e8',
+          borderRadius: 5,
+          boxShadow: 50,
+          p: 2,
+          fontsize: '2.2rem',
+          textdecoration: 'underline',
+          fontweight: 'bold',
+          backgroundColor: 'fffff',
           mt: 4,
         }}
       >
