@@ -19,12 +19,17 @@ const Footer = () => (
         variant="body2"
         sx={{
           color: 'text.primary',
-          fontWeight: 800,
+          fontWeight: 500,
           fontSize: '1.1rem', // Adjust the font size for readability
           
         }}
       >
-        Prepared and served with care by The Sesdev Achary
+        &#128522; Thanks for your Attention &#128522;
+        <br/>
+        <br/>
+        <br/>
+         Prepared and served with care by The Sesdev Achary  <br/>
+        
       </Typography>
       <Typography
         variant="caption"
