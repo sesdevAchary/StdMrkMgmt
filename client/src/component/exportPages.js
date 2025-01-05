@@ -405,10 +405,21 @@ const ExportPage = () => {
             Export as Text
           </Button>
         </Box>
+        <Typography
+  variant="h4"
+  sx={{
+    mt: 6,
+    p: 2,
+    textAlign: 'center',
+    color: 'white',
+    backgroundColor: 'primary.main',
+    borderRadius: 2,
+    boxShadow: 3,
+  }}
+>
+  Total Students: {students.length}
+</Typography>
 
-        <Typography variant="{h2}" sx={{ mt: 6 }} align="center" color="text.primary">
-          Total students: {students.length}
-        </Typography>
       </Paper>
     </Container>
   );
