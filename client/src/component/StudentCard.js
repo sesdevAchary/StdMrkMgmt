@@ -21,7 +21,7 @@ const StudentCard = ({ student }) => {
             }}
         >
             <img
-                src='https://eacademics.in/img/i5.png'
+                src='https://www.google.com/url?sa=i&url=https%3A%2F%2Fpixabay.com%2Fillustrations%2Fcomputer-icon-education-studying-2429310%2F&psig=AOvVaw24saM9lrFTFkNAnC72jHTF&ust=1736185120642000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqGAoTCJCUrtmQ34oDFQAAAAAdAAAAABCNAw'
                 alt='Students'
                 style={{ height: 200, objectFit: 'cover', width: '100%' }}
             />
@@ -52,7 +52,7 @@ const StudentCard = ({ student }) => {
                     size='small'
                     fullWidth
                 >
-                    view Details
+                    View this Stuedent Detail
                 </Button>
             </Box>
         </Card>
