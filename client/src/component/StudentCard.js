@@ -32,7 +32,7 @@ const StudentCard = ({ student }) => {
                     </Link>
                 </Typography>
 
-                <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}
+                {/* <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}
                     style={{
                         overflow: 'hidden',
                         textOverflow: 'ellipsis',
@@ -41,13 +41,13 @@ const StudentCard = ({ student }) => {
                         WebkitBoxOrient: 'vertical',
                     }}>
                     {student.total_score}
-                </Typography>
+                </Typography> */}
             </CardContent>
             <Box sx={{ p: 2, mt: 'auto' }}>
                 <Button
                     component={Link}
                     to={`/details/${student._id}`}
-                    variant='contained'
+                    variant='h4'
                     color='primary'
                     size='small'
                     fullWidth
