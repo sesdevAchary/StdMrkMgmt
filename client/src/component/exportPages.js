@@ -406,7 +406,7 @@ const ExportPage = () => {
           </Button>
         </Box>
 
-        <Typography variant="body2" sx={{ mt: 4 }} align="center" color="text.secondary">
+        <Typography variant="{h2}" sx={{ mt: 6 }} align="center" color="text.primary">
           Total students: {students.length}
         </Typography>
       </Paper>
