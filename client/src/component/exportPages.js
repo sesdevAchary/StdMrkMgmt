@@ -412,9 +412,9 @@ const ExportPage = () => {
     p: 2,
     textAlign: 'center',
     color: 'white',
-    backgroundColor: 'primary.main',
-    borderRadius: 2,
-    boxShadow: 3,
+    backgroundColor: 'dark.main',
+    borderRadius: 10,
+    boxShadow: 6,
   }}
 >
   Total Students: {students.length}
