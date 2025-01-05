@@ -109,10 +109,10 @@ const Navbar = () => {
             }}
           >
             {[
-              { title: 'Create', path: '/add' },
+              { title: 'Add Student', path: '/add' },
               { title: 'Student List', path: '/list' },
               { title: 'Search Page', path: '/search' },
-              { title: 'Download List', path: '/export' },
+              { title: 'Download Student List', path: '/export' },
               { title: 'About', path: '/about' },
             ].map((item) => (
               <MenuItem
