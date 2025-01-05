@@ -353,10 +353,10 @@ const ExportPage = () => {
   return (
     <Container maxWidth="md" sx={{ mt: 4, mb: 4 }}>
       <Paper sx={{ p: 4 }}>
-        <Typography variant="h4" gutterBottom align="center" color="primary">
+        <Typography variant="h2" gutterBottom align="center" color="Cyan">
           Export Students
         </Typography>
-        <Typography variant="body1" sx={{ mb: 4 }} align="center" color="text.secondary">
+        <Typography variant="h4" sx={{ mb: 4 }} align="center" color="text.secondary">
           Export your student data in various formats
         </Typography>
 
@@ -406,12 +406,12 @@ const ExportPage = () => {
           </Button>
         </Box>
         <Typography
-  variant="h3"
+  variant="h4"
   sx={{
     mt: 6,
     p: 2,
     textAlign: 'center',
-    color: 'white',
+    color: 'Teal',
     backgroundColor: 'dark.main',
     borderRadius: 10,
     boxShadow: 6,
