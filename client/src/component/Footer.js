@@ -30,7 +30,7 @@ const Footer = () => (
         <br/>
          Prepared and served with care by The Sesdev Achary
          <br/>
-         Credit to Chinmaya Panigrahi        
+         Credit to Chinmaya Panigrahi  bro       
       </Typography>
       <Typography
         variant="caption"
