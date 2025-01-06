@@ -25,12 +25,15 @@ const Footer = () => (
         }}
       >
         &#128522; Thanks for your Attention &#128522;
-        <br/>
+        
         <br/>
         <br/>
          Prepared and served with care by The Sesdev Achary
          <br/>
-         Credit to Chinmaya Panigrahi  bro       
+         Credit to Chinmaya Panigrahi  bro  
+         <br/>
+        <br/>
+        <br/>     
       </Typography>
       <Typography
         variant="caption"

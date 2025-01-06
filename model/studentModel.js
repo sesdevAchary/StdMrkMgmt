@@ -17,7 +17,7 @@ const studentInfoSchema= new mongoose.Schema({
         type: String,
         required: true
       },
-      attendence:{
+      attendance:{
         type: Number,
         required:true
       },

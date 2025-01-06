@@ -7,7 +7,7 @@ exports.createStudentInfo = async (req, res) => {
             unique_id: req.body.unique_id,
             mail_id: req.body.mail_id,
             current_address: req.body.current_address,
-            attendence: req.body.attendence,
+            attendance: req.body.attendance,
             total_score: req.body.total_score,
             avg_cgpa: req.body.avg_cgpa
         });
@@ -74,7 +74,7 @@ exports.updateStudentById = async(req,res) => {
         unique_id: req.body.unique_id,
         mail_id: req.body.mail_id,
         current_address: req.body.current_address,
-        attendence: req.body.attendence,
+        attendance: req.body.attendance,
         total_score: req.body.total_score,
         avg_cgpa: req.body.avg_cgpa
 }, { new: true });
@@ -87,17 +87,3 @@ exports.updateStudentById = async(req,res) => {
     }
 }
 
-// exports.updatePatient = async (req, res) => {
-//     try {
-//         const updatedPatient = await ClinicModel.findByIdAndUpdate(req.params.id, {
-//             Patient_name: req.body.name, age: req.body.age, gender:req.body.gender, 
-//             contact_number:req.body.contact_number, admit_Date: req.body.admit_Date,
-//             medical_history:req.body.medical_history,admit:req.body.admit
-//         }, { new: true }); // Return the updated patientinfo
-
-//         if (!updatedPatient) return res.status(404).send('Patient not found in database'); // If patientinfo is not found, return 404
-//         res.send(updatedPatient); // Send the updated patientinfo as a response
-//     } catch (err) {
-//         res.status(400).send(err.message); // Send an error response if something goes wrong
-//     }
-// };

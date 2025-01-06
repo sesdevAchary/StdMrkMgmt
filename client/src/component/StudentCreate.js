@@ -302,7 +302,7 @@ const CreateStudent = () => {
           unique_id: '',
           mail_id: '',
           current_address: '',
-          attendence: '',
+          attendance: '',
           total_score: '',
           avg_cgpa: '',
         });
@@ -399,7 +399,7 @@ const CreateStudent = () => {
                 fullWidth
                 label="Attendance"
                 name="attendence"
-                value={student.attendence}
+                value={student.attendance}
                 onChange={handleChange}
                 type="number"
                 variant="outlined"
