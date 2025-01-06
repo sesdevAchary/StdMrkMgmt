@@ -10,7 +10,7 @@ function StudentList() {
 
   useEffect(() => {
     axios
-      .get('https://3000-sesdevachary-stdmrkmgmt-v42c1lz37x9.ws-us117.gitpod.io/api/student')
+      .get('https://stdmrkmgmt.onrender.com/api/student')
       .then((res) => {
         setStudents(res.data);
         setLoading(false);

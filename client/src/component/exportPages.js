@@ -229,7 +229,7 @@ const ExportPage = () => {
     const fetchStudents = async () => {
       try {
         const response = await axios.get(
-          "https://3000-sesdevachary-stdmrkmgmt-v42c1lz37x9.ws-us117.gitpod.io/api/student"
+          "https://stdmrkmgmt.onrender.com/api/student"
         );
         setStudents(response.data || []);
       } catch (error) {

@@ -41,7 +41,7 @@ const ShowStudentDetails = () => {
    useEffect(() => {
     if (id) {
       axios
-        .get(`https://3000-sesdevachary-stdmrkmgmt-v42c1lz37x9.ws-us117.gitpod.io/api/student/${id}`)
+        .get(`https://stdmrkmgmt.onrender.com/api/student/${id}`)
         .then((res) => setStudent(res.data))
         .catch((error) => console.error("Error fetching student details:", error));
     }
@@ -50,7 +50,7 @@ const ShowStudentDetails = () => {
   // Handle delete confirmation
   const handleDeleteConfirmation = () => {
     axios
-      .delete(`https://3000-sesdevachary-stdmrkmgmt-v42c1lz37x9.ws-us117.gitpod.io/api/student/${id}`)
+      .delete(`https://stdmrkmgmt.onrender.com/api/student/${id}`)
       .then(() => navigate("/list"))
       .catch((err) => console.error("Error deleting student:", err));
     setOpenDialog(false);

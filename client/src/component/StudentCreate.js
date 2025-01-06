@@ -295,7 +295,7 @@ const CreateStudent = () => {
 
     // Make API request to create student
     axios
-      .post('https://3000-sesdevachary-stdmrkmgmt-v42c1lz37x9.ws-us117.gitpod.io/api/student', student)
+      .post('https://stdmrkmgmt.onrender.com/api/student', student)
       .then((res) => {
         setStudent({
           first_name: '',
