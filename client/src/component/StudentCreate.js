@@ -61,16 +61,16 @@ const CreateStudent = () => {
         });
 
         toast.success('Student created successfully!', {
-          position: 'bottom-right',
+          position: 'top-left',
           autoClose: 3000,
           theme: 'dark',
           transition: Slide,
         });
 
-        // Redirect to homepage after success
+        // Redirect to list page  after success
         setTimeout(() => {
-          navigate('/');
-        }, 3000);
+          navigate('/list');
+        }, 4000);
       })
       .catch((err) => {
         toast.error('Something went wrong, try again!', {
@@ -86,8 +86,8 @@ const CreateStudent = () => {
     <Container maxWidth="md">
       <ToastContainer position="top-right" autoClose={5000} theme="dark" transition={Slide} />
       <Paper elevation={6} sx={{ padding: 4, borderRadius: 2, backgroundColor: 'background.paper', color: 'text.primary' }}>
-        <Typography variant="h3" gutterBottom align="center">
-          Create A New Student
+        <Typography variant="2" gutterBottom align="center">
+          Create A New Student Here
         </Typography>
 
         <Box component="form" onSubmit={handleSubmit} noValidate>

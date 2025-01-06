@@ -63,7 +63,7 @@ const ShowStudentDetails = () => {
     return (
       <Container maxWidth="md">
         <StyledPaper>
-          <Typography variant="h5" align="center">
+          <Typography variant="h4" align="center">
             Loading student details...
           </Typography>
         </StyledPaper>
