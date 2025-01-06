@@ -17,7 +17,7 @@ const CreateStudent = () => {
     unique_id: '',
     mail_id: '',
     current_address: '',
-    attendance: '',
+    
     total_score: '',
     avg_cgpa: '',
   });
@@ -34,7 +34,7 @@ const CreateStudent = () => {
     e.preventDefault();
 
     // Validation: Ensure no fields are empty
-    const requiredFields = ['first_name', 'unique_id', 'mail_id', 'current_address', 'attendance', 'total_score', 'avg_cgpa'];
+    const requiredFields = ['first_name', 'unique_id', 'mail_id', 'current_address',  'total_score', 'avg_cgpa'];
     for (let field of requiredFields) {
       if (!student[field]) {
         toast.error('Please fill in all required fields.', {
@@ -55,7 +55,7 @@ const CreateStudent = () => {
           unique_id: '',
           mail_id: '',
           current_address: '',
-          attendance: '',
+        
           total_score: '',
           avg_cgpa: '',
         });
@@ -146,19 +146,7 @@ const CreateStudent = () => {
               />
             </Grid>
 
-            {/* Attendance */}
-            <Grid item xs={12} sm={4}>
-              <TextField
-                fullWidth
-                label="Attendance"
-                name="attendence"
-                value={student.attendance}
-                onChange={handleChange}
-                type="number"
-                variant="outlined"
-                required
-              />
-            </Grid>
+           
 
             {/* Total Score */}
             <Grid item xs={12} sm={4}>

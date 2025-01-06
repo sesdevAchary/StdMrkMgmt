@@ -7,7 +7,7 @@ exports.createStudentInfo = async (req, res) => {
             unique_id: req.body.unique_id,
             mail_id: req.body.mail_id,
             current_address: req.body.current_address,
-            attendance: req.body.attendance,
+            
             total_score: req.body.total_score,
             avg_cgpa: req.body.avg_cgpa
         });
@@ -74,7 +74,6 @@ exports.updateStudentById = async(req,res) => {
         unique_id: req.body.unique_id,
         mail_id: req.body.mail_id,
         current_address: req.body.current_address,
-        attendance: req.body.attendance,
         total_score: req.body.total_score,
         avg_cgpa: req.body.avg_cgpa
 }, { new: true });

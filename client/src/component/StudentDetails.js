@@ -112,9 +112,7 @@ const ShowStudentDetails = () => {
               <Typography variant="body1" paragraph>
                 <strong>Address:</strong> {student.current_address}
               </Typography>
-              <Typography variant="body1" paragraph>
-                <strong>Attendance:</strong> {student.attendance}
-              </Typography>
+             
               <Typography variant="body1" paragraph>
                 <strong>Score:</strong> {student.total_score}
               </Typography>
