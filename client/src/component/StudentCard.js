@@ -66,6 +66,7 @@ StudentCard.propTypes = {
         _id: PropTypes.string.isRequired,
         first_name: PropTypes.string.isRequired,
         total_score: PropTypes.number,
+        attendance:PropTypes.number,
         imageUrl: PropTypes.string,
     }).isRequired,
 };
