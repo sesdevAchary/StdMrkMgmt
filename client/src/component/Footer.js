@@ -29,7 +29,8 @@ const Footer = () => (
         <br/>
         <br/>
          Prepared and served with care by The Sesdev Achary
-        <br> credit to Chinmaya Panigrahi </br>          
+         <br/>
+         Credit to Chinmaya Panigrahi        
       </Typography>
       <Typography
         variant="caption"
