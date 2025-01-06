@@ -28,8 +28,8 @@ const Footer = () => (
         <br/>
         <br/>
         <br/>
-         Prepared and served with care by The Sesdev Achary  <br/>
-        
+         Prepared and served with care by The Sesdev Achary
+        <br> credit to Chinmaya Panigrahi </br>          
       </Typography>
       <Typography
         variant="caption"
