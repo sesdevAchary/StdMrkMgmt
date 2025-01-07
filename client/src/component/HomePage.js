@@ -370,8 +370,8 @@ const HomePage = () => {
               <Button
                 fullWidth
                 component={Link}
-                to={`/details/${student._id}`}
-                variant="contained"
+                to='/list'
+                variant="outlined"
                 sx={{
                   py: 2,
                   fontSize: '18px',
