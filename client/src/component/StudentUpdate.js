@@ -1,100 +1,180 @@
 
-
-
-
-import React,{useEffect,useState} from 'react';
-import {useParams,useNavigate} from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-const API_URL = process.env.REACT_APP_API_URL;
-console.log(API_URL) // logs the URL to the console for debugging purposes.//
+function StudentUpdate (props) {
+  const [student, setStudent] = useState({
+    first_name: '',
+    unique_id: '',
+    mail_id: '',
+    current_address: '',
+     total_score: '',
+    avg_cgpa: '',
+  });
 
-
-const StudentUpdate=()=>{
-    const {id} =useParams();
-    const navigate = useNavigate();
-    const [student, setStudent] = useState({ name: '', roll_no:'',gender:''});
-
-
-
-    // to fetech student  data when id changes //
-    useEffect(()=>{
-        const fetchStudent= async()=>{
-            try{
-                const response = await axios.get(`${API_URL}/$ {id}`);
-                setStudent(response.data);
-            } catch (error){
-                console.error("error fetching the student:",error);
-            }
-        };
-        fetchStudent();
-    } ,[id]);
+  const { id } = useParams();
+  const navigate = useNavigate();
 
 
 
-// to handle change in forms updates the patient state with the new value of the form field. //
-    const handleChange=(e)=>{
-        const{name,value}=e.target;
-        setStudent({...student,[name]:value}); 
-    }
+  useEffect(() => {
+    axios
+      .get(`https://stdmrkmgmt.onrender.com/api/student/${id}`)
+      .then((res) => {
+        setStudent({
+          name: res.data.first_name,
+          unique_id: res.data.unique_id,
+           mail_id: res.data.mail_id,
+          current_address: res.data.current_address,
+          total_score: res.data.total_score,
+          avg_cgpa: res.data.avg_cgpa
+        });
+      })
+      .catch((err) => {
+        console.log('Error from UpdateStudentInfo GET request');
+        console.log(err);
+      });
+  }, [id]);
 
+  const onChange = (e) => {
+    setStudent({ ...student, [e.target.name]: e.target.value });
+  };
 
-
-
-// handle update phase //
- const handleUpdate = async(e)=>{
+  const onSubmit = (e) => {
     e.preventDefault();
-    try{
-        await axios.put(`${API_URL}/${id}`,student);
-        navigate(`/detail/${id}`);
 
+    const data = {
+    
+        name: student.first_name,
+        unique_id:student.unique_id,
+         mail_id: student.mail_id,
+        current_address: student.current_address,
+        total_score: student.total_score,
+        avg_cgpa: student.avg_cgpa,
+    };
 
-    }catch(error){
-        console.log(`error in updating the student details:`,error);
-    }
+    axios
+      .put(`https://stdmrkmgmt.onrender.com/api/student/${id}`, data)
+      .then((res) => {
+        navigate(`/list`);
+      })
+      .catch((err) => {
+        console.log('Error in UpdateStudentInfo PUT request');
+        console.log(err);
+      });
+  };
 
- };
-
-
- // handle cancel operation //
- const handleCancel =()=>{
-    navigate (`/detail/${id}`); 
- };
-
-
- // handleHome function //
-  const handleHome=()=>{
-    navigate('/list'); 
-  }
- 
-
-
-  // the jsx content //
-return (
-  <div className='box-container'>
-    <h1>Update Student</h1>  
-    <form onSubmit = {handleUpdate} className="form-container">
-    <input type='text' name='name' placeholder='Name' value ={student.name}  onChange={handleChange} required className ='input-field' />
-
-    <select type='select' placeholder='select gender' value={student.gender} onchange={handleChange} require className='input-field'>
-      
-      
-         <option value="male">Male</option>
-         <option value ="female">Female</option>
-         <option value="other">Others</option>  </select>
-
-
-        <div className="person-actions">
-        <button type="submit" className="btn btn-update">Update</button>
-        <button type="button" className="btn btn-cancel" onClick={handleCancel}>Cancel</button>
-        <button type="button" className="btn btn-back" onClick={handleHome}>Back to Home</button>
+  return (
+    <div className='UpdateStudentInfo'>
+      <div className='container' style={{ display: "flex", alignItems: "center", flexDirection: "column" }}>
+        <div className='row'>
+          <div className='col-md-8 m-auto'>
+            <br />
+            <Link to='/' className='btn btm-outline-warning float-left'>
+              Show Student List
+            </Link>
+          </div>
+          <div className='col-md-8 m-auto'>
+            <h1 className='display-4 text-center'>Edit Student</h1>
+            <p className='lead text-center'>Update Student's Info</p>
+          </div>
         </div>
-        </form>
+
+        <div className='col-md-8 m-auto'>
+          <form noValidate onSubmit={onSubmit}>
+            <div className='form-group'>
+              <label htmlFor='first_name'>Name</label>
+              <input
+                type='text'
+                placeholder='Name of the student'
+                name='name'
+                className='form-control'
+                value={student.first_name}
+                onChange={onChange}
+              />
+            </div>
+            <br />
+
+            <div className='form-group'>
+              <label htmlFor='unique_id'>Email id</label>
+              <input
+                type='email'
+                placeholder='Email'
+                name='unique_id'
+                className='form-control'
+                value={student.unique_id}
+                onChange={onChange}
+              />
+            </div>
+            <br />
+
+            <div className='form-group'>
+              <label htmlFor='mail_id'>Email id</label>
+              <input
+                type='email'
+                placeholder='Email'
+                name='mail_id'
+                className='form-control'
+                value={student.mail_id}
+                onChange={onChange}
+              />
+            </div>
+            <br />
+
+
+            <div className='form-group'>
+              <label htmlFor='current_address'>Address</label>
+              <input
+                type='text'
+                placeholder='Enter your current address'
+                name='current_address'
+                className='form-control'
+                value={student.current_address}
+                onChange={onChange}
+              />
+            </div>
+            <br />
+           
+            <div className='form-group'>
+              <label htmlFor='total_score'>Score</label>
+              <input
+                type='number'
+                placeholder='Enter the Total Score'
+                name='total_score'
+                className='form-control'
+                value={student.total_score}
+                onChange={onChange}
+              />
+            </div>
+            <br />
+
+  
+            <div className='form-group'>
+              <label htmlFor='avg_cgpa'>CGPA</label>
+              <input
+                type='number'
+                placeholder='Enter Average CGPA'
+                name='avg_cgpa'
+                className='form-control'
+                value={student.avg_cgpa}
+                onChange={onChange}
+              />
+            </div>
+            <br />
+
+            <button
+               type='sumbit'
+               className='btn btn-outline-info btn-lg btn-block'
+            >
+              Update Student
+            </button>
+            <br /><br />
+          </form>
         </div>
-        
-      
-     );
+      </div>
+    </div>
+  );
+}
 
-};
-
-export default StudentUpdate;
+export default StudentUpdate ;
