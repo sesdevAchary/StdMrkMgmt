@@ -47,7 +47,7 @@ const App = () => {
                 <Route path='/details/:id' element={<ShowStudentDetails />} />
                 <Route path='/scan' element={<QRCodePage />} />
                 <Route path="/export" element={<ExportPage />} />
-                <Route path=''
+                 <Route path='/Search' element={<SearchStudents/>} />
 
 
                 
