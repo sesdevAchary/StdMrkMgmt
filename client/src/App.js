@@ -15,7 +15,9 @@ import ExportPage from './component/exportPages';
  import StudentList from './component/StudentList';
 import ShowStudentDetails from './component/StudentDetails';
 import CreateStudent from './component/StudentCreate';
-// import StudentUpdate from './component/StudentUpdate';
+import QRCodePage from './component/qrCode';
+
+//  import StudentUpdate from './component/StudentUpdate';
 import Footer from './component/Footer';
 import Navbar from './component/Navbar';
 import HomePage from './component/HomePage';
@@ -42,7 +44,7 @@ const App = () => {
                 <Route path="/add" element={<CreateStudent/>} />     
                 <Route exact path='/' element={<HomePage />} /> 
                 <Route path='/details/:id' element={<ShowStudentDetails />} />
-
+                <Route path='/scan' element={<QRCodePage />} />
                 <Route path="/export" element={<ExportPage />} />
 
 
