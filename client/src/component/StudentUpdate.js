@@ -32,7 +32,7 @@ function StudentUpdate (props) {
         });
       })
       .catch((err) => {
-        console.log('Error from UpdateStudentInfo GET request');
+        console.log('Error fromo GET request');
         console.log(err);
       });
   }, [id]);
@@ -66,7 +66,7 @@ function StudentUpdate (props) {
   };
 
   return (
-    <div className='UpdateStudentInfo'>
+    <div className='StudentUpdate'>
       <div className='container' style={{ display: "flex", alignItems: "center", flexDirection: "column" }}>
         <div className='row'>
           <div className='col-md-8 m-auto'>
@@ -97,7 +97,7 @@ function StudentUpdate (props) {
             <br />
 
             <div className='form-group'>
-              <label htmlFor='unique_id'>Email id</label>
+              <label htmlFor='unique_id'> id</label>
               <input
                 type='email'
                 placeholder='Email'
