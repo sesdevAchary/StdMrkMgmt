@@ -55,7 +55,7 @@ const App = () => {
 
               <Route path='/search' element={<SearchStudents />} />
 
-              <Route path="/update" element={<StudentUpdate />} />
+              <Route path="/edit" element={<StudentUpdate />} />
 
 
               

@@ -71,7 +71,7 @@ function StudentUpdate (props) {
         <div className='row'>
           <div className='col-md-8 m-auto'>
             <br />
-            <Link to='/' className='btn btm-outline-warning float-left'>
+            <Link to='/list' className='btn btn-outline-warning float-left'>
               Show Student List
             </Link>
           </div>
@@ -88,7 +88,7 @@ function StudentUpdate (props) {
               <input
                 type='text'
                 placeholder='Name of the student'
-                name='name'
+                name='first_name' 
                 className='form-control'
                 value={student.first_name}
                 onChange={onChange}
@@ -97,7 +97,7 @@ function StudentUpdate (props) {
             <br />
 
             <div className='form-group'>
-              <label htmlFor='unique_id'> id</label>
+            <label htmlFor='unique_id'>Unique ID</label>
               <input
                 type='email'
                 placeholder='Email'
@@ -110,7 +110,7 @@ function StudentUpdate (props) {
             <br />
 
             <div className='form-group'>
-              <label htmlFor='mail_id'>Email id</label>
+            <label htmlFor='mail_id'>Email ID</label>
               <input
                 type='email'
                 placeholder='Email'
@@ -128,7 +128,7 @@ function StudentUpdate (props) {
               <input
                 type='text'
                 placeholder='Enter your current address'
-                name='current_address'
+                 name='current_address'
                 className='form-control'
                 value={student.current_address}
                 onChange={onChange}
@@ -164,7 +164,7 @@ function StudentUpdate (props) {
             <br />
 
             <button
-               type='sumbit'
+                type='submit'
                className='btn btn-outline-info btn-lg btn-block'
             >
               Update Student
