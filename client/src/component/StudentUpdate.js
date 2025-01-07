@@ -64,7 +64,7 @@ const StudentUpdate=()=>{
 
  // handleHome function //
   const handleHome=()=>{
-    navigate('/'); 
+    navigate('/list'); 
   }
  
 

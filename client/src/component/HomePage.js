@@ -399,7 +399,7 @@ const HomePage = () => {
                 fullWidth
                 variant="outlined"
                 component={Link}
-              to='/create'
+              to='/search'
                 sx={{
                   py: 2,
                   fontSize: '18px',
@@ -425,7 +425,7 @@ const HomePage = () => {
             <Grid item xs={12} sm={4}>
               <Button
               component={Link}
-              to='/create'
+              to='/add'
                 fullWidth
                 variant="outlined"
                 sx={{
@@ -454,7 +454,7 @@ const HomePage = () => {
             <Grid item xs={12} sm={4}>
               <Button 
               component={Link}
-              to='/qrCode'
+              to='/scan'
               variant='outlined'
               fullWidth
               sx={{
@@ -473,7 +473,7 @@ const HomePage = () => {
                   boxShadow: '0px 8px 15px rgba(0, 0, 0, 0.2)',
                 },
               }}
-              aria-label="Add Student"
+              aria-label="qr Code "
               > Qr Code 
               </Button>
 

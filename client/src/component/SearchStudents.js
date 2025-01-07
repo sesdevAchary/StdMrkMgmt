@@ -17,14 +17,13 @@ import {
 } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import RestartAltIcon from '@mui/icons-material/RestartAlt';
-import BookCard from './BookCard';
+ import StudentCard from './StudentCard';
 import axios from 'axios';
 
 const SearchStudents = () => {
     const [students, setStudents] = useState([]);
     const [filtereStudents, setFilteredStudents] = useState([]);
     const [loading, setLoading] = useState(true);
-    const [publishers, setPublishers] = useState([]);
 
     const [filters, setFilters] = useState({
         searchTerm: '',
@@ -194,9 +193,9 @@ const SearchStudents = () => {
 
             {/* Books Grid */}
             <Grid container spacing={3}>
-                {filteredBooks.map((book) => (
-                    <Grid item xs={12} sm={6} md={4} key={book._id}>
-                        <BookCard book={book} />
+                {filtereStudents.map((student) => (
+                    <Grid item xs={12} sm={6} md={4} key={student.unique_id}>
+                        <StudentCard student={students} />
                     </Grid>
                 ))}
             </Grid>
