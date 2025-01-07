@@ -54,7 +54,7 @@ const SearchStudents = () => {
         let result = [...students];
 
         if (filters.searchTerm) {
-            result = result.filter(book => {
+            result = result.filter(students => {
                 const searchValue = book[filters.searchField]?.toString().toLowerCase();
                 return searchValue?.includes(filters.searchTerm.toLowerCase());
             });

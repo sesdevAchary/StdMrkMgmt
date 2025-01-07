@@ -19,6 +19,7 @@ import QRCodePage from './component/qrCode';
 
 //  import StudentUpdate from './component/StudentUpdate';
 import Footer from './component/Footer';
+import SearchStudents from'./component/SearchStudents'
 import Navbar from './component/Navbar';
 import HomePage from './component/HomePage';
 import './App.css'; // Make sure this contains your CSS
@@ -46,6 +47,7 @@ const App = () => {
                 <Route path='/details/:id' element={<ShowStudentDetails />} />
                 <Route path='/scan' element={<QRCodePage />} />
                 <Route path="/export" element={<ExportPage />} />
+                <Route path=''
 
 
                 

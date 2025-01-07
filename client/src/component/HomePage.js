@@ -376,7 +376,7 @@ const HomePage = () => {
                   py: 2,
                   fontSize: '18px',
                   fontWeight: 800,
-                  borderRadius: 10,
+                  borderRadius: 4,
                   borderColor: 'primary.main',
                   color: 'primary.main',
                   backgroundColor: 'transparent',
@@ -398,10 +398,12 @@ const HomePage = () => {
               <Button
                 fullWidth
                 variant="outlined"
+                component={Link}
+              to='/create'
                 sx={{
                   py: 2,
                   fontSize: '18px',
-                  fontWeight: 600,
+                  fontWeight: 800,
                   borderRadius: 4,
                   borderColor: 'primary.main',
                   color: 'primary.main',
@@ -422,12 +424,14 @@ const HomePage = () => {
 
             <Grid item xs={12} sm={4}>
               <Button
+              component={Link}
+              to='/create'
                 fullWidth
                 variant="outlined"
                 sx={{
-                  py: 2,
+                  py: '8 px',
                   fontSize: '18px',
-                  fontWeight: 600,
+                  fontWeight: 800,
                   borderRadius: 4,
                   borderColor: 'primary.main',
                   color: 'primary.main',
@@ -444,6 +448,35 @@ const HomePage = () => {
               >
                 Add Student
               </Button>
+            </Grid>
+
+
+            <Grid item xs={12} sm={4}>
+              <Button 
+              component={Link}
+              to='/qrCode'
+              variant='outlined'
+              fullWidth
+              sx={{
+                py: '8px',
+                fontSize:'18px',
+                fontWeight:900,
+                borderRadius:4,
+                borderColor: 'primary.main',
+                color: 'primary.main',
+                backgroundColor: 'transparent',
+                textTransform: 'none',
+                '&:hover': {
+                  backgroundColor: 'primary.light',
+                  borderColor: 'primary.dark',
+                  color: 'primary.dark',
+                  boxShadow: '0px 8px 15px rgba(0, 0, 0, 0.2)',
+                },
+              }}
+              aria-label="Add Student"
+              > Qr Code 
+              </Button>
+
             </Grid>
           </Grid>
         </Box>
