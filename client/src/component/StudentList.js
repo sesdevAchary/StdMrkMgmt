@@ -8,9 +8,19 @@ function StudentList() {
   const [students, setStudents] = useState([]);
   const [loading, setLoading] = useState(true);
 
+
+
+  
+  const Base_URL = process.env.REACT_APP_API_URL; // Access environment variable
+  
+  if (! Base_URL) {
+    console.error('API_URL is not defined in the environment variables'); // Log error 
+  }
+  
+
   useEffect(() => {
     axios
-      .get('https://stdmrkmgmt.onrender.com/api/student')
+      .get(`${Base_URL}/api/student`)
       .then((res) => {
         setStudents(res.data);
         setLoading(false);

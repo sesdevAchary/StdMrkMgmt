@@ -232,6 +232,16 @@ const SearchStudents = () => {
     const [filteredStudents, setFilteredStudents] = useState([]);
     const [loading, setLoading] = useState(true);
 
+
+
+
+    
+  const Base_URL = process.env.REACT_APP_API_URL; // Access environment variable
+  
+  if (! Base_URL) {
+    console.error('API_URL is not defined in the environment variables'); // Log error 
+  }
+
     const [filters, setFilters] = useState({
         searchTerm: '',
         searchField: 'first_name', // default to 'first_name' for search
@@ -241,7 +251,7 @@ const SearchStudents = () => {
 
     useEffect(() => {
         // Fetching the student data
-        axios.get('/api/student')
+        axios.get(`${Base_URL}/api/student`)
             .then(res => {
                 setStudents(res.data);
                 setFilteredStudents(res.data); // Initialize filteredStudents with fetched data

@@ -224,12 +224,20 @@ const ExportPage = () => {
   const [students, setStudents] = useState([]);
   const [loading, setLoading] = useState(true);
 
+
+  
+  const Base_URL = process.env.REACT_APP_API_URL; // Access environment variable
+  
+  if (! Base_URL) {
+    console.error('API_URL is not defined in the environment variables'); // Log error 
+  }
+
   // Fetch students from API
   useEffect(() => {
     const fetchStudents = async () => {
       try {
         const response = await axios.get(
-          "https://stdmrkmgmt.onrender.com/api/student"
+          `${Base_URL}/api/student`
         );
         setStudents(response.data || []);
       } catch (error) {
