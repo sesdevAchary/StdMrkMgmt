@@ -41,11 +41,18 @@ const ShowStudentDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
 
+
+  const Base_URL = process.env.REACT_APP_API_URL; // Access environment variable
+  
+  if (! Base_URL) {
+    console.error('API_URL is not defined in the environment variables'); // Log error 
+  }
+
    // Fetch student details
    useEffect(() => {
     if (id) {
       axios
-        .get(`https://stdmrkmgmt.onrender.com/api/student/${id}`)
+        .get(`${Base_URL}/student/${id}`)
         .then((res) => setStudent(res.data))
         .catch((error) => console.error("Error fetching student details:", error));
     }
@@ -54,7 +61,7 @@ const ShowStudentDetails = () => {
   // Handle delete confirmation
   const handleDeleteConfirmation = () => {
     axios
-      .delete(`https://stdmrkmgmt.onrender.com/api/student/${id}`)
+      .delete(`${Base_URL}/api/student/${id}`)
       .then(() => navigate("/list"))
       .catch((err) => console.error("Error deleting student:", err));
     setOpenDialog(false);
