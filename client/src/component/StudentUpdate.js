@@ -46,7 +46,7 @@ function StudentUpdate (props) {
 
     const data = {
     
-        name: student.first_name,
+       first_name: student.first_name,
         unique_id:student.unique_id,
          mail_id: student.mail_id,
         current_address: student.current_address,
@@ -99,8 +99,8 @@ function StudentUpdate (props) {
             <div className='form-group'>
             <label htmlFor='unique_id'>Unique ID</label>
               <input
-                type='email'
-                placeholder='Email'
+                type='unique_idl'
+                placeholder='unique_id'
                 name='unique_id'
                 className='form-control'
                 value={student.unique_id}

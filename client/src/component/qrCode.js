@@ -17,7 +17,7 @@ import axios from 'axios';
 const QRCodePage = () => {
     const [students, setStudents] = useState([]);
     const [loading, setLoading] = useState(true);
-    const baseUrl = 'https://stdmrkmgmt.onrender.com/show-student/';
+    const baseUrl = 'https://stdmrkmgmt.onrender.com/details/';
   
     useEffect(() => {
       axios.get('/api/students')
@@ -71,7 +71,7 @@ const QRCodePage = () => {
         </Typography>
   
         <Grid container spacing={3}>
-          {students.map((student) => (
+        {Array.isArray(students) && students.map((student) => (
             <Grid item xs={12} sm={6} md={4} key={student._id}>
               <Card sx={{ 
                 height: '100%',
@@ -101,18 +101,18 @@ const QRCodePage = () => {
                   >
                     {student.title}
                   </Typography>
-                  <Typography 
+                  {/* <Typography 
                     variant="body2" 
                     color="text.secondary" 
                     align="center" 
                     sx={{ mb: 2 }}
                   >
                     By {student.first_name}
-                  </Typography>
+                  </Typography> */}
                   <Button
                     variant="outlined"
                     startIcon={<DownloadIcon />}
-                    onClick={() => downloadQR(student._id, student.title)}
+                    onClick={() => downloadQR(student._id, student.first_name)}
                     size="small"
                   >
                     Download QR

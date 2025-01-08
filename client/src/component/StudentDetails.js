@@ -24,6 +24,9 @@ import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import axios from "axios";
 
+
+
+
 // Styled Paper for consistent design
 const StyledPaper = styled(Paper)(({ theme }) => ({
   padding: theme.spacing(4),
@@ -37,6 +40,7 @@ const ShowStudentDetails = () => {
   const [openDialog, setOpenDialog] = useState(false);
   const { id } = useParams();
   const navigate = useNavigate();
+
    // Fetch student details
    useEffect(() => {
     if (id) {
@@ -138,7 +142,7 @@ const ShowStudentDetails = () => {
             <Button
               startIcon={<EditIcon />}
               component={RouterLink}
-              to={`/edit/${student.unique_id}`}
+              to={`/edit/${id}`}
               variant="contained"
               color="primary"
               sx={{ mr: 2 }}
