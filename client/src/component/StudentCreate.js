@@ -23,11 +23,11 @@ const CreateStudent = () => {
 
 
 
-  const Base_URL = process.env.REACT_APP_API_URL; // Access environment variable
+  // const Base_URL = process.env.REACT_APP_API_URL; // Access environment variable
   
-  if (! Base_URL) {
-    console.error('API_URL is not defined in the environment variables'); // Log error 
-  }
+  // if (! Base_URL) {
+  //   console.error('API_URL is not defined in the environment variables'); // Log error 
+  // }
 
 
   const handleChange = (e) => {
@@ -56,14 +56,13 @@ const CreateStudent = () => {
 
     // Make API request to create student
     axios
-      .post(`${Base_URL}/api/student`, student)
+      .post(`https://stdmrkmgmt.onrender.com/api/student`, student)
       .then((res) => {
         setStudent({
           first_name: '',
           unique_id: '',
           mail_id: '',
           current_address: '',
-        
           total_score: '',
           avg_cgpa: '',
         });

@@ -18,20 +18,20 @@ import axios from 'axios';
 
 
 
-const Base_URL = process.env.REACT_APP_API_URL; // Access environment variable
+// const Base_URL = process.env.REACT_APP_API_URL; // Access environment variable
   
-if (! Base_URL) {
-  console.error('API_URL is not defined in the environment variables'); // Log error 
-}
+// if (! Base_URL) {
+//   console.error('API_URL is not defined in the environment variables'); // Log error 
+// }
 
 
 const QRCodePage = () => {
     const [students, setStudents] = useState([]);
     const [loading, setLoading] = useState(true);
-    const baseUrl = `${Base_URL}/details/`;
+    const baseUrl = `https://stdmrkmgmt.onrender.com/details/`;
 
     useEffect(() => {
-        axios.get(`${Base_URL}/api/student`)
+        axios.get(`https://stdmrkmgmt.onrender.com/api/student`)
             .then(res => {
                 setStudents(res.data);
                 setLoading(false);

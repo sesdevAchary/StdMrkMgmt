@@ -11,26 +11,32 @@ function StudentList() {
 
 
   
-  const Base_URL = process.env.REACT_APP_API_URL; // Access environment variable
+  // const Base_URL = process.env.REACT_APP_API_URL; // Access environment variable
   
-  if (! Base_URL) {
-    console.error('API_URL is not defined in the environment variables'); // Log error 
-  }
+  // if (! Base_URL) {
+  //   console.error('API_URL is not defined in the environment variables'); // Log error 
+  // }
   
-
   useEffect(() => {
     axios
-      .get(`${Base_URL}/api/student`)
+      .get(`https://stdmrkmgmt.onrender.com/api/student`)
       .then((res) => {
-        setStudents(res.data);
+        console.log("API response:", res.data);  // Log the API response
+        if (Array.isArray(res.data)) {
+          setStudents(res.data);
+        } else {
+          console.error("Response is not an array:", res.data);  // Log error if not an array
+          setStudents([]);  // Set an empty array in case of incorrect response
+        }
         setLoading(false);
       })
       .catch((err) => {
-        console.log('Error loading student data:', err);
+        console.log("Error loading student data:", err);
         setLoading(false);
+        setStudents([]);  // Set an empty array in case of error
       });
   }, []);
-
+  
   return (
     <>
       {/* Main Container for Student List */}
@@ -110,27 +116,23 @@ function StudentList() {
         </Box>
       </Container>
 
-       <container>
-        <Typography variant="h5" alignItems="start" gutterBottom sx={{
-          fontWeight: 700,
-          letterSpacing: 1.5,
-          maxWidth:"lg" ,
-           py: 6, px: 4 
-          // textTransform: 'uppercase',
-        }}>
-          <box
-            display="flex"
-            justifyContent="center"
-            sx={{
-              borderRadius: 10, // Rounded corners for the box
-              boxShadow: 50, // Light box shadow
-              p: 3, // Padding around the button
-              backgroundColor: '#e0f8e8' // Box background color
-            }}>
-            If you want to Go to the HomePage then Click on the STUDENT MANAGEMENT above
-          </box>
-        </Typography>
-      </container> 
+      {/* Additional message */}
+           <Box
+             display="flex"
+             justifyContent="center"
+             sx={{
+               borderRadius: 5,
+               boxShadow: 50,
+               p: 2,
+               fontsize: '2.2rem',
+               textdecoration: 'underline',
+               fontweight: 'bold',
+               backgroundColor: 'fffff',
+               mt: 4,
+             }}
+           >
+             If you want to go to the HomePage, click on the "STUDENT MANAGEMENT" link above.
+           </Box>
 
 
 

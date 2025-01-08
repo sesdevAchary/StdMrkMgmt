@@ -17,17 +17,17 @@ function StudentUpdate (props) {
   const navigate = useNavigate();
 
 
-  const Base_URL = process.env.REACT_APP_API_URL; // Access environment variable
+  // const Base_URL = process.env.REACT_APP_API_URL; // Access environment variable
   
-  if (! Base_URL) {
-    console.error('API_URL is not defined in the environment variables'); // Log error 
-  }
+  // if (! Base_URL) {
+  //   console.error('API_URL is not defined in the environment variables'); // Log error 
+  // }
 
 
 
   useEffect(() => {
     axios
-      .get(`${Base_URL}/api/student/${id}`)
+      .get(`https://stdmrkmgmt.onrender.com/api/student/${id}`)
       .then((res) => {
         setStudent({
           name: res.data.first_name,
@@ -62,7 +62,7 @@ function StudentUpdate (props) {
     };
 
     axios
-      .put(`${Base_URL}/${id}`, data)
+      .put(`https://stdmrkmgmt.onrender.com/${id}`, data)
       .then((res) => {
         navigate(`/list`);
       })
