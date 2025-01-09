@@ -18,11 +18,6 @@ import axios from 'axios';
 
 
 
-// const Base_URL = process.env.REACT_APP_API_URL; // Access environment variable
-  
-// if (! Base_URL) {
-//   console.error('API_URL is not defined in the environment variables'); // Log error 
-// }
 
 
 const QRCodePage = () => {
@@ -52,6 +47,7 @@ const QRCodePage = () => {
         img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(source);
 
         img.onload = () => {
+              // Create a canvas to convert the image to PNG
             canvas.width = img.width;
             canvas.height = img.height;
             const ctx = canvas.getContext('2d');
@@ -74,7 +70,7 @@ const QRCodePage = () => {
 
     return (
         <Container maxWidth="lg" sx={{ py: 4 }}>
-            <Typography variant='h4' component='h1' gutterBottom align='center' color='primary'>
+            <Typography variant='h3' component='h1' gutterBottom align='center' color='primary'>
                 Student QR Codes
             </Typography>
             <Typography variant='body1' gutterBottom align='center' sx={{ mb: 4 }}>
@@ -105,18 +101,18 @@ const QRCodePage = () => {
                                     includeMargin
                                 />
                                 <Typography
-                                    variant="h5"
+                                    variant="h4"
                                     component="div"
                                     align="center"
                                     sx={{ mt: 2, mb: 1 }}
                                 >
-                                    {student.name}
+                                    {student.first_name}
                                 </Typography>
                                
                                 <Button
                                     variant="outlined"
                                     startIcon={<DownloadIcon />}
-                                    onClick={() => downloadQR(student._id, student.name)}
+                                    onClick={() => downloadQR(student._id, student.first_name)}
                                     size="small"
                                 >
                                     Download QR
