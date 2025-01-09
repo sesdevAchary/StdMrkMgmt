@@ -23,7 +23,7 @@ import axios from 'axios';
 const QRCodePage = () => {
     const [students, setStudents] = useState([]);
     const [loading, setLoading] = useState(true);
-    const baseUrl = `https://stdmrkmgmt.onrender.com/details/`;
+    //  const baseUrl = `https://stdmrkmgmt.onrender.com/details`;
 
     useEffect(() => {
         axios.get(`https://stdmrkmgmt.onrender.com/api/student`)
@@ -70,9 +70,11 @@ const QRCodePage = () => {
 
     return (
         <Container maxWidth="lg" sx={{ py: 4 }}>
+
             <Typography variant='h3' component='h1' gutterBottom align='center' color='primary'>
                 Student QR Codes
             </Typography>
+
             <Typography variant='body1' gutterBottom align='center' sx={{ mb: 4 }}>
                 Scan QR codes to quickly access student details
             </Typography>
@@ -95,7 +97,7 @@ const QRCodePage = () => {
                             }}>
                                 <QRCodeSVG
                                     id={`qr-${student._id}`}
-                                    value={`${baseUrl}${student._id}`}
+                                    value={`https://stdmrkmgmt.onrender.com/api/student${student._id}`}
                                     size={200}
                                     level="H"
                                     includeMargin

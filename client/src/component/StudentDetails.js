@@ -35,6 +35,7 @@ const StyledPaper = styled(Paper)(({ theme }) => ({
   borderRadius: 12,
   boxShadow: theme.shadows[3],
 }));
+
 const ShowStudentDetails = () => {
   const [student, setStudent] = useState(null);
   const [openDialog, setOpenDialog] = useState(false);
@@ -86,7 +87,9 @@ const ShowStudentDetails = () => {
     <Container maxWidth="md">
       <StyledPaper>
         <Grid container spacing={4}>
+
           {/* Student Image */}
+          
           <Grid item xs={12} md={4}>
             <Card>
               <CardMedia

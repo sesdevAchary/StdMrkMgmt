@@ -3,6 +3,10 @@
 
 
 import React from 'react';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+
+
 import { Link } from 'react-router-dom';
 import { Container, Typography, Button, Box, Card, CardMedia, Grid } from '@mui/material';
 import SwipeableViews from 'react-swipeable-views';
@@ -94,6 +98,9 @@ const HomePage = () => {
           }}
           variant="outlined"
           aria-label="Click here to toggle the next page"
+          startIcon={<ArrowForwardIcon />}
+          
+
         >
           NEXT
         </Button>
@@ -167,6 +174,8 @@ const HomePage = () => {
                 component={Link}
                 to='/list'
                 variant="outlined"
+                startIcon={<ArrowForwardIcon />}
+
                 sx={{
                   py: 2,
                   fontSize: '18px',
@@ -193,6 +202,8 @@ const HomePage = () => {
               <Button
                 fullWidth
                 variant="outlined"
+                startIcon={<ArrowForwardIcon />}
+
                 component={Link}
               to='/search'
                 sx={{
@@ -221,6 +232,8 @@ const HomePage = () => {
               <Button
               component={Link}
               to='/add'
+              startIcon={<ArrowForwardIcon />}
+
                 fullWidth
                 variant="outlined"
                 sx={{
@@ -251,6 +264,8 @@ const HomePage = () => {
               component={Link}
               to='/scan'
               variant='outlined'
+              startIcon={<ArrowForwardIcon />}
+
               fullWidth
               sx={{
                 py: '8px',
@@ -298,6 +313,8 @@ const HomePage = () => {
               },
             }}
             variant="outlined"
+            startIcon={<ArrowBackIcon />}
+
             aria-label="Go Back to Home"
           >
             Go Back to Home
