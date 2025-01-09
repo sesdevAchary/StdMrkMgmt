@@ -321,7 +321,6 @@
 
 // export default HomePage;
 
-
 import React from 'react';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
@@ -348,9 +347,9 @@ const HomePage = () => {
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
-          background: 'linear-gradient(135deg, #2C3E50, #34495E)', // Dark matte gradient
+          background: 'linear-gradient(135deg, #0a1d2f, #121212)', // Dark filled background with gradients
           borderRadius: 4,
-          boxShadow: 8,
+          boxShadow: 10,
         }}
       >
         <Box
@@ -372,7 +371,7 @@ const HomePage = () => {
               mb: 3,
               letterSpacing: 2,
               textTransform: 'uppercase',
-              textShadow: '2px 2px 8px rgba(0, 0, 0, 0.5)', // Subtle text shadow
+              textShadow: '3px 3px 6px rgba(0, 0, 0, 0.6)', // Darker and bolder text shadow
             }}
           >
             St. JOSEPH HIGH SCHOOL
@@ -389,7 +388,7 @@ const HomePage = () => {
                 height: '500px',
                 objectFit: 'cover',
                 borderRadius: 2,
-                boxShadow: '0px 8px 12px rgba(0, 0, 0, 0.4)', // Darker shadow
+                boxShadow: '0px 8px 12px rgba(0, 0, 0, 0.5)', // Deeper shadow for added contrast
               }}
             />
           </Card>
@@ -403,14 +402,14 @@ const HomePage = () => {
             px: 4,
             fontSize: '16px',
             fontWeight: 600,
-            borderRadius: 2,
+            borderRadius: 4,
             border: '2px solid',
-            borderColor: '#00A9D3', // Cyan accent
-            color: '#00A9D3',
+            borderColor: '#00D4FF', // Electric blue accent
+            color: '#00D4FF',
             backgroundColor: 'transparent',
             '&:hover': {
-              backgroundColor: '#00A9D3',
-              borderColor: '#005F73',
+              backgroundColor: '#00D4FF',
+              borderColor: '#0081A7', // Slightly darker blue on hover
               color: '#ffffff',
               boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.2)',
             },
@@ -436,9 +435,9 @@ const HomePage = () => {
           py: { xs: 5, sm: 10 },
           display: 'flex',
           flexDirection: 'column',
-          background: 'linear-gradient(135deg, #34495E, #2C3E50)', // Matte dark gradient
+          background: 'linear-gradient(135deg, #2b2b2b, #121212)', // Matte dark gradient for page 2
           borderRadius: 4,
-          boxShadow: 12,
+          boxShadow: 15,
           transition: 'all 0.3s ease',
         }}
       >
@@ -452,7 +451,7 @@ const HomePage = () => {
               mb: 3,
               textTransform: 'uppercase',
               letterSpacing: 1.2,
-              textShadow: '1px 1px 4px rgba(0, 0, 0, 0.3)', // Softer shadow for contrast
+              textShadow: '2px 2px 6px rgba(0, 0, 0, 0.5)', // More intense text shadow
             }}
           >
             Student Management System
@@ -461,7 +460,7 @@ const HomePage = () => {
             variant="h5"
             sx={{
               fontFamily: 'Roboto, sans-serif',
-              color: '#BDC3C7', // Light gray for text
+              color: '#E5E5E5', // Light gray for text
               fontWeight: 400,
               lineHeight: 1.7,
               letterSpacing: 0.5,
@@ -482,9 +481,9 @@ const HomePage = () => {
             gap: 3,
             borderRadius: 4,
             boxShadow: 5,
-            backgroundColor: '#2C3E50', // Dark background for the management box
+            backgroundColor: '#1c1c1c', // Darker background for the management box
             border: '1px solid',
-            borderColor: 'divider',
+            borderColor: '#444', // Subtle border color to match the dark theme
           }}
         >
           {/* Buttons for management */}
@@ -501,13 +500,13 @@ const HomePage = () => {
                   fontSize: '18px',
                   fontWeight: 800,
                   borderRadius: 4,
-                  borderColor: '#00A9D3',
-                  color: '#00A9D3',
+                  borderColor: '#00D4FF',
+                  color: '#00D4FF',
                   backgroundColor: 'transparent',
                   textTransform: 'none',
                   '&:hover': {
-                    backgroundColor: '#00A9D3',
-                    borderColor: '#005F73',
+                    backgroundColor: '#00D4FF',
+                    borderColor: '#0081A7',
                     color: '#ffffff',
                     boxShadow: '0px 8px 15px rgba(0, 0, 0, 0.2)',
                   },
@@ -530,13 +529,13 @@ const HomePage = () => {
                   fontSize: '18px',
                   fontWeight: 800,
                   borderRadius: 4,
-                  borderColor: '#00A9D3',
-                  color: '#00A9D3',
+                  borderColor: '#00D4FF',
+                  color: '#00D4FF',
                   backgroundColor: 'transparent',
                   textTransform: 'none',
                   '&:hover': {
-                    backgroundColor: '#00A9D3',
-                    borderColor: '#005F73',
+                    backgroundColor: '#00D4FF',
+                    borderColor: '#0081A7',
                     color: '#ffffff',
                     boxShadow: '0px 8px 15px rgba(0, 0, 0, 0.2)',
                   },
@@ -559,13 +558,13 @@ const HomePage = () => {
                   fontSize: '18px',
                   fontWeight: 800,
                   borderRadius: 4,
-                  borderColor: '#00A9D3',
-                  color: '#00A9D3',
+                  borderColor: '#00D4FF',
+                  color: '#00D4FF',
                   backgroundColor: 'transparent',
                   textTransform: 'none',
                   '&:hover': {
-                    backgroundColor: '#00A9D3',
-                    borderColor: '#005F73',
+                    backgroundColor: '#00D4FF',
+                    borderColor: '#0081A7',
                     color: '#ffffff',
                     boxShadow: '0px 8px 15px rgba(0, 0, 0, 0.2)',
                   },
@@ -588,13 +587,13 @@ const HomePage = () => {
                   fontSize: '18px',
                   fontWeight: 800,
                   borderRadius: 4,
-                  borderColor: '#00A9D3',
-                  color: '#00A9D3',
+                  borderColor: '#00D4FF',
+                  color: '#00D4FF',
                   backgroundColor: 'transparent',
                   textTransform: 'none',
                   '&:hover': {
-                    backgroundColor: '#00A9D3',
-                    borderColor: '#005F73',
+                    backgroundColor: '#00D4FF',
+                    borderColor: '#0081A7',
                     color: '#ffffff',
                     boxShadow: '0px 8px 15px rgba(0, 0, 0, 0.2)',
                   },
@@ -617,13 +616,13 @@ const HomePage = () => {
               fontWeight: 600,
               borderRadius: 4,
               border: '2px solid',
-              borderColor: '#00A9D3',
-              color: '#00A9D3',
+              borderColor: '#00D4FF',
+              color: '#00D4FF',
               backgroundColor: 'transparent',
               textTransform: 'none',
               '&:hover': {
-                backgroundColor: '#00A9D3',
-                borderColor: '#005F73',
+                backgroundColor: '#00D4FF',
+                borderColor: '#0081A7',
                 color: '#ffffff',
                 boxShadow: '0px 8px 15px rgba(0, 0, 0, 0.2)',
               },
