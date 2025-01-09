@@ -76,7 +76,7 @@ const QRCodePage = () => {
             </Typography>
 
             <Typography variant='body1' gutterBottom align='center' sx={{ mb: 4 }}>
-                Scan QR codes to quickly access student details
+                Scan QR codes to quickly access student details 👇
             </Typography>
 
             <Grid container spacing={3}>
