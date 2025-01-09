@@ -105,7 +105,7 @@ const QRCodePage = () => {
                                     includeMargin
                                 />
                                 <Typography
-                                    variant="h6"
+                                    variant="h5"
                                     component="div"
                                     align="center"
                                     sx={{ mt: 2, mb: 1 }}
