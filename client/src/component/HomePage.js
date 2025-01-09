@@ -322,8 +322,6 @@
 // export default HomePage;
 
 
-
-
 import React from 'react';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
@@ -350,9 +348,9 @@ const HomePage = () => {
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
-          background: 'linear-gradient(135deg, #9C4E97, #00A9D3)', // Soft purple to blue gradient
+          background: 'linear-gradient(135deg, #2C3E50, #34495E)', // Dark matte gradient
           borderRadius: 4,
-          boxShadow: 4,
+          boxShadow: 8,
         }}
       >
         <Box
@@ -374,7 +372,7 @@ const HomePage = () => {
               mb: 3,
               letterSpacing: 2,
               textTransform: 'uppercase',
-              textShadow: '2px 2px 8px rgba(0, 0, 0, 0.3)', // Softer shadow for readability
+              textShadow: '2px 2px 8px rgba(0, 0, 0, 0.5)', // Subtle text shadow
             }}
           >
             St. JOSEPH HIGH SCHOOL
@@ -388,11 +386,10 @@ const HomePage = () => {
               alt="St. Joseph High School"
               sx={{
                 width: '100%',
-                height: '500px', // Fixed height for the image
+                height: '500px',
                 objectFit: 'cover',
                 borderRadius: 2,
-                borderColor: 'primary.light',
-                boxShadow: '0px 8px 12px rgba(0, 0, 0, 0.3)',
+                boxShadow: '0px 8px 12px rgba(0, 0, 0, 0.4)', // Darker shadow
               }}
             />
           </Card>
@@ -408,8 +405,8 @@ const HomePage = () => {
             fontWeight: 600,
             borderRadius: 2,
             border: '2px solid',
-            borderColor: 'primary.main',
-            color: 'primary.main',
+            borderColor: '#00A9D3', // Cyan accent
+            color: '#00A9D3',
             backgroundColor: 'transparent',
             '&:hover': {
               backgroundColor: '#00A9D3',
@@ -439,7 +436,7 @@ const HomePage = () => {
           py: { xs: 5, sm: 10 },
           display: 'flex',
           flexDirection: 'column',
-          background: 'linear-gradient(135deg, #F0F4F8, #B3C7D6)', // Light pastel gradient
+          background: 'linear-gradient(135deg, #34495E, #2C3E50)', // Matte dark gradient
           borderRadius: 4,
           boxShadow: 12,
           transition: 'all 0.3s ease',
@@ -448,14 +445,14 @@ const HomePage = () => {
         <Box sx={{ mb: 3, position: 'relative', zIndex: 2, color: 'text.primary' }}>
           <Typography
             variant="h2"
-            color="primary.main"
+            color="white"
             sx={{
               fontFamily: 'Montserrat, sans-serif',
               fontWeight: 700,
               mb: 3,
               textTransform: 'uppercase',
               letterSpacing: 1.2,
-              textShadow: '1px 1px 4px rgba(0, 0, 0, 0.2)',
+              textShadow: '1px 1px 4px rgba(0, 0, 0, 0.3)', // Softer shadow for contrast
             }}
           >
             Student Management System
@@ -464,7 +461,7 @@ const HomePage = () => {
             variant="h5"
             sx={{
               fontFamily: 'Roboto, sans-serif',
-              color: 'text.secondary',
+              color: '#BDC3C7', // Light gray for text
               fontWeight: 400,
               lineHeight: 1.7,
               letterSpacing: 0.5,
@@ -485,7 +482,7 @@ const HomePage = () => {
             gap: 3,
             borderRadius: 4,
             boxShadow: 5,
-            backgroundColor: 'background.paper',
+            backgroundColor: '#2C3E50', // Dark background for the management box
             border: '1px solid',
             borderColor: 'divider',
           }}
@@ -504,8 +501,8 @@ const HomePage = () => {
                   fontSize: '18px',
                   fontWeight: 800,
                   borderRadius: 4,
-                  borderColor: 'primary.main',
-                  color: 'primary.main',
+                  borderColor: '#00A9D3',
+                  color: '#00A9D3',
                   backgroundColor: 'transparent',
                   textTransform: 'none',
                   '&:hover': {
@@ -533,8 +530,8 @@ const HomePage = () => {
                   fontSize: '18px',
                   fontWeight: 800,
                   borderRadius: 4,
-                  borderColor: 'primary.main',
-                  color: 'primary.main',
+                  borderColor: '#00A9D3',
+                  color: '#00A9D3',
                   backgroundColor: 'transparent',
                   textTransform: 'none',
                   '&:hover': {
@@ -562,8 +559,8 @@ const HomePage = () => {
                   fontSize: '18px',
                   fontWeight: 800,
                   borderRadius: 4,
-                  borderColor: 'primary.main',
-                  color: 'primary.main',
+                  borderColor: '#00A9D3',
+                  color: '#00A9D3',
                   backgroundColor: 'transparent',
                   textTransform: 'none',
                   '&:hover': {
@@ -591,8 +588,8 @@ const HomePage = () => {
                   fontSize: '18px',
                   fontWeight: 800,
                   borderRadius: 4,
-                  borderColor: 'primary.main',
-                  color: 'primary.main',
+                  borderColor: '#00A9D3',
+                  color: '#00A9D3',
                   backgroundColor: 'transparent',
                   textTransform: 'none',
                   '&:hover': {
@@ -620,8 +617,8 @@ const HomePage = () => {
               fontWeight: 600,
               borderRadius: 4,
               border: '2px solid',
-              borderColor: 'primary.main',
-              color: 'primary.main',
+              borderColor: '#00A9D3',
+              color: '#00A9D3',
               backgroundColor: 'transparent',
               textTransform: 'none',
               '&:hover': {
