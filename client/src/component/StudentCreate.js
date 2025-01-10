@@ -384,7 +384,7 @@ const CreateStudent = () => {
           borderRadius: 3,
           background: isDarkMode
             ? 'linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)' // Dark mode gradient
-            : 'linear-gradient(135deg, #67b26f 0%, #4ca2cd 100%)', // Light mode gradient
+            : 'linear-gradient(135deg,rgb(41, 108, 48) 0%,rgb(33, 81, 105) 100%)', // Light mode gradient
           color: isDarkMode ? 'white' : 'black',
         }}
       >
@@ -394,6 +394,7 @@ const CreateStudent = () => {
 
         <Box component="form" onSubmit={handleSubmit} noValidate>
           <Grid container spacing={3}>
+
             {/* Student Name */}
             <Grid item xs={12} sm={6}>
               <TextField
@@ -530,7 +531,7 @@ const CreateStudent = () => {
                     boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)',
                   },
                   '& .MuiOutlinedInput-root': {
-                    borderColor: isDarkMode ? '#888' : '#ddd',
+                    borderColor: isDarkMode ? '#888' : '#00BCD4',
                     '&:hover': {
                       borderColor: isDarkMode ? '#fff' : '#4caf50',
                     },
@@ -581,7 +582,7 @@ const CreateStudent = () => {
               sx={{
                 borderRadius: '8px',
                 padding: '12px 24px',
-                background: 'linear-gradient(45deg, #ff7e5f, #feb47b)',
+                background: 'linear-gradient(45deg,rgb(216, 131, 110), #feb47b)',
                 color: 'white',
                 '&:hover': {
                   background: 'linear-gradient(45deg, #feb47b, #ff7e5f)',
@@ -614,20 +615,28 @@ const CreateStudent = () => {
 
       {/* Additional message */}
       <Box
-        display="flex"
-        justifyContent="center"
-        sx={{
-          borderRadius: 5,
-          boxShadow: 5,
-          p: 2,
-          fontSize: '1.2rem',
-          fontWeight: 'bold',
-          backgroundColor: isDarkMode ? '#333' : '#f5f5f5',
-          mt: 4,
-        }}
-      >
-        If you want to go to the HomePage, click on the "STUDENT MANAGEMENT" link above.
-      </Box>
+  display="flex"
+  justifyContent="center"
+  sx={{
+    borderRadius: 2, // Smooth rounded corners
+    boxShadow: 3, // Softer shadow
+    p: 3, // More padding for a spacious feel
+    fontSize: '1.25rem', // Slightly larger font size for better readability
+    fontWeight: '600', // Bold font weight for prominence
+    backgroundColor: isDarkMode ? '#212121' : '#E3F2FD', // Dark and Light mode colors
+    color: isDarkMode ? '#E0E0E0' : '#1E2A47', // Light text in dark mode, dark text in light mode
+    textAlign: 'center', // Center text alignment
+    mt: 4,
+    transition: 'all 0.3s ease-in-out', // Smooth transition for hover effects
+    '&:hover': {
+      backgroundColor: isDarkMode ? '#333333' : '#B3E5FC', // Lighter shades on hover
+      boxShadow: 4, // Increase shadow on hover for focus effect
+    },
+  }}
+>
+  If you want to go to the HomePage, click on the "STUDENT MANAGEMENT" link above.
+</Box>
+
     </Container>
   );
 };
