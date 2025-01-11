@@ -621,7 +621,7 @@ const CreateStudent = () => {
     borderRadius: 2, // Smooth rounded corners
     boxShadow: 3, // Softer shadow
     p: 3, // More padding for a spacious feel
-    fontSize: '1.25rem', // Slightly larger font size for better readability
+    fontSize: '1.2rem', // Slightly larger font size for better readability
     fontWeight: '600', // Bold font weight for prominence
     backgroundColor: isDarkMode ? '#212121' : '#E3F2FD', // Dark and Light mode colors
     color: isDarkMode ? '#E0E0E0' : '#1E2A47', // Light text in dark mode, dark text in light mode
