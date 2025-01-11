@@ -451,7 +451,7 @@ const SearchStudents = () => {
                                     startIcon={<RestartAltIcon />}
                                     onClick={resetFilters}
                                     sx={{
-                                        backgroundColor: '#1d68a7',
+                                        backgroundColor: '#444444',
                                         '&:hover': {
                                             backgroundColor: '#135b7e',
                                         },
