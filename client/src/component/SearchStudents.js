@@ -215,6 +215,7 @@
 
 // export default SearchStudents;
 
+
 import React, { useState, useEffect, useCallback } from 'react';
 import {
     Container,
@@ -328,7 +329,7 @@ const SearchStudents = () => {
             sx={{
                 py: 4,
                 minHeight: '100vh',
-                bgcolor: 'linear-gradient(to right, #00c6ff, #0072ff)', // Vibrant gradient background
+                background: 'linear-gradient(135deg, #00aaff, #3a2a7d)', // Cool gradient background
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
@@ -341,13 +342,13 @@ const SearchStudents = () => {
                 gutterBottom
                 align="center"
                 color="white"
-                sx={{ fontWeight: 600, textShadow: '2px 2px 5px rgba(0, 0, 0, 0.3)' }}
+                sx={{ fontWeight: 700, textShadow: '2px 2px 5px rgba(0, 0, 0, 0.4)' }}
             >
                 Search Students
             </Typography>
 
             {/* Search and Filter Section */}
-            <Card sx={{ mb: 4, p: 3, boxShadow: 4, bgcolor: '#ffffff', borderRadius: 3, width: '100%' }}>
+            <Card sx={{ mb: 4, p: 3, boxShadow: 5, bgcolor: '#2e2e2e', borderRadius: 3, width: '100%' }}>
                 <CardContent>
                     <Grid container spacing={2} alignItems="center">
                         {/* Search Field */}
@@ -358,13 +359,14 @@ const SearchStudents = () => {
                                 value={filters.searchTerm}
                                 onChange={(e) => setFilters({ ...filters, searchTerm: e.target.value })}
                                 InputProps={{
-                                    startAdornment: <SearchIcon sx={{ mr: 1, color: '#0072ff' }} />,
+                                    startAdornment: <SearchIcon sx={{ mr: 1, color: '#ffffff' }} />,
                                 }}
                                 variant="outlined"
                                 size="small"
                                 sx={{
-                                    backgroundColor: '#f1f3f6',
-                                    '& .MuiOutlinedInput-root': { borderRadius: '8px' },
+                                    backgroundColor: '#404040',
+                                    '& .MuiOutlinedInput-root': { borderRadius: '8px', borderColor: '#757575' },
+                                    color: 'white',
                                 }}
                             />
                         </Grid>
@@ -372,14 +374,19 @@ const SearchStudents = () => {
                         {/* Search By Dropdown */}
                         <Grid item xs={12} md={2}>
                             <FormControl fullWidth size="small">
-                                <InputLabel>Search By</InputLabel>
+                                <InputLabel sx={{ color: '#ffffff' }}>Search By</InputLabel>
                                 <Select
                                     value={filters.searchField}
                                     label="Search By"
                                     onChange={(e) => setFilters({ ...filters, searchField: e.target.value })}
                                     sx={{
-                                        backgroundColor: '#f1f3f6',
+                                        backgroundColor: '#404040',
                                         borderRadius: '8px',
+                                        '& .MuiOutlinedInput-root': {
+                                            borderRadius: '8px',
+                                            borderColor: '#757575',
+                                        },
+                                        color: 'white',
                                     }}
                                 >
                                     <MenuItem value="first_name">First Name</MenuItem>
@@ -391,14 +398,19 @@ const SearchStudents = () => {
                         {/* Sort By Dropdown */}
                         <Grid item xs={12} md={2}>
                             <FormControl fullWidth size="small">
-                                <InputLabel>Sort By</InputLabel>
+                                <InputLabel sx={{ color: '#ffffff' }}>Sort By</InputLabel>
                                 <Select
                                     value={filters.sortBy}
                                     label="Sort By"
                                     onChange={(e) => setFilters({ ...filters, sortBy: e.target.value })}
                                     sx={{
-                                        backgroundColor: '#f1f3f6',
+                                        backgroundColor: '#404040',
                                         borderRadius: '8px',
+                                        '& .MuiOutlinedInput-root': {
+                                            borderRadius: '8px',
+                                            borderColor: '#757575',
+                                        },
+                                        color: 'white',
                                     }}
                                 >
                                     <MenuItem value="first_name">First Name</MenuItem>
@@ -410,14 +422,19 @@ const SearchStudents = () => {
                         {/* Sort Order */}
                         <Grid item xs={12} md={2}>
                             <FormControl fullWidth size="small">
-                                <InputLabel>Order</InputLabel>
+                                <InputLabel sx={{ color: '#ffffff' }}>Order</InputLabel>
                                 <Select
                                     value={filters.sortOrder}
                                     label="Order"
                                     onChange={(e) => setFilters({ ...filters, sortOrder: e.target.value })}
                                     sx={{
-                                        backgroundColor: '#f1f3f6',
+                                        backgroundColor: '#404040',
                                         borderRadius: '8px',
+                                        '& .MuiOutlinedInput-root': {
+                                            borderRadius: '8px',
+                                            borderColor: '#757575',
+                                        },
+                                        color: 'white',
                                     }}
                                 >
                                     <MenuItem value="asc">Ascending</MenuItem>
@@ -434,9 +451,9 @@ const SearchStudents = () => {
                                     startIcon={<RestartAltIcon />}
                                     onClick={resetFilters}
                                     sx={{
-                                        backgroundColor: '#0072ff',
+                                        backgroundColor: '#1d68a7',
                                         '&:hover': {
-                                            backgroundColor: '#0056b3',
+                                            backgroundColor: '#135b7e',
                                         },
                                         color: 'white',
                                         padding: '8px 16px',
