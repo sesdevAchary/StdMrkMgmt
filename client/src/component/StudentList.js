@@ -116,23 +116,30 @@ function StudentList() {
         </Box>
       </Container>
 
-      {/* Additional message */}
+       {/* Additional message */}
            <Box
-             display="flex"
-             justifyContent="center"
-             sx={{
-               borderRadius: 5,
-               boxShadow: 50,
-               p: 2,
-               fontsize: '2.2rem',
-               textdecoration: 'underline',
-               fontweight: 'bold',
-               backgroundColor: 'fffff',
-               mt: 4,
-             }}
-           >
-             If you want to go to the HomePage, click on the "STUDENT MANAGEMENT" link above.
-           </Box>
+       display="flex"
+       justifyContent="center"
+       sx={{
+         borderRadius: 2, // Smooth rounded corners
+         boxShadow: 3, // Softer shadow
+         p: 3, // More padding for a spacious feel
+         fontSize: '1.2rem', // Slightly larger font size for better readability
+         fontWeight: '600', // Bold font weight for prominence
+         backgroundColor: isDarkMode ? '#212121' : '#E3F2FD', // Dark and Light mode colors
+         color: isDarkMode ? '#E0E0E0' : '#1E2A47', // Light text in dark mode, dark text in light mode
+         textAlign: 'center', // Center text alignment
+         mt: 4,
+         transition: 'all 0.3s ease-in-out', // Smooth transition for hover effects
+         '&:hover': {
+           backgroundColor: isDarkMode ? '#333333' : '#B3E5FC', // Lighter shades on hover
+           boxShadow: 4, // Increase shadow on hover for focus effect
+         },
+       }}
+     >
+       If you want to go to the HomePage, click on the "STUDENT MANAGEMENT" link above.
+     </Box>
+     
 
 
 
