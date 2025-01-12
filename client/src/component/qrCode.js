@@ -16,14 +16,9 @@
 // import DownloadIcon from '@mui/icons-material/Download';
 // import axios from 'axios';
 
-
-
-
-
 // const QRCodePage = () => {
 //     const [students, setStudents] = useState([]);
 //     const [loading, setLoading] = useState(true);
-//     //  const baseUrl = `https://stdmrkmgmt.onrender.com/details`;
 
 //     useEffect(() => {
 //         axios.get(`https://stdmrkmgmt.onrender.com/api/student`)
@@ -32,7 +27,7 @@
 //                 setLoading(false);
 //             })
 //             .catch(err => {
-//                 console.error('Error fetching books:', err);
+//                 console.error('Error fetching students:', err);
 //                 setLoading(false);
 //             });
 //     }, []);
@@ -47,7 +42,6 @@
 //         img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(source);
 
 //         img.onload = () => {
-//               // Create a canvas to convert the image to PNG
 //             canvas.width = img.width;
 //             canvas.height = img.height;
 //             const ctx = canvas.getContext('2d');
@@ -63,59 +57,71 @@
 //     if (loading) {
 //         return (
 //             <Box display="flex" justifyContent="center" alignItems="center" minHeight="60vh">
-//                 <CircularProgress />
+//                 <CircularProgress color="primary" size={60} />
 //             </Box>
 //         );
 //     }
 
-//     return (
-//         <Container maxWidth="lg" sx={{ py: 4 }}>
+//     // Define an array of unique colors for each QR code card
+//     const cardColors = ['#1E88E5', '#FF7043', '#43A047', '#9C27B0', '#0288D1', '#F57C00'];
 
-//             <Typography variant='h3' component='h1' gutterBottom align='center' color='primary'>
+//     return (
+//         <Container maxWidth="lg" sx={{ py: 6, backgroundColor: '#121212', borderRadius: 2 }}>
+//             <Typography variant='h3' component='h1' gutterBottom align='center' color='primary' sx={{ fontWeight: 700 }}>
 //                 Student QR Codes
 //             </Typography>
 
-//             <Typography variant='body1' gutterBottom align='center' sx={{ mb: 4 }}>
+//             <Typography variant='body1' gutterBottom align='center' sx={{ mb: 4, fontWeight: 500, color: 'text.secondary' }}>
 //                 Scan QR codes to quickly access student details 👇
 //             </Typography>
 
 //             <Grid container spacing={3}>
-//                 {students.map((student) => (
+//                 {students.map((student, index) => (
 //                     <Grid item xs={12} sm={6} md={4} key={student._id}>
 //                         <Card sx={{
-//                             height: '100%',
 //                             display: 'flex',
 //                             flexDirection: 'column',
 //                             alignItems: 'center',
-//                             p: 2
+//                             p: 3,
+//                             boxShadow: 3,
+//                             borderRadius: 2,
+//                             backgroundColor: cardColors[index % cardColors.length],
+//                             '&:hover': {
+//                                 boxShadow: 6,
+//                                 transform: 'scale(1.05)',
+//                                 transition: 'all 0.3s ease-in-out'
+//                             },
 //                         }}>
-//                             <CardContent sx={{
-//                                 display: 'flex',
-//                                 flexDirection: 'column',
-//                                 alignItems: 'center',
-//                                 width: '100%'
-//                             }}>
+//                             <CardContent sx={{ textAlign: 'center' }}>
 //                                 <QRCodeSVG
 //                                     id={`qr-${student._id}`}
-//                                     value={`https://stdmrkmgmt.onrender.com/api/student${student._id}`}
+//                                     value={`https://stdmrkmgmt.onrender.com/api/student/${student._id}`}
 //                                     size={200}
 //                                     level="H"
 //                                     includeMargin
 //                                 />
-//                                 <Typography
-//                                     variant="h4"
-//                                     component="div"
-//                                     align="center"
-//                                     sx={{ mt: 2, mb: 1 }}
-//                                 >
+//                                 <Typography variant="h5" component="div" sx={{ mt: 2, mb: 1, fontWeight: 600, color: '#fff' }}>
 //                                     {student.first_name}
 //                                 </Typography>
-                               
+//                                 <Typography variant="body2" sx={{ mb: 2, color: '#fff' }}>
+//                                     {student.email}
+//                                 </Typography>
+
 //                                 <Button
-//                                     variant="outlined"
+//                                     variant="contained"
+//                                     color="secondary"
 //                                     startIcon={<DownloadIcon />}
 //                                     onClick={() => downloadQR(student._id, student.first_name)}
-//                                     size="small"
+//                                     sx={{
+//                                         textTransform: 'none',
+//                                         fontWeight: 600,
+//                                         borderRadius: 3,
+//                                         '&:hover': {
+//                                             backgroundColor: '#ffffff',
+//                                             color: '#121212',
+//                                             boxShadow: 3,
+//                                         },
+//                                     }}
 //                                 >
 //                                     Download QR
 //                                 </Button>
@@ -129,7 +135,6 @@
 // };
 
 // export default QRCodePage;
-
 
 
 
@@ -194,18 +199,23 @@ const QRCodePage = () => {
         );
     }
 
+    // Define an array of unique colors for each QR code card
+    const cardColors = ['#1E88E5', '#FF7043', '#43A047', '#9C27B0', '#0288D1', '#F57C00'];
+
     return (
-        <Container maxWidth="lg" sx={{ py: 6, backgroundColor: '#f4f6f9', borderRadius: 2 }}>
-            <Typography variant='h3' component='h1' gutterBottom align='center' color='primary.main' sx={{ fontWeight: 700 }}>
-                Student QR Codes
-            </Typography>
+        <Container maxWidth="lg" sx={{ py: 6, backgroundColor: '#121212', borderRadius: 2 }}>
+            {/* Heading Container with Dark Background */}
+            <Box sx={{ backgroundColor: '#333', padding: 3, borderRadius: 2 }}>
+                <Typography variant='h3' component='h1' gutterBottom align='center' color='white' sx={{ fontWeight: 700 }}>
+                    Student QR Codes
+                </Typography>
+                <Typography variant='body1' gutterBottom align='center' sx={{ mb: 4, fontWeight: 500, color: 'text.secondary' }}>
+                    Scan QR codes to quickly access student details 👇
+                </Typography>
+            </Box>
 
-            <Typography variant='body1' gutterBottom align='center' sx={{ mb: 4, fontWeight: 500, color: 'text.secondary' }}>
-                Scan QR codes to quickly access student details 👇
-            </Typography>
-
-            <Grid container spacing={3}>
-                {students.map((student) => (
+            <Grid container spacing={3} sx={{ mt: 4 }}>
+                {students.map((student, index) => (
                     <Grid item xs={12} sm={6} md={4} key={student._id}>
                         <Card sx={{
                             display: 'flex',
@@ -214,7 +224,7 @@ const QRCodePage = () => {
                             p: 3,
                             boxShadow: 3,
                             borderRadius: 2,
-                            backgroundColor: '#fff',
+                            backgroundColor: cardColors[index % cardColors.length],
                             '&:hover': {
                                 boxShadow: 6,
                                 transform: 'scale(1.05)',
@@ -229,16 +239,16 @@ const QRCodePage = () => {
                                     level="H"
                                     includeMargin
                                 />
-                                <Typography variant="h5" component="div" sx={{ mt: 2, mb: 1, fontWeight: 600 }}>
+                                <Typography variant="h5" component="div" sx={{ mt: 2, mb: 1, fontWeight: 600, color: '#fff' }}>
                                     {student.first_name}
                                 </Typography>
-                                <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
+                                <Typography variant="body2" sx={{ mb: 2, color: '#fff' }}>
                                     {student.email}
                                 </Typography>
 
                                 <Button
                                     variant="contained"
-                                    color="primary"
+                                    color="secondary"
                                     startIcon={<DownloadIcon />}
                                     onClick={() => downloadQR(student._id, student.first_name)}
                                     sx={{
@@ -246,7 +256,8 @@ const QRCodePage = () => {
                                         fontWeight: 600,
                                         borderRadius: 3,
                                         '&:hover': {
-                                            backgroundColor: '#81c784',
+                                            backgroundColor: '#ffffff',
+                                            color: '#121212',
                                             boxShadow: 3,
                                         },
                                     }}
