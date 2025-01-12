@@ -90,7 +90,7 @@ const QRCodePage = () => {
             color='white'
             sx={{
                 fontWeight: 700,
-                textDecoration: 'underline',
+                // textDecoration: 'underline',
                 fontStyle: 'italic',
                 textTransform: 'uppercase',                
                 color: '#F0F0F0', // Darker shade for better readability
