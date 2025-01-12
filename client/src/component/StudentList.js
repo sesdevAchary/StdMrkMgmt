@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import { Button, Typography, Container, CircularProgress, Box, Grid } from '@mui/material';
+import { Button, Typography, Container, CircularProgress, Box, Grid ,useTheme, useMediaQuery } from '@mui/material';
 import StudentCard from './StudentCard';
 
 function StudentList() {
   const [students, setStudents] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  const isDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
+
 
 
 
