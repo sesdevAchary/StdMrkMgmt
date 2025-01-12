@@ -83,15 +83,16 @@ const QRCodePage = () => {
     {/* Heading Container with Dark Background */}
     <Box sx={{ backgroundColor: '#333', padding: 3, borderRadius: 2 }}>
         <Typography
-            variant='h3'
-            component='h1'
+            variant='h2'
+            component='h2'
             gutterBottom
             align='center'
             color='white'
             sx={{
                 fontWeight: 700,
+                textDecoration: 'underline',
                 fontStyle: 'italic',
-                textDecoration: 'line-through',
+                textTransform: 'uppercase',                
                 color: '#F0F0F0', // Darker shade for better readability
                 letterSpacing: '1px',
             }}
@@ -100,17 +101,16 @@ const QRCodePage = () => {
         </Typography>
         
         <Typography
-            variant='h2'
-            component='h2'
+            variant='h4'
+            component='h4'
             gutterBottom
             align='center'
             sx={{
                 mb: 4,
                 fontWeight: 800,
                 fontStyle: 'italic',
-                textDecoration: 'underline',
+                
                 color: '#E0E0E0', // Light dark gray for a subtle contrast
-                textTransform: 'uppercase',
                 letterSpacing: '1px',
             }}
         >
