@@ -207,3 +207,17 @@ const [ student , setStudent ]= usestate( {
 
 const {id}= useParams()  // unique id to fetch specific student's data 
 const navigate= useNavigate();
+
+useEffect( ()=>{
+  axios.get(`https://stdmrkmgmt.onrender.com/api/student/{id}`).then((res)=>{
+    setStudent({
+      first_name: res.data.first_name,
+          unique_id: res.data.  unique_id,
+          mail_id: res.data.mail_id,
+          current_address: res.data.current_address,
+          total_score: res.data.total_score,
+          avg_cgpa: res.data.avg_cgpa,
+    })
+  })
+
+})
