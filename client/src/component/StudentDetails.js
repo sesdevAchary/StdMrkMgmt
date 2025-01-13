@@ -95,7 +95,7 @@ const ShowStudentDetails = () => {
               <CardMedia
                 component="img"
                 height="400"
-                image={student.imageUrl || "https://images.unsplash.com/photo-1495446815901-a7297e633e8d"}
+                 image={student.image.jpg || "https://images.unsplash.com/photo-1495446815901-a7297e633e8d"}
                 alt={student.first_name}
                 sx={{ borderRadius: "8px" }}
               />
