@@ -227,5 +227,29 @@ useEffect( ()=>{
 
 
 const onChange=(e)=>{
-  setStudent({...student,[e.target.name]: e.target.value});
+  setStudent({...student,[e.target.name]: e.target.value});   // onChange function is triggered whenever there is a change in any form input.
+};
+
+
+
+const onSubmit = (e) => {
+  e.preventDefault();
+  const data = {
+    name: student.first_name,
+    unique_id: student.unique_id,
+    mail_id: student.mail_id,
+    current_address: student.current_address,
+    total_score: student.total_score,
+    avg_cgpa: student.avg_cgpa
+  };
+
+  axios
+    .put(`https://stdmrkmgmt.onrender.com/api/student/${id}`, data)
+    .then((res) => {
+     navigate(`/list`);
+})
+    .catch((err) => {
+      console.log('Error in UpdateStudentInfo PUT request');
+      console.log(err);
+    });
 };
