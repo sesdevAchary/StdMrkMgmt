@@ -1,6 +1,4 @@
 
-
-
 // import React from 'react';
 // import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 // import ArrowBackIcon from '@mui/icons-material/ArrowBack';
@@ -17,6 +15,7 @@
 
 //   return (
 //     <SwipeableViews index={index} onChangeIndex={handleChangeIndex}>
+      
 //       {/* Page 1 */}
 //       <Container
 //         maxWidth="xl"
@@ -27,9 +26,9 @@
 //           flexDirection: 'column',
 //           justifyContent: 'center',
 //           alignItems: 'center',
-//           backgroundColor: 'background.paper',
-//           borderRadius: 2,
-//           boxShadow: 3,
+//           background: 'linear-gradient(135deg, #0a1d2f, #121212)', // Dark filled background with gradients
+//           borderRadius: 4,
+//           boxShadow: 10,
 //         }}
 //       >
 //         <Box
@@ -44,31 +43,31 @@
 //         >
 //           <Typography
 //             variant="h2"
-//             color="primary.main"
+//             color="white"
 //             sx={{
 //               fontFamily: 'Ubuntu, sans-serif',
 //               fontWeight: 700,
 //               mb: 3,
-//               letterSpacing: 1.5,
+//               letterSpacing: 2,
 //               textTransform: 'uppercase',
-//               textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)',
+//               textShadow: '3px 3px 6px rgba(0, 0, 0, 0.6)', // Darker and bolder text shadow
 //             }}
 //           >
 //             St. JOSEPH HIGH SCHOOL
 //           </Typography>
 
 //           {/* Full Width Image */}
-//           <Card sx={{ borderRadius: 2, boxShadow: 10, width: '100%', height: 'auto' }}>
+//           <Card sx={{ borderRadius: 2, boxShadow: 15, width: '100%', height: 'auto' }}>
 //             <CardMedia
 //               component="img"
 //               image="https://stjosephbbsr.org/wp-content/uploads/2023/10/bn12023.png"
 //               alt="St. Joseph High School"
 //               sx={{
 //                 width: '100%',
-//                 height: '500px',  // Fixed height for the image
+//                 height: '500px',
 //                 objectFit: 'cover',
 //                 borderRadius: 2,
-//                 borderColor: 'primary.light',
+//                 boxShadow: '0px 8px 12px rgba(0, 0, 0, 0.5)', // Deeper shadow for added contrast
 //               }}
 //             />
 //           </Card>
@@ -82,16 +81,16 @@
 //             px: 4,
 //             fontSize: '16px',
 //             fontWeight: 600,
-//             borderRadius: 2,
+//             borderRadius: 4,
 //             border: '2px solid',
-//             borderColor: 'primary.main',
-//             color: 'primary.main',
+//             borderColor: '#00D4FF', // Electric blue accent
+//             color: '#00D4FF',
 //             backgroundColor: 'transparent',
 //             '&:hover': {
-//               backgroundColor: 'primary.light',
-//               borderColor: 'primary.dark',
-//               color: 'primary.dark',
-//               boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)',
+//               backgroundColor: '#00D4FF',
+//               borderColor: '#0081A7', // Slightly darker blue on hover
+//               color: '#ffffff',
+//               boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.2)',
 //             },
 //             '&:active': {
 //               transform: 'scale(0.98)',
@@ -115,23 +114,23 @@
 //           py: { xs: 5, sm: 10 },
 //           display: 'flex',
 //           flexDirection: 'column',
-//           backgroundColor: 'background.default',
+//           background: 'linear-gradient(135deg, #2b2b2b, #121212)', // Matte dark gradient for page 2
 //           borderRadius: 4,
-//           boxShadow: 10,
+//           boxShadow: 15,
 //           transition: 'all 0.3s ease',
 //         }}
 //       >
 //         <Box sx={{ mb: 3, position: 'relative', zIndex: 2, color: 'text.primary' }}>
 //           <Typography
 //             variant="h2"
-//             color="primary.main"
+//             color="white"
 //             sx={{
 //               fontFamily: 'Montserrat, sans-serif',
 //               fontWeight: 700,
 //               mb: 3,
 //               textTransform: 'uppercase',
 //               letterSpacing: 1.2,
-//               textShadow: '1px 1px 4px rgba(0, 0, 0, 0.1)',
+//               textShadow: '2px 2px 6px rgba(0, 0, 0, 0.5)', // More intense text shadow
 //             }}
 //           >
 //             Student Management System
@@ -140,7 +139,7 @@
 //             variant="h5"
 //             sx={{
 //               fontFamily: 'Roboto, sans-serif',
-//               color: 'text.secondary',
+//               color: '#E5E5E5', // Light gray for text
 //               fontWeight: 400,
 //               lineHeight: 1.7,
 //               letterSpacing: 0.5,
@@ -161,9 +160,9 @@
 //             gap: 3,
 //             borderRadius: 4,
 //             boxShadow: 5,
-//             backgroundColor: 'background.paper',
+//             backgroundColor: '#1c1c1c', // Darker background for the management box
 //             border: '1px solid',
-//             borderColor: 'divider',
+//             borderColor: '#444', // Subtle border color to match the dark theme
 //           }}
 //         >
 //           {/* Buttons for management */}
@@ -180,15 +179,15 @@
 //                   fontSize: '18px',
 //                   fontWeight: 800,
 //                   borderRadius: 4,
-//                   borderColor: 'primary.main',
-//                   color: 'primary.main',
+//                   borderColor: '#00D4FF',
+//                   color: '#00D4FF',
 //                   backgroundColor: 'transparent',
 //                   textTransform: 'none',
 //                   '&:hover': {
-//                     backgroundColor: 'primary.light',
-//                     borderColor: 'primary.dark',
-//                     color: 'primary.dark',
-//                     boxShadow: '0px 8px 15px rgba(174, 177, 212, 0.2)',
+//                     backgroundColor: '#00D4FF',
+//                     borderColor: '#0081A7',
+//                     color: '#ffffff',
+//                     boxShadow: '0px 8px 15px rgba(0, 0, 0, 0.2)',
 //                   },
 //                 }}
 //                 aria-label="List Students"
@@ -209,14 +208,14 @@
 //                   fontSize: '18px',
 //                   fontWeight: 800,
 //                   borderRadius: 4,
-//                   borderColor: 'primary.main',
-//                   color: 'primary.main',
+//                   borderColor: '#00D4FF',
+//                   color: '#00D4FF',
 //                   backgroundColor: 'transparent',
 //                   textTransform: 'none',
 //                   '&:hover': {
-//                     backgroundColor: 'primary.light',
-//                     borderColor: 'primary.dark',
-//                     color: 'primary.dark',
+//                     backgroundColor: '#00D4FF',
+//                     borderColor: '#0081A7',
+//                     color: '#ffffff',
 //                     boxShadow: '0px 8px 15px rgba(0, 0, 0, 0.2)',
 //                   },
 //                 }}
@@ -238,14 +237,14 @@
 //                   fontSize: '18px',
 //                   fontWeight: 800,
 //                   borderRadius: 4,
-//                   borderColor: 'primary.main',
-//                   color: 'primary.main',
+//                   borderColor: '#00D4FF',
+//                   color: '#00D4FF',
 //                   backgroundColor: 'transparent',
 //                   textTransform: 'none',
 //                   '&:hover': {
-//                     backgroundColor: 'primary.light',
-//                     borderColor: 'primary.dark',
-//                     color: 'primary.dark',
+//                     backgroundColor: '#00D4FF',
+//                     borderColor: '#0081A7',
+//                     color: '#ffffff',
 //                     boxShadow: '0px 8px 15px rgba(0, 0, 0, 0.2)',
 //                   },
 //                 }}
@@ -267,14 +266,14 @@
 //                   fontSize: '18px',
 //                   fontWeight: 800,
 //                   borderRadius: 4,
-//                   borderColor: 'primary.main',
-//                   color: 'primary.main',
+//                   borderColor: '#00D4FF',
+//                   color: '#00D4FF',
 //                   backgroundColor: 'transparent',
 //                   textTransform: 'none',
 //                   '&:hover': {
-//                     backgroundColor: 'primary.light',
-//                     borderColor: 'primary.dark',
-//                     color: 'primary.dark',
+//                     backgroundColor: '#00D4FF',
+//                     borderColor: '#0081A7',
+//                     color: '#ffffff',
 //                     boxShadow: '0px 8px 15px rgba(0, 0, 0, 0.2)',
 //                   },
 //                 }}
@@ -296,14 +295,14 @@
 //               fontWeight: 600,
 //               borderRadius: 4,
 //               border: '2px solid',
-//               borderColor: 'primary.main',
-//               color: 'primary.main',
+//               borderColor: '#00D4FF',
+//               color: '#00D4FF',
 //               backgroundColor: 'transparent',
 //               textTransform: 'none',
 //               '&:hover': {
-//                 backgroundColor: 'primary.light',
-//                 borderColor: 'primary.dark',
-//                 color: 'primary.dark',
+//                 backgroundColor: '#00D4FF',
+//                 borderColor: '#0081A7',
+//                 color: '#ffffff',
 //                 boxShadow: '0px 8px 15px rgba(0, 0, 0, 0.2)',
 //               },
 //             }}
@@ -321,6 +320,8 @@
 
 // export default HomePage;
 
+
+
 import React from 'react';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
@@ -337,17 +338,18 @@ const HomePage = () => {
 
   return (
     <SwipeableViews index={index} onChangeIndex={handleChangeIndex}>
+      
       {/* Page 1 */}
       <Container
         maxWidth="xl"
         sx={{
           textAlign: 'center',
-          py: { xs: 4, sm: 6 },
+          py: { xs: 3, sm: 6 },
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
-          background: 'linear-gradient(135deg, #0a1d2f, #121212)', // Dark filled background with gradients
+          background: 'linear-gradient(135deg, #0a1d2f, #121212)',
           borderRadius: 4,
           boxShadow: 10,
         }}
@@ -363,7 +365,7 @@ const HomePage = () => {
           }}
         >
           <Typography
-            variant="h2"
+            variant="h3"
             color="white"
             sx={{
               fontFamily: 'Ubuntu, sans-serif',
@@ -371,7 +373,8 @@ const HomePage = () => {
               mb: 3,
               letterSpacing: 2,
               textTransform: 'uppercase',
-              textShadow: '3px 3px 6px rgba(0, 0, 0, 0.6)', // Darker and bolder text shadow
+              textShadow: '3px 3px 6px rgba(0, 0, 0, 0.6)',
+              fontSize: { xs: '2rem', sm: '3rem' }, // Smaller text on mobile
             }}
           >
             St. JOSEPH HIGH SCHOOL
@@ -385,10 +388,10 @@ const HomePage = () => {
               alt="St. Joseph High School"
               sx={{
                 width: '100%',
-                height: '500px',
+                height: { xs: '250px', sm: '500px' }, // Adjust height for mobile
                 objectFit: 'cover',
                 borderRadius: 2,
-                boxShadow: '0px 8px 12px rgba(0, 0, 0, 0.5)', // Deeper shadow for added contrast
+                boxShadow: '0px 8px 12px rgba(0, 0, 0, 0.5)',
               }}
             />
           </Card>
@@ -400,16 +403,16 @@ const HomePage = () => {
             mt: 3,
             py: 1.5,
             px: 4,
-            fontSize: '16px',
+            fontSize: { xs: '14px', sm: '16px' }, // Smaller font on mobile
             fontWeight: 600,
             borderRadius: 4,
             border: '2px solid',
-            borderColor: '#00D4FF', // Electric blue accent
+            borderColor: '#00D4FF',
             color: '#00D4FF',
             backgroundColor: 'transparent',
             '&:hover': {
               backgroundColor: '#00D4FF',
-              borderColor: '#0081A7', // Slightly darker blue on hover
+              borderColor: '#0081A7',
               color: '#ffffff',
               boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.2)',
             },
@@ -432,18 +435,17 @@ const HomePage = () => {
         maxWidth="xl"
         sx={{
           textAlign: 'center',
-          py: { xs: 5, sm: 10 },
+          py: { xs: 4, sm: 10 },
           display: 'flex',
           flexDirection: 'column',
-          background: 'linear-gradient(135deg, #2b2b2b, #121212)', // Matte dark gradient for page 2
+          background: 'linear-gradient(135deg, #2b2b2b, #121212)',
           borderRadius: 4,
           boxShadow: 15,
-          transition: 'all 0.3s ease',
         }}
       >
         <Box sx={{ mb: 3, position: 'relative', zIndex: 2, color: 'text.primary' }}>
           <Typography
-            variant="h2"
+            variant="h3"
             color="white"
             sx={{
               fontFamily: 'Montserrat, sans-serif',
@@ -451,21 +453,23 @@ const HomePage = () => {
               mb: 3,
               textTransform: 'uppercase',
               letterSpacing: 1.2,
-              textShadow: '2px 2px 6px rgba(0, 0, 0, 0.5)', // More intense text shadow
+              textShadow: '2px 2px 6px rgba(0, 0, 0, 0.5)',
+              fontSize: { xs: '2rem', sm: '3rem' }, // Smaller font on mobile
             }}
           >
             Student Management System
           </Typography>
           <Typography
-            variant="h5"
+            variant="h6"
             sx={{
               fontFamily: 'Roboto, sans-serif',
-              color: '#E5E5E5', // Light gray for text
+              color: '#E5E5E5',
               fontWeight: 400,
               lineHeight: 1.7,
               letterSpacing: 0.5,
               maxWidth: '800px',
               mx: 'auto',
+              fontSize: { xs: '1rem', sm: '1.25rem' }, // Adjust text size for smaller devices
             }}
           >
             Effortlessly manage student information with an intuitive, streamlined system.
@@ -481,13 +485,12 @@ const HomePage = () => {
             gap: 3,
             borderRadius: 4,
             boxShadow: 5,
-            backgroundColor: '#1c1c1c', // Darker background for the management box
+            backgroundColor: '#1c1c1c',
             border: '1px solid',
-            borderColor: '#444', // Subtle border color to match the dark theme
+            borderColor: '#444',
           }}
         >
-          {/* Buttons for management */}
-          <Grid container spacing={3} justifyContent="center">
+          <Grid container spacing={2} justifyContent="center" direction={{ xs: 'column', sm: 'row' }}>
             <Grid item xs={12} sm={4}>
               <Button
                 fullWidth
@@ -497,7 +500,7 @@ const HomePage = () => {
                 startIcon={<ArrowForwardIcon />}
                 sx={{
                   py: 2,
-                  fontSize: '18px',
+                  fontSize: '16px',
                   fontWeight: 800,
                   borderRadius: 4,
                   borderColor: '#00D4FF',
@@ -526,7 +529,7 @@ const HomePage = () => {
                 to='/search'
                 sx={{
                   py: 2,
-                  fontSize: '18px',
+                  fontSize: '16px',
                   fontWeight: 800,
                   borderRadius: 4,
                   borderColor: '#00D4FF',
@@ -555,7 +558,7 @@ const HomePage = () => {
                 variant="outlined"
                 sx={{
                   py: 2,
-                  fontSize: '18px',
+                  fontSize: '16px',
                   fontWeight: 800,
                   borderRadius: 4,
                   borderColor: '#00D4FF',
@@ -584,7 +587,7 @@ const HomePage = () => {
                 fullWidth
                 sx={{
                   py: 2,
-                  fontSize: '18px',
+                  fontSize: '16px',
                   fontWeight: 800,
                   borderRadius: 4,
                   borderColor: '#00D4FF',
@@ -612,7 +615,7 @@ const HomePage = () => {
             sx={{
               py: 2,
               px: 6,
-              fontSize: '18px',
+              fontSize: '16px',
               fontWeight: 600,
               borderRadius: 4,
               border: '2px solid',
