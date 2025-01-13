@@ -217,7 +217,15 @@ useEffect( ()=>{
           current_address: res.data.current_address,
           total_score: res.data.total_score,
           avg_cgpa: res.data.avg_cgpa,
-    })
+    });
   })
+  .catch((error)=>{
+    console.log(`error in update student data`); console.log(error);
+  });
 
-})
+},[id])
+
+
+const onChange=(e)=>{
+  setStudent({...student,[e.target.name]: e.target.value});
+};
