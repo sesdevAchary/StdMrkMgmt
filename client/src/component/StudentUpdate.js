@@ -253,3 +253,118 @@ const onSubmit = (e) => {
       console.log(err);
     });
 };
+
+
+return (
+  <div className='StudentUpdate'>
+    <div className='container' style={{ display: "flex", alignItems: "center", flexDirection: "column" }}>
+      <div className='row'>
+        <div className='col-md-8 m-auto'>
+          <br />
+          <Link to='/list' className='btn btn-outline-warning float-left'>
+            Show Student List
+          </Link>
+        </div>
+        <div className='col-md-8 m-auto'>
+          <h1 className='display-4 text-center'>Edit Student</h1>
+          <p className='lead text-center'>Update Student's Info</p>
+        </div>
+      </div>
+
+      <div className='col-md-8 m-auto'>
+        <form noValidate onSubmit={onSubmit}>
+          <div className='form-group'>
+            <label htmlFor='first_name'>Name</label>
+            <input
+              type='text'
+              placeholder='Name of the student'
+              name='first_name' 
+              className='form-control'
+              value={student.first_name}
+              onChange={onChange}
+            />
+          </div>
+          <br />
+
+          <div className='form-group'>
+          <label htmlFor='unique_id'>Unique ID</label>
+            <input
+              type='unique_idl'
+              placeholder='unique_id'
+              name='unique_id'
+              className='form-control'
+              value={student.unique_id}
+              onChange={onChange}
+            />
+          </div>
+          <br />
+
+          <div className='form-group'>
+          <label htmlFor='mail_id'>Email ID</label>
+            <input
+              type='email'
+              placeholder='Email'
+              name='mail_id'
+              className='form-control'
+              value={student.mail_id}
+              onChange={onChange}
+            />
+          </div>
+          <br />
+
+
+          <div className='form-group'>
+            <label htmlFor='current_address'>Address</label>
+            <input
+              type='text'
+              placeholder='Enter your current address'
+               name='current_address'
+              className='form-control'
+              value={student.current_address}
+              onChange={onChange}
+            />
+          </div>
+          <br />
+         
+          <div className='form-group'>
+            <label htmlFor='total_score'>Score</label>
+            <input
+              type='number'
+              placeholder='Enter the Total Score'
+              name='total_score'
+              className='form-control'
+              value={student.total_score}
+              onChange={onChange}
+            />
+          </div>
+          <br />
+
+
+          <div className='form-group'>
+            <label htmlFor='avg_cgpa'>CGPA</label>
+            <input
+              type='number'
+              placeholder='Enter Average CGPA'
+              name='avg_cgpa'
+              className='form-control'
+              value={student.avg_cgpa}
+              onChange={onChange}
+            />
+          </div>
+          <br />
+
+          <button
+              type='submit'
+             className='btn btn-outline-info btn-lg btn-block'
+          >
+            Update Student
+          </button>
+          <br /><br />
+        </form>
+      </div>
+    </div>
+  </div>
+);
+}
+
+export default StudentUpdate ;
