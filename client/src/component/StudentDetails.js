@@ -197,7 +197,7 @@
 
 
 
-import React,{usestate,useEffect} from 'react'
+import React,{useState,useEffect} from 'react'
 import {Link,useParams,useNavigate} from 'react-router-dom'
 
 import axios from 'axios'
@@ -225,3 +225,29 @@ import { styled } from '@mui/material/styles'; // for styling the component
 
 const [student, setStudent] = useState({});
 const [openDialog, setOpenDialog] = useState(false);
+
+
+
+const value= useParams();
+const id= value.id;
+const navigate=useNavigate();
+
+useEffect(()=>{
+  if(id){
+    axios.get(`https://stdmrkmgmt.onrender.com/api/student/${id}`).then((res)=>{
+      setStudent(res.data)
+    })
+    .catch((error)=>{
+      console.log(error)
+    });
+  }
+},[id]);
+
+
+const onDeleteClick=()=>{
+  setOpenDialog(true);
+};
+
+const handleDeleteConfirmation=()=>{
+  
+}

@@ -39,7 +39,7 @@ function StudentUpdate (props) {
         });
       })
       .catch((err) => {
-        console.log('Error fromo GET request');
+        console.log('Error from GET request');
         console.log(err);
       });
   }, [id]);
