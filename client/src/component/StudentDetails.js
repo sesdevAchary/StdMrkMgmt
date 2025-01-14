@@ -219,9 +219,8 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 
-import { Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from '@mui/material'; //  used to display a confirmation dialog when the user wants to delete a student record.
-
-import { styled } from '@mui/material/styles'; // for styling the component 
+import { Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from '@mui/material';  
+import { styled } from '@mui/material/styles';  
 
 const [student, setStudent] = useState({});
 const [openDialog, setOpenDialog] = useState(false);
@@ -249,5 +248,101 @@ const onDeleteClick=()=>{
 };
 
 const handleDeleteConfirmation=()=>{
+  axios.delete(`https://stdmrkmgmt.onrender.com/api/student/${id}`).then((res)=>{navigate('/list');}).catch((error)=>{console.log(error)});
+  setOpenDialog(false);
+
+};
+
+  const handleCancelDelete=()=>{
+    setOpenDialog(false);
+  };
+
+
+  return (
+    <Container maxWidth="md">
+      <StyledPaper>
+        <Grid container spacing={4}>
+          <Grid item xs={12} md={4}>
+            <Card>
+              <CardMedia
+                component="img"
+                height="300"
+                image="https://images.unsplash.com/photo-1495446815901-a7297e633e8d"
+                alt={student.name}
+              />
+            </Card>
+          </Grid>
+          <Grid item xs={12} md={8}>
+            <Typography variant='h4' component='h1' gutterBottom>
+              {student.name}
+            </Typography>
+            <Typography variant='h6' color='textSecondary' gutterBottom>
+              {student.avg_cgpa}
+            </Typography>
+            <Divider sx={{ my: 2 }} />
+            <Box display="flex" flexDirection="column">
+              <Typography variant='body1' paragraph>Name: {student.first_name}</Typography>
+              <Typography variant='body1'>ID: {student.unique_id}</Typography>
+              <Typography variant='body1'>Email: {student.mail_id}</Typography>
+              <Typography variant='body1'>Address: {student.current_address}</Typography>
+              <Typography variant='body1'>Score: {student.total_score}</Typography>
+              <Typography variant='body1'>CGPA: {student.avg_cgpa}</Typography>
+            </Box>
+          </Grid>
+        </Grid>
+        <Box mt={4} display="flex" justifyContent="space-between">
+          <Button
+            startIcon={<ArrowBackIcon/>}
+            component={RouterLink}
+            to="/list"
+            variant="outlined"
+          >
+            Back to Student List
+          </Button>
+          <Box>
+            <Button
+              startIcon={<EditIcon/>}
+              component={RouterLink}
+              to={`/edit/id}`}
+              variant="contained"
+              color="primary"
+              sx={{ mr: 1 }}
+            >
+              Edit Student
+            </Button>
+            <Button
+              startIcon={<DeleteIcon/>}
+              onClick={onDeleteClick}
+              variant="contained"
+              color="error"
+            >
+              Delete Student
+            </Button>
+          </Box>
+        </Box>
+      </StyledPaper>
   
-}
+      <Dialog
+        open={openDialog}
+        onClose={ handleCancelDelete}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+      >
+        <DialogTitle id="alert-dialog-title">{"Confirm Deletion"}</DialogTitle>
+        <DialogContent>
+          <DialogContentText id="alert-dialog-description">
+            Are you sure you want to delete this student? This action cannot be undone.
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleCancelDelete} color="primary">
+            Cancel
+          </Button>
+          <Button onClick={handleDeleteConfirmation} color="error" autoFocus>
+            Delete
+          </Button>
+        </DialogActions>
+      </Dialog>
+    </Container>
+  );
+  
