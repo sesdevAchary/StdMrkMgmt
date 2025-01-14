@@ -244,12 +244,12 @@ const ShowStudentDetails = () => {
             </Card>
           </Grid>
           <Grid item xs={12} md={8}>
-            <Typography variant="h4" component="h1" gutterBottom>
+            <Typography variant="h4" component="h1" gutterBottom >
               {student.first_name}
             </Typography>
 
             <Typography variant="h6" color="textSecondary" gutterBottom>
-              {`id=student.unique_id`}
+               id={student.unique_id}
             </Typography>
 
             <Divider sx={{ my: 2 }} />
