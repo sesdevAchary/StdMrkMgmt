@@ -425,14 +425,16 @@ const ShowStudentDetails = () => {
           </Grid>
           <Grid item xs={12} md={8}>
             <Typography variant="h4" component="h1" gutterBottom>
-              {student.name}
+              {student.first_name}
             </Typography>
+            
             <Typography variant="h6" color="textSecondary" gutterBottom>
-              {student.avg_cgpa}
+              {student.unique_id}
             </Typography>
+
             <Divider sx={{ my: 2 }} />
             <Box display="flex" flexDirection="column">
-              <Typography variant="body1" paragraph>
+              <Typography variant="body1" >
                 Name: {student.first_name}
               </Typography>
               <Typography variant="body1">ID: {student.unique_id}</Typography>
@@ -456,7 +458,7 @@ const ShowStudentDetails = () => {
             <Button
               startIcon={<EditIcon />}
               component={Link}
-              to={`/edit-student/${id}`}  // Fixed edit URL to correctly point to the student edit page
+              to={`/edit/${id}`}  // Fixed edit URL to correctly point to the student edit page
               variant="contained"
               color="primary"
               sx={{ mr: 1 }}
