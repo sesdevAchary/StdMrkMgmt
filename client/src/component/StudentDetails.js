@@ -238,7 +238,7 @@ const ShowStudentDetails = () => {
               <CardMedia
                 component="img"
                 height="300"
-                image="https://png.pngtree.com/element_our/png/20180911/student-vector-png-png_90686.jpg"
+                image="https://cdn-icons-png.flaticon.com/512/326/326830.png"
                 alt={student.name}
               />
             </Card>
