@@ -67,19 +67,9 @@ const QRCodePage = () => {
     const cardColors = ['#1E88E5', '#FF7043', '#43A047', '#9C27B0', '#0288D1', '#F57C00'];
 
     return (
-        // <Container maxWidth="lg" sx={{ py: 6, backgroundColor: '#121212', borderRadius: 2 }}>
-        //     {/* Heading Container with Dark Background */}
-        //     <Box sx={{ backgroundColor: '#333', padding: 3, borderRadius: 2 }}>
-        //         <Typography variant='h3' component='h1' gutterBottom align='center' color='white' sx={{ fontWeight: 700 }}>
-        //             Student QR Codes
-        //         </Typography>
-        //         <Typography variant='h2' component='h2' gutterBottom align='center' sx={{ mb: 4, fontWeight: 800, color: 'text.secondary' }}>
-        //             Scan QR codes to quickly access student details 👇
-        //         </Typography>
-        //     </Box>
-
-
+       
         <Container maxWidth="lg" sx={{ py: 6, backgroundColor: '#121212', borderRadius: 2 }}>
+            
     {/* Heading Container with Dark Background */}
     <Box sx={{ backgroundColor: '#333', padding: 3, borderRadius: 2 }}>
         <Typography
