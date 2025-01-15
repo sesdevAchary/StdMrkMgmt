@@ -12,7 +12,7 @@ import { Box, Button, Container, Grid, Paper, TextField, Typography, useTheme, u
 
 const CreateStudent = () => {
   const navigate = useNavigate();
-  const theme = useTheme();
+  // const theme = useTheme();
   const isDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
   const [student, setStudent] = useState({
     first_name: '',
