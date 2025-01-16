@@ -296,35 +296,31 @@ const ShowStudentDetails = () => {
               <StyledText variant="body1">CGPA: {student.avg_cgpa}</StyledText>
             </Box> */}
 
-            <Box display="flex" flexDirection="column">
-              <StyledText variant="body1" sx={{ mb: 2 }}>
-                <strong sx={{ color: '#E0E0E0', fontFamily: 'Merriweather, serif' }}>Name:</strong> {student.first_name}
-              </StyledText>
+<Box display="flex" flexDirection="column">
+<StyledText variant="body1" sx={{ mb: 2 }}>
+  <strong sx={{ color: '#E0E0E0' }}>Name:</strong> {student.first_name}
+</StyledText>
 
-              <StyledText variant="body1" sx={{ mb: 2 }}>
-                <strong sx={{ color: '#E0E0E0', fontFamily: 'Merriweather, serif' }}>ID:</strong> {student.unique_id}
-              </StyledText>
+  <StyledText variant="body1" sx={{ mb: 2 }}>
+    <strong  sx={{ color: '#E0E0E0' }}>ID:</strong> {student.unique_id}
+  </StyledText>
 
-              <StyledText variant="body1" sx={{ mb: 2 }}>
-                <strong sx={{ color: '#E0E0E0', fontFamily: 'Merriweather, serif' }}>Email:</strong> {student.mail_id}
-              </StyledText>
+  <StyledText variant="body1" sx={{ mb: 2 }}>
+    <strong sx={{ color: '#E0E0E0' }}>Email:</strong> {student.mail_id}
+  </StyledText>
 
-              <StyledText variant="body1" sx={{ mb: 2 }}>
-                <strong sx={{
-                  color: '#E0E0E0', fontFamily: 'Merriweather, serif'
-                }}>Address:</strong> {student.current_address}
-              </StyledText>
+  <StyledText variant="body1" sx={{ mb: 2 }}>
+    <strong sx={{ color: '#E0E0E0' }}>Address:</strong> {student.current_address}
+  </StyledText>
 
-              <StyledText variant="body1" sx={{ mb: 2 }}>
-                <strong sx={{
-                  color: '#E0E0E0', fontFamily: 'Merriweather, serif'
-                }}>Score:</strong> {student.total_score}
-              </StyledText>
+  <StyledText variant="body1" sx={{ mb: 2 }}>
+    <strong sx={{ color: '#E0E0E0'  }}>Score:</strong> {student.total_score}
+  </StyledText>
 
-              <StyledText variant="body1" sx={{ mb: 2 }}>
-                <strong sx={{ color: '#E0E0E0', fontFamily: 'Merriweather, serif' }}>CGPA:</strong> {student.avg_cgpa}
-              </StyledText>
-            </Box>
+  <StyledText variant="body1" sx={{ mb: 2 }}>
+    <strong sx={{ color: '#E0E0E0' }}>CGPA:</strong> {student.avg_cgpa}
+  </StyledText>
+</Box>
 
           </Grid>
         </Grid>
