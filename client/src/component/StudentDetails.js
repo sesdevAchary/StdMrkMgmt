@@ -297,23 +297,28 @@ const ShowStudentDetails = () => {
             </Box> */}
 
 <Box display="flex" flexDirection="column">
+<StyledText variant="body1" sx={{ mb: 2 }}>
+  <strong sx={{ color: '#E0E0E0' }}>Name:</strong> {student.first_name}
+</StyledText>
+
   <StyledText variant="body1" sx={{ mb: 2 }}>
-    <strong>Name:</strong> {student.first_name}
+    <strong  sx={{ color: '#E0E0E0' }}>ID:</strong> {student.unique_id}
   </StyledText>
+
   <StyledText variant="body1" sx={{ mb: 2 }}>
-    <strong>ID:</strong> {student.unique_id}
+    <strong sx={{ color: '#E0E0E0' }}>Email:</strong> {student.mail_id}
   </StyledText>
+
   <StyledText variant="body1" sx={{ mb: 2 }}>
-    <strong>Email:</strong> {student.mail_id}
+    <strong sx={{ color: '#E0E0E0' }}>Address:</strong> {student.current_address}
   </StyledText>
+
   <StyledText variant="body1" sx={{ mb: 2 }}>
-    <strong>Address:</strong> {student.current_address}
+    <strong sx={{ color: '#E0E0E0' }}>Score:</strong> {student.total_score}
   </StyledText>
+
   <StyledText variant="body1" sx={{ mb: 2 }}>
-    <strong>Score:</strong> {student.total_score}
-  </StyledText>
-  <StyledText variant="body1" sx={{ mb: 2 }}>
-    <strong>CGPA:</strong> {student.avg_cgpa}
+    <strong sx={{ color: '#E0E0E0' }}>CGPA:</strong> {student.avg_cgpa}
   </StyledText>
 </Box>
 
