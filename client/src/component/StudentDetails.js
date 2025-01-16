@@ -238,7 +238,7 @@ const ShowStudentDetails = () => {
               <CardMedia
                 component="img"
                 height="300"
-                image="https://cdn-icons-png.flaticon.com/512/326/326830.png"
+                image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEteB2kkyGYlk82GNIUBLzuHoslGNhlbXyRQ&s"
                 alt={student.name}
               />
             </Card>
@@ -266,58 +266,59 @@ const ShowStudentDetails = () => {
           </Grid>
         </Grid>
         <Box mt={4} display="flex" justifyContent="space-between">
-          <StyledButton
-            startIcon={<ArrowBackIcon />}
-            component={Link}
-            to="/list"
-            variant="outlined"
-          >
-            Back to Student List
-          </StyledButton>
-          <Box>
-            <StyledButton
-              startIcon={<EditIcon />}
-              component={Link}
-              to={`/edit/${id}`} // Fixed edit URL to correctly point to the student edit page
-              variant="contained"
-              sx={{ mr: 1 }}
-            >
-              Edit Student
-            </StyledButton>
-            <StyledButton
-              startIcon={<DeleteIcon />}
-              onClick={onDeleteClick}
-              variant="contained"
-              color="error"
-            >
-              Delete Student
-            </StyledButton>
-          </Box>
+           <Button
+             startIcon={<ArrowBackIcon />}
+             component={Link}
+             to="/list"
+             variant="outlined"
+           >
+             Back to Student List
+           </Button>
+           <Box>
+             <Button
+               startIcon={<EditIcon />}
+               component={Link}
+               to={`/edit/${id}`}  // Fixed edit URL to correctly point to the student edit page
+               variant="contained"
+               color="primary"
+               sx={{ mr: 1 }}
+             >
+               Edit Student
+             </Button>
+             <Button
+               startIcon={<DeleteIcon />}
+               onClick={onDeleteClick}
+               variant="contained"
+               color="error"
+             >
+               Delete Student
+             </Button>
+         </Box>
         </Box>
       </StyledPaper>
 
-      {/* Confirmation Dialog */}
-      <Dialog
-        open={openDialog}
-        onClose={handleCancelDelete}
-        aria-labelledby="alert-dialog-title"
-        aria-describedby="alert-dialog-description"
-      >
-        <DialogTitle id="alert-dialog-title">{"Confirm Deletion"}</DialogTitle>
-        <DialogContent>
-          <DialogContentText id="alert-dialog-description">
-            Are you sure you want to delete this student? This action cannot be undone.
-          </DialogContentText>
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={handleCancelDelete} color="primary">
+       {/* Confirmation Dialog */}
+       <Dialog
+         open={openDialog}
+         onClose={handleCancelDelete}
+         aria-labelledby="alert-dialog-title"
+         aria-describedby="alert-dialog-description"
+       >
+         <DialogTitle id="alert-dialog-title">{"Confirm Deletion"}</DialogTitle>
+         <DialogContent>
+           <DialogContentText id="alert-dialog-description">
+             Are you sure you want to delete this student? This action cannot be undone.
+           </DialogContentText>
+         </DialogContent>
+         <DialogActions>
+           <Button onClick={handleCancelDelete} color="primary">
             Cancel
-          </Button>
-          <Button onClick={handleDeleteConfirmation} color="error" autoFocus>
-            Delete
-          </Button>
-        </DialogActions>
-      </Dialog>
+           </Button>
+           <Button onClick={handleDeleteConfirmation} color="error" autoFocus>
+             Delete
+           </Button>
+         </DialogActions>
+     </Dialog>
     </Container>
   );
 };
