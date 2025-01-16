@@ -287,14 +287,36 @@ const ShowStudentDetails = () => {
             </StyledText>
 
             <Divider sx={{ my: 2 }} />
-            <Box display="flex" flexDirection="column">
+            {/* <Box display="flex" flexDirection="column">
               <StyledText variant="body1">Name: {student.first_name}</StyledText>
               <StyledText variant="body1">ID: {student.unique_id}</StyledText>
               <StyledText variant="body1">Email: {student.mail_id}</StyledText>
               <StyledText variant="body1">Address: {student.current_address}</StyledText>
               <StyledText variant="body1">Score: {student.total_score}</StyledText>
               <StyledText variant="body1">CGPA: {student.avg_cgpa}</StyledText>
-            </Box>
+            </Box> */}
+
+<Box display="flex" flexDirection="column">
+  <StyledText variant="body1" sx={{ mb: 2 }}>
+    <strong>Name:</strong> {student.first_name}
+  </StyledText>
+  <StyledText variant="body1" sx={{ mb: 2 }}>
+    <strong>ID:</strong> {student.unique_id}
+  </StyledText>
+  <StyledText variant="body1" sx={{ mb: 2 }}>
+    <strong>Email:</strong> {student.mail_id}
+  </StyledText>
+  <StyledText variant="body1" sx={{ mb: 2 }}>
+    <strong>Address:</strong> {student.current_address}
+  </StyledText>
+  <StyledText variant="body1" sx={{ mb: 2 }}>
+    <strong>Score:</strong> {student.total_score}
+  </StyledText>
+  <StyledText variant="body1" sx={{ mb: 2 }}>
+    <strong>CGPA:</strong> {student.avg_cgpa}
+  </StyledText>
+</Box>
+
           </Grid>
         </Grid>
 
