@@ -114,7 +114,7 @@ function StudentList() {
         },
       }}
     >
-      <span role="img" aria-label="add">➕</span> Add New Student...
+       Add New Student... <span role="img" aria-label="add">➕</span>
     </Button>
   </Box>
 </Container>
