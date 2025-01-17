@@ -77,8 +77,6 @@
 
 // export default StudentCard;
 
-
-
 import React from 'react';
 import { Card, CardContent, Typography, Button, Box, Avatar } from '@mui/material';
 import { Link } from 'react-router-dom';
@@ -103,11 +101,11 @@ const StudentCard = ({ student }) => {
         >
             <Avatar
                 alt={student.first_name}
-                src={student.imageUrl || 'https://cdni.iconscout.com/illustration/premium/thumb/college-student-illustration-download-in-svg-png-gif-file-formats--pretty-logo-bag-man-character-pack-people-illustrations-2323990.png?f=webp'}
+                src={student.imageUrl || 'https://cdn-icons-png.flaticon.com/512/10584/10584906.png'}
                 sx={{
-                    width: '100%',
-                    height: 200,
-                    objectFit: 'cover',
+                    width: '100%',   // Ensures the image stretches across the width of the card
+                    height: 200,     // Fixed height
+                    objectFit: 'contain', // Ensures the entire image is visible
                     borderTopLeftRadius: 4,
                     borderTopRightRadius: 4,
                 }}
