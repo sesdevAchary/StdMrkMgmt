@@ -98,23 +98,23 @@ function StudentList() {
       sx={{
         px: 5,
         py: 4,
-        fontSize: '40px', // Increased font size
-        fontWeight: 800,  // Bold font weight
-        borderRadius: 5,
+        fontSize: '25px', // Increased font size
+        fontWeight: 700,  // Bold font weight
+        borderRadius: 10,
         textTransform: 'uppercase',
-        background: isDarkMode ? 'linear-gradient(145deg, #4a5d78, #3c4a6d)' : 'linear-gradient(145deg, #8E9CFF, #A1B6FF)', // Gradient background
+        background: isDarkMode ? 'linear-gradient(145deg,rgb(235, 221, 232), #3c4a6d)' : 'linear-gradient(145deg, #8E9CFF, #A1B6FF)', // Gradient background
         display: 'flex',
         alignItems: 'center',
         gap: 1, // Adds space between the emoji and the text
         '&:hover': {
-          background: isDarkMode ? 'linear-gradient(145deg,rgb(189, 195, 208), #4a5d78)' : 'linear-gradient(145deg, #A1B6FF, #A8C7FF)', // Lighter hover gradient
+          background: isDarkMode ? 'linear-gradient(145deg,rgb(225, 230, 215),rgb(215, 204, 201))' : 'linear-gradient(145deg,rgb(166, 205, 185), #A8C7FF)', // Lighter hover gradient
           boxShadow: '0px 8px 18px rgba(39, 47, 92, 0.3)', // More pronounced shadow for hover effect
           transform: 'scale(1.1)', // Enlarged scale for more interactive effect
           transition: 'transform 0.2s ease, box-shadow 0.3s ease, background 0.3s ease', // Smooth transitions
         },
       }}
     >
-      Add New Student <span role="img" aria-label="add">➕</span> 
+      add new student <span role="img" aria-label="add">➕</span> 
     </Button>
   </Box>
 </Container>
