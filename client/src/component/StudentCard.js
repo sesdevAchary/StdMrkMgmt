@@ -103,44 +103,61 @@ const StudentCard = ({ student }) => {
                 alt={student.first_name}
                 src={student.imageUrl || 'https://cdn-icons-png.flaticon.com/512/10584/10584906.png'}
                 sx={{
-                    width: '100%',   // Ensures the image stretches across the width of the card
-                    height: 200,     // Fixed height
-                    objectFit: 'contain', // Ensures the entire image is visible
+                    width: '150%',   // Ensures the image stretches across the width of the card
+                    height: 150,     // Fixed height
+                    objectFit: 'cover', // Ensures the entire image is visible
                     borderTopLeftRadius: 4,
                     borderTopRightRadius: 4,
                 }}
             />
-            <CardContent sx={{ flexGrow: 1 }}>
-                <Typography variant="h6" component="div" color="primary" gutterBottom>
-                    <Link
-                        to={`/show-student/${student._id}`}
-                        style={{ textDecoration: 'none', color: 'inherit' }}
-                    >
-                        {student.first_name}
-                    </Link>
-                </Typography>
-            </CardContent>
-            <Box sx={{ p: 2, mt: 'auto' }}>
-                <Button
-                    component={Link}
-                    to={`/details/${student._id}`}
-                    variant="contained"
-                    color="primary"
-                    size="large"
-                    fullWidth
-                    sx={{
-                        fontWeight: 700, // Bold font
-                        fontSize: '16px',
-                        backgroundColor: '#007BFF', // Vibrant blue background
-                        '&:hover': {
-                            backgroundColor: '#0056b3', // Darker blue on hover
-                            boxShadow: '0px 8px 15px rgba(0, 0, 0, 0.15)', // Subtle shadow effect
-                        },
-                    }}
-                >
-                    View Student Details
-                </Button>
-            </Box>
+          <CardContent sx={{ flexGrow: 1 }}>
+    <Typography 
+        variant="h6" 
+        component="div" 
+        color="primary" 
+        gutterBottom
+        sx={{
+            fontWeight: 600, // Adjust font weight for better boldness
+            fontSize: '1.2rem', // Slightly larger font for better readability
+            letterSpacing: '0.5px', // Adds some letter spacing for a modern look
+            fontFamily: "'Roboto', sans-serif", // Modern font family
+        }}
+    >
+        <Link
+            to={`/details/${student._id}`}
+            style={{ textDecoration: 'none', color: 'inherit' }}
+        >
+            {student.first_name}
+        </Link>
+    </Typography>
+</CardContent>
+
+<Box sx={{ p: 2, mt: 'auto' }}>
+    <Button
+        component={Link}
+        to={`/details/${student._id}`}
+        variant="contained"
+        color="secondary" // Darker theme, so use secondary color
+        size="large"
+        fullWidth
+        sx={{
+            fontWeight: 700, // Bold font
+            fontSize: '16px',
+            backgroundColor: '#333', // Dark background color for the button
+            color: '#fff', // White text color for better contrast
+            borderRadius: '8px', // Slightly rounded corners for modern design
+            '&:hover': {
+                backgroundColor: '#444', // Darker shade on hover
+                boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.2)', // Slightly stronger shadow effect
+                transform: 'scale(1.05)', // Slight scale effect on hover for a modern feel
+            },
+            transition: 'all 0.3s ease', // Smooth transition for hover effects
+        }}
+    >
+        View Student Details
+    </Button>
+</Box>
+
         </Card>
     );
 };
