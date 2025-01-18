@@ -32,53 +32,58 @@ const StudentCard = ({ student }) => {
                     borderTopRightRadius: 4,
                 }}
             />
-          <CardContent sx={{ flexGrow: 1 }}>
-    <Typography 
-        variant="h5" 
-        component="div" 
-        color="primary.dark" 
-        gutterBottom
-        sx={{
-            fontWeight: 700, // Adjust font weight for better boldness
-            fontSize: '1.2rem', // Slightly larger font for better readability
-            letterSpacing: '0.5px', // Adds some letter spacing for a modern look
-            fontFamily: "'Roboto', sans-serif", // Modern font family
-        }}
-    >
-        <Link
-            to={`/details/${student._id}`}
-            style={{ textDecoration: 'none', color: 'inherit' }}
-        >
-            {student.first_name}
-        </Link>
-    </Typography>
-</CardContent>
+            <CardContent sx={{ flexGrow: 1 }}>
+                <Typography
+                    variant="h5"
+                    component="div"
+                    color="primary.dark"
+                    gutterBottom
+                    sx={{
+                        fontWeight: 700, // Adjust font weight for better boldness
+                        fontSize: '1.2rem', // Slightly larger font for better readability
+                        color: '#212121',
+                        letterSpacing: '0.5px', // Adds some letter spacing for a modern look
+                        fontFamily: "'Playfair Display', serif", // Elegant serif font for a more refined look
+                        fontStyle: 'italic',
+                    }}
+                >
+                    <Link
+                        to={`/details/${student._id}`}
+                        style={{
+                            textDecoration: 'underline wavy'
+                            , color: 'inherit'
+                        }}
+                    >
+                        {student.first_name}
+                    </Link>
+                </Typography>
+            </CardContent>
 
-<Box sx={{ p: 2, mt: 'auto' }}>
-    <Button
-        component={Link}
-        to={`/details/${student._id}`}
-        variant="contained"
-        color="secondary" // Darker theme, so use secondary color
-        size="large"
-        fullWidth
-        sx={{
-            fontWeight: 700, // Bold font
-            fontSize: '16px',
-            backgroundColor: '#333', // Dark background color for the button
-            color: '#fff', // White text color for better contrast
-            borderRadius: '8px', // Slightly rounded corners for modern design
-            '&:hover': {
-                backgroundColor: '#444', // Darker shade on hover
-                boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.2)', // Slightly stronger shadow effect
-                transform: 'scale(1.05)', // Slight scale effect on hover for a modern feel
-            },
-            transition: 'all 0.3s ease', // Smooth transition for hover effects
-        }}
-    >
-        View Student Details
-    </Button>
-</Box>
+            <Box sx={{ p: 2, mt: 'auto' }}>
+                <Button
+                    component={Link}
+                    to={`/details/${student._id}`}
+                    variant="contained"
+                    color="secondary" // Darker theme, so use secondary color
+                    size="large"
+                    fullWidth
+                    sx={{
+                        fontWeight: 700, // Bold font
+                        fontSize: '16px',
+                        backgroundColor: '#333', // Dark background color for the button
+                        color: '#fff', // White text color for better contrast
+                        borderRadius: '8px', // Slightly rounded corners for modern design
+                        '&:hover': {
+                            backgroundColor: '#444', // Darker shade on hover
+                            boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.2)', // Slightly stronger shadow effect
+                            transform: 'scale(1.05)', // Slight scale effect on hover for a modern feel
+                        },
+                        transition: 'all 0.3s ease', // Smooth transition for hover effects
+                    }}
+                >
+                    View Student Details
+                </Button>
+            </Box>
 
         </Card>
     );
