@@ -151,13 +151,15 @@ const StudentCard = ({ student }) => {
                     color="primary.light" // Lighter text color for contrast
                     gutterBottom
                     sx={{
-                        fontWeight: 700, // Bold text
-                        fontSize: '1.1rem', // Slightly smaller but bold text for name
+                        fontWeight: 800, // Bold text
+                        fontSize: '1.5rem', // Slightly smaller but bold text for name
                         color: '#fff', // White text for contrast
                         letterSpacing: '0.5px', // Adds some letter-spacing for a modern look
                         fontFamily: "'Playfair Display', serif", // Elegant serif font
                         fontStyle: 'italic',
                         textAlign: 'center', // Center align the text
+                        borderBottom: '2px solid #fff', // Adds a white line below the name
+                        paddingBottom: '8px'
                     }}
                 >
                     <Link
