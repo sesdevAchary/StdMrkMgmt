@@ -107,13 +107,13 @@ const Footer = () => (
             <Link href="#" sx={{ display: 'block', color: 'primary.main', mb: 1 }}>
               OHEPEE
             </Link>
-            <Link href="#" sx={{ display: 'block', color: 'primary.main', mb: 1 }}>
+            <Link href="https://www.ugc.gov.in/" sx={{ display: 'block', color: 'primary.main', mb: 1 }}>
               UGC
             </Link>
-            <Link href="#" sx={{ display: 'block', color: 'primary.main', mb: 1 }}>
+            <Link href="http://rusa.nic.in/" sx={{ display: 'block', color: 'primary.main', mb: 1 }}>
               RUSA
             </Link>
-            <Link href="#" sx={{ display: 'block', color: 'primary.main' }}>
+            <Link href="https://vtputkal.odisha.gov.in/" sx={{ display: 'block', color: 'primary.main' }}>
               VIRTUAL TUTORIAL PROJECT
             </Link>
           </Box>
