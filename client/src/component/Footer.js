@@ -44,7 +44,7 @@ const Footer = () => (
           </Typography>
         </Grid>
 
-        {/* Middle Section: Quick Links */}
+        {/* Middle Section: Quick Links
         <Grid item xs={12} sm={6} md={3}>
           <Typography
             variant="h6"
@@ -78,7 +78,7 @@ const Footer = () => (
               CONTACT
             </Link>
           </Box>
-        </Grid>
+        </Grid> */}
 
         {/* Right Section: Important Links */}
         <Grid item xs={12} sm={6} md={3}>
@@ -134,8 +134,8 @@ const Footer = () => (
             Find Us
           </Typography>
           <Typography variant="body2" sx={{ color: 'text.primary' }}>
-            Khallikote Unitary University
-            <br />
+          st. Joseph Unitary University
+          <br />
             Berhampur, Ganjam, Odisha, India Pin – 760001
           </Typography>
         </Grid>
