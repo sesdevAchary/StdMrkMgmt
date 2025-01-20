@@ -1,5 +1,11 @@
+
+
+
+
+
 // import React from 'react';
 // import { Box, Typography, Container, Link, Grid } from '@mui/material';
+// import FindUs from './FindUs'; // Import the FindUs component
 
 // const Footer = () => (
 //   <Box
@@ -85,47 +91,6 @@
 //             </Link>
 //           </Box>
 //         </Grid>
-
-//         {/* Right Section: Find Us */}
-//         <Grid item xs={12} sm={6} md={3}>
-//           <Typography
-//             variant="h6"
-//             sx={{
-//               color: 'text.primary',
-//               fontWeight: 600,
-//               fontSize: '1.3rem',
-//               letterSpacing: 1.1,
-//               mb: 2,
-//             }}
-//           >
-//             Find Us
-//           </Typography>
-//           <Typography variant="body2" sx={{ color: 'text.primary' }}>
-//             Khallikote Unitary University
-//             <br />
-//             Berhampur, Ganjam, Odisha, India Pin – 760001
-//           </Typography>
-
-//           {/* Google Map Embed using iframe */}
-//           <Box
-//             sx={{
-//               mt: 3,
-//               borderRadius: '8px',
-//               overflow: 'hidden',
-//               boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
-//             }}
-//           >
-//             <iframe
-//               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14956.04539827178!2d85.9088800637985!3d20.4236141549822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a190cd8341668fd%3A0x136fb0e392733c82!2sBerhampur%2C%20Brahmapur%2C%20Odisha%20754112!5e0!3m2!1sen!2sin!4v1737347071371!5m2!1sen!2sin"
-//               width="100%"
-//               height="300"
-//               style={{ border: 0 }}
-//               allowFullScreen=""
-//               loading="lazy"
-//               referrerPolicy="no-referrer-when-downgrade"
-//             ></iframe>
-//           </Box>
-//         </Grid>
 //       </Grid>
 
 //       {/* Footer Bottom Section */}
@@ -145,6 +110,9 @@
 //         &copy; {new Date().getFullYear()} The Sesdev Achary. All rights reserved.
 //       </Typography>
 //     </Container>
+
+//     {/* Add the Find Us Section here */}
+//     <FindUs />
 //   </Box>
 // );
 
@@ -152,7 +120,7 @@
 
 
 
-// Footer.js
+
 import React from 'react';
 import { Box, Typography, Container, Link, Grid } from '@mui/material';
 import FindUs from './FindUs'; // Import the FindUs component
@@ -189,7 +157,7 @@ const Footer = () => (
           <Typography variant="body2" sx={{ color: 'text.primary' }}>
             Khallikote Unitary University
             <br />
-            st. Joseph Unitary University
+            St. Joseph Unitary University
             <br />
             Berhampur, Ganjam, Odisha, India Pin – 760001
             <br />
@@ -261,8 +229,10 @@ const Footer = () => (
       </Typography>
     </Container>
 
-    {/* Add the Find Us Section here */}
-    <FindUs />
+    {/* Add the Find Us Section as a separate div on the right side */}
+    <Box sx={{ display: 'flex', justifyContent: 'flex-end', mt: 4 }}>
+      <FindUs />
+    </Box>
   </Box>
 );
 
