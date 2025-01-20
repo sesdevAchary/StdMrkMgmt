@@ -155,17 +155,14 @@ const Footer = () => (
             Contact Us
           </Typography>
           <Typography variant="body2" sx={{ color: 'text.primary' }}>
-            Khallikote Unitary University
-            <br />
+           
             St. Joseph Unitary University
             <br />
             Berhampur, Ganjam, Odisha, India Pin – 760001
             <br />
-            Phone: 91-680-2229667
+            Phone: 91-680-5541267
             <br />
             Phone: 91-7848011250
-            <br />
-            Email: <Link href="mailto:kkcprincipal@gmail.com">kkcprincipal@gmail.com</Link>
             <br />
             Email: <Link href="mailto:josephuniversity@gmail.com">josephUniversity@gmail.com</Link>
           </Typography>
