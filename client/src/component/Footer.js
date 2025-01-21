@@ -265,7 +265,7 @@ const Footer = () => (
         }}
       >
         {/* Left Section: Contact Us */}
-        {/* <Box sx={{ flexBasis: '30%', minWidth: '250px' }}>
+         <Box sx={{ flexBasis: '30%', minWidth: '250px' }}>
           <Typography
             variant="h6"
             sx={{
@@ -289,56 +289,7 @@ const Footer = () => (
             <br />
             Email: <Link href="mailto:josephuniversity@gmail.com">josephUniversity@gmail.com</Link>
           </Typography>
-        </Box> */}
-
-<Box
-  sx={{
-    flexBasis: '30%',
-    minWidth: '250px',
-    bgcolor: 'background.paper', // Background color for the section
-    padding: 3, // Padding for better spacing inside
-    borderRadius: 2, // Rounded corners
-    boxShadow: 2, // Subtle shadow for depth
-    display: 'flex',
-    flexDirection: 'column', // Ensures elements stack vertically
-    justifyContent: 'space-between', // Spacing between elements
-    height: 'auto', // Ensures the box adjusts based on content
-    transition: '0.3s ease', // Smooth transition for hover effects
-    '&:hover': {
-      boxShadow: 6, // Increase shadow on hover for a 3D effect
-    },
-  }}
->
-  <Typography
-    variant="h6"
-    sx={{
-      color: 'text.primary',
-      fontWeight: 600,
-      fontSize: '1.3rem',
-      letterSpacing: 1.1,
-      mb: 2,
-    }}
-  >
-    Contact Us
-  </Typography>
-  
-  <Typography variant="body2" sx={{ color: 'text.secondary', lineHeight: 1.8 }}>
-    <strong>St. Joseph Unitary University</strong>
-    <br />
-    Berhampur, Ganjam, Odisha, India Pin – 760001
-    <br />
-    <br />
-    <strong>Phone:</strong> 91-680-5541267
-    <br />
-    <strong>Phone:</strong> 91-7848011250
-    <br />
-    <br />
-    <strong>Email:</strong>{' '}
-    <Link href="mailto:josephuniversity@gmail.com" sx={{ color: 'primary.main' }}>
-      josephUniversity@gmail.com
-    </Link>
-  </Typography>
-</Box>
+        </Box> 
 
 
         {/* Middle Section: Important Links */}
