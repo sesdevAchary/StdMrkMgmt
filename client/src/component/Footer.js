@@ -1,8 +1,6 @@
 
 
 
-
-
 // import React from 'react';
 // import { Box, Typography, Container, Link, Grid } from '@mui/material';
 // import FindUs from './FindUs'; // Import the FindUs component
@@ -21,127 +19,16 @@
 //     }}
 //   >
 //     <Container maxWidth="lg">
-//       <Grid container spacing={4}>
-//         {/* Left Section: Contact Us */}
-//         <Grid item xs={12} sm={6} md={3}>
-//           <Typography
-//             variant="h6"
-//             sx={{
-//               color: 'text.primary',
-//               fontWeight: 600,
-//               fontSize: '1.3rem',
-//               letterSpacing: 1.1,
-//               mb: 2,
-//             }}
-//           >
-//             Contact Us
-//           </Typography>
-//           <Typography variant="body2" sx={{ color: 'text.primary' }}>
-//             Khallikote Unitary University
-//             <br />
-//             st. Joseph Unitary University
-//             <br />
-//             Berhampur, Ganjam, Odisha, India Pin – 760001
-//             <br />
-//             Phone: 91-680-2229667
-//             <br />
-//             Phone: 91-7848011250
-//             <br />
-//             Email: <Link href="mailto:kkcprincipal@gmail.com">kkcprincipal@gmail.com</Link>
-//             <br />
-//             Email: <Link href="mailto:josephuniversity@gmail.com">josephUniversity@gmail.com</Link>
-//           </Typography>
-//         </Grid>
-
-//         {/* Middle Section: Important Links */}
-//         <Grid item xs={12} sm={6} md={3}>
-//           <Typography
-//             variant="h6"
-//             sx={{
-//               color: 'text.primary',
-//               fontWeight: 600,
-//               fontSize: '1.3rem',
-//               letterSpacing: 1.1,
-//               mb: 2,
-//             }}
-//           >
-//             Important Links
-//           </Typography>
-//           <Box>
-//             <Link href="https://dst.gov.in/" sx={{ display: 'block', color: 'primary.main', mb: 1 }}>
-//               DST, GOVT. OF INDIA
-//             </Link>
-//             <Link href="http://www.dhe.odisha.gov.in/" sx={{ display: 'block', color: 'primary.main', mb: 1 }}>
-//               DHE, GOVT. OF ODISHA
-//             </Link>
-//             <Link href="#" sx={{ display: 'block', color: 'primary.main', mb: 1 }}>
-//               MOCOLLEGE ABHIJAN
-//             </Link>
-//             <Link href="#" sx={{ display: 'block', color: 'primary.main', mb: 1 }}>
-//               OHEPEE
-//             </Link>
-//             <Link href="#" sx={{ display: 'block', color: 'primary.main', mb: 1 }}>
-//               UGC
-//             </Link>
-//             <Link href="#" sx={{ display: 'block', color: 'primary.main', mb: 1 }}>
-//               RUSA
-//             </Link>
-//             <Link href="#" sx={{ display: 'block', color: 'primary.main' }}>
-//               VIRTUAL TUTORIAL PROJECT
-//             </Link>
-//           </Box>
-//         </Grid>
-//       </Grid>
-
-//       {/* Footer Bottom Section */}
-//       <Typography
-//         variant="caption"
+//       <Box
 //         sx={{
-//           display: 'block',
-//           mt: 5,
-//           color: 'text.secondary',
-//           fontSize: '0.9rem',
-//           borderTop: '1px solid',
-//           borderColor: 'divider',
-//           pt: 2,
-//           letterSpacing: 0.5,
+//           display: 'flex',
+//           flexWrap: 'wrap',
+//           justifyContent: 'space-between',
+//           gap: 4, // Adds space between the columns
 //         }}
 //       >
-//         &copy; {new Date().getFullYear()} The Sesdev Achary. All rights reserved.
-//       </Typography>
-//     </Container>
-
-//     {/* Add the Find Us Section here */}
-//     <FindUs />
-//   </Box>
-// );
-
-// export default Footer;
-
-
-
-
-// import React from 'react';
-// import { Box, Typography, Container, Link, Grid } from '@mui/material';
-// import FindUs from './FindUs'; // Import the FindUs component
-
-// const Footer = () => (
-//   <Box
-//     component="footer"
-//     sx={{
-//       bgcolor: 'background.default',
-//       color: 'text.secondary',
-//       py: 6,
-//       mt: 6,
-//       textAlign: 'center',
-//       borderTop: (theme) => `1px solid ${theme.palette.divider}`,
-//       boxShadow: '0 -4px 12px rgba(0, 0, 0, 0.1)',
-//     }}
-//   >
-//     <Container maxWidth="lg">
-//       <Grid container spacing={4}>
 //         {/* Left Section: Contact Us */}
-//         <Grid item xs={12} sm={6} md={3}>
+//          <Box sx={{ flexBasis: '30%', minWidth: '250px' }}>
 //           <Typography
 //             variant="h6"
 //             sx={{
@@ -155,7 +42,6 @@
 //             Contact Us
 //           </Typography>
 //           <Typography variant="body2" sx={{ color: 'text.primary' }}>
-           
 //             St. Joseph Unitary University
 //             <br />
 //             Berhampur, Ganjam, Odisha, India Pin – 760001
@@ -166,10 +52,11 @@
 //             <br />
 //             Email: <Link href="mailto:josephuniversity@gmail.com">josephUniversity@gmail.com</Link>
 //           </Typography>
-//         </Grid>
+//         </Box> 
+
 
 //         {/* Middle Section: Important Links */}
-//         <Grid item xs={12} sm={6} md={3}>
+//         <Box sx={{ flexBasis: '30%', minWidth: '250px' }}>
 //           <Typography
 //             variant="h6"
 //             sx={{
@@ -189,27 +76,32 @@
 //             <Link href="http://www.dhe.odisha.gov.in/" sx={{ display: 'block', color: 'primary.main', mb: 1 }}>
 //               DHE, GOVT. OF ODISHA
 //             </Link>
-//             <Link href="#" sx={{ display: 'block', color: 'primary.main', mb: 1 }}>
+//             <Link href="https://mocollege.in/" sx={{ display: 'block', color: 'primary.main', mb: 1 }}>
 //               MOCOLLEGE ABHIJAN
 //             </Link>
-//             <Link href="#" sx={{ display: 'block', color: 'primary.main', mb: 1 }}>
+//             <Link href="https://oshec.nic.in/" sx={{ display: 'block', color: 'primary.main', mb: 1 }}>
 //               OHEPEE
 //             </Link>
-//             <Link href="#" sx={{ display: 'block', color: 'primary.main', mb: 1 }}>
+//             <Link href="https://www.ugc.gov.in/" sx={{ display: 'block', color: 'primary.main', mb: 1 }}>
 //               UGC
 //             </Link>
-//             <Link href="#" sx={{ display: 'block', color: 'primary.main', mb: 1 }}>
+//             <Link href="http://rusa.nic.in/" sx={{ display: 'block', color: 'primary.main', mb: 1 }}>
 //               RUSA
 //             </Link>
-//             <Link href="#" sx={{ display: 'block', color: 'primary.main' }}>
+//             <Link href="https://vtputkal.odisha.gov.in/" sx={{ display: 'block', color: 'primary.main' }}>
 //               VIRTUAL TUTORIAL PROJECT
 //             </Link>
 //           </Box>
-//         </Grid>
-//       </Grid>
+//         </Box>
+
+//         {/* Right Section: Find Us */}
+//         <Box sx={{ flexBasis: '30%', minWidth: '250px' }}>
+//           <FindUs />
+//         </Box>
+//       </Box>
 
 //       {/* Footer Bottom Section */}
-//       <Typography
+//       {/* <Typography
 //         variant="caption"
 //         sx={{
 //           display: 'block',
@@ -224,13 +116,36 @@
 //       >
 //         &copy; {new Date().getFullYear()} The Sesdev Achary. All rights reserved.
 //       </Typography>
-//     </Container>
+//     </Container> */}
 
-//     {/* Add the Find Us Section as a separate div on the right side */}
-//     <Box sx={{ display: 'flex', justifyContent: 'flex-end', mt: 4 }}>
-//       <FindUs />
-//     </Box>
+    
+
+// <Typography
+//   variant="caption"
+//   sx={{
+//     display: 'block',
+//     mt: 5,
+//     color: 'text.disabled', // Using a more subtle color for a soft look
+//     fontSize: '0.875rem', // Slightly smaller font size for subtlety
+//     borderTop: '1px solid',
+//     borderColor: 'divider', // Keeps the border subtle and matches theme
+//     pt: 2,
+//     letterSpacing: 0.5,
+//     textAlign: 'center', // Centered for better alignment
+//     bgcolor: 'background.paper', // Light background for contrast
+//     borderRadius: 1, // Rounded corners to smooth out the design
+//     boxShadow: '0px 1px 2px rgba(0, 0, 0, 0.1)', // Light shadow for depth
+//     maxWidth: '80%', // Limiting the width to prevent it from stretching too far on large screens
+//     margin: '0 auto', // Center the element
+//     padding: '10px 0', // Vertical padding for better spacing
+//   }}
+// >
+//   &copy; {new Date().getFullYear()} The Sesdev Achary. All rights reserved.
+// </Typography>
+
 //   </Box>
+//   </Container>
+
 // );
 
 // export default Footer;
@@ -238,8 +153,9 @@
 
 
 
+
 import React from 'react';
-import { Box, Typography, Container, Link, Grid } from '@mui/material';
+import { Box, Typography, Container, Link } from '@mui/material';
 import FindUs from './FindUs'; // Import the FindUs component
 
 const Footer = () => (
@@ -265,7 +181,7 @@ const Footer = () => (
         }}
       >
         {/* Left Section: Contact Us */}
-         <Box sx={{ flexBasis: '30%', minWidth: '250px' }}>
+        <Box sx={{ flexBasis: '30%', minWidth: '250px' }}>
           <Typography
             variant="h6"
             sx={{
@@ -289,8 +205,7 @@ const Footer = () => (
             <br />
             Email: <Link href="mailto:josephuniversity@gmail.com">josephUniversity@gmail.com</Link>
           </Typography>
-        </Box> 
-
+        </Box>
 
         {/* Middle Section: Important Links */}
         <Box sx={{ flexBasis: '30%', minWidth: '250px' }}>
@@ -343,12 +258,19 @@ const Footer = () => (
         sx={{
           display: 'block',
           mt: 5,
-          color: 'text.secondary',
-          fontSize: '0.9rem',
+          color: 'text.disabled', // Using a more subtle color for a soft look
+          fontSize: '0.875rem', // Slightly smaller font size for subtlety
           borderTop: '1px solid',
-          borderColor: 'divider',
+          borderColor: 'divider', // Keeps the border subtle and matches theme
           pt: 2,
           letterSpacing: 0.5,
+          textAlign: 'center', // Centered for better alignment
+          bgcolor: 'background.paper', // Light background for contrast
+          borderRadius: 1, // Rounded corners to smooth out the design
+          boxShadow: '0px 1px 2px rgba(0, 0, 0, 0.1)', // Light shadow for depth
+          maxWidth: '80%', // Limiting the width to prevent it from stretching too far on large screens
+          margin: '0 auto', // Center the element
+          padding: '10px 0', // Vertical padding for better spacing
         }}
       >
         &copy; {new Date().getFullYear()} The Sesdev Achary. All rights reserved.
