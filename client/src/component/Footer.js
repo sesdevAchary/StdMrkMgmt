@@ -312,10 +312,10 @@ const Footer = () => (
             <Link href="http://www.dhe.odisha.gov.in/" sx={{ display: 'block', color: 'primary.main', mb: 1 }}>
               DHE, GOVT. OF ODISHA
             </Link>
-            <Link href="#" sx={{ display: 'block', color: 'primary.main', mb: 1 }}>
+            <Link href="https://mocollege.in/" sx={{ display: 'block', color: 'primary.main', mb: 1 }}>
               MOCOLLEGE ABHIJAN
             </Link>
-            <Link href="#" sx={{ display: 'block', color: 'primary.main', mb: 1 }}>
+            <Link href="https://oshec.nic.in/" sx={{ display: 'block', color: 'primary.main', mb: 1 }}>
               OHEPEE
             </Link>
             <Link href="#" sx={{ display: 'block', color: 'primary.main', mb: 1 }}>
