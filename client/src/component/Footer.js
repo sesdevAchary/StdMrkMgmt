@@ -25,6 +25,7 @@ const Footer = () => (
           flexWrap: 'wrap',
           justifyContent: 'space-between',
           gap: 4, // Adds space between the columns
+          alignItems: 'flex-start', // Ensures all sections are aligned at the top
         }}
       >
         {/* Left Section: Contact Us */}
