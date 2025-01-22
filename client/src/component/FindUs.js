@@ -26,9 +26,11 @@ const FindUs = () => (
         Find Us
       </Typography>
       <Typography variant="body1" sx={{ color: 'text.primary', mb: 3 }}>
-        Khallikote Unitary University
-        <br />
-        Berhampur, Ganjam, Odisha, India Pin – 760001
+      St. Joseph Unitary University
+      <br />
+        Berhampur, Ganjam, Odisha, India
+        <br/>
+         Pin – 760001
       </Typography>
 
       {/* Google Map Embed Section */}
