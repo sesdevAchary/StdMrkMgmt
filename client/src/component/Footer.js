@@ -281,7 +281,7 @@ const Footer = () => (
 >
   &copy; {new Date().getFullYear()} The Sesdev Achary. All rights reserved.
 </Typography>
-
+</Container>
   </Box>
 );
 
