@@ -320,16 +320,16 @@ const Footer = () => (
           <Typography
             variant="h5"
             sx={{
-              color: 'text.primary',
-              fontWeight: 700,
-              fontSize: '1.4rem',
+              color: 'primary,dark',
+              fontWeight: 900,
+              fontSize: '1.5rem',
               letterSpacing: 1.2,
               mb: 3,
             }}
           >
             Contact Us
           </Typography>
-          <Typography variant="body2" sx={{ color: 'text.secondary', mb: 2 }}>
+          <Typography variant="body2" sx={{ color: 'primary,dark',fontWeight: 900, mb: 2 }}>
             St. Joseph Unitary University
             <br />
             Berhampur, Ganjam, Odisha, India Pin – 760001
