@@ -166,7 +166,7 @@ const Footer = () => (
           <Typography
             variant="h5"
             sx={{
-              color: 'primary.dark',
+              color: 'text.primary',
               fontWeight: 800,
               fontSize: '1.5rem',
               letterSpacing: 1.2,
