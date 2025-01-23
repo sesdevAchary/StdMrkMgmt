@@ -103,7 +103,7 @@
 // //       </Box>
 
 // //       {/* Footer Bottom Section */}
-      
+
 // //       <Typography
 // //         variant="caption"
 // //         sx={{
@@ -321,7 +321,7 @@ const Footer = () => (
             variant="h5"
             sx={{
               color: 'primary,dark',
-              fontWeight: 900,
+              fontWeight: 800,
               fontSize: '1.5rem',
               letterSpacing: 1.2,
               mb: 3,
@@ -329,7 +329,10 @@ const Footer = () => (
           >
             Contact Us
           </Typography>
-          <Typography variant="body2" sx={{ color: 'primary,dark',fontWeight: 900, mb: 2 }}>
+          <Typography variant="body2" sx={{
+            color: 'primary,dark', fontWeight: 700, letterSpacing: 1.2,
+            mb: 2
+          }}>
             St. Joseph Unitary University
             <br />
             Berhampur, Ganjam, Odisha, India Pin – 760001
