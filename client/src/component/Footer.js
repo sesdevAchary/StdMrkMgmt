@@ -235,7 +235,7 @@ const Footer = () => (
       </Box>
 
       {/* Footer Bottom Section */}
-      <Typography
+      {/* <Typography
         variant="caption"
         sx={{
           display: 'block',
@@ -257,7 +257,31 @@ const Footer = () => (
       >
         &copy; {new Date().getFullYear()} The Sesdev Achary. All rights reserved.
       </Typography>
-    </Container>
+    </Container> */}
+
+<Typography
+  variant="caption"
+  sx={{
+    display: 'block',
+    mt: 5,
+    color: 'text.disabled', // Subtle text color
+    fontSize: '0.875rem',
+    borderTop: '1px solid',
+    borderColor: 'divider',
+    pt: 2,
+    letterSpacing: 0.6,
+    textAlign: 'center',
+    bgcolor: '#2c3e50', // Dim, cool background color
+    borderRadius: 1,
+    boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.3)', // Slightly stronger shadow
+    maxWidth: '80%',
+    margin: '0 auto',
+    padding: '12px 0',
+  }}
+>
+  &copy; {new Date().getFullYear()} The Sesdev Achary. All rights reserved.
+</Typography>
+
   </Box>
 );
 
