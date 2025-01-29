@@ -302,7 +302,7 @@ const QRCodePage = () => {
                                 <CardContent sx={{ textAlign: 'center' }}>
                                     <QRCodeSVG
                                         ref={qrRefs.current[index]}
-                                        value={`https://stdmrkmgmt.onrender.com/api/student/${student._id}`}
+                                        value={`https://stdmrkmgmt.onrender.com/student/${student._id}`} // Correct URL
                                         size={200}
                                         level="H"
                                         includeMargin
