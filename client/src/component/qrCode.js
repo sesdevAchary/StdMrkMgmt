@@ -171,8 +171,6 @@
 // export default QRCodePage;
 
 
-
-
 import React, { useState, useEffect, useRef } from 'react';
 import { QRCodeSVG } from 'qrcode.react';
 import {
@@ -192,6 +190,9 @@ const QRCodePage = () => {
     const [students, setStudents] = useState([]);
     const [loading, setLoading] = useState(true);
 
+    // Store refs for each student QR code
+    const qrRefs = useRef([]);
+
     useEffect(() => {
         axios.get(`https://stdmrkmgmt.onrender.com/api/student`)
             .then(res => {
@@ -204,8 +205,8 @@ const QRCodePage = () => {
             });
     }, []);
 
-    const downloadQR = (studentId, studentName, qrRef) => {
-        const svg = qrRef.current;
+    const downloadQR = (studentId, studentName, index) => {
+        const svg = qrRefs.current[index];
         if (!svg) return;
 
         const serializer = new XMLSerializer();
@@ -251,8 +252,8 @@ const QRCodePage = () => {
                     sx={{
                         fontWeight: 700,
                         fontStyle: 'italic',
-                        textTransform: 'uppercase',                
-                        color: '#F0F0F0', 
+                        textTransform: 'uppercase',
+                        color: '#F0F0F0',
                         letterSpacing: '1px',
                     }}
                 >
@@ -277,7 +278,10 @@ const QRCodePage = () => {
 
             <Grid container spacing={3} sx={{ mt: 4 }}>
                 {students.map((student, index) => {
-                    const qrRef = useRef();
+                    // Initialize each ref when mapping through students
+                    if (!qrRefs.current[index]) {
+                        qrRefs.current[index] = React.createRef();
+                    }
 
                     return (
                         <Grid item xs={12} sm={6} md={4} key={student._id}>
@@ -297,7 +301,7 @@ const QRCodePage = () => {
                             }}>
                                 <CardContent sx={{ textAlign: 'center' }}>
                                     <QRCodeSVG
-                                        ref={qrRef}
+                                        ref={qrRefs.current[index]}
                                         value={`https://stdmrkmgmt.onrender.com/api/student/${student._id}`}
                                         size={200}
                                         level="H"
@@ -314,7 +318,7 @@ const QRCodePage = () => {
                                         variant="contained"
                                         color="secondary"
                                         startIcon={<DownloadIcon />}
-                                        onClick={() => downloadQR(student._id, student.first_name, qrRef)}
+                                        onClick={() => downloadQR(student._id, student.first_name, index)}
                                         sx={{
                                             textTransform: 'none',
                                             fontWeight: 600,
